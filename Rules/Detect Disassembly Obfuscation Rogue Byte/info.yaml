@@ -1,2 +1,3 @@
+name: Detect Disassembly Obfuscation Rogue Byte
 type: YARA
 contributors: Gelven

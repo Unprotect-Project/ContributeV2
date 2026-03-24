@@ -1,2 +1,3 @@
+name: detect_cuckoo_named_pipe
 type: YARA
 contributors: HoIIovv
