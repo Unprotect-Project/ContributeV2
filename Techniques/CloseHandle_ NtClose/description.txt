@@ -1,0 +1,3 @@
+When a process is debugged, calling `NtClose` or `CloseHandle` with an invalid handle will generate a `STATUS_INVALID_HANDLE` exception.
+
+The exception can be cached by an exception handler. If the control is passed to the exception handler, it indicates that a debugger is present.

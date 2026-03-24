@@ -1,0 +1,4 @@
+language: Python
+contributors: 1d8
+associated_technique: 'Virtualization/Sandbox Evasion: User Activity Based Checks'
+target_operating_system: linux

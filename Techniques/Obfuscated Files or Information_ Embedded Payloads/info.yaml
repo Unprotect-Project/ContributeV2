@@ -1,0 +1,14 @@
+name: 'Obfuscated Files or Information: Embedded Payloads'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1027/009/
+tags:
+- Defense Evasion
+- conceal malicious code
+- obfuscate malicious payloads
+- Subvert Trust Controls
+- embedded payloads
+- nested payloads
+- Process Injection payloads
+- encrypted communications module

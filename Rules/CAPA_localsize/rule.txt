@@ -1,0 +1,13 @@
+rule:
+  meta:
+    name: trap debugger with localsize
+    namespace: anti-analysis/anti-debugging
+    author: lordtmk@protonmail.com
+    scope: basic block
+    examples:
+      - B67E5B1985742F62785122B637EF4FBD:0x4B1F5B
+  features:
+    - and:
+      - api: LocalSize
+      - mnemonic: push 
+      - number: 0

@@ -1,0 +1,1 @@
+To avoid some actions on the system by the malware like deleted a file. Cuckoo will hook some function and performs another action instead of the original one. For example the function DeleteFileW could be hooked to avoid file deletion.

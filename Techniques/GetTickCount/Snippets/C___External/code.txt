@@ -1,0 +1,6 @@
+bool IsDebugged(DWORD dwNativeElapsed)
+{
+    DWORD dwStart = GetTickCount();
+    // ... some work
+    return (GetTickCount() - dwStart) > dwNativeElapsed;
+}

@@ -1,0 +1,47 @@
+#include <Windows.h>
+#include <TlHelp32.h>
+#include <iostream>
+
+int main()
+{
+    // Get the current process ID
+    DWORD currentPID = GetCurrentProcessId();
+
+    // Create a snapshot of all processes in the system
+    HANDLE snapshot = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
+
+    // Initialize the process entry structure
+    PROCESSENTRY32 entry;
+    entry.dwSize = sizeof(entry);
+
+    // Iterate over all processes in the snapshot
+    if (Process32First(snapshot, &entry))
+    {
+        do
+        {
+            // Check if the current process is the one we're looking for
+            if (entry.th32ProcessID == currentPID)
+            {
+                // The parent process ID is the one we want
+                DWORD parentPID = entry.th32ParentProcessID;
+
+                // Check if the parent process is explorer.exe
+                if (parentPID == 0)
+                {
+                    std::cout << "Parent process is explorer.exe" << std::endl;
+                }
+                else
+                {
+                    std::cout << "Parent process is not explorer.exe" << std::endl;
+                }
+
+                break;
+            }
+        } while (Process32Next(snapshot, &entry));
+    }
+
+    // Clean up
+    CloseHandle(snapshot);
+
+    return 0;
+}

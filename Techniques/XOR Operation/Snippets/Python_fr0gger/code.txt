@@ -1,0 +1,17 @@
+# Define the key to use for the XOR operation
+key = "mysecretkey"
+
+# Define the original message to be encrypted
+message = "Hello, world!"
+
+# Convert the key and message to binary format
+binary_key = key.encode('utf-8')
+binary_message = message.encode('utf-8')
+
+# Perform the XOR operation on the binary message using the binary key
+ciphertext = bytearray(len(binary_message))
+for i in range(len(binary_message)):
+  ciphertext[i] = binary_message[i] ^ binary_key[i % len(binary_key)]
+
+# Print the resulting ciphertext
+print(ciphertext)

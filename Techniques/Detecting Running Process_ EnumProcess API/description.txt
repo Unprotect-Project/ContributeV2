@@ -1,0 +1,3 @@
+Anti-monitoring is a technique used by malware to prevent security professionals from detecting and analyzing it. One way that malware can accomplish this is by using the `EnumProcess` function to search for specific processes, such as ollydbg.exe or wireshark.exe, which are commonly used by security professionals to monitor and analyze running processes on a system. 
+
+By detecting these processes and taking evasive action, such as terminating itself or encrypting its own code, malware can prevent security professionals from gaining visibility into its activities and disrupt their efforts to analyze it.

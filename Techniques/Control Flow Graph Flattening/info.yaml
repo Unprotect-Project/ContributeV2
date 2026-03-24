@@ -1,0 +1,15 @@
+name: Control Flow Graph Flattening
+categories:
+- Anti-Disassembly
+resources:
+- http://ac.inf.elte.hu/Vol_030_2009/003.pdf
+tags:
+- Control flow flattening
+- Anti-disassembling
+- Obfuscation
+- Switch statement
+- Loop statement
+- Control flow
+- Nesting
+- Unstructured code
+- Complex control flow

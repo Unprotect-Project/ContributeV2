@@ -1,0 +1,25 @@
+name: 'System Binary Proxy Execution: Rundll32'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1218/011/
+tags:
+- Defense Evasion
+- rundll32.exe {DLLname
+- DLLfunction}
+- execute Control Panel Item files (.cpl)
+- Control_RunDLL
+- Control_RunDLLAsUser
+- 'rundll32.exe javascript:'
+- obfuscate malicious code
+- Masquerading
+- APT19
+- APT28
+- APT29
+- APT3
+- APT32
+- APT38
+- APT41
+- maintain persistence
+- inject malicious payload
+- execute malicious DLLs

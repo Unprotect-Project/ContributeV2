@@ -1,0 +1,5 @@
+The VMCPUID instruction is a sophisticated mechanism often employed by malware to ascertain if it is operating within a virtual environment.
+
+This instruction is part of the x86 architecture's virtual machine extensions (VMX) and is designed to provide information about the capabilities and status of the virtual machine. 
+
+By using VMCPUID, malware can adapt its behavior based on the context in which it is running, thus adding an additional layer of complexity to its detection and mitigation. Essentially, it serves as a telltale indicator, aiding malware in identifying virtualization-based security measures or sandboxing environments

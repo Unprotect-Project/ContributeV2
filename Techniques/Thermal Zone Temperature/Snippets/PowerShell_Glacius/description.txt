@@ -1,0 +1,2 @@
+If the return is "MSAcpi_ThermalZoneTemperature not supported, it means you are in a virtualized environment.
+Reference : https://gist.github.com/teixeira0xfffff/36293713c254c69a7ba2353e8d64afce#file-msacpi_thermalzonetemperature-ps1

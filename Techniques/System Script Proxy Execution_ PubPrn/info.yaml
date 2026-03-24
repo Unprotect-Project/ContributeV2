@@ -1,0 +1,16 @@
+name: 'System Script Proxy Execution: PubPrn'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1216/001/
+tags:
+- Defense Evasion
+- proxy execution of malicious remote files
+- PubPrn.vbs
+- Cscript.exe
+- execute malicious remote payloads
+- 'script: parameter'
+- scriptlet file (.sct)
+- bypass signature validation restrictions
+- bypass application control solutions
+- APT32

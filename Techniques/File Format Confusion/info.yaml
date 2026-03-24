@@ -1,0 +1,6 @@
+name: File Format Confusion
+categories:
+- Antivirus/EDR Evasion
+resources:
+- https://wikileaks.org/ciav7p1/cms/files/BypassAVDynamics.pdf
+- https://code.google.com/archive/p/corkami/wikis/mix.wiki

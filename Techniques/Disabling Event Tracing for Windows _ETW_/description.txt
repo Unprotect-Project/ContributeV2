@@ -1,0 +1,3 @@
+Many EDR solutions leverage Event Tracing for Windows (ETW) extensively. ETW allows for extensive instrumentation and tracing of a process functionality and WINAPI calls. It has components in the kernel, to register callbacks for system calls and other kernel operations, but also consists of a userland component that is part of ntdll.dll. 
+
+Since ntdll.dll is a DLL loaded into the process of a binary, an attacker can have full control over this DLL and therefore the ETW functionality. The most common nypassing technique is patching the function EtwEventWrite which is called to write/log ETW events. It is possible to fetch its address in ntdll.dll, and replace its first instructions with instructions to return 0 (SUCCESS).

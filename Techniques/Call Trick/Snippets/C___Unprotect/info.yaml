@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Call Trick
+target_operating_system: windows

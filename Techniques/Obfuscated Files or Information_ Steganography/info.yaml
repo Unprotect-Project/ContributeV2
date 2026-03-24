@@ -1,0 +1,14 @@
+name: 'Obfuscated Files or Information: Steganography'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1027/003/
+tags:
+- Defense Evasion
+- conceal information
+- conceal payloads
+- Invoke-PSImage
+- APT37
+- hidden malicious portable executable
+- embedded image files
+- obfuscated files

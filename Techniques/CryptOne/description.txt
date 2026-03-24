@@ -1,0 +1,1 @@
+A packing software called CryptOne became popular among some major threat actors. It was first reported by Fox-IT that the group behind Wastedlocker has begun using it, as well as Netwalker, Gozi ISFB v3, ZLoader, Emotet, Dridex, and Smokeloader.

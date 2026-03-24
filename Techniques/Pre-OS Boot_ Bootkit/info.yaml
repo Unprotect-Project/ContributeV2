@@ -1,0 +1,16 @@
+name: 'Pre-OS Boot: Bootkit'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1542/003/
+tags:
+- Persistence
+- Defense Evasion
+- boot sector modification
+- Master Boot Record (MBR)
+- Volume Boot Record (VBR)
+- boot loader
+- boot drive overwrite
+- APT28
+- APT41
+- ransomware

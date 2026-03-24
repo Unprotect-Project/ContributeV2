@@ -1,0 +1,15 @@
+name: Abusing the Return Pointer
+categories:
+- Anti-Disassembly
+resources:
+- https://www.malwinator.com/2015/11/27/anti-disassembly-techniques-used-by-malware-a-primer-part-2/
+tags:
+- Abusing the return pointer
+- Anti-disassembling
+- Disassembler
+- Debugger
+- Control flow
+- Return instruction (RETN)
+- Function call
+- Stack pointer
+- Register

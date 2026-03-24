@@ -1,0 +1,3 @@
+The malicious sample listed below abused variant bytes of __IsNonwritableInCurrentImage signature to add two instructions consisting of an anti-debugging technique referenced as [U0114](https://unprotect.it/technique/closehandle-ntclose/) on Unprotect.
+
+Sha256 : a41ba65405a032f4450ba80882cdd01d715d9d1684f4204050566be29a6dedb0

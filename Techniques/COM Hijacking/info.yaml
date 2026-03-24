@@ -1,0 +1,11 @@
+name: COM Hijacking
+categories:
+- Process Manipulating
+resources:
+- https://www.endgame.com/blog/technical-blog/how-hunt-detecting-persistence-evasion-com
+tags:
+- Microsoft Component Object Model (COM)
+- software components
+- interaction
+- Windows operating system
+- persistence

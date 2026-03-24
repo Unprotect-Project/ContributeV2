@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <inttypes.h>
+
+int main()
+{
+    // Retrieve the value of the IDTR
+    uint64_t idtr;
+    asm volatile (
+        "sidt %0"
+        : "=m" (idtr)
+    );
+
+    // Check the value of the IDTR
+    if (idtr != 0) {
+        // We are running on a virtual machine
+        printf("We are running on a virtual machine.\n");
+    } else {
+        // We are running on a physical machine
+        printf("We are running on a physical machine.\n");
+    }
+
+    return 0;
+}

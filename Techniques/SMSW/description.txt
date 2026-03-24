@@ -1,0 +1,1 @@
+Stores the machine status word into the destination operand.

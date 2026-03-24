@@ -1,0 +1,104 @@
+library rundll32;
+
+uses
+  System.SysUtils,
+  Winapi.Windows;
+
+const LOG_TEMPLATE = 'Unprotect -> %s';
+
+{ Simplify ODS Call }
+procedure Debug(const AMessage : PWideChar); stdcall;
+begin
+  OutputDebugStringW(PWideChar(Format(LOG_TEMPLATE, [WideCharToString(AMessage)])));
+end;
+
+{ One method to retrieve process name from PID }
+function GetProcessName(const AProcessID : Cardinal) : String;
+var QueryFullProcessImageNameW : function(
+                                    AProcess: THANDLE;
+                                    AFlags: DWORD;
+                                    AFileName: PWideChar;
+                                    var ASize: DWORD
+    ): BOOL; stdcall;
+
+const PROCESS_QUERY_LIMITED_INFORMATION = $00001000;
+begin
+  result := '';
+  ///
+
+  if (TOSVersion.Major < 6) then
+    Exit();
+  ///
+
+  QueryFullProcessImageNameW := nil;
+
+  var hDLL := LoadLibrary('kernel32.dll');
+  if hDLL = 0 then
+    Exit();
+  try
+    @QueryFullProcessImageNameW := GetProcAddress(hDLL, 'QueryFullProcessImageNameW');
+    ///
+
+    if Assigned(QueryFullProcessImageNameW) then begin
+      var hProc := OpenProcess(PROCESS_QUERY_LIMITED_INFORMATION, false, AProcessID);
+      if hProc = 0 then exit;
+      try
+        var ALength : DWORD := (MAX_PATH * 2);
+
+        SetLength(result, ALength);
+
+        if NOT QueryFullProcessImageNameW(hProc, 0, @result[1], ALength) then
+          Exit();
+
+        SetLength(result, ALength);
+      finally
+        CloseHandle(hProc);
+      end;
+    end;
+  finally
+    FreeLibrary(hDLL);
+  end;
+end;
+
+{ Exported Function : Require this function signature be operated by Rundll32 }
+procedure UnprotectFunction(hHwnd, hInstance : THandle; lpszCmdLine : PAnsiChar; nCmdShow : Integer); stdcall;
+begin
+  var AProcessId := GetCurrentProcessId();
+
+  var AMessage := Format('%s' + #13#10#13#10 + 'From: %s (%d / 0x%x)',
+    [
+      lpszCmdLine,
+      ExtractFileName(GetProcessName(AProcessId)),
+      AProcessId,
+      AProcessId
+    ]
+  );
+
+  MessageBoxA(0, PAnsiChar(AnsiString(AMessage)), 'Unprotect Test', MB_ICONINFORMATION);
+
+  // Define and parse `lpszCmdLine` to extend functionality of your payload
+  // (Ex: rev shell IP, Port, App; Encoded shellcode etc..)
+end;
+
+{ DLL Initialization / Finalization }
+procedure DllMain(const AReason : DWORD);
+begin
+  case AReason of
+    DLL_PROCESS_ATTACH:
+      Debug('DLL_PROCESS_ATTACH');
+
+    // ...
+  end;
+end;
+
+{ Define Exportations }
+exports
+  UnprotectFunction index 14 name 'UnprotectFunction';
+
+{ EP }
+begin
+  DllProc := @DllMain;
+
+  DllMain(DLL_PROCESS_ATTACH);
+
+end.

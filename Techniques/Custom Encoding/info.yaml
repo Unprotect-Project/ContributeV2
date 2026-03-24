@@ -1,0 +1,14 @@
+name: Custom Encoding
+categories:
+- Data Obfuscation
+resources:
+- https://securityintelligence.com/an-example-of-common-string-and-payload-obfuscation-techniques-in-malware/
+tags:
+- Custom encoding schemes
+- Conceal
+- Payloads
+- Full custom layers
+- Variations
+- Known algorithms
+- XOR
+- Base64

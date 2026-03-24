@@ -1,0 +1,5 @@
+name: PE Format Manipulation
+categories:
+- Antivirus/EDR Evasion
+resources:
+- https://pentest.blog/art-of-anti-detection-2-pe-backdoor-manufacturing/

@@ -1,0 +1,10 @@
+name: 'Masquerading: Rename System Utilities'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1036/003/
+tags:
+- Defense Evasion
+- rename legitimate file
+- APT32
+- replace legitimate system file

@@ -1,0 +1,1 @@
+Original source code available here: https://anti-debug.checkpoint.com/techniques/debug-flags.html#manual-checks-heap-flags

@@ -1,0 +1,1 @@
+This code snippet examines artifacts of typical human activity, focusing on Linux systems with Firefox installed. It checks for browser add-ons presence and browsing history to distinguish real users from sandbox or VM environments.

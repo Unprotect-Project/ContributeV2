@@ -1,0 +1,76 @@
+program PoC;
+
+{$APPTYPE CONSOLE}
+
+uses
+  Winapi.Windows, System.SysUtils;
+
+begin
+  try
+    var AString := 'Hello, World';
+    var AStringSize := SIZE_T(Length(AString) * SizeOf(WideChar));
+
+    var pDummyBuffer := nil;
+    var pNewBuffer := nil;
+
+    GetMem(pDummyBuffer, High(Byte));
+    try
+      //
+      // Example 1: ReadProcessMemory
+      //
+
+      // Alloc a new memory region in current process using VirtualAlloc
+      pNewBuffer := VirtualAlloc(nil, AStringSize, MEM_COMMIT, PAGE_READWRITE); // +Execute
+      if not Assigned(pNewBuffer) then
+        raise Exception.Create(Format('VirtualAlloc le:%d', [GetLastError()]));
+
+      // Copy our buffer (string) using an unrelated Windows API (e.g. ReadProcessMemory)
+      var pDestOffset : PSIZE_T;
+
+      for var I := 0 to AStringSize -1 do begin
+        pDestOffset := Pointer(NativeUInt(pNewBuffer) + I);
+        ///
+
+        ReadProcessMemory(GetCurrentProcess(), pNewBuffer, pDummyBuffer, PByte(NativeUInt(AString) + I)^, pDestOffset^);
+      end;
+
+      ///
+      WriteLn(Format('Indirectly Copied String (ReadProcessMemory): "%s"', [String(PWideChar(pNewBuffer))]));
+
+      //
+      // Example 2: ReadFile
+      //
+
+      AString := '@DarkCoderSc'; // Keep same size as for "Hello, World" to prevent re-allocating memory for our example
+
+      var hFile := CreateFileW(PWideChar(GetModuleName(0)), GENERIC_READ, FILE_SHARE_READ, nil, OPEN_ALWAYS, 0, 0);
+      if hFile = INVALID_HANDLE_VALUE then
+        raise Exception.Create(Format('CreateFileW le:%d', [GetLastError()]));
+      try
+        for var I := 0 to AStringSize -1 do begin
+          pDestOffset := Pointer(NativeUInt(pNewBuffer) + I);
+          ///
+
+          ReadFile(hFile, PByte(pDummyBuffer)^, PByte(NativeUInt(AString) + I)^, pDestOffset^, nil);
+        end;
+
+        ///
+        WriteLn(Format('Indirectly Copied String (ReadFile): "%s"', [String(PWideChar(pNewBuffer))]));
+      finally
+        CloseHandle(hFile);
+      end;
+
+      ///
+      Readln;
+    finally
+      if Assigned(pNewBuffer) then
+        VirtualFree(pNewBuffer, AStringSize, MEM_RELEASE);
+
+      if Assigned(pDummyBuffer) then
+        FreeMem(pDummyBuffer, High(Byte));
+    end;
+  except
+    on E: Exception do
+      Writeln(E.ClassName, ' -> Error: ', E.Message);
+  end;
+end.

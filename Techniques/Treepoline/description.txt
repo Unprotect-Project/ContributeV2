@@ -1,0 +1,5 @@
+Tree-view controls are a type of user interface element that is used to display hierarchical data in a graphical user interface (GUI). They are commonly used in Windows applications and allow users to navigate and explore complex data structures.
+
+To display its content, a tree-view control must sort the items it shows. The sorting routine for a tree-view control can be controlled and modified using a TVSORTCB structure, which includes a field called lpfnCompare that points to a callback function. This callback function is called anytime a comparison between tree elements is required.
+
+By sending a TVM_SORTCHILDRENCB message to a tree-view control, it is possible to specify the callback function that should be used to sort the tree-view's elements. When the tree-view control executes the specified callback function, it is possible to execute arbitrary code or perform other actions. This technique can be used to compromise the host system or cause harm in other ways. It is important to note that manipulating the callback function in this way is likely to be detected by security systems and may result in the host system being compromised.

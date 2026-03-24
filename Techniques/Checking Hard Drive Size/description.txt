@@ -1,0 +1,1 @@
+Many user machines have hard drives that are larger than 80GB. A malware program can detect whether it is running in a virtual environment by checking the size of the hard drive. If the size is less than 80GB, it is likely that the program is running in a sandbox or virtual environment.

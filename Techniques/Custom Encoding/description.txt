@@ -1,0 +1,5 @@
+Malware often uses custom encoding schemes to conceal their payloads and avoid detection. These custom schemes can be full custom layers, or they can be variations of known algorithms such as XOR or Base64. Using custom encoding schemes allows malware to encode their payloads in a unique way that can be difficult for security tools and forensic investigators to detect. 
+
+In some cases, the custom encoding scheme may be a combination of different algorithms, such as using XOR to encrypt the payload and then using Base64 to encode the resulting ciphertext. This can make the encoded payload even more difficult to detect and analyze.
+
+To safeguard payloads and communication channels, multiple data encoding operations (e.g., XOR, ADD, SUB, ROL, and ROR) can also be chained together with a randomly generated key. These operations are not only simple to execute and reverse but also demand minimal computing resources.

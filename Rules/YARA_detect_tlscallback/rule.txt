@@ -1,0 +1,10 @@
+rule detect_tlscallback {
+    meta:
+        description = "Simple rule to detect tls callback as anti-debug."
+        author = "Thomas Roccia | @fr0gger_"
+    strings:
+        $str1 = "TLS_CALLBACK" nocase
+        $str2 = "TLScallback" nocase
+    condition:
+        uint32(uint32(0x3C)) == 0x4550 and any of them
+}

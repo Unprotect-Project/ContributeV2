@@ -1,0 +1,47 @@
+#include &lt;Winternl.h&gt;
+#include &lt;Windows.h&gt;
+#include &lt;tchar.h&gt;
+#include &lt;stdio.h&gt;
+
+/*
+*Using ZwQueryInformationProcess we get the PEB Address and 
+*then we check the NtGlobalFlag to determine the process is being debugged or not.
+*/
+
+int main() {
+     
+    typedef unsigned long(__stdcall *pfnZwQueryInformationProcess)
+    (
+        IN  HANDLE,
+        IN  unsigned int, 
+        OUT PVOID, 
+        IN  ULONG, 
+        OUT PULONG
+    );
+    pfnZwQueryInformationProcess ZwQueryInfoProcess = NULL;
+     
+    HMODULE hNtDll = LoadLibrary(_T(&quot;ntdll.dll&quot;));
+    if (hNtDll == NULL) { }
+ 
+    ZwQueryInfoProcess = (pfnZwQueryInformationProcess) GetProcAddress(hNtDll,
+        &quot;ZwQueryInformationProcess&quot;);
+    if (ZwQueryInfoProcess == NULL) { }
+    unsigned long status;
+ 
+    DWORD pid = GetCurrentProcessId();
+    HANDLE hProcess = OpenProcess(PROCESS_QUERY_INFORMATION, FALSE, pid);
+    PROCESS_BASIC_INFORMATION pbi;
+    status = ZwQueryInfoProcess(hProcess,
+                                ProcessBasicInformation,
+                                &amp;pbi,
+                                sizeof(pbi),
+                                NULL);
+                                 
+    PPEB peb_addr = pbi.PebBaseAddress;
+    DWORD ptr = pbi.PebBaseAddress;
+    ptr|=104;
+    DWORD *temp = ptr;
+    MessageBox(0, *temp ? &quot;Debugger found&quot; : &quot;Debugger not found&quot;,&quot;Status&quot;,0x30);
+     
+    return 0;
+}

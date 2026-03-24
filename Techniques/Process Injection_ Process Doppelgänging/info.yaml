@@ -1,0 +1,16 @@
+name: "Process Injection: Process Doppelg\xE4nging"
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1055/013/
+tags:
+- Defense Evasion
+- Privilege Escalation
+- Windows Transactional NTFS (TxF)
+- TxF application programming interface (API)
+- file-less variation of Process Injection
+- replacing memory of a legitimate process with malicious code
+- TxF transaction
+- evade detection from security products
+- mimic legitimate process
+- abuse NTFS transactions

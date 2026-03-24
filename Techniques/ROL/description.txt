@@ -1,0 +1,5 @@
+ROL, or Rotate Left, is a simple encoding algorithm similar to the Caesar Cipher. In the ROL algorithm, each letter of the plaintext is replaced with a letter that is a fixed number of positions down the alphabet. For example, if the rotation value is 3, then the letter "A" would be replaced with "D", "B" would be replaced with "E", and so on. 
+
+ROL is a monoalphabetic substitution cipher, meaning that each letter of the plaintext is replaced with the same letter of the ciphertext every time it appears. This makes ROL relatively easy to break, as frequency analysis can be used to determine the rotation value and decrypt the ciphertext. 
+
+Despite its weaknesses, ROL is still a popular algorithm for teaching the basics of cryptography. In the context of malware, ROL can be used to encode the payload or communication channels in order to avoid detection and analysis.

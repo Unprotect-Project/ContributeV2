@@ -1,0 +1,3 @@
+A lolbin (short for "Living Off the Land Binaries") is a legitimate Windows utility that can be used by adversaries to execute arbitrary commands. Various Windows utilities may be used to execute commands, possibly without invoking cmd. For example, the Program Compatibility Assistant (pcalua.exe) and components of the Windows Subsystem for Linux (WSL) are examples of lolbins that can be used for this purpose.
+
+Adversaries may abuse these utilities for Defense Evasion, specifically to perform arbitrary execution while subverting detections and/or mitigation controls (such as Group Policy) that limit/prevent the usage of cmd.

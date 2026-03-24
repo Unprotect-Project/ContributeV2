@@ -1,0 +1,16 @@
+# Navigate to the debug log directory
+cd /data/var/dlogs/
+
+# Remove specific entries from debug logs
+sed -i '/segfault/d' debuglog
+sed -i '/segfault/d' debuglog.old
+sed -i '/SystemError/d' debuglog
+sed -i '/SystemError/d' debuglog.old
+sed -i '/ifttls/d' debuglog
+sed -i '/ifttls/d' debuglog.old
+sed -i '/main.cc/d' debuglog
+sed -i '/main.cc/d' debuglog.old
+sed -i '/SSL_read/d' debuglog
+sed -i '/SSL_read/d' debuglog.old
+sed -i '/tlsconnectionpoint/d' debuglog
+sed -i '/tlsconnectionpoint/d' debuglog.old

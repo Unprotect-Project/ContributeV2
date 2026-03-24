@@ -1,0 +1,5 @@
+Killing the Windows Event Log is a technique used by malware to prevent security professionals from detecting and analyzing it. Svchost.exe is a process that manages services on Windows operating systems. 
+
+By grouping multiple services into a single process, Svchost.exe conserves computing resources and reduces resource consumption. However, this also means that Svchost.exe manages the Event Log service, which is responsible for collecting logs on the system. 
+
+By targeting the Event Log service and killing the threads responsible for it, malware can prevent the system from collecting logs, making it more difficult for security professionals to detect and analyze the malware.

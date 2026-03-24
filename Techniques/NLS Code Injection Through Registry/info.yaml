@@ -1,0 +1,32 @@
+name: NLS Code Injection Through Registry
+categories:
+- Process Manipulating
+resources:
+- https://github.com/NtQuerySystemInformation/NlsCodeInjectionThroughRegistry
+tags:
+- Dll injection
+- registry modification
+- NLS code page ID
+- SetThreadLocale
+- NlsDllCodePageTranslation
+- SetConsoleCp
+- SetConsoleOutputCP
+- AllocConsole
+- malware
+- proof of concept
+- position-independent shellcode
+- remote process
+- stager
+- loading of DLL
+featured_apis:
+- CreateRemoteThread
+- VirtualAlloc
+- VirtualAllocEx
+- WriteProcessMemory
+- CreateProcessW
+- RegSetValueExW
+- RegOpenKeyExW
+- RegQueryInfoKeyW
+- RegEnumValueW
+contributors:
+- fr0gger

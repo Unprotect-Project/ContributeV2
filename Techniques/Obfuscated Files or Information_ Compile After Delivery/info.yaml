@@ -1,0 +1,11 @@
+name: 'Obfuscated Files or Information: Compile After Delivery'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1027/004/
+tags:
+- Defense Evasion
+- uncompiled code
+- compile malicious code
+- execute malicious code
+- encrypted malicious code

@@ -1,0 +1,10 @@
+rule DebuggerCheck__RemoteAPI {
+    meta:
+        description = "Rule to RemoteAPI debugger check"
+        author = "Thibault Seret"
+        date = "2020-09-26"
+    strings:
+        $s1 ="CheckRemoteDebuggerPresent"
+    condition:
+        any of them
+}

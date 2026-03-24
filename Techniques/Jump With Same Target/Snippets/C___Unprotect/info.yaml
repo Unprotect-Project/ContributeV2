@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Jump With Same Target
+target_operating_system: windows

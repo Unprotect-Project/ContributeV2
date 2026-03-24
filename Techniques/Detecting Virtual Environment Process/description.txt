@@ -1,0 +1,3 @@
+Process related to Virtualbox can be detected by malware by query the process list.
+
+The VMware Tools use processes like VMwareServices.exe or VMwareTray.exe, to perform actions on the virtual environment. A malware can list the process and searches for the VMware string. Process: VMwareService.exe, VMwareTray.exe, TPAutoConnSvc.exe, VMtoolsd.exe, VMwareuser.exe.

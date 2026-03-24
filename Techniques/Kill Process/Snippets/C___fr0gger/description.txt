@@ -1,0 +1,1 @@
+Using the `CreateToolhelp32Snapshot` API, it is possible to list the running process and compare it with a blacklist to kill them.

@@ -1,0 +1,23 @@
+ConfuserEx is a open-source protector for .NET applications. It is the successor of Confuser project. It's primarily designed to make reverse engineering difficult for applications written in .NET languages like C# and VB.NET. ConfuserEx does this by using a variety of techniques like symbol renaming, control flow obfuscation, and encryption of strings and resources.
+
+- Supports .NET Framework 2.0/3.0/3.5/4.0/4.5/4.6/4.7/4.8
+
+- Symbol renaming (Support WPF/BAML)
+
+- Protection against debuggers/profilers
+
+- Protection against memory dumping
+
+- Protection against tampering (method encryption)
+
+- Control flow obfuscation
+
+- Constant/resources encryption
+
+- Reference hiding proxies
+
+- Disable decompilers
+
+- Embedding dependency
+
+- Compressing output

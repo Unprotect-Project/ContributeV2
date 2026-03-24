@@ -1,0 +1,1 @@
+QEMU has the CPU brand value of "QEMU Virtual CPU" if KVM is not based on the VM

@@ -1,0 +1,43 @@
+VOID StartSys(LPCSTR chSysPath)
+{
+	NTSTATUS St;
+	BOOL bRet = FALSE;
+	HKEY hKey;
+	CHAR chRegPath[MAX_PATH];
+	WCHAR wcLoadDrv[MAX_PATH];
+	CHAR chImagePath[MAX_PATH] = "\\??\\";
+	UNICODE_STRING usStr;
+	DWORD dwType;
+
+	GetPrivilege(SE_LOAD_DRIVER_PRIVILEGE);
+
+	DbgPrint(__FUNCTION__"(): driver path '%s'\n",chSysPath);
+
+	DWORD dwId = GetTickCount();
+
+	_snprintf(chRegPath,RTL_NUMBER_OF(chRegPath)-1,"system\\currentcontrolset\\services\\%x", dwId);
+	_snwprintf(wcLoadDrv,RTL_NUMBER_OF(wcLoadDrv)-1,L"\\registry\\machine\\system\\currentcontrolset\\services\\%x", dwId);
+
+	strncat(chImagePath,chSysPath,sizeof(chImagePath));
+	if (RegCreateKey(HKEY_LOCAL_MACHINE,chRegPath,&hKey) == ERROR_SUCCESS)
+	{
+		RegSetValueEx(hKey,"ImagePath",0,REG_SZ,(LPBYTE)&chImagePath,strlen(chImagePath)+1);
+
+		dwType = SERVICE_KERNEL_DRIVER;
+		RegSetValueEx(hKey,"Type",0,REG_DWORD,(LPBYTE)&dwType,sizeof(DWORD));
+
+		dwType = SERVICE_DEMAND_START;
+		RegSetValueEx(hKey,"Start",0,REG_DWORD,(LPBYTE)&dwType,sizeof(DWORD));
+
+		RegCloseKey(hKey);
+
+		RtlInitUnicodeString(&usStr,wcLoadDrv);
+		St = NtLoadDriver(&usStr);
+
+		DbgPrint(__FUNCTION__"(): NtLoadDriver status %x\n",St);
+	}
+	else
+	{
+		DbgPrint(__FUNCTION__"(): RegCreateKey last error %x\n",GetLastError());
+	}
+}

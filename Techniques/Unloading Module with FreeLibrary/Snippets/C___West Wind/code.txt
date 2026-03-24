@@ -1,0 +1,8 @@
+#include <windows.h>
+
+int main()
+{
+  HMODULE hLibModule = GetModuleHandleA("av_edr_dllName.dll");
+  FreeLibrary(hLibModule);
+  return 0;
+}

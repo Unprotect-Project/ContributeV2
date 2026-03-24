@@ -1,0 +1,1 @@
+NtLoadDriver technique used by Caberp malware.

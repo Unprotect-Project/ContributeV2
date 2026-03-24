@@ -1,0 +1,709 @@
+rule ASProtect_v123_RC1: PEiD
+{
+    strings:
+        $a = { 68 01 ?? ?? 00 E8 01 00 00 00 C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v123_RC4_build_0807_dll_Alexey_Solodovnikov_h_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v123_RC4_build_0807_exe_Alexey_Solodovnikov_h: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB ?? ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+        $b = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB ?? ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASProtect_130824_beta: PEiD
+{
+    strings:
+        $a = { 68 01 ?? 40 00 E8 01 00 00 00 C3 C3 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 89 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v12_Alexey_Solodovnikov_h1: PEiD
+{
+    strings:
+        $a = { 90 60 E8 1B 00 00 00 E9 FC 8D B5 0F 06 00 00 8B FE B9 97 00 00 00 AD 35 78 56 34 12 AB 49 75 F6 EB 04 5D 45 55 C3 E9 ?? ?? ?? 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_vxx: PEiD
+{
+    strings:
+        $a = { 60 ?? ?? ?? ?? ?? 90 5D ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 03 DD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_vxx_additional: PEiD
+{
+    strings:
+        $a = { 90 60 90 E8 00 00 00 00 5D 81 ED D1 27 40 00 B9 15 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_ASProtect_Anorganix_additional: PEiD
+{
+    strings:
+        $a = { 60 90 90 90 90 90 90 5D 90 90 90 90 90 90 90 90 90 90 90 03 DD E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_23_SKE_build_0426_Beta_additional: PEiD
+{
+    strings:
+        $a = { 68 01 60 40 00 E8 01 00 00 00 C3 C3 0D 6C 65 3E 09 84 BB 91 89 38 D0 5A 1D 60 6D AF D5 51 2D A9 2F E1 62 D8 C1 5A 8D 6B 6E 94 A7 F9 1D 26 8C 8E FB 08 A8 7E 9D 3B 0C DF 14 5E 62 14 7D 78 D0 6E }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_2122_dll_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v123_RC4_build_0807_dll_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v12x_New_Strain_additional: PEiD
+{
+    strings:
+        $a = { 68 01 ?? ?? ?? E8 01 ?? ?? ?? C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_23_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 E5 0B 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v11_BRS_additional: PEiD
+{
+    strings:
+        $a = { 60 E9 ?? 05 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v_If_you_know_this_version_post_on_PEiD_board: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? 00 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 DD 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v12x_additional: PEiD
+{
+    strings:
+        $a = { 00 00 68 01 ?? ?? ?? C3 AA }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_V2X_DLL_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 ?? ?? 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ?? ?? ?? ?? 03 DD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v132: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v_If_you_know_this_version_post_on_PEiD_board_h2_additional: PEiD
+{
+    strings:
+        $a = { 33 C0 E9 ?? ?? FF FF ?? 1C ?? ?? 40 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_12_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 68 01 ?? ?? ?? C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_23_Alexey_Solodovnikov_h: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 E5 0B 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v12_Alexey_Solodovnikov_h1_additional: PEiD
+{
+    strings:
+        $a = { 90 ?? 90 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 90 FF E0 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v20_additional: PEiD
+{
+    strings:
+        $a = { 68 01 ?? 40 00 E8 01 00 00 00 C3 C3 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 3B ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 2C }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v123_RC4_build_0807_exe_Alexey_Solodovnikov_h_additional: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB ?? ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_123_RC4_build_0807_exe_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB ?? ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v20: PEiD
+{
+    strings:
+        $a = { 68 01 ?? 40 00 E8 01 00 00 00 C3 C3 }
+        $b = { 68 01 ?? 40 00 E8 01 00 00 00 C3 C3 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 3B ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 2C }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASProtect_v12x_New_Strain: PEiD
+{
+    strings:
+        $a = { 68 01 ?? ?? ?? E8 01 ?? ?? ?? C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v11_BRS: PEiD
+{
+    strings:
+        $a = { 68 01 }
+        $b = { 60 E9 ?? 05 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASProtect_123_RC4_build_0807_dll_Alexey_Solodovnikov_h: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_10_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E8 01 00 00 00 90 5D 81 ED ?? ?? ?? 00 BB ?? ?? ?? 00 03 DD 2B 9D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_21x_dll_Alexey_Solodovnikov_h_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_2122_exe_Alexey_Solodovnikov_h: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C 00 }
+        $b = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C }
+        $c = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASProtect_V2X_Registered_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 68 01 ?? ?? ?? E8 01 00 00 00 C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_ASProtect: PEiD
+{
+    strings:
+        $a = { 60 90 90 90 90 90 90 5D 90 90 90 90 90 90 90 90 90 90 90 03 DD E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v123_RC1_additional: PEiD
+{
+    strings:
+        $a = { 53 60 BD ?? ?? ?? ?? 8D 45 ?? 8D 5D ?? E8 ?? ?? ?? ?? 8D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_11_MTE_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E9 ?? ?? ?? ?? 91 78 79 79 79 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_2122_exe_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v123_RC4_build_0807_dll_Alexey_Solodovnikov_h: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+        $b = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASProtect_v_If_you_know_this_version_post_on_PEiD_board_h2: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? 00 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 DD 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+        $b = { 33 C0 E9 ?? ?? FF FF ?? 1C ?? ?? 40 }
+        $c = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? 00 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 DD 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASProtect_SKE_21x_exe_Alexey_Solodovnikov_h_additional: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB ?? ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_02_ASProtect: PEiD
+{
+    strings:
+        $a = { 60 90 90 90 90 90 90 5D 90 90 90 90 90 90 90 90 90 90 90 03 DD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v21x: PEiD
+{
+    strings:
+        $a = { BB E9 60 9C FC BF B9 F3 AA 9D 61 C3 55 8B }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_123_RC4_build_0807_exe_Alexey_Solodovnikov_h_additional: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB ?? ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_ASProtect_Anorganix: PEiD
+{
+    strings:
+        $a = { 60 90 90 90 90 90 90 5D 90 90 90 90 90 90 90 90 90 90 90 03 DD E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_2122_dll_Alexey_Solodovnikov_h: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C 00 }
+        $b = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule AHTeam_EP_Protector_03_fake_ASProtect_10_FEUERRADER: PEiD
+{
+    strings:
+        $a = { 90 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 90 FF E0 60 E8 01 00 00 00 90 5D 81 ED 00 00 00 00 BB 00 00 00 00 03 DD 2B 9D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_2122_dll_Alexey_Solodovnikov_h_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v11_MTEb_additional: PEiD
+{
+    strings:
+        $a = { 90 60 E9 ?? 04 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_133_21_Registered_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 68 01 ?? ?? ?? E8 01 00 00 00 C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_20: PEiD
+{
+    strings:
+        $a = { 68 01 ?? 40 00 E8 01 00 00 00 C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_23_SKE_build_0426_Beta: PEiD
+{
+    strings:
+        $a = { 68 01 60 40 00 E8 01 00 00 00 C3 C3 0D 6C 65 3E 09 84 BB 91 89 38 D0 5A 1D 60 6D AF D5 51 2D A9 2F E1 62 D8 C1 5A 8D 6B 6E 94 A7 F9 1D 26 8C 8E FB 08 A8 7E 9D 3B 0C DF 14 5E 62 14 7D 78 D0 6E }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v11_additional: PEiD
+{
+    strings:
+        $a = { 90 60 E8 1B ?? ?? ?? E9 FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v11_MTEc: PEiD
+{
+    strings:
+        $a = { 90 60 E8 1B ?? ?? ?? E9 FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v11_MTEb: PEiD
+{
+    strings:
+        $a = { 90 60 E8 1B E9 }
+        $b = { 90 60 E9 ?? 04 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASProtect_v123_RC4_build_0807_exe_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB ?? ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+        $b = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB ?? ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASProtect_20_additional: PEiD
+{
+    strings:
+        $a = { 68 01 ?? 40 00 E8 01 00 00 00 C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_123_RC4_build_0807_exe_Alexey_Solodovnikov_h: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB ?? ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_11_BRS_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E9 ?? 05 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v10_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 01 00 00 00 E8 83 C4 04 E8 01 00 00 00 E9 5D 81 ED D3 22 40 00 E8 04 02 00 00 E8 EB 08 EB 02 CD 20 FF 24 24 9A 66 BE 47 46 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v12x: PEiD
+{
+    strings:
+        $a = { 00 00 68 01 ?? ?? ?? C3 AA }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_V2X_DLL_Alexey_Solodovnikov_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 ?? ?? 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ?? ?? ?? ?? 03 DD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PseudoSigner_02_ASProtect: PEiD
+{
+    strings:
+        $a = { 60 90 90 90 90 90 90 5D 90 90 90 90 90 90 90 90 90 90 90 03 DD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_21x_dll_Alexey_Solodovnikov_h: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PseudoSigner_02_ASProtect_Anorganix: PEiD
+{
+    strings:
+        $a = { 60 90 90 90 90 90 90 5D 90 90 90 90 90 90 90 90 90 90 90 03 DD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_123_RC4_build_0807_dll_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_23_Alexey_Solodovnikov_h_additional: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 E5 0B 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_21x_dll_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v11_MTE: PEiD
+{
+    strings:
+        $a = { 60 E9 ?? ?? ?? ?? 91 78 79 79 79 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v10: PEiD
+{
+    strings:
+        $a = { 60 E8 01 ?? ?? ?? 90 5D 81 ED ?? ?? ?? ?? BB ?? ?? ?? ?? 03 DD 2B 9D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v11: PEiD
+{
+    strings:
+        $a = { 60 E9 ?? 04 ?? ?? E9 ?? ?? ?? ?? ?? ?? ?? EE }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v12: PEiD
+{
+    strings:
+        $a = { 68 01 C3 AA ?? }
+        $b = { 68 01 ?? ?? ?? C3 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASProtect_v_If_you_know_this_version_post_on_PEiD_board_additional: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? 00 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 DD 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_21x_exe_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+        $b = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB ?? ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 B8 F8 C0 A5 23 50 50 03 45 4E 5B 85 C0 74 1C EB 01 E8 81 FB F8 C0 A5 23 74 35 33 D2 56 6A 00 56 FF 75 4E FF D0 5E 83 FE 00 75 24 33 D2 8B 45 41 85 C0 74 07 52 52 FF 75 35 FF D0 8B 45 35 85 C0 74 0D 68 00 80 00 00 6A 00 FF 75 35 FF 55 3D 5B 0B DB 61 75 06 6A 01 58 C2 0C 00 33 C0 F7 D8 1B C0 40 C2 0C 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASProtect_v12_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 90 60 E8 1B 00 00 00 E9 FC 8D B5 0F 06 00 00 8B FE B9 97 00 00 00 AD 35 78 56 34 12 AB 49 75 F6 EB 04 5D 45 55 C3 E9 ?? ?? ?? 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_11_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E9 ?? 04 00 00 E9 ?? ?? ?? ?? ?? ?? ?? EE }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v12_additional: PEiD
+{
+    strings:
+        $a = { 68 01 ?? ?? 00 E8 01 00 00 00 C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_123_RC4_130824_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 68 01 ?? ?? 00 E8 01 00 00 00 C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v11_MTEc_additional: PEiD
+{
+    strings:
+        $a = { 33 C0 BE ?? ?? 8B D8 B9 ?? ?? BF ?? ?? BA ?? ?? 47 4A 74 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_2122_exe_Alexey_Solodovnikov_h_additional: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_133_21_Registered_Alexey_Solodovnikov_additional: PEiD
+{
+    strings:
+        $a = { 68 01 ?? ?? ?? E8 01 00 00 00 C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_SKE_21x_exe_Alexey_Solodovnikov_h: PEiD
+{
+    strings:
+        $a = { 90 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 ED 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_123_RC4_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 68 01 F0 58 00 E8 01 00 00 00 C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_123_RC4_build_0807_dll_Alexey_Solodovnikov_h_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 ?? ?? ?? 80 7D 4D 01 75 0C 8B 74 24 28 83 FE 01 89 5D 4E 75 31 8D 45 53 50 53 FF B5 D5 09 00 00 8D 45 35 50 E9 82 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PseudoSigner_01_ASProtect_Anorganix: PEiD
+{
+    strings:
+        $a = { 60 90 90 90 90 90 90 5D 90 90 90 90 90 90 90 90 90 90 90 03 DD E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_02_ASProtect_Anorganix: PEiD
+{
+    strings:
+        $a = { 60 90 90 90 90 90 90 5D 90 90 90 90 90 90 90 90 90 90 90 03 DD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_122_123_Beta_21_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 68 01 E0 46 00 E8 01 00 00 00 C3 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASProtect_v11_MTE_additional: PEiD
+{
+    strings:
+        $a = { 60 E9 ?? ?? ?? ?? 91 78 79 79 79 E9 }
+    condition:
+        $a at pe.entry_point
+
+}

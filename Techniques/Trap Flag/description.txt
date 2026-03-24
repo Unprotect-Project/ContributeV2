@@ -1,0 +1,1 @@
+There is a Trap Flag in the Flags register. Bit number 8 of the EFLAGS register is the trap flag. When the Trap Flag is set, a SINGLE_STEP exception is generated.

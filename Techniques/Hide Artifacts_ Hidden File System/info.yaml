@@ -1,0 +1,17 @@
+name: 'Hide Artifacts: Hidden File System'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1564/005/
+tags:
+- Defense Evasion
+- FAT
+- NTFS
+- ext4
+- APFS
+- Volume Boot Record (VBR)
+- Master File Table (MFT)
+- virtual file systems
+- portable partition image
+- reserved disk space
+- file fragmentation

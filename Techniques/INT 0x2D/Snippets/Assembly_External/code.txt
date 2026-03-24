@@ -1,0 +1,12 @@
+BOOL IsDebuggerPresent_Int2d()
+{
+    __try
+    { 
+        __asm int 0x2d 
+    }
+    __except(1)
+    {
+        return FALSE;
+    }
+    return TRUE;
+}

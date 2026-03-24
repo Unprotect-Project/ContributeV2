@@ -1,0 +1,16 @@
+name: 'Impair Defenses: Disable or Modify Tools'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1562/001/
+tags:
+- Defense Evasion
+- bypass event aggregation
+- bypass analysis mechanisms
+- bypass security tools
+- bypass anti-tampering
+- disable updates
+- APT29
+- artifact tampering
+- GMER
+- driver exploitation

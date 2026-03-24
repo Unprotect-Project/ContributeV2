@@ -1,0 +1,30 @@
+Disassembly desynchronization is a technique that is used to prevent disassemblers from accurately reconstructing the original instructions of a program. It involves the creative use of instructions and data in a way that breaks the normal, predictable sequence of instructions in a program. This can cause disassemblers to become "desynchronized" and generate incorrect disassembly output.
+
+For example, suppose a program contains the following instructions:
+
+```assembly
+mov eax, 0x12345678
+add eax, 0x00000004
+```
+
+A disassembler that is working correctly would recognize these instructions and generate the following disassembly output:
+
+```assembly
+0x00000000: mov eax, 0x12345678
+0x00000004: add eax, 0x00000004
+```
+
+However, if the programmer uses disassembly desynchronization techniques, they could rearrange the instructions in the program in a way that breaks the normal sequence of instructions. For example, they could insert some "garbage" instructions or data between the `mov` and `add` instructions, like this:
+
+```assembly
+mov eax, 0x12345678
+nop
+nop
+nop
+nop
+add eax, 0x00000004
+```
+
+In this case, a disassembler that uses a simple, linear sweep algorithm might become "desynchronized" when it encounters the nop instructions and generate incorrect disassembly output. This can make it difficult for an analyst to understand the program's behavior and can also make it more difficult for other tools, such as debuggers, to accurately interpret the program.
+
+Disassembly desynchronization is a well-known anti-disassembly technique that is commonly used by malware authors and other attackers to make it more difficult to analyze and understand their programs. It can be used in conjunction with other anti-disassembly techniques, such as the call trick or the insertion of garbage bytes, to create even more effective and powerful exploits.

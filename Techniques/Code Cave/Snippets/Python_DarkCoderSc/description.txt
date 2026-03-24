@@ -1,0 +1,7 @@
+* `-f / --file` : Valid PE File location (Ex: /path/to/calc.exe).
+* `-p / --payload` : Shellcode Payload (Example: \"\\x01\\x02\\x03...\\x0a\").
+* `-x / --encrypt` : Encrypt main section (entry point section).
+* `-k / --encryption-key` : Define custom encryption key (1 Byte only).
+* `-c / --cave-opcodes` : Define code opcode list to search for.
+* `-s / --cave-min-size` : Minimum size of region to be considered as code cave.
+* `-e / --egg` : Define a custom egg name (ESP Restore Mechanism).

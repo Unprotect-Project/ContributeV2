@@ -1,0 +1,4 @@
+language: Assembly
+contributors: Unprotect
+associated_technique: Register Reassignment
+target_operating_system: windows

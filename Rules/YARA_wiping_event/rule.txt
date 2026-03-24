@@ -1,0 +1,22 @@
+rule UNPROTECT_wiping_event
+{
+    meta:
+        description = "Rule to detect wiping events logs"
+        author = "McAfee ATR team | Thomas Roccia"
+        date = "2020-11-10"
+        rule_version = "v1"
+        mitre = "T1070"
+        hash = "c063c86931c662c1a962d08915d9f3a8"
+
+    strings:
+        $s1 = "wevtutil.exe" ascii wide nocase
+        $s2 = "cl Application" ascii wide nocase
+        $s3 = "cl System" ascii wide nocase
+        $s4 = "cl Setup" ascii wide nocase
+        $s5 = "cl Security" ascii wide nocase
+        $s6 = "sl Security /e:false" ascii wide nocase
+        $s7= "usn deletejournal /D" ascii wide nocase
+
+    condition:
+        uint16(0) == 0x5a4d and 4 of them
+}

@@ -1,0 +1,5 @@
+name: CheckRemoteDebuggerPresent
+categories:
+- Anti-Debugging
+resources:
+- https://msdn.microsoft.com/en-us/library/windows/desktop/ms679280(v=vs.85).aspx

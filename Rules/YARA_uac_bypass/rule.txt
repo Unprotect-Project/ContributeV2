@@ -1,0 +1,32 @@
+rule UNPROTECT_UAC_Bypass_Strings {
+    meta:
+        description = "Rule to detect UAC bypass attempt by regarding strings"
+        author = "Thibault Seret"
+        date = "2020-04-10"
+    strings:
+        $s1 = "SeIncreaseQuotaPrivilege" ascii fullword
+        $s2 = "SeSecurityPrivilege" ascii fullword
+        $s3 = "SeTakeOwnershipPrivilege" ascii fullword
+        $s4 = "SeLoadDriverPrivilege" ascii fullword
+        $s5 = "SeSystemProfilePrivilege" ascii fullword
+        $s6 = "SeSystemtimePrivilege" ascii fullword
+        $s7 = "SeProfileSingleProcessPrivilege" ascii fullword
+        $s8 = "SeIncreaseBasePriorityPrivilege" ascii fullword
+        $s9 = "SeCreatePagefilePrivilege" ascii fullword
+        $s10 = "SeBackupPrivilege" ascii fullword
+        $s11 = "SeRestorePrivilege" ascii fullword
+        $s12 = "SeShutdownPrivilege" ascii fullword
+        $s13 = "SeDebugPrivilege" ascii fullword
+        $s14 = "SeSystemEnvironmentPrivilege" ascii fullword
+        $s15 = "SeChangeNotifyPrivilege" ascii fullword
+        $s16 = "SeRemoteShutdownPrivilege" ascii fullword
+        $s17 = "SeUndockPrivilege" ascii fullword
+        $s18 = "SeManageVolumePrivilege" ascii fullword
+        $s19 = "SeImpersonatePrivilege" ascii fullword
+        $s20 = "SeCreateGlobalPrivilege" ascii fullword
+        $s21 = "SeIncreaseWorkingSetPrivilege" ascii fullword
+        $s22 = "SeTimeZonePrivilege" ascii fullword
+        $s23 = "SeCreateSymbolicLinkPrivilege" ascii fullword
+    condition:
+        5 of them
+}

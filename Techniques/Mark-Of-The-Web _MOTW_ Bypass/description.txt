@@ -1,0 +1,13 @@
+Mark-of-the-Web (MOTW) is a security feature originally introduced by Internet Explorer. When downloading a file, Internet Explorer creates an ADS named Zone.Identifier and adds a ZoneId to this stream to indicate from which zone the file originates. It is used on Windows OS to trigger a Windows Defender SmartScreen detection and raise an alert to the user about the file. 
+
+The following ZoneId values may be used in a Zone.Identifier ADS:
+
+* 0 Local computer
+* 1 Local intranet
+* 2 Trusted sites
+* 3 Internet
+* 4 Restricted sites
+
+In some cases, the Alternate Data Stream will be `SmartScreen` with the value `anaheim`. To bypass this security feature malware authors can use file format that does not manage the MOTW such as ISO or VHD file. 
+
+Using `git clone` can also be an alternative as a file cloned from GitHub with the Git client does not have a Zone.Identifier ADS.

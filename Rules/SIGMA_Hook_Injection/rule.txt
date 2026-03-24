@@ -1,0 +1,23 @@
+title: Hook Injection Detection
+description: Detects instances of hook injection in Windows
+author: Unprotect
+references:
+- https://en.wikipedia.org/wiki/Hooking
+- https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-setwindowhookexe
+- https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-unhookwindowshookex
+- https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-callnexthookex
+tags:
+- attack.persistence
+- attack.t1179
+- malware.generic
+
+# Check for the presence of the SetWindowsHookEx function, which is often used to install hooks
+- 'SetWindowsHookExA'
+- 'SetWindowsHookExW'
+
+# Check for the presence of the UnhookWindowsHookEx function, which is often used to remove hooks
+- 'UnhookWindowsHookEx'
+
+# Check for the presence of the CallNextHookEx function, which is often used in hook functions
+- 'CallNextHookEx'
+This rule uses string matching to look for the presence of specific functions that are commonly used in hook injection. If any of these functions are found in a scanned file, the rule will match and the code will be detected as potentially using hook injection. As with the YARA rule, this is just an example and more advanced rules may be needed for more robust detection.

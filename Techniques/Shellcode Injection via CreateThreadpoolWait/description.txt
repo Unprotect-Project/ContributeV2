@@ -1,0 +1,17 @@
+Shellcode injection is a technique used by malware to execute arbitrary code within the context of a targeted process. One method of achieving this is through the use of the `CreateThreadpoolWait` function, which is a part of the Windows thread pool API.
+
+In the context of shellcode injection, `CreateThreadpoolWait` is used to create a wait object that is associated with a thread pool. The malware can then use this wait object to execute its shellcode within the context of the targeted process, by passing the shellcode as a callback function to the `CreateThreadpoolWait` function.
+
+Here is a summary of the steps:
+
+1. The malware creates an event object with the `CreateEvent` function, and sets it to the Signaled state.
+
+2. The malware allocates read-write-execute (RWX) memory for the shellcode using the `VirtualAlloc` function and writes the shellcode to this memory.
+
+3. The malware creates a wait object using the `CreateThreadpoolWait` function and specifies the address of the shellcode as the callback function.
+
+4. The malware sets the wait object using the `SetThreadpoolWait` function.
+
+5. The malware waits for the wait object to become signaled using the `WaitForSingleObject` function. When the wait object is signaled, the callback function (which contains the shellcode) is executed.
+
+Other techniques injection includes using APIs such as `CreateRemoteThread`, `QueueUserWorkItem`, and `NtCreateThreadEx`.

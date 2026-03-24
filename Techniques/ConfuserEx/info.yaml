@@ -1,0 +1,9 @@
+name: ConfuserEx
+categories:
+- Packers
+resources:
+- https://github.com/mkaring/ConfuserEx
+- https://cod3nym.github.io/Detecting-Stealthy-ConfuserEx-with-Yara
+contributors:
+- fr0gger
+- Jonathan Peters

@@ -1,0 +1,15 @@
+name: DLL Proxying
+categories:
+- Process Manipulating
+resources:
+- https://www.ired.team/offensive-security/persistence/dll-proxying-for-persistence
+- https://itm4n.github.io/dll-proxying/
+- https://github.com/Sh0ckFR/DLLirant
+tags:
+- DLL proxying
+- Code obfuscation
+- Persistence
+- DLL redirection
+- Stealth operation
+contributors:
+- Sh0ckFR

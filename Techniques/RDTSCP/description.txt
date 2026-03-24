@@ -1,0 +1,3 @@
+Newer processors support a new instruction called RDTSCP which does the exact same thing as RDTSC, except that it does so serializing (meaning it waits for all instructions to execute before reading the counter. and that the possible reordering of the execution of the instructions is won that does not happen). 
+
+This instruction can be used to calculate the delta of the timestamp counter in the same way as RDTSC and thus detect whether the program is being debugged, emulated or executed in a virtual environment.

@@ -1,0 +1,15 @@
+name: 'Detecting Running Process: EnumProcess API'
+categories:
+- Sandbox Evasion
+- Anti-Debugging
+- Anti-Monitoring
+resources:
+- https://msdn.microsoft.com/en-us/library/windows/desktop/ms682623(v=vs.85).aspx
+tags:
+- EnumProcess function
+- Ollydbg.exe
+- Wireshark.exe
+- Monitoring
+- Analysis
+featured_apis:
+- OpenProcess

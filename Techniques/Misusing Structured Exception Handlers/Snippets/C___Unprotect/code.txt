@@ -1,0 +1,80 @@
+#include <Windows.h>
+#include <stdio.h>
+
+// Function to push a new function onto the SEH chain
+void push_seh(LPVOID fn)
+{
+    // Use the FS segment register to gain access to the TEB
+    __asm
+    {
+        mov eax, dword ptr fs:[0]
+    }
+
+    // The first structure in the TEB is the TIB,
+    // which contains a pointer to the SEH chain
+    __asm
+    {
+        mov eax, dword ptr[eax + 0x04]
+    }
+
+    // Push the new function onto the SEH chain
+    __asm
+    {
+        push fn
+        push dword ptr[eax]
+        mov dword ptr[eax], esp
+    }
+}
+
+// Function to pop a function off the SEH chain
+void pop_seh()
+{
+    // Use the FS segment register to gain access to the TEB
+    __asm
+    {
+        mov eax, dword ptr fs:[0]
+    }
+
+    // The first structure in the TEB is the TIB,
+    // which contains a pointer to the SEH chain
+    __asm
+    {
+        mov eax, dword ptr[eax + 0x04]
+    }
+
+    // Pop the top function off the SEH chain
+    __asm
+    {
+        mov esp, dword ptr[eax]
+        pop dword ptr[eax]
+    }
+}
+
+// Function to handle exceptions
+DWORD handle_exception(EXCEPTION_POINTERS *ep)
+{
+    // Print a message when an exception occurs
+    printf("Exception occurred!\n");
+
+    // Return the exception code to continue execution
+    return ep->ExceptionRecord->ExceptionCode;
+}
+
+int main()
+{
+    // Push the handle_exception function onto the SEH chain
+    push_seh(&handle_exception);
+
+    // Cause an exception to occur
+    __try
+    {
+        *(int*)0 = 0;
+    }
+    __except (EXCEPTION_EXECUTE_HANDLER)
+    {
+        // Pop the handle_exception function off the SEH chain
+        pop_seh();
+    }
+
+    return 0;
+}

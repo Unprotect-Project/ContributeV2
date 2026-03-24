@@ -1,0 +1,3 @@
+By looking the structure of the PE and the content of the file, the engine is able to detect if the file is malicious or not. For example, an heuristic engine can try to figure out if a file are using a dual extension (e.g: invoice.doc.exe) and determine the file as being malicious.
+
+Confusing file format is another trick that can be used to bypass an AV detection specific to a file format.

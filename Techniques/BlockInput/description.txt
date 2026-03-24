@@ -1,0 +1,3 @@
+As per Microsoft's documentation, `BlockInput` function "prevents keyboard and mouse input events from reaching applications," effectively restricting user interaction with the system. 
+
+Malware occasionally employs this tactic to hinder analysis by debuggers or other analysis tools throughout the process' runtime. To deactivate the block, the program must make a live call to `BlockInput` with the parameter 0. Windows automatically lifts the block when the process ends or the user initiates `Ctrl+Alt+Del`.

@@ -1,0 +1,3 @@
+Deleting Volume Shadow Copy makes the forensic investigation more difficult in terms of the recovery of previous artifact evidence. In addition, attackers using ransomware often delete VSCs not to be able to recover the original files of the encrypted files from VSCs. 
+
+On the other hand, deleting by using vssadmin and WMIC is on a file system level, the actual data remains in clusters. Thus, it may be able to be recovered from VSC until other files overwrite the clusters.

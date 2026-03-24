@@ -1,0 +1,1 @@
+API hammering is a technique used to delay sandbox analysis and thus avoid malware capability analysis reporting. This technique consists of calling a large amount of benign APIs like "printf" in a loop.

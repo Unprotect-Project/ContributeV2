@@ -1,0 +1,3 @@
+The `sysctl` anti-debugging technique can be abused by malware to detect and evade debugging tools on macOS or BSD-like systems. By querying the kernel for process information, malware checks flags (e.g., `0x800`) to see if a debugger is attached. If detected, the malware can terminate, alter behavior, or enter a dormant state to avoid analysis. 
+
+This technique blends with legitimate system calls, it makes detection harder, and allow to bypass sandboxes analysis. BANSHEE Stealer (`11aa6eeca2547fcf807129787bec0d576de1a29b56945c5a8fb16ed8bf68f782`) uses this method to evade reverse-engineering and maintain stealth.

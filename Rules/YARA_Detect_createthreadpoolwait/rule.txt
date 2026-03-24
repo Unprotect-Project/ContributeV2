@@ -1,0 +1,7 @@
+rule shellcode_injection_via_createthreadpoolwait {
+  condition:
+    pe.imports("kernel32.dll", "VirtualAlloc") and 
+    pe.imports("kernel32.dll", "CreateThreadpoolWait") and 
+    pe.imports("kernel32.dll", "SetThreadpoolWait") and 
+    pe.imports("kernel32.dll", "WaitForSingleObject")
+}

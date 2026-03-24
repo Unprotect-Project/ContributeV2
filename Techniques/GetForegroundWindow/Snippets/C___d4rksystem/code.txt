@@ -1,0 +1,23 @@
+#include <winuser.h> // Required import for GetForegroundWindow API
+ 
+int main()
+{
+ 
+    //Get a handle to user's current foreground window.
+    int foregroundWindowHandle1 = GetForegroundWindow(); 
+ 
+    do {
+ 
+        //Sleep for .1 second.
+        Sleep(100); 
+ 
+        //Get a handle to user's current foreground window again.
+        int foregroundWindowHandle2 = GetForegroundWindow(); 
+ 
+        }
+ 
+    //While the handles to the current foreground windows are equal, continue to loop.
+    while (foregroundWindowHandle1 == foregroundWindowHandle2);
+ 
+    return 0;
+};

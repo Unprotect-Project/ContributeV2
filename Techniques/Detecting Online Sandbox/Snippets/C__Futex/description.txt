@@ -1,0 +1,1 @@
+The code checks if the file My Wallpaper.jpg exists in the user’s Pictures folder, which indicates the system is running inside the Tria.ge sandbox.

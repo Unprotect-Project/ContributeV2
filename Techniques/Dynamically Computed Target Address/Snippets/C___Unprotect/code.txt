@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main() {
+    // Dynamically compute the target address of the "call" instruction
+    char *target = (char *)malloc(8);
+    *(unsigned long long *)target = (unsigned long long)main + 0x00000004;
+
+    // Use the dynamically computed target address in a "call" instruction
+    __asm__("mov eax, [%0]\n"
+            "call eax\n"
+            :: "r" (target) : "eax");
+
+    return 0;
+}

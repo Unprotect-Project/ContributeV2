@@ -1,0 +1,5 @@
+name: Fingerprinting Emulator
+categories:
+- Antivirus/EDR Evasion
+resources:
+- https://www.blackhat.com/docs/us-16/materials/us-16-Bulazel-AVLeak-Fingerprinting-Antivirus-Emulators-For-Advanced-Malware-Evasion.pdf

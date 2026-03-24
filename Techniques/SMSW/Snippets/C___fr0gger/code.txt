@@ -1,0 +1,27 @@
+#include <iostream>
+
+using namespace std;
+
+void smsw()
+{
+	unsigned int reax = 0;
+
+	__asm
+	{
+		mov eax, 0xCCCCCCCC
+		smsw eax
+		mov DWORD PTR[reax], eax
+	}
+
+	if ((((reax >> 24) & 0xFF) == 0xcc) && (((reax >> 16) & 0xFF) == 0xcc))
+	{
+	    cout << "VM detected!" << endl;
+	}
+}
+
+int main()
+{
+    smsw();
+    cout << "Hello world!" << endl;
+    return 0;
+}

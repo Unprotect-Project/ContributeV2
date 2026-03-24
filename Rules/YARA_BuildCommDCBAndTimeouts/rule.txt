@@ -1,0 +1,15 @@
+rule BuildCommDCBAndTimeouts 
+{
+    meta:
+        author = "Unprotect"
+        contributors = "Huntress Research Team | Unprotect Project"
+        description = "Detects usage of BuildCommDCBAndTimeouts function call"
+        status = "experimental"
+
+    strings:
+        $s1 = "jhl46745fghb" ascii wide nocase
+        $s2 = "BuildCommDCBAndTimeouts" ascii wide nocase
+
+    condition:
+        uint16(0) == 0x5a4d and ($s2 or ($s2 and $s1))
+}

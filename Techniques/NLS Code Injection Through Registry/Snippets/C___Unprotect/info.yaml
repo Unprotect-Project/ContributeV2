@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: NLS Code Injection Through Registry
+target_operating_system: windows

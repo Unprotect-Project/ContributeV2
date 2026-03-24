@@ -1,0 +1,12 @@
+name: Disabling Antivirus
+categories:
+- Antivirus/EDR Evasion
+resources:
+- https://blog.malwarebytes.com/cybercrime/2015/11/vonteera-adware-uses-certificates-to-disable-anti-malware/
+tags:
+- computer system
+- network
+- device
+- antivirus
+- evade detection
+- malicious programs

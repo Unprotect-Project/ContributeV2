@@ -1,0 +1,14 @@
+name: 'Impair Defenses: Safe Mode Boot'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1562/009/
+tags:
+- Defense Evasion
+- disable endpoint defenses
+- Windows safe mode
+- Boot Configuration Data (BCD)
+- registry modification
+- malicious Component Object Model (COM) objects
+- bypass EDR
+- disable endpoint defences

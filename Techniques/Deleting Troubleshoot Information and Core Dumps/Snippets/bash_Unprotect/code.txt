@@ -1,0 +1,3 @@
+# Remove all state dumps and core dumps
+rm -rf /data/var/statedumps/*
+rm -rf /data/var/cores/*

@@ -1,0 +1,3 @@
+Adversaries may use code checksumming to detect if their code has been modified or tampered with. This technique involves calculating a checksum or hash of the code, storing it, and then periodically checking the current checksum against the stored one. If the checksums do not match, it indicates that the code has been modified and the adversary's code can take appropriate action, such as exiting or altering its behavior. 
+
+This technique can be used to detect if anti-debugging routines have been disabled or if the code has been tampered with in other ways. By detecting these modifications, the adversary's code can attempt to evade detection and make reverse engineering more difficult.

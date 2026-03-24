@@ -1,0 +1,14 @@
+name: Spaghetti, Junk Code
+categories:
+- Anti-Disassembly
+resources:
+- https://en.wikipedia.org/wiki/Spaghetti_code
+- https://www.nozominetworks.com/blog/greyenergy-malware-research-paper-maldoc-to-backdoor/
+tags:
+- Junk code
+- Spaghetti code
+- Anti-disassembling
+- Control flow
+- Obfuscation
+- Instruction insertion
+- Unstructured code

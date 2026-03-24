@@ -1,0 +1,3 @@
+Malware will delay execution to avoid analysis by the sample. For example, a Ping can be perform during a time defined. Unlike extended sleep that will use the Sleep function, onset delay will use another way to delay execution.
+
+The purpose of such evasive code is to delay the execution of malicious activity long enough so that automated analysis systems give up on a sample, incorrectly assuming that the program is non-functional, or does not execute any action of interest.

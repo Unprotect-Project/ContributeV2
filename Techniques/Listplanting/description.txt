@@ -1,0 +1,7 @@
+Edit controls are a type of user interface element that allows a user to enter and edit text in a graphical user interface (GUI). They are commonly used in Windows applications and can be embedded directly into a GUI or subclassed as a separate window.
+
+Edit controls can be set to display text in multiline mode, in which case they use a special callback function called the EditWordBreakProc to handle word wrapping. This callback function is called anytime the control needs to perform an operation related to word wrapping.
+
+In addition to the EditWordBreakProc callback function, the ListView control, which is a common GUI element used to display lists of items, can also be customized using certain messages. The LVM_SORTGROUPS message allows the user to specify a callback function that is used to sort the groups in a ListView control. The LVM_INSERTGROUPSORTED message inserts a new group into a ListView control, using the callback function specified in the LVM_SORTGROUPS message to determine the proper position for the new group. The LVM_SORTITEMS message allows the user to specify a callback function that is used to sort the items in a ListView control.
+
+Using these messages and callback functions, it is possible to customize the sorting of items and groups in a ListView control to meet the specific needs of an application.

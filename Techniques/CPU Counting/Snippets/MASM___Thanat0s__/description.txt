@@ -1,0 +1,5 @@
+This code snippet is written in assembly language and is used to detect the hyperthreading capacity and number of CPUs in a system.
+
+For detecting hyperthreading capacity, the code sets EAX to 1 to access the leaf processor info and feature bits. It then calls CPUID instruction, shifts the 28th bit (which is the hyperthread bit on Intel processors), and clears other bits with an AND instruction. If the result in EDX is 0, it means that the system does not have hyperthreading capacity.
+
+For detecting the number of CPUs, the code retrieves the Processor Environment Block (PEB) and gets the CPU count information stored at an offset. It then decrements the value and checks if it is not equal to zero. If it is not equal to zero, it means that there is more than one CPU in the system.

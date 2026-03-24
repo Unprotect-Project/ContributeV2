@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Wiping or Encrypting
+target_operating_system: windows

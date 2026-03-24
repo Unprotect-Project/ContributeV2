@@ -1,0 +1,3 @@
+An `EventPair` Object is an event constructed by two `_KEVENT` structures which are conventionally named High and Low. 
+
+There is a relation between generic Event Objects and Debuggers because they must create a custom event called `DebugEvent` able to handle exceptions. Due to the presence of events owned by the Debugger, every information relative to the events of a normal process differs from a debugged process.

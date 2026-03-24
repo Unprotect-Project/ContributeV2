@@ -1,0 +1,1 @@
+DLL Proxying code via `DNSAPI.dll` on nslookup.exe, in this exemple, the original `DNSAPI.dll` file must be renamed proxy.dll and the generated dll must be named `DNSAPI.dll`.

@@ -1,0 +1,4 @@
+language: C++
+contributors: Sh0ckFR
+associated_technique: 'Hijack Execution Flow: DLL Search Order Hijacking'
+target_operating_system: windows

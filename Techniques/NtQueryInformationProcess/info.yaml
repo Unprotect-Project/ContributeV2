@@ -1,0 +1,7 @@
+name: NtQueryInformationProcess
+categories:
+- Anti-Debugging
+resources:
+- https://msdn.microsoft.com/en-us/library/windows/desktop/ms684280(v=vs.85).aspx
+tags:
+- NtQueryInformationProcess

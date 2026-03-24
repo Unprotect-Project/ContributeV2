@@ -1,0 +1,4 @@
+language: C
+contributors: Unprotect
+associated_technique: Opaque Predicate
+target_operating_system: windows

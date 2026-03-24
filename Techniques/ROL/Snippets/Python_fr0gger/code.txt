@@ -1,0 +1,27 @@
+# Define the original message to be encoded
+message = "Hello, world!"
+
+# Define the rotation value
+rotation_value = 3
+
+# Encode the message using the ROL algorithm and the defined rotation value
+encoded_message = ""
+for char in message:
+  if char.isalpha():
+    encoded_message += chr((ord(char) - ord("A") + rotation_value) % 26 + ord("A"))
+  else:
+    encoded_message += char
+
+# Print the resulting encoded message
+print(encoded_message)
+
+# Decode the encoded message using the ROL algorithm and the same rotation value
+decoded_message = ""
+for char in encoded_message:
+  if char.isalpha():
+    decoded_message += chr((ord(char) - ord("A") - rotation_value) % 26 + ord("A"))
+  else:
+    decoded_message += char
+
+# Print the resulting decoded message
+print(decoded_message)

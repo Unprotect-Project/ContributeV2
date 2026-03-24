@@ -1,0 +1,3 @@
+The proof of concept (POC) used a position-independent shellcode and injected it into a remote process, which works as a stager for the actual loading of the DLL.
+
+Original source code: https://github.com/NtQuerySystemInformation/NlsCodeInjectionThroughRegistry

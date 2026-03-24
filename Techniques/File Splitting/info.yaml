@@ -1,0 +1,5 @@
+name: File Splitting
+categories:
+- Antivirus/EDR Evasion
+resources:
+- https://dl.packetstormsecurity.net/papers/bypass/bypassing-av.pdf

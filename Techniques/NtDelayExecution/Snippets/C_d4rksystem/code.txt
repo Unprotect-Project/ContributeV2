@@ -1,0 +1,19 @@
+int main() {
+    
+    bool alertable = 0; // Thread alertable state. 0 = thread cannot cannot break on call to NtAlertThread.
+    int duration = 60000; // Duration of the delay in milliseconds
+
+    NtDelayExecution(alertable, duration)
+    return 0;
+}
+
+// ---
+
+int main() {
+    
+    int frequency = 0; // Frequency of the beep in hertz (this will likely be "0" if the malware doesn't actually want to invoke the beep sound!)
+    int duration = 60000; // Duration of the beep in milliseconds
+
+    Beep(frequency, duration)
+    return 0;
+}

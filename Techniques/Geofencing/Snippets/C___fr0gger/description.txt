@@ -1,0 +1,1 @@
+In this code, the `IsLanguageInstalled` function is used to check if the specified language, indicated by its LCID (Language Code Identifier), is installed on the system. In this case, the malware could check the languages installed on a Windows machine and not run if Russian is present.

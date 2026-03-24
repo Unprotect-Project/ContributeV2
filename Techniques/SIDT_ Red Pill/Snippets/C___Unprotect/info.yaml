@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: SIDT, Red Pill
+target_operating_system: windows

@@ -1,0 +1,22 @@
+Process Argument Spoofing is a technique used by attackers to hide their true intentions by changing the command line arguments of a process after it has started.
+
+--windows--
+This is done by tampering with the Process Environment Block (PEB).
+
+The PEB is a structure in Windows that holds various information about a running process. Within the PEB, there's a specific section called `RTL_USER_PROCESS_PARAMETERS`. This section contains an attribute named CommandLine, which is structured as a `UNICODE_STRING`. The CommandLine attribute is crucial because it stores the command line arguments that were used to start the process.
+
+Attackers exploit this by modifying the CommandLine attribute's buffer. When they change the contents of this buffer, the command line arguments that are visible to monitoring tools and security analysts are altered. This means that even if a process was started with malicious intentions, the attackers can overwrite these initial arguments with harmless-looking ones. As a result, the process can appear legitimate to security systems and analysts, and potentially hiding the malicious activity.
+
+The sophistication of Process Argument Spoofing lies in its ability to alter process information after the process has been created and initially inspected by security tools, making it a bit more challenging to detect.
+--end--
+
+--linux--
+`argv[0]` is the first argument on a process' command line, typically representing the name or path of the executable. For most processes, `argv[0]` can be set to an arbitrary value without it affecting the process flow.
+
+  Detections relying on command-line arguments may, by manipulating `argv[0]`, be bypassed. For example:
+
+  * Setting `argv[0]` to an empty string may bypass detections that look for the executable name in the command line component;
+  * Similarly, by setting `argv[0]` to a different executable name, it may be possible to bypass detections, or fool security analysts by making them believe the command is doing something different;
+  * By putting a very long string in `argv[0]`, it may be possible to 'hide' the actual command-line arguments at the very end; and,
+  * By including known detection exclusions in `argv[0]`, it may be possible to prevent the alerting logic from triggering.
+--end--

@@ -1,0 +1,13 @@
+#include <windows.h>
+#include <iostream>
+
+int main() {
+    MEMORYSTATUSEX memInfo;
+    memInfo.dwLength = sizeof(MEMORYSTATUSEX);
+    GlobalMemoryStatusEx(&memInfo);
+
+    std::cout << "Total physical memory: " << memInfo.ullTotalPhys / 1024 / 1024 << " MB\n";
+    std::cout << "Available physical memory: " << memInfo.ullAvailPhys / 1024 / 1024 << " MB\n";
+
+    return 0;
+}

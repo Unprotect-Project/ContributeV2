@@ -1,0 +1,3 @@
+DLL Injection Via `CreateRemoteThread` and `LoadLibrary` is a technique used by malware to inject its code into a legitimate process. This technique is similar to hook injection, where the malware inserts a malicious DLL to be used by the system. It is one of the most common techniques used to inject malware into another process.
+
+The malware writes the path to its malicious dynamic-link library (DLL) in the virtual address space of the target process, and then creates a remote thread in the target process. The thread's start address is the `LoadLibrary` function, which is used to load the malicious DLL into the target process's address space. This allows the malware to execute its code within the context of the target process, without creating new processes or threads.

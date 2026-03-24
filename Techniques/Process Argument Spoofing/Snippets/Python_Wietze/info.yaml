@@ -1,0 +1,4 @@
+language: Python
+contributors: Wietze
+associated_technique: Process Argument Spoofing
+target_operating_system: linux

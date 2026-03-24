@@ -1,0 +1,4 @@
+language: C++
+contributors: kernelwernel
+associated_technique: Odd Thread Count
+target_operating_system: windows

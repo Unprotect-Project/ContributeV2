@@ -1,0 +1,10 @@
+rule Detect_NtQueryInformationProcess: AntiDebug {
+    meta: 
+        description = "Detect NtQueryInformationProcess as anti-debug"
+        author = "Unprotect"
+        comment = "Experimental rule"
+    strings:
+        $1 = "NtQueryInformationProcess" fullword ascii
+    condition:   
+       uint16(0) == 0x5A4D and filesize < 1000KB and $1
+}

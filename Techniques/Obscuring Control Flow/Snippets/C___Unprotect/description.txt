@@ -1,0 +1,1 @@
+This code includes an exception handler that is called whenever an exception occurs. This exception handler calls the my_function function, which simply prints "Hello, world!" to the console. The obfuscated instructions use the SEH mechanism to obscure the control flow of the program, by raising an exception and handling it with the exception handler.

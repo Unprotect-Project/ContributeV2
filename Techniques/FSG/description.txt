@@ -1,0 +1,1 @@
+The free, simple FSG software compresses both small and large files. While it is popular and commonly used to hide malware code, it is also relatively simple to unpack through a decompression loop that writes the data to the final destination.

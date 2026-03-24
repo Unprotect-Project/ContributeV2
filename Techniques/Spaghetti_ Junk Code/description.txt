@@ -1,0 +1,5 @@
+Junk code is a technique used to add meaningless or irrelevant instructions to a program, in order to make it more difficult for a disassembler to accurately interpret the program's behavior. This technique is often used by malware authors to make it more difficult for analysts to reverse engineer the malware and understand its behavior.
+
+Junk code can be inserted into a program without modifying the original code, and it will not affect the program's behavior. Instead, it will simply add extra instructions that the disassembler must process, which can make it more difficult for the disassembler to generate correct disassembly output.
+
+Spaghetti code, on the other hand, is a coding style that is characterized by a complex and unstructured control flow. This can make it difficult for a disassembler to accurately interpret the instructions and generate correct disassembly output, because the disassembler may not be able to follow the complex and unstructured control flow.

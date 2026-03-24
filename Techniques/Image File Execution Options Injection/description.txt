@@ -1,0 +1,5 @@
+Image File Execution Options Injection, also known as IFEO Injection, is a technique used by malware to evade detection and persist on a compromised system. 
+
+The technique involves modifying the Image File Execution Options (IFEO) registry key, which is used by the Windows operating system to set debugging options for executable files. When an executable file is launched, the operating system checks the corresponding IFEO registry key for any specified debugging options. If the key exists, the operating system launches the specified debugger instead of the executable file. 
+
+Along with IFEO, malware also uses other registry keys such as `Appinit_DLL` and `AppCertDlls` for both injection and persistence on the compromised system. These keys are used by the operating system to load DLLs at the start of a process and for code signing, respectively.

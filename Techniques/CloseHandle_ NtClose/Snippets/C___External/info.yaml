@@ -1,0 +1,4 @@
+language: C++
+contributors: External
+associated_technique: CloseHandle, NtClose
+target_operating_system: windows

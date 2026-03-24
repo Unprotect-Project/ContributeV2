@@ -1,0 +1,5 @@
+The Hell's Gate technique refers to a specific method used by malware authors to make their software more difficult to detect and analyze. The technique involves the use of a custom native API resolver to resolve Windows API functions at runtime dynamically.
+
+By using Hell's Gate, malware can avoid referencing the Windows API functions directly in the Import Address Table (IAT). This makes it harder for security analysts and automated tools to identify and trace the malware's behavior. The technique essentially hides the malware's intentions by obfuscating the API calls it uses to perform its malicious activities.
+
+The Hell's Gate malware technique is a method used by malware authors to dynamically resolve Windows API functions at runtime, making the malware more difficult to analyze and detect. It achieves this by bypassing the conventional method of statically linking API functions in the Import Address Table.

@@ -1,0 +1,4 @@
+language: Python
+contributors: fr0gger
+associated_technique: XOR Operation
+target_operating_system: windows

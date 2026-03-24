@@ -1,0 +1,5 @@
+DLL proxying is a technique used by malware to evade detection and gain persistence on a system. It involves replacing a legitimate DLL with a malicious DLL that has the same exported functions and is named similarly to the legitimate DLL. 
+
+When a program attempts to load the legitimate DLL, it will instead load the malicious DLL, which acts as a proxy for the legitimate DLL. The malicious DLL will redirect function calls to the legitimate DLL, allowing the malware to execute its own code and perform malicious actions without the program realizing that it is not the legitimate DLL. 
+
+This technique allows the malware to operate stealthily and evade detection by security software, as the malicious DLL is designed to mimic the legitimate DLL. This makes it difficult for security software to differentiate between the legitimate and malicious DLLs, allowing the malware to continue to operate undetected.

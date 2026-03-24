@@ -1,0 +1,20 @@
+Alienyze is a software packer designed to compress executable files, allowing them to reduce the file size of their software as much as possible.
+
+
+- Anti-Debugger techniques that detect and fool present debuggers
+
+- Anti-VM techniques that detect sandbox & virtualized environments
+
+- Protection from disassemblers and software analysis tools
+
+- Hardware ID locking for making applications machine dependant
+
+- Integrity checks that detect code patching & tampering
+
+- Customizable compression and encryption of the applications code
+
+- Real time protection in running application
+
+- Project configuration settings Load, Save support
+
+- Multilingual user interface, language selection support

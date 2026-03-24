@@ -1,0 +1,17 @@
+name: 'System Binary Proxy Execution: MMC'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1218/014/
+tags:
+- Defense Evasion
+- .msc files
+- Microsoft Management Console (MMC)
+- snap-ins
+- mmc gpedit.msc
+- mmc C:\Users\*\admintools.msc /a
+- mmc.exe -Embedding
+- Inhibit System Recovery
+- Class Identifier (CLSID) subkey
+- Component Object Model class object
+- Link to Web Address

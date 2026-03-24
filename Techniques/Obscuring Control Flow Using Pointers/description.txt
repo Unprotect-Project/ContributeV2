@@ -1,0 +1,3 @@
+The use of pointers in a program can be an issue for disassemblers, because pointers can be used in complex ways that are difficult for the disassembler to accurately interpret. This can make it more difficult for the disassembler to generate correct disassembly output, and can also make it more difficult for analysts to understand the program's behavior.
+
+Pointers are a common programming idiom used in C and C++ to reference memory locations and manipulate data in memory. They are typically implemented as variables that contain the memory address of another variable. This allows the programmer to access and modify the data stored at that memory address, without having to know the exact memory address of the data.

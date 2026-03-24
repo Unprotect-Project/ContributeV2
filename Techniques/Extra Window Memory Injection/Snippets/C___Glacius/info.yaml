@@ -1,0 +1,4 @@
+language: C++
+contributors: Glacius
+associated_technique: Extra Window Memory Injection
+target_operating_system: windows

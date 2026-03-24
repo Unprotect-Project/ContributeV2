@@ -1,0 +1,21 @@
+name: Listplanting
+categories:
+- Process Manipulating
+resources:
+- https://modexp.wordpress.com/2019/04/25/seven-window-injection-methods/
+tags:
+- Rich Edit controls
+- Windows controls
+- Multiline mode
+- EditWordBreakProc callback
+- Word wrapping
+- ListView control
+- GUI element
+- Display lists of items
+- LVM_SORTGROUPS message
+- Callback function
+featured_apis:
+- VirtualAlloc
+- VirtualAllocEx
+- WriteProcessMemory
+- OpenProcess

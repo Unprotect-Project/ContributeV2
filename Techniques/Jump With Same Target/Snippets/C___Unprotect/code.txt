@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+void my_function() {
+    printf("Hello, world!\n");
+}
+
+int main() {
+    int eax = 0x12345678;
+
+    // Original instructions
+    if (eax == 0) {
+        my_function();
+    }
+    if (eax != 0) {
+        my_function();
+    }
+
+    // Obfuscated instructions using back-to-back conditional jumps
+    if (eax == 0) {
+        my_function();
+    }
+    my_function();
+
+    return 0;
+}

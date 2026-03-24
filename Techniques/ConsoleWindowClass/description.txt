@@ -1,0 +1,5 @@
+One method that has been used to achieve process injection is by manipulating the User Data of a window object.
+
+The User Data of a window is a small amount of memory that is usually used to store a pointer to a class object. This memory can be set using the `SetWindowLongPtr` API and the GWLP_USERDATA parameter. In the case of the Console Window Host (conhost) process, the User Data of a window is used to store the address of a data structure that contains information about the window's position, dimensions, and object handle, as well as a class object with methods to control the behavior of the console window.
+
+By manipulating the User Data of a window object, it may be possible to execute arbitrary code in the context of the process associated with that window.

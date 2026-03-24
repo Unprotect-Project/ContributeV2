@@ -1,0 +1,12 @@
+name: Hiding Mechanisms
+categories:
+- Others
+resources:
+- https://www.cimcor.com/blog/5-places-ransomware-and-malware-can-hide-that-you-may-never-check
+tags:
+- hide presence
+- system registry
+- critical system files
+- temporary folders
+- operating system
+- installed applications

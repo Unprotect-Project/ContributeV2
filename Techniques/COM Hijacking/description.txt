@@ -1,0 +1,5 @@
+COM hijacking is a technique used by adversaries to insert malicious code into the Windows operating system through the Microsoft Component Object Model (COM). 
+
+COM is a system that allows software components to interact with each other, and adversaries can abuse this system to execute their own code in place of legitimate software. To achieve this, they alter references and relationships in the COM system by modifying the Windows Registry. Specifically, they replace a reference to a legitimate system component with a reference to their own malicious code. 
+
+When the legitimate component is executed through normal system operation, the adversary's code is executed instead. This can provide a means for the adversary to achieve persistence, as they can choose to hijack objects that are used frequently enough to maintain a consistent level of persistence. However, they must be careful not to break noticeable functionality within the system, as this could cause system instability and potentially lead to detection.

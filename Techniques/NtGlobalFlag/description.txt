@@ -1,0 +1,9 @@
+The information that the system uses to determine how to create heap structures is stored at an undocumented location in the PEB at offset `0x68`. If the value at this location is `0x70`, we know that we are running in a debugger.
+
+The `NtGlobalFlag` field of the Process Environment Block (0x68 offset on 32-Bit and 0xBC on 64-bit Windows) is 0 by default. Attaching a debugger doesn’t change the value of NtGlobalFlag. However, if the process was created by a debugger, the following flags will be set:
+
+- `FLG_HEAP_ENABLE_TAIL_CHECK` (0x10)
+- `FLG_HEAP_ENABLE_FREE_CHECK` (0x20)
+- `FLG_HEAP_VALIDATE_PARAMETERS` (0x40)
+
+The presence of a debugger can be detected by checking a combination of those flags.

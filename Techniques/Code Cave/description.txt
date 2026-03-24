@@ -1,0 +1,1 @@
+A code cave is a series of null bytes in a process's memory. The code cave inside a process's memory is often a reference to a section of the code’s script functions that have capacity for the injection of custom instructions. For example, if a script’s memory allows for 5 bytes and only 3 bytes are used, then the remaining 2 bytes can be used to add external code to the script.

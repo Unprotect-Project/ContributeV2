@@ -1,0 +1,7 @@
+The exported function must follow a specific signature to be invoked by rundll32.exe.
+
+You can then call the exported function using the following command:
+
+`rundll32.exe <dll>,<exported_function> <args>`
+
+`rundll32.exe rundll.dll,UnprotectFunction Hello, World`

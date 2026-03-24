@@ -1,0 +1,1 @@
+This code retrieves and displays the serial number, model number, and firmware revision of a physical hard drive using Windows API calls.

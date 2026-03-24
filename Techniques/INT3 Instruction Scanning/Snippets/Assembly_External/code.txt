@@ -1,0 +1,13 @@
+BOOL IsDebuggerPresent_Int3()
+{
+      __try
+         { 
+             __asm int 3 
+         }
+      __except(1) 
+         { 
+             return FALSE; 
+         }
+     return TRUE;
+
+}

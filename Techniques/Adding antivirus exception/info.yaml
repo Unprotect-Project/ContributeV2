@@ -1,0 +1,7 @@
+name: Adding antivirus exception
+categories:
+- Antivirus/EDR Evasion
+resources:
+- https://www.darknet.org.uk/2016/12/malware-writers-using-exclusion-lists-to-linger/
+contributors:
+- Malfav.Win32

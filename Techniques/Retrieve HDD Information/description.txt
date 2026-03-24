@@ -1,0 +1,3 @@
+Malware can figure out if it's in a virtual environment by checking hard drive info. It looks for specific details like serial and model numbers. This is easier to spot in VirtualBox because it shows clues that it's running in a virtual space. 
+
+Malware uses this trick to avoid getting caught. It does this by using a special command in the DeviceIoControl Win32 API, called IOCTL SMART_RCV_DRIVE_DATA. But, to use this command, you need top-level access.

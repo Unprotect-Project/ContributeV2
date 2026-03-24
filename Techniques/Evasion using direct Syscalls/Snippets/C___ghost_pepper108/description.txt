@@ -1,0 +1,2 @@
+Additional details here: 
+https://github.com/fr0gger/Unprotect_Submission/tree/c105bf119d923d8c5b44e26527fa6bbaf6a02699/techniques/EvasionUsingSyscall

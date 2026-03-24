@@ -1,0 +1,23 @@
+name: Process Hollowing, RunPE
+categories:
+- Process Manipulating
+resources:
+- https://www.blackhat.com/docs/asia-17/materials/asia-17-KA-What-Malware-Authors-Don't-Want-You-To-Know-Evasive-Hollow-Process-Injection-wp.pdf
+- https://speakerdeck.com/fr0gger/teslacrypt-ransomware-analysis
+tags:
+- Process hollowing
+- malware
+- evading detection
+- injecting
+- malicious code
+- legitimate process
+- memory modification
+featured_apis:
+- VirtualAlloc
+- VirtualAllocEx
+- WriteProcessMemory
+- CreateProcessA
+- CreateProcessW
+- NtUnmapViewOfSection
+- ResumeThread
+- ReadProcessMemory

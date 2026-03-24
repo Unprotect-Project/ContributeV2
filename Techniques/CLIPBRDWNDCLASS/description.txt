@@ -1,0 +1,5 @@
+CLIPBRDWNDCLASS is a window class that is registered by the Object Linking & Embedding (OLE) library (ole32.dll) to handle clipboard data. When a window of this class is created, it is assigned a number of window properties that store the addresses of various interfaces that are used to process clipboard data. These interfaces include the `ClipboardDataObjectInterface`, `ClipboardRootDataObjectInterface`, and `ClipboardDataObjectInterfaceMTA`.
+
+One of these interfaces, the `ClipboardDataObjectInterface`, can be leveraged for code injection. If this interface is set to the address of an IUnknown interface and the clipboard window procedure receives a WM_DESTROYCLIPBOARD message, it will invoke the Release method of the IUnknown interface. This can potentially allow malware to inject code into the host system by manipulating the clipboard data and causing the Release method to be called.
+
+It is important to note that the CLIPBRDWNDCLASS window class and the interfaces it uses are private to the OLE library, and are not intended for use by external programs.

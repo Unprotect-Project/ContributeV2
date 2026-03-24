@@ -1,0 +1,65 @@
+title: Impair Defenses Through Disable Windows Event Logging was Detected
+description: Detects the Impair Defenses tatic, through disable windows event logging technique
+date : 04/12/2024
+author: 0x0d4y
+references:
+- https://thedfirreport.com/2021/11/15/exchange-exploit-leads-to-domain-wide-ransomware/
+- https://attack.mitre.org/techniques/T1562/002/
+tags:
+- attack.defense.evasion
+- attack.T1562.002
+- malware.generic
+logsource:
+      category: process_creation, powershell_cmdlet, regitry_modification
+      product: windows
+detection:
+    selection1:
+        EventID:
+            - '4688'
+            - '1'
+        NewProcessName:
+            - 'sc.exe'    
+        CommandLine|contains:
+            - '*eventlog start=disabled*'
+    selection2:
+        EventID:
+            - '4688'
+            - '1'
+        NewProcessName:
+            - 'auditpol.exe'
+        CommandLine|contains:
+            - '*/success:disable*'
+            - '*/clear*'
+            - '*/remove*'
+    selection3:
+        EventID:
+            - '4688'
+            - '1'
+        NewProcessName:
+            - 'wevtutil.exe'
+        CommandLine|contains:
+            - '*sl*'
+    selection4:
+        EventID:
+            - '4688'
+            - '1'
+        NewProcessName:
+            - 'reg.exe'
+        CommandLine|contains:
+            - '*add*SOFTWARE\\Windows\\CurrentVersion\\WINEVT\\Channels\\*REG_DWORD /d 0*'
+    selection5:
+        EventID:
+            - '13'
+            - '4657'
+        TargetRegistry|contains:
+            - '*SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\WINEVT\\*'
+        Details:
+            - 0
+            - 0x00000000
+    selection6:
+        EventID:
+            - '4104'
+        Message|contains:
+            - '*Set-Service -Name EventLog -Status Stopped*'
+      condition: selection1 or selection2 or selection3 or selection4 or selection5 or selection6
+level: critical

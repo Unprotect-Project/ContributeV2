@@ -1,0 +1,12 @@
+rule Detect_EnumProcess: AntiDebug {
+    meta: 
+        description = "Detect EnumProcessas anti-debug"
+        author = "Unprotect"
+        comment = "Experimental rule"
+    strings:
+        $1 = "EnumProcessModulesEx" fullword ascii
+        $2 = "EnumProcesses" fullword ascii
+        $3 = "EnumProcessModules" fullword ascii
+    condition:   
+        uint16(0) == 0x5A4D and filesize < 1000KB and any of them 
+}

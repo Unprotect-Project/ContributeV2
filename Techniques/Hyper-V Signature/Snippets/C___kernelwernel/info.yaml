@@ -1,0 +1,4 @@
+language: C++
+contributors: kernelwernel
+associated_technique: Hyper-V Signature
+target_operating_system: windows

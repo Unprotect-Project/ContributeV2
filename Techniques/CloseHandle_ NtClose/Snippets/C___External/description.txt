@@ -1,0 +1,1 @@
+Original source code is available here: https://anti-debug.checkpoint.com/techniques/object-handles.html#closehandle

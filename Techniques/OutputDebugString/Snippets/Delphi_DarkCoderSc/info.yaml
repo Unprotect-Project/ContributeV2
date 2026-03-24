@@ -1,0 +1,4 @@
+language: Delphi
+contributors: DarkCoderSc
+associated_technique: OutputDebugString
+target_operating_system: windows

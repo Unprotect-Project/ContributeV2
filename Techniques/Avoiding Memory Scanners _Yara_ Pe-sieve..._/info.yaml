@@ -1,0 +1,12 @@
+name: Avoiding Memory Scanners (Yara, Pe-sieve...)
+categories:
+- Others
+resources:
+- https://youtu.be/9z9PHSk2MsY
+- https://github.com/kyleavery/AceLdr
+tags:
+- YARA
+- PE-SIEVE
+- Monetta
+- Endpoint
+- Memory Scan

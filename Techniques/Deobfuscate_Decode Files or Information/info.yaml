@@ -1,0 +1,14 @@
+name: Deobfuscate/Decode Files or Information
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1140/
+tags:
+- Defense Evasion
+- certutil
+- Windows copy /b command
+- APT19
+- APT28
+- APT29
+- APT39
+- decryption

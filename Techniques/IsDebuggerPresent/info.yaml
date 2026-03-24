@@ -1,0 +1,9 @@
+name: IsDebuggerPresent
+categories:
+- Anti-Debugging
+resources:
+- https://msdn.microsoft.com/en-us/library/windows/desktop/ms680345(v=vs.85).aspx
+tags:
+- isdebuggerpresent
+featured_apis:
+- IsDebuggerPresent

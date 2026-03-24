@@ -1,0 +1,1 @@
+To avoid detection, attackers can use stolen certificates from known companies. It allows the malware to bypass security solution.

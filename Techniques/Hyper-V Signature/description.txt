@@ -1,0 +1,1 @@
+Hyper-V has a signature value of "Hv#1" in eax if leaf `0x40000001` is provided to CPUID.

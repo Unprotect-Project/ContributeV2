@@ -1,0 +1,5 @@
+name: Detecting Active Services
+categories:
+- Sandbox Evasion
+featured_apis:
+- RegOpenKeyExW

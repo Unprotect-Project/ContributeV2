@@ -1,0 +1,11 @@
+name: SLDT, No Pill
+categories:
+- Sandbox Evasion
+resources:
+- https://blog.talosintelligence.com/2009/10/how-does-malware-know-difference.html
+tags:
+- Physical machine
+- Virtual machine
+- Local Descriptor Table (LDT)
+- Processor
+- Operating system

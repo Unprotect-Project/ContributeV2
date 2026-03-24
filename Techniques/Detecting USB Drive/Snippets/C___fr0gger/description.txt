@@ -1,0 +1,1 @@
+This code uses the GetLogicalDrives function to retrieve a bitmask of all available drives on the system, and the GetDriveTypeA function to check if each drive is removable. If a removable drive is detected, the code prints its drive letter to the console.

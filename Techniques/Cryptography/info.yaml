@@ -1,0 +1,11 @@
+name: Cryptography
+categories:
+- Data Obfuscation
+resources:
+- https://www.blackhat.com/docs/sp-14/materials/arsenal/sp-14-Schmitt-A-Different-Kind-of-Crypto-Slides.pdf
+tags:
+- Cryptography
+- Ransomware
+- Encrypt
+- Payloads
+- Communication channels

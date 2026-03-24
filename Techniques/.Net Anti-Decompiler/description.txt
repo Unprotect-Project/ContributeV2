@@ -1,0 +1,1 @@
+.Net Anti-Decompiler is a protective tool for .Net assemblies. It provides an extra layer of security and compliance to .Net application from reverse engineering.

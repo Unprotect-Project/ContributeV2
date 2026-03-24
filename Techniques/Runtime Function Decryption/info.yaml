@@ -1,0 +1,10 @@
+name: Runtime Function Decryption
+categories:
+- Antivirus/EDR Evasion
+resources:
+- https://irfan-eternal.github.io/understanding-internals-of-smokeloader/#encrypted-function-code
+tags:
+- encryption
+- smokeloader
+contributors:
+- irfan_eternal

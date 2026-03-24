@@ -1,0 +1,12 @@
+Process Herpaderping is a method of obscuring the intentions of a process by modifying the content on a disk after the image has been mapped. This results in curious behavior by security products and the OS itself.
+
+To abuse this convention, we first write a binary to a target file on a disk. Then, we map an image of the target file and provide it to the OS to use for process creation. The OS kindly maps the original binary for us. Using the existing file handle, and before creating the initial thread, we modify the target file content to obscure or fake the file backing the image. Sometime later, we create the initial thread to begin the execution of the original binary. Finally, we will close the target file handle. Let's walk through this step-by-step:
+
+1. Write target binary to disk, keeping the handle open. This is what will execute in memory.
+2. Map the file as an image section `NtCreateSection, SEC_IMAGE`.
+3. Create the process object using the section handle `NtCreateProcessEx`.
+4. Using the same target file handle, obscure the file on disk.
+5. Create the initial thread in the process `NtCreateThreadEx`.
+    * At this point, the process creation callback in the kernel will fire. The contents on the disk do not match what was mapped. Inspection of the file at this point will result in incorrect attribution.
+6. Close the handle. `IRP_MJ_CLEANUP` will occur here.
+    * Since we've hidden the contents of what is executing, inspection at this point will result in incorrect attribution.

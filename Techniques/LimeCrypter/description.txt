@@ -1,0 +1,1 @@
+Limecrypter is a sophisticated obfuscation tool designed for both native and .NET files. It employs a unique approach to secure payloads by encrypting them within a .NET-based stub. This stub acts as a container for the encrypted payload, ensuring its contents remain concealed until execution.

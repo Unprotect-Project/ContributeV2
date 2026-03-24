@@ -1,0 +1,1 @@
+The below example shows how to calculate the checksum of a function used to detect a breakpoint using INT3. Original source code available here:

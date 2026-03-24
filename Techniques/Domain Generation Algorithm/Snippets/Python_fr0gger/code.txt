@@ -1,0 +1,18 @@
+import random
+import datetime
+
+# Replace with the base domain name that you control
+base_domain = "example.com"
+
+# Get the current date and time
+date = datetime.datetime.now()
+
+# Generate a random number using the date and time as a seed
+random.seed(date)
+number = random.randint(0, 1000000)
+
+# Generate a domain name using the base domain and the random number
+domain_name = str(number) + "." + base_domain
+
+# Print the generated domain name
+print(domain_name)

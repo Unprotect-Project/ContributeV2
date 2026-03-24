@@ -1,0 +1,62 @@
+.586
+.MODEL FLAT,STDCALL
+ include    windows.inc
+ include    kernel32.inc
+ includelib kernel32.lib
+ include    user32.inc
+ includelib user32.lib
+ include    masm32.inc
+ includelib masm32.lib
+.data
+  pat                  db 'rdtscp delta=%d, rdtsc delta=%d',13,10,0
+  rdtscp_not_supported db 'rdtscp not supported'
+.data?
+  buf db 64 dup (?)
+.code
+rdtscp macro
+  db 0Fh, 01h, 0F9h
+endm
+assume fs:nothing
+RDTSCP  proc
+  LOCAL _retval:DWORD
+   mov  _retval,0
+   pushad
+   push OFFSET e
+   push dword ptr fs:[0]
+   mov  dword ptr fs:[0], esp
+   rdtscp
+   mov ebx,eax
+   rdtscp
+   sub  eax,ebx
+   mov  _retval,eax
+   jmp  no_e
+ e:
+   mov  esp, [esp + 8]
+   pop  dword ptr fs:[0]
+   add  esp, 4
+   popad
+   mov  _retval,-1
+   jmp  _ret
+ no_e:
+   pop  dword ptr fs:[0]
+   add  esp, 4
+   popad
+_ret:
+   mov eax,_retval
+   ret
+RDTSCP  endp
+  Start:
+   rdtsc
+   mov ebx,eax
+   rdtsc
+   sub  eax,ebx
+   mov  ebp,eax
+   call RDTSCP
+   .if eax==-1
+       invoke  StdOut,OFFSET rdtscp_not_supported
+   .else
+       invoke  wsprintfA,OFFSET buf,OFFSET pat,eax,ebp
+       invoke  StdOut,OFFSET buf
+   .endif
+   invoke ExitProcess,0
+END Start

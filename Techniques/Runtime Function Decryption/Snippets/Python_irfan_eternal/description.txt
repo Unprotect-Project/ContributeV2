@@ -1,0 +1,1 @@
+This Ghidra script decrypts shellcode by XORing each byte with a given key and writes the decrypted bytes back to a specified address in the program.

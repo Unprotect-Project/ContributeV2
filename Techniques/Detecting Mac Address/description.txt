@@ -1,0 +1,6 @@
+Virtualbox and VMware use specific virtual Mac address that can be detected by Malware.
+
+* The usual mac address used by Virtualbox starts with the following number: 08:00:27.
+* The usual mac address used by VMware starts with the following numbers: 00:0C:29, 00:1C:14, 00:50:56, 00:05:69.
+
+Malware can use this simple trick to detect if it is running in a virtual environment and decide to not run properly.

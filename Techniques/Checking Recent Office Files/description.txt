@@ -1,0 +1,1 @@
+Another way to detect if the malware is running in a real user machine is to check if some recent Office files was opened.

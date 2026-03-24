@@ -1,0 +1,1 @@
+The attached code snippet will trigger after a file creation event occurs within the `/tmp` directory. It will read the contents of the newly created file.

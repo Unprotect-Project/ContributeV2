@@ -1,0 +1,1 @@
+Original source code available here: https://github.com/LordNoteworthy/al-khaser/blob/master/al-khaser/AntiDebug/TrapFlag.cpp

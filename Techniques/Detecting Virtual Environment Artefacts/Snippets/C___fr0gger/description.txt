@@ -1,0 +1,1 @@
+This is a snippet to detect most common registry keys created by virtual machines.

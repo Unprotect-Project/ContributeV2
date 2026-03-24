@@ -1,0 +1,14 @@
+name: Checking Screen Resolution
+categories:
+- Sandbox Evasion
+resources:
+- https://www.botconf.eu/2015/sandbox-detection-for-the-masses-leak-abuse-test/
+tags:
+- sandbox environments
+- standard user workspaces
+- screen resolution
+- 800x600
+- malware detection
+- user machine
+featured_apis:
+- GetDesktopWindow

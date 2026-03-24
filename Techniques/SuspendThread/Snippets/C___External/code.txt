@@ -1,0 +1,61 @@
+DWORD g_dwDebuggerProcessId = -1;
+
+BOOL CALLBACK EnumWindowsProc(HWND hwnd, LPARAM lParam)
+{
+    DWORD dwProcessId = *(PDWORD)lParam;
+
+    DWORD dwWindowProcessId;
+    GetWindowThreadProcessId(hwnd, &dwWindowProcessId);
+
+    if (dwProcessId == dwWindowProcessId)
+    {
+        std::wstring wsWindowTitle{ string_heper::ToLower(std::wstring(GetWindowTextLengthW(hwnd) + 1, L'\0')) };
+        GetWindowTextW(hwnd, &wsWindowTitle[0], wsWindowTitle.size());
+
+        if (string_heper::FindSubstringW(wsWindowTitle, L"dbg") || 
+            string_heper::FindSubstringW(wsWindowTitle, L"debugger"))
+        {
+            g_dwDebuggerProcessId = dwProcessId;
+            return FALSE;
+        }
+        return FALSE;
+    }
+
+    return TRUE;
+}
+
+bool IsDebuggerProcess(DWORD dwProcessId) const
+{
+    EnumWindows(EnumWindowsProc, reinterpret_cast<LPARAM>(&dwProcessId));
+    return g_dwDebuggerProcessId == dwProcessId;
+}
+
+bool SuspendDebuggerThread()
+{
+    THREADENTRY32 ThreadEntry = { 0 };
+    ThreadEntry.dwSize = sizeof(THREADENTRY32);
+
+    DWORD dwParentProcessId = process_helper::GetParentProcessId(GetCurrentProcessId());
+    if (-1 == dwParentProcessId)
+        return false;
+
+    HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPTHREAD, dwParentProcessId);
+    if(Thread32First(hSnapshot, &ThreadEntry))
+    {
+        do
+        {
+            if ((ThreadEntry.th32OwnerProcessID == dwParentProcessId) && IsDebuggerProcess(dwParentProcessId))
+            {
+                HANDLE hThread = OpenThread(THREAD_SUSPEND_RESUME, FALSE, ThreadEntry.th32ThreadID);
+                if (hThread)
+                    SuspendThread(hThread);
+                break;
+            }
+        } while(Thread32Next(hSnapshot, &ThreadEntry));
+    }
+
+    if (hSnapshot)
+        CloseHandle(hSnapshot);
+
+    return false;
+}

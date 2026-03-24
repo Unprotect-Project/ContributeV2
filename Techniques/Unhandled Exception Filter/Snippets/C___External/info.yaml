@@ -1,0 +1,4 @@
+language: C++
+contributors: External
+associated_technique: Unhandled Exception Filter
+target_operating_system: windows

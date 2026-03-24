@@ -1,0 +1,5 @@
+DTPacker is a .NET packer or downloader which although seeing considerable variety in the first stage, uses a second stage with a fixed password as part of the decoding. 
+
+The main difference between a packer and a downloader is the location of the payload data which is embedded in the former and downloaded in the latter. DTPacker uses both forms. It is unusual for a piece of malware to be both a packer and downloader.  
+
+This packer uses multiple obfuscation techniques to evade antivirus, sandboxing, and analysis. It is likely distributed on underground forums

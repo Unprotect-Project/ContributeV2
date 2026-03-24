@@ -1,0 +1,1 @@
+This code snippet demonstrates a basic geofencing concept using Python. It checks if a target location (given by latitude and longitude coordinates) is within a specified radius (in kilometers) from a central point.

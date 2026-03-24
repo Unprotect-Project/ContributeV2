@@ -1,0 +1,12 @@
+name: Anti-UPX Unpacking
+categories:
+- Others
+resources:
+- https://github.com/upx/upx/blob/master/src/stub/src/include/header.S
+- https://bsodtutorials.wordpress.com/2014/11/14/upx-packing-and-anti-packing-techniques/
+- https://blogs.jpcert.or.jp/en/2022/03/anti_upx_unpack.html
+- https://cujo.com/upx-anti-unpacking-techniques-in-iot-malware/
+tags:
+- antiUPX
+contributors:
+- hackeT

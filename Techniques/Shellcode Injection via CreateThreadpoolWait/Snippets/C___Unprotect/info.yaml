@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Shellcode Injection via CreateThreadpoolWait
+target_operating_system: windows

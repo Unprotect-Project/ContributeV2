@@ -1,0 +1,3 @@
+API obfuscation is a technique used by malware to make it more difficult for security analysts to understand and analyze the code. This is typically done by using a technique called API hashing, which replaces the names of API functions with a hashed value. When an analyst runs the malware through a disassembler tool, the hashed values are printed instead of the actual names of the functions, making it more difficult to understand the code and identify any potentially malicious behavior.
+
+This technique is often used to hide suspicious API calls from the Import Address Table (IAT), which is used to store the addresses of functions imported from other libraries. By hiding these calls, malware authors can make it harder for analysts to identify and analyze their code.

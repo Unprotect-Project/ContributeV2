@@ -1,0 +1,12 @@
+name: 'Hide Artifacts: Process Argument Spoofing'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1564/010/
+tags:
+- Defense Evasion
+- process environment block (PEB)
+- Process Hollowing
+- WriteProcessMemory()
+- Parent PID Spoofing
+- malicious cmd arguments

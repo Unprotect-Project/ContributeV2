@@ -1,0 +1,3 @@
+Some malware contains a built-in expiration date, after which the malware will no longer run or function. This can be used by attackers to limit the time during which the malware can be detected and analyzed by security researchers. In order to run and analyze the malware after its expiration date, security researchers must manually change the date on the machine where the malware is being analyzed. 
+
+This can be effective in defeating sandbox environments, which are typically used to isolate and analyze malware, if the sandbox's clock is not set to the current date. By using this technique, attackers can make it more difficult for researchers to analyze and understand their malware, potentially allowing it to evade detection.

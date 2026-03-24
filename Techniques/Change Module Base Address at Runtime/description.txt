@@ -1,0 +1,3 @@
+It is possible to change the `DllBase` of a module at runtime. This can trick debugging and analysis tools such as IDA or Cheat Engine into thinking a module's base is actually at another address. 
+
+This is achieved by accessing the process PEB's member 'Ldr', in particular it has a member `InOrderMemoryLinks` which we can iterate through to get a list of the process's modules. On each iteration we get a `PLDR_DATA_TABLE_ENTRY` structure to work with which contains a member PVOID `DllBase`, that can be overwritten with the new module base address.

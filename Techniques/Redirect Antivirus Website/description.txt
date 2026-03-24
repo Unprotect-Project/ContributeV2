@@ -1,0 +1,1 @@
+To avoid connection to anti malware website, malware can modify the host file to redirect the connexion.

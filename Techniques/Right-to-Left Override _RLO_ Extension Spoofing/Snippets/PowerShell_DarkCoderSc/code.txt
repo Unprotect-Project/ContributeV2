@@ -1,0 +1,1 @@
+Rename-Item -Path malware.exe -NewName ("Ann" + ( [char]0x202E) + "gepj.exe")

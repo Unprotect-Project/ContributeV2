@@ -1,0 +1,16 @@
+Process Ghosting is a technique used to bypass detection by manipulating the executable image when a process is loaded. 
+
+Windows attempts to prevent mapped executables from being modified. Once a file is mapped into an image section, attempts to open it with `FILE_WRITE_DATA` (to modify it) will fail with `ERROR_SHARING_VIOLATION`. Deletion attempts via `FILE_DELETE_ON_CLOSE`/`FILE_FLAG_DELETE_ON_CLOSE` fail with `ERROR_SHARING_VIOLATION`. `NtSetInformationFile`(`FileDispositionInformation`) requires the `DELETE` access right. Even though the `DELETE` access right is granted to files mapped to image sections, `NtSetInformationFile`(`FileDispositionInformation`) fails with `STATUS_CANNOT_DELETE`. Deletion attempts via `FILE_SUPERCEDE`/`CREATE_ALWAYS` fail with `ACCESS_DENIED`. 
+
+An important note, however, is that this deletion restriction only comes into effect once the executable is mapped into an image section. This means that it is possible to create a file, mark it for deletion, map it to an image section, close the file handle to complete the deletion, then create a process from the now-fileless section. This is Process Ghosting.
+
+The attack flow is:
+
+1. Create a file
+2. Put the file into a delete-pending state using `NtSetInformationFile`(FileDispositionInformation). Note: Attempting to use `FILE_DELETE_ON_CLOSE` instead will not delete the file.
+3. Write the payload executable to the file. The content isn’t persisted because the file is already delete-pending. The delete-pending state also blocks external file-open attempts.
+4. Create an image section for the file.
+5. Close the delete-pending handle, deleting the file.
+6. Create a process using the image section.
+7. Assign process arguments and environment variables.
+8. Create a thread to execute in the process.

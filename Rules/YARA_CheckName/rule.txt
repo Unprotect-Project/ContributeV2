@@ -1,0 +1,25 @@
+rule MalwareNameEvasion
+{
+    strings:
+        // Check for the GetModuleFileName() function call
+        $get_module_filename = "GetModuleFileName"
+
+        // Check for the find_last_of() method call
+        $find_last_of = "find_last_of"
+
+        // Check for the std::string data type
+        $string = "std::string"
+
+        // Check for the "\\/" string
+        $backslash_slash = "\\\\/"
+
+        // Check for the "sample.exe" string
+        $sample_exe = "sample.exe"
+
+        // Check for the "malware.exe" string
+        $malware_exe = "malware.exe"
+
+    condition:
+        // Check if all the required strings are present in the code
+        all of them
+}

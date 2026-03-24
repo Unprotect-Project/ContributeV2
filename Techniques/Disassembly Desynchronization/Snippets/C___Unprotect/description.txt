@@ -1,0 +1,1 @@
+This code contains the original instructions mov eax, 0x12345678 and add eax, 0x00000004, but it also includes some "garbage" instructions (the nop instructions) between these two instructions. This breaks the normal sequence of instructions and can cause a disassembler to generate incorrect disassembly output.

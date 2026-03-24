@@ -1,0 +1,3 @@
+Dynamic Data Exchange (DDE) is a protocol that allows applications to share data with each other. The Dynamic Data Exchange Management Library (DDEML) is a set of functions that facilitate data sharing using the DDE protocol. DDE and DDEML are commonly used in Microsoft Office to enable data to be shared between applications. In October 2017, a vulnerability was discovered in Microsoft Office that could be exploited using DDE to execute arbitrary code. Since then, DDE has been disabled by default in Microsoft Office and is no longer considered a critical component. 
+
+This injection method is limited to the explorer.exe process, which is the process that handles graphical user interface (GUI) elements in the Windows operating system.

@@ -1,0 +1,1 @@
+C:\> pcalua.exe -run "C:\malicious-script.ps1"

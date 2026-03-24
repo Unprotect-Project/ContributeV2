@@ -1,0 +1,16 @@
+name: Breaking BaDDEr
+categories:
+- Process Manipulating
+resources:
+- https://modexp.wordpress.com/2019/08/09/windows-process-injection-breaking-badder/
+tags:
+- Data sharing protocol
+- Data sharing library
+- DDE protocol
+- Code execution
+featured_apis:
+- VirtualAlloc
+- VirtualAllocEx
+- WriteProcessMemory
+- OpenProcess
+- ReadProcessMemory

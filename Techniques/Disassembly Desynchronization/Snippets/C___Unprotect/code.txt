@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    // Original instructions
+    __asm__("mov eax, 0x12345678\n"
+            "add eax, 0x00000004\n");
+
+    // "Garbage" instructions that break the normal sequence of instructions
+    __asm__("nop\n"
+            "nop\n"
+            "nop\n"
+            "nop\n");
+
+    // More original instructions
+    __asm__("mov ebx, 0x87654321\n"
+            "sub ebx, 0x00000004\n");
+
+    return 0;
+}

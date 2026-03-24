@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Injection using Shims
+target_operating_system: windows

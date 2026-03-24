@@ -1,0 +1,1 @@
+Most sandbox are using name like Sandbox, Cuckoo, Maltest, Malware, malsand, ClonePC.... All this hostname can provide the information to the malware. The username can also be checked by malware.

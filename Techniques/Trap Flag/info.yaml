@@ -1,0 +1,10 @@
+name: Trap Flag
+categories:
+- Anti-Debugging
+tags:
+- trapflag
+featured_apis:
+- IsDebuggerPresent
+- AddVectoredExceptionHandler
+contributors:
+- fr0gger

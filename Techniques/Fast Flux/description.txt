@@ -1,0 +1,3 @@
+Fast flux is a technique used by botnets to conceal the location of their phishing and malware delivery sites by using a constantly changing network of compromised hosts as proxies. This makes it difficult for law enforcement and other security actors to track down and shut down the sites, as the IP addresses of the sites are constantly changing.
+
+Fast flux is often used in combination with other techniques, such as peer-to-peer networking, distributed command and control, web-based load balancing, and proxy redirection, to make the botnet more resilient to detection and countermeasures. By using these techniques together, the botnet can maintain a high level of operational security and evade detection by security systems.

@@ -1,0 +1,5 @@
+This C++ program uses the Windows and Intel intrinsic headers to check if it's running in a Microsoft Hyper-V virtual environment. It defines a union called CpuFeaturesEcx, which is used to map out the CPU features reported by the cpuid instruction, specifically the contents of the ECX register. These include various instruction sets, such as SSE3, SMX, and AESNI.
+
+The function IsHyperV() uses the __cpuid function intrinsic to get the processor features and checks for the existence of Hyper-V by examining the hypervisor brand identification reported by cpuid with the leaf parameter 0x40000001. If the returned value is more than or equal to 4000, it indicates the presence of Hyper-V.
+
+In the main() function, it calls the IsHyperV() function and outputs whether the current environment is a Hyper-V or not. If IsHyperV() returns true, it prints "Hyper-V True"; otherwise, it prints "Hyper-V False".

@@ -1,0 +1,4 @@
+language: Golang
+contributors: fr0gger
+associated_technique: Detecting Mac Address
+target_operating_system: windows

@@ -1,0 +1,19 @@
+rule macos_XprotectDecryption
+{
+  meta:
+    author = "Antonis Terefos @Tera0017 | modified by @fr0gger_"
+    descr = "Detects macOS binaries and associated decryption algorithms"
+    hahs = "ce371a92e905d12cb16b5c273429ae91d6ff5485dda04bfedf002d2006856038"
+  
+  strings:
+
+    // Decryption algorithm patterns (x64 and ARM)
+    $x64_code_str_decr1 = { 80 E1 ?? (48|49) 89 (DE|F0|FE) (48|49) D3 (EE|E8) (40|44) 30 ?? 48 83 C2 08 }
+    $x64_code_str_decr2 = { 48 89 ?? 48 D3 [1-2] 30 ?? 48 83 C1 08 48 FF C? }
+    $arm_code_str_decr1 = { 0B 09 7D 92 2B 25 CB 9A 4C 01 40 39 8B 01 0B 4A 4B 15 00 38 08 21 00 91 }
+    $arm_code_str_decr2 = { 2B 25 C8 9A 4C 01 40 39 8B 01 0B 4A 4B 15 00 38 08 21 00 91 }
+  
+  condition:
+    (uint32(0) == 0xFEEDFACE or uint32(0) == 0xFEEDFACF or uint32(0) == 0xBEBAFECA) and 
+    (2 of ($x64_code_str_decr*) or 2 of ($arm_code_str_decr*))
+}

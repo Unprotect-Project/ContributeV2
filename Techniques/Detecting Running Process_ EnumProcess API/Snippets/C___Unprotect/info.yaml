@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: 'Detecting Running Process: EnumProcess API'
+target_operating_system: windows

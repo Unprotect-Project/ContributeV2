@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: 'Execution Guardrails: Environmental Keying'
+target_operating_system: windows

@@ -1,0 +1,5 @@
+Domain generation algorithms (DGAs) are algorithms used by malware to generate a large number of domain names that can be used as communication channels with their command and control servers. These domain names are generated periodically, typically using a pseudorandom number generator.
+
+The use of DGAs makes it difficult for law enforcement and other security actors to shut down botnets, as infected computers will attempt to contact some of these domain names every day to receive updates or commands. The use of public-key cryptography in the malware code also makes it difficult to mimic commands from the malware controllers.
+
+DGAs are commonly used by malware families such as Zeus, Andromeda, and Necurs to establish communication channels that are hard to detect and disrupt. This allows the malware to receive instructions from the attackers and carry out various malicious activities, such as stealing sensitive information, spreading to other devices, or launching attacks on other systems.

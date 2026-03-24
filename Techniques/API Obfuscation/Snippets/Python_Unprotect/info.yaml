@@ -1,0 +1,4 @@
+language: Python
+contributors: Unprotect
+associated_technique: API Obfuscation
+target_operating_system: windows

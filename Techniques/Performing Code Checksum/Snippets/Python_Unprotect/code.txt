@@ -1,0 +1,30 @@
+import struct
+
+# Calculate checksum of function
+def calc_func_crc(func_begin, func_end):
+    crc = 0
+    for i in range(func_begin, func_end):
+        crc += struct.unpack("B", i)[0]
+    return crc
+
+# Debuggee function
+def debuggee_function():
+    calc = 0
+    calc += 2
+    calc <<= 8
+    calc -= 3
+
+# End of debuggee function
+def debuggee_function_end():
+    pass
+
+# Original function checksum
+ORIG_CRC = 0x2bd0
+
+# Calculate current function checksum
+CUR_CRC = calc_func_crc(debuggee_function, debuggee_function_end)
+
+# Check if current checksum matches original checksum
+if CUR_CRC != ORIG_CRC:
+    print("Stop debugging program!")
+    exit(-1)

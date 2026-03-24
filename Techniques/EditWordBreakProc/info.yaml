@@ -1,0 +1,20 @@
+name: EditWordBreakProc
+categories:
+- Process Manipulating
+resources:
+- https://modexp.wordpress.com/2019/04/25/seven-window-injection-methods/
+tags:
+- Edit controls
+- Rich Edit controls
+- Windows control
+- multiline mode
+- EditWordBreakProc callback function
+- word wrapping
+- EM_STREAMIN message
+- EDITSTREAM structure
+- pfnCallback field
+featured_apis:
+- VirtualAlloc
+- VirtualAllocEx
+- WriteProcessMemory
+- OpenProcess

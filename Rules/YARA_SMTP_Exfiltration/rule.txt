@@ -1,0 +1,20 @@
+rule Detect_SMTP_Exfiltration
+{
+    meta:
+        description = "Detects potential SMTP exfiltration scripts"
+        author = "Unprotect"
+        date = "2025-01-09"
+        reference = "Example based on SMTP exfiltration code"
+
+    strings:
+        $smtp_client = "SmtpClient" nocase
+        $mail_message = "MailMessage" nocase
+        $email_subject = "Exfiltrated Data" nocase
+        $attachment = "Attachment" nocase
+        $smtp_server = "smtp.gmail.com" nocase
+        $email_address = /[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}/ nocase
+        $hardcoded_password = /"[a-z0-9!@#$%^&*()_+={}\[\]:;'<>,.?\/-]{6,}"/ nocase
+
+    condition:
+        $smtp_client and $mail_message and $email_subject and $attachment and $smtp_server and $email_address and $hardcoded_password
+}

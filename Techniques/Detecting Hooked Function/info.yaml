@@ -1,0 +1,5 @@
+name: Detecting Hooked Function
+categories:
+- Sandbox Evasion
+resources:
+- https://www.slideshare.net/ThomasRoccia/sandbox-evasion-cheat-sheet

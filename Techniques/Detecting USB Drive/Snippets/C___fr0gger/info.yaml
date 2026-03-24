@@ -1,0 +1,4 @@
+language: C++
+contributors: fr0gger
+associated_technique: Detecting USB Drive
+target_operating_system: windows

@@ -1,0 +1,1 @@
+In this code, the `HookFunction` is injected as a hook using the `SetWindowsHookEx` function. This function will be called whenever a low-level mouse event occurs, allowing the malware to monitor and manipulate user actions. The `CallNextHookEx` function is used to call the next hook in the chain, allowing the normal flow of execution to continue.

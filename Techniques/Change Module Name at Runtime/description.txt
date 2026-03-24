@@ -1,0 +1,3 @@
+It is possible to change the name of the current process or any of its modules at runtime. This is achieved by accessing the process PEB's member 'Ldr', in particular it has a member 'InOrderMemoryLinks' which we can iterate through to get a list of the process's modules. 
+
+On each iteration it gets a `PLDR_DATA_TABLE_ENTRY` structure to work with which contains a member `UNICODE_STRING FullDllName`, which can be overwritten with the module name.

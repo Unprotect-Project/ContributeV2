@@ -1,0 +1,10 @@
+name: TrueCrypt
+categories:
+- Packers
+resources:
+- https://www.resecurity.com/blog/article/new-version-of-medusa-stealer-released-in-dark-web
+tags:
+- truecrypt
+- packer
+contributors:
+- RussianPanda

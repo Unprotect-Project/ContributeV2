@@ -1,0 +1,13 @@
+name: 'Domain Policy Modification: Domain Trust Modification'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1484/002/
+tags:
+- Defense Evasion
+- Privilege Escalation
+- Domain trust details
+- add fake certificate
+- SAML Tokens
+- federated domain
+- APT29

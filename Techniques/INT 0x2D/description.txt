@@ -1,0 +1,1 @@
+When the instruction `INT2D` is executed, the exception `EXCEPTION_BREAKPOINT` is raised. Windows uses the EIP register as an exception address and then increments the EIP register value. Windows also examines the value of the EAX register while `INT2D` is executed.

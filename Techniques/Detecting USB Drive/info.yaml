@@ -1,0 +1,9 @@
+name: Detecting USB Drive
+categories:
+- Sandbox Evasion
+resources:
+- https://www.first.org/resources/papers/conf2017/Countering-Innovative-Sandbox-Evasion-Techniques-Used-by-Malware.pdf
+tags:
+- sandbox
+- program
+- USB drives

@@ -1,0 +1,17 @@
+import subprocess
+
+def executer(args):
+    proc = subprocess.Popen(args,stdout=subprocess.PIPE)
+    return str(proc.communicate()[0])
+
+cert = executer(["powershell.exe", "-Command","Get-ChildItem","-Recurse","Cert:CurrentUser\My"])
+proc = executer(["powershell.exe","Get-Process"])
+dlls = executer(["listdlls.exe","srvpost.exe","/accepteula"])
+
+SUSDLLS = ("winanr.dll", "winsanr.dll")
+if any(dll in dlls for dll in SUSDLLS): print("Any.Run Monitoring Agent Found")
+
+if "Some Company" in cert or "srvpost" in proc:
+    print("ANY.RUN DETECTED")
+else:
+    print("NOT ANY.RUN")

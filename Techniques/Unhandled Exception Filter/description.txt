@@ -1,0 +1,5 @@
+An application-defined function that passes unhandled exceptions to the debugger, if the process is being debugged. Otherwise, it optionally displays an application error message box and causes the exception handler to be executed.
+
+If an exception occurs and no exception handler is registered, the `UnhandledExceptionFilter` function will be called. It is possible to register a custom unhandled exception filter using the `SetUnhandledExceptionFilter`. But if the program is running under a debugger, the custom filter won’t be called, and the exception will be passed to the debugger. 
+
+Therefore, if the unhandled exception filter is registered and the control is passed to it, then the process is not running with a debugger.

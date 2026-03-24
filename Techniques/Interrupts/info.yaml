@@ -1,0 +1,5 @@
+name: Interrupts
+categories:
+- Anti-Debugging
+featured_apis:
+- IsDebuggerPresent

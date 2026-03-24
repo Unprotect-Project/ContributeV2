@@ -1,0 +1,1 @@
+The following code uses the registry editor and LVM_SORTITEMS to trigger the payload. The problem is that the callback function will be invoked for every item in the list. If no items are in the list, the function isn’t invoked at all.

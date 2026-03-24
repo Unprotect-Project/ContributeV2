@@ -1,0 +1,1 @@
+This technique is used for delaying execution of the real malicious code. Stalling code is typically executed before any malicious behavior. The attacker’s aim is to delay the execution of the malicious activity long enough so that an automated dynamic analysis system fails to extract the interesting malicious behavior.

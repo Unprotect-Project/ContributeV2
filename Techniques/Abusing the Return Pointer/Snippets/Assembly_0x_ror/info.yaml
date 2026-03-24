@@ -1,0 +1,4 @@
+language: Assembly
+contributors: 0x_ror
+associated_technique: Abusing the Return Pointer
+target_operating_system: windows

@@ -1,0 +1,14 @@
+name: 'System Binary Proxy Execution: Control Panel'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1218/002/
+tags:
+- Defense Evasion
+- control.exe
+- Control Panel (.cpl)
+- CPlApplet function
+- bypass application allow lists
+- bypass file extension allow lists
+- HKCU\Software\Microsoft\Windows\CurrentVersion\Control Panel\Cpls
+- DllEntryPoint

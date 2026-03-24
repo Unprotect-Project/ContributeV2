@@ -1,0 +1,1 @@
+The `recently-used.xbel` XML file documents recent files on a Linux system that were accessed by applications. By parsing the file & checking how many files were recently accessed, we can determine whether or not a system is likely a sandbox or virtual machine. If a system has a low amount of files being accessed, it's likely a sandbox/VM.

@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: 'Access Token Manipulation: Parent PID Spoofing'
+target_operating_system: windows

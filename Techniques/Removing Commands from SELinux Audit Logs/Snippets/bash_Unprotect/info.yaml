@@ -1,0 +1,4 @@
+language: bash
+contributors: Unprotect
+associated_technique: Removing Commands from SELinux Audit Logs
+target_operating_system: linux

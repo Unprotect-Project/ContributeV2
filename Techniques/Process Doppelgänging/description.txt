@@ -1,0 +1,43 @@
+This technique leverages the `Transactional NTFS` functionality in Windows. This functionality helps maintain data integrity during an unexpected error. For example, when an application needs to write or modify a file, if an error is triggered mid-write, the data can be corrupted. To avoid this kind of behavior, an application can open the file in a transactional mode to perform the modification, then commit the modification, avoiding any corruption. The modification either completes successfully or does not begin.
+
+Process Doppelgänging abuses this functionality to overwrite a legitimate file with a malicious file, resulting in a process injection. The malicious file will be created inside a transaction then committed to the legitimate file, then executed.
+
+Here are the detailed steps to reproduce the Process Doppelgänging technique:
+
+1. Create a new transaction object using `NtCreateTransaction` and store the handle in `hTransaction`.
+
+2. Open the target file for the transaction using `CreateFileTransacted` and store the handle in `hTransactedFile`.
+
+3. Open the payload file using  `CreateFile` and store the handle in hFile.
+
+4. Query the size of the payload file using `GetFileSizeEx` and store the result in `fsz`.
+
+5. Allocate a buffer for the payload file using `NtAllocateVirtualMemory` and store the pointer in Buffer.
+
+6. Read the payload file into the buffer using `ReadFile`.
+
+7. Close the handle to the payload file.
+
+8. Set the size of the target file using `SetFileInformationByHandle` and the `FileEndOfFileInfo` structure.
+
+9. Map the target file into memory using `NtMapViewOfSection` and store the result in `MemoryPtr`.
+
+10. Copy the payload file from the buffer into the mapped memory using `RtlCopyMemory`.
+
+11. Unmap the target file from memory using `NtUnmapViewOfSection`.
+
+12. Commit the transaction using `NtCommitTransaction`.
+
+13. Create a new process using `NtCreateUserProcess` and store the handle in `hProcess`.
+
+14. Allocate memory for the process parameters using `NtAllocateVirtualMemory` and store the result in `ProcessParameters`.
+
+15. Set the process parameters using `RtlCreateProcessParametersEx`.
+
+16. Create the process using `NtCreateSection` and `NtMapViewOfSection`.
+
+17. Start the process using `NtCreateThreadEx` and store the handle in `hThread`.
+
+18. Wait for the process to finish execution using `WaitForSingleObject`.
+
+19. Close the handle to the process and thread.

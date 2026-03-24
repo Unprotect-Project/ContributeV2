@@ -1,0 +1,10 @@
+rule DebuggerCheck__GlobalFlags  {
+    meta:
+	description = "Rule to detect NtGlobalFlags debugger check"
+        author = "Thibault Seret"
+        date = "2020-09-26"
+    strings:
+        $s1 = "NtGlobalFlags"
+    condition:
+        any of them
+}

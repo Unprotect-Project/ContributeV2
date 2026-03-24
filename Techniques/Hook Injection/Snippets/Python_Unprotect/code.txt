@@ -1,0 +1,30 @@
+import ctypes
+from ctypes.wintypes import HHOOK, LPARAM, LRESULT, WPARAM
+
+
+# The function to be injected as a hook
+def HookFunction(code: int, wParam: WPARAM, lParam: LPARAM) -> LRESULT:
+    # Perform malicious actions here
+
+    # Return the result of the next hook in the chain
+    return ctypes.windll.user32.CallNextHookEx(None, code, wParam, lParam)
+
+
+def main():
+    # Install the hook
+    hHook = ctypes.windll.user32.SetWindowsHookEx(
+        ctypes.c_int(14), HookFunction, None, 0
+    )
+
+    # Run the message loop to receive events
+    msg = ctypes.wintypes.MSG()
+    while ctypes.windll.user32.GetMessageW(ctypes.byref(msg), None, 0, 0):
+        ctypes.windll.user32.TranslateMessageW(msg)
+        ctypes.windll.user32.DispatchMessageW(msg)
+
+    # Uninstall the hook
+    ctypes.windll.user32.UnhookWindowsHookEx(hHook)
+
+
+if __name__ == "__main__":
+    main()

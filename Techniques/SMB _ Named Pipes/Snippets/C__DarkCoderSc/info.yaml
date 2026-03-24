@@ -1,0 +1,4 @@
+language: C#
+contributors: DarkCoderSc
+associated_technique: SMB / Named Pipes
+target_operating_system: windows

@@ -1,0 +1,1 @@
+Original code available here: https://github.com/a0rtega/pafish/blob/master/pafish/cpu.c

@@ -1,0 +1,15 @@
+#include <iostream>
+#include <windows.h>
+
+using namespace std;
+
+int main()
+{
+	SIZE_T s;
+	printf("Starting the LocalSize()\n");
+	for (int i = 0; i < 0xFFF; i++){
+	    s = LocalSize(0);
+	}
+	printf("Sempai! :) \n");
+	return 0;
+}

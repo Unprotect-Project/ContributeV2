@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <unistd.h>
+#include <fcntl.h>
+
+int main()
+{
+    // Attempt to open the Cuckoo named pipe
+    int fd = open("\\\\.\\pipe\\cuckoo", O_RDONLY);
+    if (fd >= 0) {
+        // The named pipe exists, so we are running on a virtual machine
+        printf("We are running on a virtual machine.\n");
+        close(fd);
+    } else {
+        // The named pipe does not exist, so we are running on a physical machine
+        printf("We are running on a physical machine.\n");
+    }
+
+    return 0;
+}

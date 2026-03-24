@@ -1,0 +1,4 @@
+language: C++
+contributors: Ahmed
+associated_technique: Kill Process
+target_operating_system: windows

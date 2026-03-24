@@ -1,0 +1,22 @@
+Adversaries may impair command history logging to hide commands they run on a compromised system. Various command interpreters keep track of the commands users type in their terminal so that users can retrace what they've done.
+
+--windows--
+The `PSReadLine` module tracks commands used in all PowerShell sessions and writes them to a file `($env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt` by default). 
+
+Adversaries may change where these logs are saved using `Set-PSReadLineOption -HistorySavePath {File Path}`. 
+
+This will cause `ConsoleHost_history.txt` to stop receiving logs. Additionally, it is possible to turn off logging to this file using the PowerShell command `Set-PSReadlineOption -HistorySaveStyle SaveNothing`.
+
+Adversaries may also leverage a **Network Device CLI** on network devices to disable historical command logging (e.g. no logging).
+--end--
+
+--linux--
+An adversary can manipulate command history logging in Bash on a Linux system by exploiting the `HISTCONTROL` environment variable, which determines how commands are recorded in the history file. By setting this variable to specific values, such as `ignoreboth` or `ignorespace`, any command that starts with a space will not be logged in the history file. This technique allows the adversary to conceal potentially malicious commands from future review:
+
+```
+export HISTCONTROL=ignorespace
+whoami
+id
+cat /etc/passwd
+```
+--end--

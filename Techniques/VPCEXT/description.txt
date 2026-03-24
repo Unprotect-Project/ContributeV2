@@ -1,0 +1,1 @@
+The VPCEXT instruction (visual property container extender) is another anti–virtual machine trick used by malware to detect virtual systems. This technique is not documented. If the execution of the instruction does not generate an exception (illegal instruction), then the program is running on a virtual machine.

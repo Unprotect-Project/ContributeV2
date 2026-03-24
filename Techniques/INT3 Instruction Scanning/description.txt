@@ -1,0 +1,3 @@
+Instruction `INT3` is an interruption which is used as Software breakpoints. These breakpoints are set by modifying the code at the target address, replacing it with a byte value `0xCC` (INT3 / Breakpoint Interrupt). 
+
+The exception `EXCEPTION_BREAKPOINT` (0x80000003) is generated, and an exception handler will be raised. Malware identify software breakpoints by scanning for the byte 0xCC in the protector code and/or an API code.

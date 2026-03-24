@@ -1,0 +1,5 @@
+This function is undocumented within `OpenProcess`. It can be used to get the PID of CRSS.exe, which is a `SYSTEM` process. By default, a process has the `SeDebugPrivilege` privilege in their access token disabled. 
+
+However, when the process is loaded by a debugger such as OllyDbg or WinDbg, the `SeDebugPrivilege` privilege is enabled. If a process is able to open CRSS.exe process, it means that the process `SeDebugPrivilege` enabled in the access token, and thus, suggesting that the process is being debugged.
+
+If we call `OpenProcess` and pass the ID returned by `CsrGetProcessId`, no error will occur if the `SeDebugPrivilege` has been set with `SetPrivilege` / `AdjustTokenPrivileges`.

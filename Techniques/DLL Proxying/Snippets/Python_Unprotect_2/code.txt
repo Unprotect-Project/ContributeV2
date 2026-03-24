@@ -1,0 +1,21 @@
+from ctypes import cdll
+
+# Function prototype for the function that will be used to redirect calls to the legitimate DLL
+ProxyFunction = ctypes.CFUNCTYPE(ctypes.c_int, ctypes.c_int)
+
+def DllMain():
+    # Load the legitimate DLL
+    hLegitDLL = ctypes.windll.LoadLibrary("legit.dll")
+    if not hLegitDLL:
+        # Handle error
+
+    # Retrieve the address of the function in the legitimate DLL
+    # This example uses a function named "FunctionA", but the function name can be anything
+    FunctionA = ProxyFunction(hLegitDLL.FunctionA)
+    if not FunctionA:
+        # Handle error
+
+# Function that will be used to redirect calls to the legitimate DLL
+def ProxyFunction(arg):
+    # Call the function
+    return FunctionA(arg)

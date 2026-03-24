@@ -1,0 +1,3 @@
+This technique uses the GetForegroundWindow and Sleep APIs to attempt to evade sandboxes. Many sandboxes do not alter the foreground window like a user would in a normal desktop environment.
+
+It accomplishes this by making a call to GetForegroundWindow, which returns a handle to the current window. Then the malware sample will sleep for a short time, followed by another call to GetForegroundWindow. If the foreground window has not changed, the malware assumes it is in a sandbox or analysis virtual machine and will continue this loop until the foreground window changes. If there is no change, the program will loop indefinitely or may make a call to ExitProcess.

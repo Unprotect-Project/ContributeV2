@@ -1,0 +1,4 @@
+language: C++
+contributors: HoIIovv
+associated_technique: VboxEnumShares
+target_operating_system: windows

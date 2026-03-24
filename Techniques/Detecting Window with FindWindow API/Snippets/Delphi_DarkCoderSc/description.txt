@@ -1,0 +1,1 @@
+You can build this snippet as a classic Delphi Console Application and add your own signatures for detecting debuggers and related tools.

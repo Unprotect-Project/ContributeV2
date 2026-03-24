@@ -1,0 +1,13 @@
+name: 'Process Injection: Portable Executable Injection'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1055/002/
+tags:
+- Defense Evasion
+- Privilege Escalation
+- executing arbitrary code in live process
+- virtual address space
+- VirtualAllocEx
+- WriteProcessMemory
+- CreateRemoteThread

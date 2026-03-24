@@ -1,0 +1,1 @@
+Obsidium is a software protection and licensing system that is designed to protect 32-bit and 64-bit Windows software applications and games from reverse engineering, unauthorized modifications ("cracking") and redistribution ("software piracy") while providing a licensing system.

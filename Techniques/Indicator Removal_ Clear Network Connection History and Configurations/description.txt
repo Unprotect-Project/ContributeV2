@@ -1,0 +1,9 @@
+Adversaries may clear or remove evidence of malicious network connections in order to clean up traces of their operations. Configuration settings as well as various artifacts that highlight connection history may be created on a system from behaviors that require network connections, such as Remote Services or External Remote Services. Defenders may use these artifacts to monitor or otherwise analyze network connections created by adversaries.
+
+Network connection history may be stored in various locations on a system. For example, RDP connection history may be stored in Windows Registry values under:
+
+HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default
+HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Servers
+Windows may also store information about recent RDP connections in files such as C:\Users\%username%\Documents\Default.rdp and C:\Users\%username%\AppData\Local\Microsoft\TerminalServer Client\Cache\. 
+
+Malicious network connections may also require changes to network configuration settings, such as Disable or Modify System Firewall or tampering to enable Proxy. Adversaries may delete or modify this data to conceal indicators and/or impede defensive analysis.

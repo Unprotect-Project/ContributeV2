@@ -1,0 +1,26 @@
+#include <Windows.h>
+#include <stdio.h>
+
+void my_function() {
+    printf("Hello, world!\n");
+}
+
+LONG WINAPI exception_handler(EXCEPTION_POINTERS *exception) {
+    my_function();
+    return EXCEPTION_EXECUTE_HANDLER;
+}
+
+int main() {
+    int eax = 0x12345678;
+
+    // Obfuscated instructions using SEH
+    __try {
+        if (eax == 0) {
+            my_function();
+        }
+        RaiseException(0x12345678, 0, 0, NULL);
+    } __except (exception_handler(GetExceptionInformation())) {
+    }
+
+    return 0;
+}

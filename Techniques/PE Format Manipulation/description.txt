@@ -1,0 +1,1 @@
+Evading signature can also be performed by modifying the PE structure (changing section names, TimeDateStamp, MajorLinkerVersion/MinorLinkerVersion, Major/Minor OperatingSystemVersion and ImageVersion/MinorImageVersion, AddressOfEntryPoint, Maximum number of sections, File length.

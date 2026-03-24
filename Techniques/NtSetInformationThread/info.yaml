@@ -1,0 +1,12 @@
+name: NtSetInformationThread
+categories:
+- Anti-Debugging
+resources:
+- https://docs.microsoft.com/en-us/windows-hardware/drivers/ddi/content/ntddk/nf-ntddk-zwsetinformationthread
+- https://ntquery.wordpress.com/2014/03/29/anti-debug-ntsetinformationthread/
+tags:
+- NtSetInformationThread
+featured_apis:
+- ResumeThread
+- IsDebuggerPresent
+- GetProcAddress

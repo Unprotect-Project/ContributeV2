@@ -1,0 +1,5 @@
+Thwarting Stack-Frame Analysis is a technique used by malware to make it more difficult for security analysts to reverse engineer and analyze the code. A stack frame is a collection of data associated with a function, including local variables, arguments passed to the function, and the return address. Disassemblers can use information from the stack frame to understand a function's behavior.
+
+However, malware authors can use various techniques to defeat this analysis and make it harder to understand the code. For example, they may use complex control flow structures, such as nested loops and conditionals, to make it difficult for the disassembler to track the flow of execution. 
+
+They may also use techniques like code obfuscation and API hashing to hide the names of functions and make it harder to identify potentially malicious behavior. By using these techniques, malware authors can make it more difficult for security analysts to analyze and understand their code, and thwart stack-frame analysis.

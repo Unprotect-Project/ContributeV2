@@ -1,0 +1,579 @@
+rule PEtite_v20_Ian_Luck: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 66 9C 60 50 8B D8 03 ?? 68 54 BC ?? ?? 6A 00 FF 50 18 8B CC 8D A0 54 BC ?? ?? 8B C3 8D 90 E0 15 ?? ?? 68 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_v032a_fake_PEtite_21_emadicius_h: PEiD
+{
+    strings:
+        $a = { B8 00 50 40 00 6A 00 68 BB 21 40 00 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 83 C4 04 61 66 9D 64 8F 05 00 00 00 00 83 C4 08 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v22_wwwun4seencompetite: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 FF 35 ?? ?? ?? ?? 64 89 25 ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_21: PEiD
+{
+    strings:
+        $a = { 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 8B D8 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_20: PEiD
+{
+    strings:
+        $a = { B8 00 00 00 00 66 9C 60 50 8B D8 03 00 68 54 BC 00 00 6A 00 FF 50 18 8B CC 8D A0 54 BC 00 00 8B C3 8D 90 E0 15 00 00 68 00 00 00 00 51 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 E3 00 00 FF 8B }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v_after_v14_additional: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 66 9C 60 50 8D ?? ?? ?? ?? ?? 68 ?? ?? ?? ?? 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v13_additional: PEiD
+{
+    strings:
+        $a = { 66 9C 60 50 8D 88 ?? F0 ?? ?? 8D 90 04 16 ?? ?? 8B DC 8B E1 68 ?? ?? ?? ?? 53 50 80 04 24 08 50 80 04 24 42 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_12_c1998_Ian_Luck_h: PEiD
+{
+    strings:
+        $a = { 66 9C 60 E8 CA 00 00 00 03 00 04 00 05 00 06 00 07 00 08 00 09 00 0A 00 0B 00 0D 00 0F 00 11 00 13 00 17 00 1B 00 1F 00 23 00 2B 00 33 00 3B 00 43 00 53 00 63 00 73 00 83 00 A3 00 C3 00 E3 00 02 01 00 00 00 00 00 00 00 00 00 00 00 00 01 01 01 01 02 02 02 }
+        $b = { 66 9C 60 E8 CA 00 00 00 03 00 04 00 05 00 06 00 07 00 08 00 09 00 0A 00 0B 00 0D 00 0F 00 11 00 13 00 17 00 1B 00 1F 00 23 00 2B 00 33 00 3B 00 43 00 53 00 63 00 73 00 83 00 A3 00 C3 00 E3 00 02 01 00 00 00 00 00 00 00 00 00 00 00 00 01 01 01 01 02 02 02 02 03 03 03 03 04 04 04 04 05 05 05 05 00 70 70 01 00 02 00 03 00 04 00 05 00 07 00 09 00 0D 00 11 00 19 00 21 00 31 00 41 00 61 00 81 00 C1 00 01 01 81 01 01 02 01 03 01 04 01 06 01 08 01 0C 01 10 01 18 01 20 01 30 01 40 01 60 00 00 00 00 01 01 02 02 03 03 04 04 05 05 06 06 07 07 08 08 09 09 0A 0A 0B 0B 0C 0C 0D 0D 10 11 12 00 08 07 09 06 0A 05 0B 04 0C 03 0D 02 0E 01 0F 58 2C 08 50 8B C8 8B D0 81 C1 ?? D2 00 00 81 C2 ?? ?? 00 00 89 20 8B E1 50 81 2C 24 00 ?? ?? ?? FF 30 50 80 04 24 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule Petite_v22_Compresor_wwwun4seencompetite: PEiD
+{
+    strings:
+        $a = { B8 00 ?? ?? 00 ?? 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PseudoSigner_01_PEtite_2x_level_0: PEiD
+{
+    strings:
+        $a = { 90 90 90 90 68 ?? ?? ?? ?? 67 64 FF 36 00 00 67 64 89 26 00 00 F1 90 90 90 90 B8 00 90 90 00 6A 00 68 90 90 90 00 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 8B D8 03 00 68 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v12_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 CA ?? ?? ?? 03 ?? 04 ?? 05 ?? 06 ?? 07 ?? 08 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_22_c1998_99_Ian_Luck_h_additional: PEiD
+{
+    strings:
+        $a = { 66 9C 60 50 8D 88 ?? F0 ?? ?? 8D 90 04 16 ?? ?? 8B DC 8B E1 68 ?? ?? ?? ?? 53 50 80 04 24 08 50 80 04 24 42 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v22: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 FF 35 ?? ?? ?? ?? 64 89 25 ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v20: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 66 9C 60 50 8B D8 03 ?? 68 54 BC ?? ?? 6A ?? FF 50 18 8B CC 8D A0 54 BC ?? ?? 8B C3 8D 90 E0 15 ?? ?? 68 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v21: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 6A ?? 68 ?? ?? ?? ?? 64 FF 35 ?? ?? ?? ?? 64 89 25 ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v22_additional: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 FF 35 ?? ?? ?? ?? 64 89 25 ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_PEtite_2x_level_0_Anorganix: PEiD
+{
+    strings:
+        $a = { 90 90 90 90 68 ?? ?? ?? ?? 67 64 FF 36 00 00 67 64 89 26 00 00 F1 90 90 90 90 B8 00 90 90 00 6A 00 68 90 90 90 00 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 8B D8 03 00 68 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_032a_fake_PEtite_21_emadicius: PEiD
+{
+    strings:
+        $a = { B8 00 50 40 00 6A 00 68 BB 21 40 00 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 83 C4 04 61 66 9D 64 8F 05 00 00 00 00 83 C4 08 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_13_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 50 8D 88 00 ?? ?? ?? 8D 90 ?? ?? 00 00 8B DC 8B E1 68 00 00 ?? ?? 53 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 DA 14 00 00 8B 44 24 18 F6 42 03 80 74 19 FD 80 72 03 80 8B F0 8B F8 03 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v_after_v14: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 66 9C 60 50 8D ?? ?? ?? ?? ?? 68 ?? ?? ?? ?? 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_14_additional: PEiD
+{
+    strings:
+        $a = { 66 9C 60 50 8B D8 03 00 68 54 BC 00 00 6A 00 FF 50 14 8B CC 8D A0 54 BC 00 00 50 8B C3 8D 90 ?? 16 00 00 68 00 00 ?? ?? 51 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 D8 14 00 00 8B 44 24 18 F6 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v21_1: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_12_c1998_Ian_Luck_h_additional: PEiD
+{
+    strings:
+        $a = { 66 9C 60 E8 CA 00 00 00 03 00 04 00 05 00 06 00 07 00 08 00 09 00 0A 00 0B 00 0D 00 0F 00 11 00 13 00 17 00 1B 00 1F 00 23 00 2B 00 33 00 3B 00 43 00 53 00 63 00 73 00 83 00 A3 00 C3 00 E3 00 02 01 00 00 00 00 00 00 00 00 00 00 00 00 01 01 01 01 02 02 02 02 03 03 03 03 04 04 04 04 05 05 05 05 00 70 70 01 00 02 00 03 00 04 00 05 00 07 00 09 00 0D 00 11 00 19 00 21 00 31 00 41 00 61 00 81 00 C1 00 01 01 81 01 01 02 01 03 01 04 01 06 01 08 01 0C 01 10 01 18 01 20 01 30 01 40 01 60 00 00 00 00 01 01 02 02 03 03 04 04 05 05 06 06 07 07 08 08 09 09 0A 0A 0B 0B 0C 0C 0D 0D 10 11 12 00 08 07 09 06 0A 05 0B 04 0C 03 0D 02 0E 01 0F 58 2C 08 50 8B C8 8B D0 81 C1 ?? D2 00 00 81 C2 ?? ?? 00 00 89 20 8B E1 50 81 2C 24 00 ?? ?? ?? FF 30 50 80 04 24 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_22_c1998_99_Ian_Luck_h: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? 66 9C 60 50 8D 88 ?? F0 ?? ?? 8D 90 04 16 ?? ?? 8B DC 8B E1 68 ?? ?? ?? ?? 53 50 80 04 24 08 50 80 04 24 42 }
+        $b = { 68 ?? ?? ?? ?? 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 68 00 00 ?? ?? 8B 3C 24 8B 30 66 81 C7 80 07 8D 74 06 08 89 38 8B 5E 10 50 56 6A 02 68 80 08 00 00 57 6A ?? 6A 06 56 6A 04 68 80 08 00 00 57 FF D3 83 EE 08 59 F3 A5 59 66 83 C7 68 81 C6 ?? ?? 00 00 F3 A5 FF D3 58 8D 90 B8 01 00 00 8B 0A 0F BA F1 1F 73 16 8B 04 24 FD 8B F0 8B F8 03 72 04 03 7A 08 F3 A5 83 C2 0C FC EB E2 83 C2 10 8B 5A F4 85 DB 74 D8 8B 04 24 8B 7A F8 03 F8 52 8D 34 01 EB 17 58 58 58 5A 74 C4 E9 1C FF FF FF 02 D2 75 07 8A 16 83 EE FF 12 D2 C3 81 FB 00 00 01 00 73 0E 68 60 C0 FF FF 68 60 FC FF FF B6 05 EB 22 81 FB 00 00 04 00 73 0E 68 80 81 FF FF 68 80 F9 FF FF B6 07 EB 0C 68 00 83 FF FF 68 00 FB FF FF B6 08 6A 00 32 D2 4B A4 33 C9 83 FB 00 7E A4 E8 AA FF FF FF 72 17 A4 30 5F FF 4B EB ED 41 E8 9B FF FF FF 13 C9 E8 94 FF FF FF 72 F2 C3 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule AHTeam_EP_Protector_03_fake_PEtite_22_FEUERRADER: PEiD
+{
+    strings:
+        $a = { 90 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 90 FF E0 B8 00 00 00 00 68 00 00 00 00 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v21_2_additional: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 6A 00 68 ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v14_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 66 9C 60 50 8B D8 03 00 68 ?? ?? ?? ?? 6A 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v22_wwwun4seencompetite_additional: PEiD
+{
+    strings:
+        $a = { B8 00 ?? ?? 00 ?? 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v14: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 66 9C 60 50 8B D8 03 00 68 ?? ?? ?? ?? 6A 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_vxx: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_14: PEiD
+{
+    strings:
+        $a = { 66 9C 60 50 8B D8 03 00 68 54 BC 00 00 6A 00 FF 50 14 8B CC }
+        $b = { ?? ?? ?? ?? ?? 66 9C 60 50 8B D8 03 00 68 54 BC 00 00 6A 00 FF 50 14 8B CC 8D A0 54 BC 00 00 50 8B C3 8D 90 ?? 16 00 00 68 00 00 ?? ?? 51 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 D8 14 00 00 8B 44 24 18 F6 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule Petite_12: PEiD
+{
+    strings:
+        $a = { 66 9C 60 E8 CA 00 00 00 03 00 04 00 05 00 06 00 07 00 08 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_13: PEiD
+{
+    strings:
+        $a = { 66 9C 60 50 8D 88 00 F0 00 00 8D 90 04 16 00 00 8B DC 8B E1 }
+        $b = { ?? ?? ?? ?? ?? ?? 9C 60 50 8D 88 00 ?? ?? ?? 8D 90 ?? ?? 00 00 8B DC 8B E1 68 00 00 ?? ?? 53 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 DA 14 00 00 8B 44 24 18 F6 42 03 80 74 19 FD 80 72 03 80 8B F0 8B F8 03 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule PackerPetite_v22_Compresor_wwwun4seencompetite: PEiD
+{
+    strings:
+        $a = { B8 00 ?0 ?? 00 6? 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_14_c1998_99_Ian_Luck_h_additional: PEiD
+{
+    strings:
+        $a = { 66 9C 60 50 8B D8 03 00 68 54 BC 00 00 6A 00 FF 50 14 8B CC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v13_Ian_Luck: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? 66 9C 60 50 8D 88 00 F0 00 00 8D 90 04 16 00 00 8B DC 8B E1 68 ?? ?? ?? ?? 53 50 80 04 24 08 50 80 04 24 42 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v14_additional: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 66 9C 60 50 8B D8 03 00 68 ?? ?? ?? ?? 6A 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_14_c1998_99_Ian_Luck_h: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? 66 9C 60 50 8B D8 03 00 68 54 BC 00 00 6A 00 FF 50 14 8B CC }
+        $b = { 66 9C 60 50 8B D8 03 00 68 54 BC 00 00 6A 00 FF 50 14 8B CC 8D A0 54 BC 00 00 50 8B C3 8D 90 ?? 16 00 00 68 00 00 ?? ?? 51 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 D8 14 00 00 8B 44 24 18 F6 42 03 80 74 19 FD 80 72 03 80 8B F0 8B F8 03 72 04 03 7A 08 8B 0A F3 A5 83 C2 0C FC EB D4 8B 7A 08 03 F8 8B 5A 04 85 DB 74 13 52 53 57 03 02 50 E8 79 00 00 00 85 C0 74 30 5F 5F 58 5A 8B 4A 0C C1 F9 02 33 C0 F3 AB 8B 4A 0C 83 E1 03 F3 AA 83 C2 10 EB 9E 45 52 52 4F 52 21 00 43 6F 72 72 75 70 74 20 44 61 74 61 21 00 8B 64 24 24 8B 04 24 83 C4 26 8B D0 66 81 C2 7E 01 6A 10 8B D8 66 05 77 01 50 52 6A 00 03 1B FF 13 6A FF FF 53 08 56 57 8B 7C 24 0C 8B 74 24 10 8B 4C 24 14 C1 F9 02 F3 A5 8B 4C 24 14 83 E1 03 F3 A4 5F 5E C3 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule MSLRH_032a_fake_PEtite_21_emadicius_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 2B 00 00 00 0D 0A 0D 0A 0D 0A 52 65 67 69 73 74 41 72 65 64 20 74 6F 3A 20 4E 4F 4E 2D 43 4F 4D 4D 45 52 43 49 41 4C 21 21 0D 0A 0D 0A 0D 00 58 61 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_21_additional: PEiD
+{
+    strings:
+        $a = { 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 8B D8 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_13_c1998_Ian_Luck_h_additional: PEiD
+{
+    strings:
+        $a = { 68 ?? ?? ?? ?? 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 68 00 00 ?? ?? 8B 3C 24 8B 30 66 81 C7 80 07 8D 74 06 08 89 38 8B 5E 10 50 56 6A 02 68 80 08 00 00 57 6A ?? 6A 06 56 6A 04 68 80 08 00 00 57 FF D3 83 EE 08 59 F3 A5 59 66 83 C7 68 81 C6 ?? ?? 00 00 F3 A5 FF D3 58 8D 90 B8 01 00 00 8B 0A 0F BA F1 1F 73 16 8B 04 24 FD 8B F0 8B F8 03 72 04 03 7A 08 F3 A5 83 C2 0C FC EB E2 83 C2 10 8B 5A F4 85 DB 74 D8 8B 04 24 8B 7A F8 03 F8 52 8D 34 01 EB 17 58 58 58 5A 74 C4 E9 1C FF FF FF 02 D2 75 07 8A 16 83 EE FF 12 D2 C3 81 FB 00 00 01 00 73 0E 68 60 C0 FF FF 68 60 FC FF FF B6 05 EB 22 81 FB 00 00 04 00 73 0E 68 80 81 FF FF 68 80 F9 FF FF B6 07 EB 0C 68 00 83 FF FF 68 00 FB FF FF B6 08 6A 00 32 D2 4B A4 33 C9 83 FB 00 7E A4 E8 AA FF FF FF 72 17 A4 30 5F FF 4B EB ED 41 E8 9B FF FF FF 13 C9 E8 94 FF FF FF 72 F2 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v12_Ian_Luck: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 CA 00 00 00 03 00 04 00 05 00 06 00 07 00 08 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v22_wwwun4seencompetite: PEiD
+{
+    strings:
+        $a = { B8 00 ?? ?? 00 ?? 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 }
+        $b = { B8 00 ?0 ?? 00 6? 00 ?? ?? ?? ?? ?? ?? ?? ?? 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule Petite_22_c1998_99_Ian_Luck: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 68 00 00 ?? ?? 8B 3C 24 8B 30 66 81 C7 80 07 8D 74 06 08 89 38 8B 5E 10 50 56 6A 02 68 80 08 00 00 57 6A ?? 6A 06 56 6A 04 68 80 08 00 00 57 FF D3 83 EE 08 59 F3 A5 59 66 }
+        $b = { 68 ?? ?? ?? ?? 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 68 00 00 ?? ?? 8B 3C 24 8B 30 66 81 C7 80 07 8D 74 06 08 89 38 8B 5E 10 50 56 6A 02 68 80 08 00 00 57 6A ?? 6A 06 56 6A 04 68 80 08 00 00 57 FF D3 83 EE 08 59 F3 A5 59 66 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule PEtite_v21_additional: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 6A 00 68 ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_12_c1998_Ian_Luck: PEiD
+{
+    strings:
+        $a = { 66 9C 60 E8 CA 00 00 00 03 00 04 00 05 00 06 00 07 00 08 00 09 00 0A 00 0B 00 0D 00 0F 00 11 00 13 00 17 00 1B 00 1F 00 23 00 2B 00 33 00 3B 00 43 00 53 00 63 00 73 00 83 00 A3 00 C3 00 E3 00 02 01 00 00 00 00 00 00 00 00 00 00 00 00 01 01 01 01 02 02 02 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v14: PEiD
+{
+    strings:
+        $a = { 66 9C 60 50 8B D8 03 ?? 68 54 BC ?? ?? 6A ?? FF 50 14 8B CC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v13: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? 66 9C 60 50 8D 88 ?? F0 ?? ?? 8D 90 04 16 ?? ?? 8B DC 8B E1 68 ?? ?? ?? ?? 53 50 80 04 24 08 50 80 04 24 42 }
+        $b = { 66 9C 60 50 8D 88 ?? F0 ?? ?? 8D 90 04 16 ?? ?? 8B DC 8B E1 68 ?? ?? ?? ?? 53 50 80 04 24 08 50 80 04 24 42 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule PEtite_v12: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 CA ?? ?? ?? 03 ?? 04 ?? 05 ?? 06 ?? 07 ?? 08 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v22_Ian_Luck: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_22_PE_EXE: PEiD
+{
+    strings:
+        $a = { B8 00 00 00 00 6A 00 68 00 00 00 00 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 8B D8 03 00 68 70 BC 00 00 6A 00 FF 50 1C 8B CC 8D A0 70 BC 00 00 89 61 2E 68 00 00 00 00 51 8B 7C 24 04 8B 33 66 81 C7 80 07 8D 74 1E 08 89 3B 53 8B }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v14_additional: PEiD
+{
+    strings:
+        $a = { 59 F3 A5 83 C8 FF 8B DF AB 40 AB 40 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_vxx_additional: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_PEtite_2x_level_0_Anorganix_additional: PEiD
+{
+    strings:
+        $a = { 90 90 90 90 68 ?? ?? ?? ?? 67 64 FF 36 00 00 67 64 89 26 00 00 F1 90 90 90 90 B8 00 90 90 00 6A 00 68 90 90 90 00 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 8B D8 03 00 68 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_14_c1998_99_Ian_Luck: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? 66 9C 60 50 8B D8 03 00 68 54 BC 00 00 6A 00 FF 50 14 8B CC 8D A0 54 BC 00 00 50 8B C3 8D 90 ?? 16 00 00 68 00 00 ?? ?? 51 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 D8 14 00 00 8B 44 24 18 F6 }
+        $b = { 66 9C 60 50 8B D8 03 00 68 54 BC 00 00 6A 00 FF 50 14 8B CC 8D A0 54 BC 00 00 50 8B C3 8D 90 ?? 16 00 00 68 00 00 ?? ?? 51 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 D8 14 00 00 8B 44 24 18 F6 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule Petite_v21_2_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 6A 00 68 ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_13a: PEiD
+{
+    strings:
+        $a = { B8 00 00 00 00 66 9C 60 50 8D 88 00 00 00 00 8D 90 00 00 00 00 8B DC 8B E1 68 00 00 00 00 53 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 DC 14 00 00 8B 44 24 18 F6 42 03 80 74 19 FD 80 72 03 80 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v21_1_additional: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v21_2: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 6A 00 68 ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v21_1_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 64 ?? ?? ?? ?? ?? ?? 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_22_PE_DLL: PEiD
+{
+    strings:
+        $a = { B8 00 00 00 00 68 00 00 00 00 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 68 00 00 00 00 8B 3C 24 8B 30 66 81 C7 80 07 8D 74 06 08 89 38 8B 5E 10 50 56 6A 02 68 80 08 00 00 57 6A 00 6A 06 56 6A 04 68 80 08 00 00 57 FF D3 83 EE 08 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_v_after_v14_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 66 9C 60 50 8D ?? ?? ?? ?? ?? 68 ?? ?? ?? ?? 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_14_c1998_99_Ian_Luck_additional: PEiD
+{
+    strings:
+        $a = { 66 9C 60 50 8B D8 03 00 68 54 BC 00 00 6A 00 FF 50 14 8B CC 8D A0 54 BC 00 00 50 8B C3 8D 90 ?? 16 00 00 68 00 00 ?? ?? 51 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 D8 14 00 00 8B 44 24 18 F6 42 03 80 74 19 FD 80 72 03 80 8B F0 8B F8 03 72 04 03 7A 08 8B 0A F3 A5 83 C2 0C FC EB D4 8B 7A 08 03 F8 8B 5A 04 85 DB 74 13 52 53 57 03 02 50 E8 79 00 00 00 85 C0 74 30 5F 5F 58 5A 8B 4A 0C C1 F9 02 33 C0 F3 AB 8B 4A 0C 83 E1 03 F3 AA 83 C2 10 EB 9E 45 52 52 4F 52 21 00 43 6F 72 72 75 70 74 20 44 61 74 61 21 00 8B 64 24 24 8B 04 24 83 C4 26 8B D0 66 81 C2 7E 01 6A 10 8B D8 66 05 77 01 50 52 6A 00 03 1B FF 13 6A FF FF 53 08 56 57 8B 7C 24 0C 8B 74 24 10 8B 4C 24 14 C1 F9 02 F3 A5 8B 4C 24 14 83 E1 03 F3 A4 5F 5E C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_13_c1998_Ian_Luck: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? ?? 9C 60 50 8D 88 00 ?? ?? ?? 8D 90 ?? ?? 00 00 8B DC 8B E1 68 00 00 ?? ?? 53 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 DA 14 00 00 8B 44 24 18 F6 42 03 80 74 19 FD 80 72 03 80 8B F0 8B F8 03 }
+        $b = { 9C 60 50 8D 88 00 ?? ?? ?? 8D 90 ?? ?? 00 00 8B DC 8B E1 68 00 00 ?? ?? 53 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 DA 14 00 00 8B 44 24 18 F6 42 03 80 74 19 FD 80 72 03 80 8B F0 8B F8 03 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule Petite_13_c1998_Ian_Luck_h: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? 68 ?? ?? ?? ?? 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 68 00 00 ?? ?? 8B 3C 24 8B 30 66 81 C7 80 07 8D 74 06 08 89 38 8B 5E 10 50 56 6A 02 68 80 08 00 00 57 6A ?? 6A 06 56 6A 04 68 80 08 00 00 57 FF D3 83 EE 08 59 F3 A5 59 66 83 C7 68 81 C6 ?? ?? 00 00 F3 A5 FF D3 58 8D 90 B8 01 00 00 8B 0A 0F BA F1 1F 73 16 8B 04 24 FD 8B F0 8B F8 03 72 04 03 7A 08 F3 A5 83 C2 0C FC EB E2 83 C2 10 8B 5A F4 85 DB 74 D8 8B 04 24 8B 7A F8 03 F8 52 8D 34 01 EB 17 58 58 58 5A 74 C4 E9 1C FF FF FF 02 D2 75 07 8A 16 83 EE FF 12 D2 C3 81 FB 00 00 01 00 73 0E 68 60 C0 FF FF 68 60 FC FF FF B6 05 EB 22 81 FB 00 00 04 00 73 0E 68 80 81 FF FF 68 80 F9 FF FF B6 07 EB 0C 68 00 83 FF FF 68 00 FB FF FF B6 08 6A 00 32 D2 4B A4 33 C9 83 FB 00 7E A4 E8 AA FF FF FF 72 17 A4 30 5F FF 4B EB ED 41 E8 9B FF FF FF 13 C9 E8 94 FF FF FF 72 F2 C3 }
+        $b = { 9C 60 50 8D 88 00 ?? ?? ?? 8D 90 ?? ?? 00 00 8B DC 8B E1 68 00 00 ?? ?? 53 50 80 04 24 08 50 80 04 24 42 50 80 04 24 61 50 80 04 24 9D 50 80 04 24 BB 83 3A 00 0F 84 DA 14 00 00 8B 44 24 18 F6 42 03 80 74 19 FD 80 72 03 80 8B F0 8B F8 03 72 04 03 7A 08 8B 0A F3 A5 83 C2 0C FC EB D4 8B 7A 08 03 F8 8B 5A 04 85 DB 74 13 52 53 57 03 02 50 E8 7B 00 00 00 85 C0 74 2E 5F 5F 58 5A 8B 4A 0C C1 F9 02 F3 AB 8B 4A 0C 83 E1 03 F3 AA 83 C2 10 EB A0 45 52 52 4F 52 21 00 43 6F 72 72 75 70 74 20 44 61 74 61 21 00 8B 64 24 24 8B 04 24 83 C4 26 8B D0 66 81 C2 6D 01 6A 10 8B D8 66 05 66 01 50 52 6A 00 8B 13 FF 14 1A 6A FF FF 93 ?? ?? 00 00 56 57 8B 7C 24 0C 8B 74 24 10 8B 4C 24 14 C1 F9 02 F3 A5 8B 4C 24 14 83 E1 03 F3 A4 5F 5E C3 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule MSLRH_v032a_fake_PEtite_21_emadicius: PEiD
+{
+    strings:
+        $a = { B8 00 50 40 00 6A 00 68 BB 21 40 00 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 83 C4 04 61 66 9D 64 8F 05 00 00 00 00 83 C4 08 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_22_c1998_99_Ian_Luck_additional: PEiD
+{
+    strings:
+        $a = { 68 ?? ?? ?? ?? 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 68 00 00 ?? ?? 8B 3C 24 8B 30 66 81 C7 80 07 8D 74 06 08 89 38 8B 5E 10 50 56 6A 02 68 80 08 00 00 57 6A ?? 6A 06 56 6A 04 68 80 08 00 00 57 FF D3 83 EE 08 59 F3 A5 59 66 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Petite_12_additional: PEiD
+{
+    strings:
+        $a = { 66 9C 60 E8 CA 00 00 00 03 00 04 00 05 00 06 00 07 00 08 00 09 00 0A 00 0B 00 0D 00 0F 00 11 00 13 00 17 00 1B 00 1F 00 23 00 2B 00 33 00 3B 00 43 00 53 00 63 00 73 00 83 00 A3 00 C3 00 E3 00 02 01 00 00 00 00 00 00 00 00 00 00 00 00 01 01 01 01 02 02 02 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v21_Ian_Luck: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 6A 00 68 ?? ?? ?? ?? 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PEtite_v20_additional: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? 66 9C 60 50 8B D8 03 ?? 68 54 BC ?? ?? 6A ?? FF 50 18 8B CC 8D A0 54 BC ?? ?? 8B C3 8D 90 E0 15 ?? ?? 68 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_PEtite_2x_level_0: PEiD
+{
+    strings:
+        $a = { 90 90 90 90 68 ?? ?? ?? ?? 67 64 FF 36 00 00 67 64 89 26 00 00 F1 90 90 90 90 B8 00 90 90 00 6A 00 68 90 90 90 00 64 FF 35 00 00 00 00 64 89 25 00 00 00 00 66 9C 60 50 8B D8 03 00 68 }
+    condition:
+        $a at pe.entry_point
+
+}

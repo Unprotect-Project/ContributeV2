@@ -1,0 +1,19 @@
+name: 'Hijack Execution Flow: DLL Search Order Hijacking'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1574/001/
+- https://pentestlab.blog/2017/03/27/dll-hijacking/
+- https://itm4n.github.io/windows-dll-hijacking-clarified/
+- https://posts.specterops.io/automating-dll-hijack-discovery-81c4295904b0
+- https://github.com/Sh0ckFR/DLLirant
+tags:
+- Persistence
+- Privilege Escalation
+- Defense Evasion
+- execute malicious payloads
+- trojan dynamic-link library files (DLLs)
+- DLL preloading
+- binary planting attacks
+- mimic legitimate DLL
+- DLL redirection

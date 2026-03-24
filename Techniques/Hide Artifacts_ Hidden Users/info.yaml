@@ -1,0 +1,10 @@
+name: 'Hide Artifacts: Hidden Users'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1564/002/
+tags:
+- Defense Evasion
+- HKLM\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\UserList
+- Dragonfly
+- supress users from login screen

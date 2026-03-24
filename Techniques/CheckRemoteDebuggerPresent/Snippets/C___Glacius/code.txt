@@ -1,0 +1,12 @@
+#include "windows.h"
+ 
+int main(void)
+{
+    BOOL HasDebugPort = FALSE;
+ 
+    if (CheckRemoteDebuggerPresent(GetCurrentProcess(), &HasDebugPort))
+    {
+           ExitProcess(0); // Running in ring-3 debugger
+    }
+    // Running outside ring-3 debugger
+    return 0;

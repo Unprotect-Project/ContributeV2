@@ -1,0 +1,1 @@
+This code uses the stem library to connect to the Tor control port and authenticate with the control password. It then creates a new circuit to the specified C&C server and resolves its address using stem.util.connection.resolve_address(). The code then establishes a connection to the C&C server over the Tor network and sends and receives data from it.

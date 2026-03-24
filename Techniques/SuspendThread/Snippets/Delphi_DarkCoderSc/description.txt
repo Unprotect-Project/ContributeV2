@@ -1,0 +1,1 @@
+You can compile this unit as a classic Delphi Console Application. Feel free to edit both `LFindWindowSignatures` and `LProcessNameSignatures` to support more debuggers.

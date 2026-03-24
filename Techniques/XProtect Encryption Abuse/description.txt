@@ -1,0 +1,9 @@
+Malware can abuse Apple's macOS XProtect string encryption algorithm to hide critical strings, including commands, browser paths, extension IDs, cryptocurrency wallet locations, and command-and-control (C2) details. 
+
+This technique leverages the same XOR-based encryption logic implemented in macOS’s XProtect antivirus engine, this encryption is used for “encrypted YARA rules stored within the XProtect Remediator binaries”.
+
+The encryption process involves XORing each byte of the string with a key derived from bitwise operations on an encryption key and the byte index. The decrypted output is only available in memory during execution, complicating detection by antivirus solutions.
+
+The encrypted strings remain hidden in the malware's binary, and during runtime, a decryption function processes the strings, to reconstruct them in memory for use. For example, malware authors embed encrypted strings related to C2 server URLs or file paths, which are decrypted dynamically when required. 
+
+The combination of leveraging XProtect’s encryption logic and runtime decryption allows the malware to evade static analysis and signature-based detection methods.

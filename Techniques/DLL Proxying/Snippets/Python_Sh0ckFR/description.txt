@@ -1,0 +1,1 @@
+Basic python script to extract all exported functions of a targeted DLL, here DNSAPI.dll used by nslookup.exe.

@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Killing Windows Event Log
+target_operating_system: windows

@@ -1,0 +1,12 @@
+name: 'Impair Defenses: Downgrade Attack'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1562/010/
+tags:
+- Defense Evasion
+- downgrading Windows
+- Script Block Logging (SBL)
+- removing features
+- execute malicious scripts
+- Adversary-in-the-Middle.

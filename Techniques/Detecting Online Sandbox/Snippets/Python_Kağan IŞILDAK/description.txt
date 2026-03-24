@@ -1,0 +1,1 @@
+This snippet detects if the process is running in the online sandbox app.any.run.

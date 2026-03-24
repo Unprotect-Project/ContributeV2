@@ -1,0 +1,14 @@
+name: Opcode Obfuscation
+categories:
+- Anti-Disassembly
+resources:
+- https://en.wikibooks.org/wiki/X86_Disassembly/Code_Obfuscation
+tags:
+- Opcode obfuscation
+- Anti-disassembling
+- Disassembler
+- Machine language
+- Opcode
+- Equivalent opcodes
+- Disassembly output
+- Disassembly accuracy

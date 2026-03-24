@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Time Bomb
+target_operating_system: windows

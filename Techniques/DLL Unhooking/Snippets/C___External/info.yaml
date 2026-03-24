@@ -1,0 +1,4 @@
+language: C++
+contributors: External
+associated_technique: DLL Unhooking
+target_operating_system: windows

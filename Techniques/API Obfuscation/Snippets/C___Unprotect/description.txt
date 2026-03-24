@@ -1,0 +1,1 @@
+Original source code: https://www.ired.team/offensive-security/defense-evasion/windows-api-hashing-in-malware

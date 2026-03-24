@@ -1,0 +1,10 @@
+name: Bypass User Account Control
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1548/002/
+tags:
+- Defense Evasion
+- bypass UAC controls
+- MITRE
+- privilege elevation

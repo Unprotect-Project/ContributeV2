@@ -1,0 +1,4 @@
+language: C++
+contributors: Alex Schwarz
+associated_technique: Tamper DLL Export Names & GetProcAddress Spoofing
+target_operating_system: windows

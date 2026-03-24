@@ -1,0 +1,7 @@
+The CPUID instruction is a low-level command that allows you to retrieve information about the CPU that is currently running. This instruction, which is executed at the CPU level (using the bytecode 0FA2), is available on all processors that are based on the Pentium architecture or newer.
+
+You can use the CPUID instruction to retrieve various pieces of information about the CPU, such as the brand of the CPU, the operating system, or the presence of a hypervisor. This is done by specifying the "leaf" information you want to retrieve (such as 0 for the brand of the CPU) in the EAX register, and then executing the instruction. The result will be returned in the EBX, EDX, and ECX registers as a string.
+
+For example, when you request leaf information 0, you may see the brand of the CPU or the virtualization technology in use. Some common strings that you may see include "KVMKVMKVM" for KVM, "Microsoft Hv" for Hyper-V, "VMwareVMware" for VMware, and "GenuineIntel" for an Intel CPU.
+
+The information returned by the CPUID instruction can vary depending on the platform and the specific CPU model.

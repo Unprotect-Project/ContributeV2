@@ -1,0 +1,4 @@
+language: Python
+contributors: DarkCoderSc
+associated_technique: Detecting Window with FindWindow API
+target_operating_system: windows

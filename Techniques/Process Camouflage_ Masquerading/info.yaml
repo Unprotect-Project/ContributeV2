@@ -1,0 +1,23 @@
+name: Process Camouflage, Masquerading
+categories:
+- Process Manipulating
+resources:
+- https://www.endgame.com/blog/technical-blog/how-hunt-masquerade-ball
+tags:
+- Masquerading
+- malware
+- legitimate file
+- svchost.exe
+- legitimate folder
+- name
+- location
+- executable
+- manipulated
+- abused
+- security defenses
+- observation
+- variations
+- forms
+- legitimate software
+- source
+- process

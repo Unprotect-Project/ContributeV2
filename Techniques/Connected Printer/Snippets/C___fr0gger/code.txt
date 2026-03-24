@@ -1,0 +1,19 @@
+#include <windows.h>
+#include <winspool.h>
+
+int main() {
+    DWORD numPrinters;
+    PRINTER_INFO_2* printerInfo;
+    if (EnumPrinters(PRINTER_ENUM_LOCAL, NULL, 2, NULL, 0, &numPrinters, NULL)) {
+        printerInfo = (PRINTER_INFO_2*) malloc(numPrinters * sizeof(PRINTER_INFO_2));
+        if (EnumPrinters(PRINTER_ENUM_LOCAL, NULL, 2, (LPBYTE) printerInfo, numPrinters * sizeof(PRINTER_INFO_2), &numPrinters, NULL)) {
+            printf("Number of printers found: %d\n", numPrinters);
+            // Print the names of the printers
+            for (DWORD i = 0; i < numPrinters; i++) {
+                printf("%s\n", printerInfo[i].pPrinterName);
+            }
+        }
+        free(printerInfo);
+    }
+    return 0;
+}

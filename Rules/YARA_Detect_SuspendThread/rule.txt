@@ -1,0 +1,16 @@
+rule Detect_SuspendThread: AntiDebug {
+    meta: 
+        description = "Detect SuspendThread as anti-debug"
+        author = "Unprotect"
+        comment = "Experimental rule"
+    strings:
+        $1 = "SuspendThread" fullword ascii
+        $2 = "NtSuspendThread" fullword ascii
+        $3 = "OpenThread" fullword ascii
+        $4 = "SetThreadContext" fullword ascii
+        $5 = "SetInformationThread" fullword ascii
+        $x1 = "CreateToolHelp32Snapshot" fullword ascii
+        $x2 = "EnumWindows" fullword ascii
+    condition:   
+        uint16(0) == 0x5A4D and filesize < 1000KB and ($x1 or $x2) and 2 of them
+}

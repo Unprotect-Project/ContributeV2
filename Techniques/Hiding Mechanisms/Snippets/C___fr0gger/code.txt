@@ -1,0 +1,18 @@
+#include <Windows.h>
+
+int main()
+{
+  // Open the registry key where the malware will be hidden
+  HKEY hKey;
+  RegOpenKeyEx(HKEY_LOCAL_MACHINE, "SOFTWARE\\MyMalware", 0, KEY_WRITE, &hKey);
+  
+  // Create a new value in the registry key to store the malware
+  DWORD dwValue = 1;
+  RegSetValueEx(hKey, "HiddenValue", 0, REG_DWORD, (LPBYTE)&dwValue, sizeof(dwValue));
+  
+  // Close the registry key
+  RegCloseKey(hKey);
+  
+  // Return success
+  return 0;
+}

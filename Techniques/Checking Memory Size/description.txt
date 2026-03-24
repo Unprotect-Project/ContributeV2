@@ -1,0 +1,1 @@
+Most modern user machines have at least 4GB of memory. Malware programs can detect whether they are running in a sandbox environment by checking the available memory size. If the available memory size is less than 4GB, it is likely that the program is running in a sandbox.

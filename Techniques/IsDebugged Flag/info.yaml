@@ -1,0 +1,10 @@
+name: IsDebugged Flag
+categories:
+- Anti-Debugging
+tags:
+- NtQueryInformationProcess
+featured_apis:
+- WriteProcessMemory
+- OpenProcess
+- ReadProcessMemory
+- GetProcAddress

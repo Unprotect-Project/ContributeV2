@@ -1,0 +1,17 @@
+name: 'Valid Accounts: Default Accounts'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1078/001/
+tags:
+- Defense Evasion
+- Persistence
+- Privilege Escalation
+- Initial Access
+- built-into an OS accounts
+- admin accounts
+- guest accounts
+- publicly disclosed credentials
+- stolen credentials
+- stolen private keys
+- remote access

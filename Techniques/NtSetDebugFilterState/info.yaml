@@ -1,0 +1,10 @@
+name: NtSetDebugFilterState
+categories:
+- Anti-Debugging
+tags:
+- NtSetDebugFilterState
+- DbgSetDebugFilterState
+- Kernel mode debugger detection
+- Debug filter
+featured_apis:
+- GetProcAddress

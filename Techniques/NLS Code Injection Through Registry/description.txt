@@ -1,0 +1,5 @@
+Dll injection through registry modification of NLS code page ID is a technique used by malware to inject a malicious DLL into a process by modifying the NLS code page ID in the registry.
+
+There are two ways to accomplish this technique:
+1. Calling the `SetThreadLocale` function and setting up an export function named `NlsDllCodePageTranslation`, where the main payload is located.
+2. Using the `SetConsoleCp` or `SetConsoleOutputCP` functions to modify the code page ID. If the process is not console-based, it is possible to allocate a console using the `AllocConsole` function.

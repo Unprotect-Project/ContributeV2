@@ -1,0 +1,1 @@
+When a debugger is present, and used to single-step through the code, there is a significant delay between the executions of the individual instructions, when compared to native execution.

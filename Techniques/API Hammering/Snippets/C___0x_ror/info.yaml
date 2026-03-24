@@ -1,0 +1,4 @@
+language: C++
+contributors: 0x_ror
+associated_technique: API Hammering
+target_operating_system: windows

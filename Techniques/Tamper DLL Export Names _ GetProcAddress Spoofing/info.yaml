@@ -1,0 +1,7 @@
+name: Tamper DLL Export Names & GetProcAddress Spoofing
+categories:
+- Process Manipulating
+featured_apis:
+- VirtualAlloc
+- VirtualQuery
+- GetProcAddress

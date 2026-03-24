@@ -1,0 +1,37 @@
+#include <Windows.h>
+#include <TlHelp32.h>
+
+int main()
+{
+    // Create a snapshot of all running threads
+    HANDLE hSnapshot = CreateToolhelp32Snapshot(TH32CS_SNAPTHREAD, 0);
+
+    if (hSnapshot != INVALID_HANDLE_VALUE)
+    {
+        THREADENTRY32 te32;
+        te32.dwSize = sizeof(THREADENTRY32);
+
+        // Enumerate all running threads
+        if (Thread32First(hSnapshot, &te32))
+        {
+            do
+            {
+                // Check if the thread belongs to the target process
+                if (te32.th32OwnerProcessID == targetProcessId)
+                {
+                    // Open the thread
+                    HANDLE hThread = OpenThread(THREAD_SET_CONTEXT, 0, te32.th32ThreadID);
+
+                    if (hThread != NULL)
+                    {
+                        // Inject your code here
+
+                        CloseHandle(hThread);
+                    }
+                }
+            } while (Thread32Next(hSnapshot, &te32));
+        }
+
+        CloseHandle(hSnapshot);
+    }
+}

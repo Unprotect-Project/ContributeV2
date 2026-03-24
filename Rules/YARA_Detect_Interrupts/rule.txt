@@ -1,0 +1,7 @@
+rule AntiDebugging_Interrupt {
+  condition:
+    // Check for presence of __try and __except blocks
+    uint32(0) == 0x00646120 and uint32(4) == 0x00646120 and
+    // Check for presence of __debugbreak or interrupt instructions such as INT 3 or UD2
+    (uint8(8) == 0xCC or uint8(8) == 0xF1 or uint8(8) == 0xCC)
+}

@@ -1,0 +1,13 @@
+rule DLLHijacking {
+  condition:
+    // Check for presence of DLL_PROCESS_ATTACH in DllMain function
+    uint16(0) == 0x6461 and (
+      // Check for the presence of CreateThread, which is used to start the main function
+      uint32(2) == 0x74006872 and uint32(6) == 0x00006563 and uint32(10) == 0x74616843 and
+      
+      // Check for the presence of Main function
+      uint32(14) == 0x6E69006D and uint32(18) == 0x0064614D
+    )
+    // Check for presence of dllexport attribute
+    and (pe.exports("DnsFreeConfigStructure") or pe.exports("DnsFreeConfigStructure@0"))
+}

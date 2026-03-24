@@ -1,0 +1,16 @@
+name: 'Obfuscated Files or Information: Binary Padding'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1027/001/
+tags:
+- Defense Evasion
+- checksum manipulation
+- avoid hash-based blocklists
+- avoid static anti-virus signatures
+- append junk data
+- append random binary data
+- maximum file size
+- APT29
+- APT32
+- maximum file size

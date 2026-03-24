@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: NOP Sled
+target_operating_system: windows

@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Querying the I/O Communication Port
+target_operating_system: windows

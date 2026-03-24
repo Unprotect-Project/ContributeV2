@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Control Flow Graph Flattening
+target_operating_system: windows

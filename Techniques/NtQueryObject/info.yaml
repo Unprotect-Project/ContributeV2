@@ -1,0 +1,11 @@
+name: NtQueryObject
+categories:
+- Anti-Debugging
+resources:
+- https://msdn.microsoft.com/en-us/library/bb432383(v=vs.85).aspx
+- https://www.codeproject.com/Articles/30815/An-Anti-Reverse-Engineering-Guide?fbclid=IwAR0fpYHnQX6C3YyBx3pnZ1m3bOYawc-kUIhZn65T5Bf7pQR26fUuVNYPs_Q#NtQueryObject
+tags:
+- NtQueryObject
+featured_apis:
+- VirtualAlloc
+- GetProcAddress

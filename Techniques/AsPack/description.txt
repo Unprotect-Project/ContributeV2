@@ -1,0 +1,5 @@
+ASPack is an EXE packer created to compress Win32 executable files and to protect them against reverse engineering.
+
+The solution makes Windows programs and libraries smaller up to 70% what leads to a reduction in the download time of compressed applications in local networks and the Internet because of their smaller size compared to uncompressed apps.
+
+The ASPack exe compressor also provides protection to programs/applications from unprofessional analysis, debuggers and decompilers.

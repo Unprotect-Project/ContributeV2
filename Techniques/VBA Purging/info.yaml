@@ -1,0 +1,12 @@
+name: VBA Purging
+categories:
+- Antivirus/EDR Evasion
+resources:
+- https://blog.didierstevens.com/2020/06/22/vba-purging/
+- https://cloud.google.com/blog/topics/threat-intelligence/purgalicious-vba-macro-obfuscation-with-vba-purging/?hl=en
+- https://blog.nviso.eu/2020/02/25/evidence-of-vba-purging-found-in-malicious-documents/
+- https://github.com/mandiant/OfficePurge
+- https://beta-v1.malva.re/File/730a8401140edb4c79d563f306ca529e/Report
+- https://beta-v1.malva.re/File/2433e76542036ab53b138a98eeda548a/Report
+contributors:
+- sbruyere

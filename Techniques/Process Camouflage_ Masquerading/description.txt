@@ -1,0 +1,11 @@
+Masquerading is a technique used by malware to evade detection by disguising itself as a legitimate file. This is typically achieved by renaming the malicious file to match the name of a commonly found and trusted file, such as `svchost.exe`, and placing it in a legitimate folder. 
+
+Masquerading can occur when the name or location of an executable, whether legitimate or malicious, is manipulated or abused to evade security defenses and observation. This technique has many variations and has been observed in various forms.
+
+This technique is more a social engineering trick. The malware will use the same techniques to copy and rename the file as a legitimate one in the system. Some examples of how the malware can achieve this are:
+
+* Using scripting languages such as VBS or PowerShell to copy and rename the files.
+* Using built-in Windows commands such as copy and rename.
+* Using legitimate tools such as xcopy or robocopy to copy the files while preserving their original timestamps.
+
+The detection of this technique is not based on the code used but in the analysis of the file properties such as the name, location, timestamps, and digital signature. And also, on the behavior of the process after it runs.

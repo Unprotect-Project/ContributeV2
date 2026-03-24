@@ -1,0 +1,1 @@
+Goat files inside Defender AV Emulator's file system. Often used in PE malware as an evasion technique to evade executing in Windows Defender's AV Emulator.

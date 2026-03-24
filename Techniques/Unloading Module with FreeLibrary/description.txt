@@ -1,0 +1,5 @@
+Malware authors often use various techniques to evade detection by AV/EDR solutions. One such technique involves checking for the presence of AV/EDR DLLs that may be loaded in the malware's address space and attempting to unload them before executing their malicious code.
+
+To do this, the malware first uses the `GetModuleHandleA` function to retrieve a handle to the DLL, if it's already loaded. Once it has a valid handle, the malware then calls the `FreeLibrary` function to free and unload the DLL from memory.
+
+By unloading the AV/EDR DLL, the malware can avoid detection and carry out its malicious activities without being monitored or blocked by the security software. However, it is important to note that this technique only affects user-mode components of an EDR and not kernel components. Additionally, modern EDR systems have evolved to detect such evasive techniques and prevent malware from disabling them.

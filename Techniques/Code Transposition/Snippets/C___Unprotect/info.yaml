@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Code Transposition
+target_operating_system: windows

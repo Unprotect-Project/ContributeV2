@@ -1,0 +1,14 @@
+name: 'Indicator Removal: Clear Command History'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1070/003/
+tags:
+- Defense Evasion
+- clear CLI history
+- PSReadLine
+- $env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\ConsoleHost_history.txt
+- Clear-History
+- ConsoleHost_history.txt
+- APT41
+- log file deletion

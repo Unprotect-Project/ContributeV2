@@ -1,0 +1,4 @@
+language: C++
+contributors: External
+associated_technique: Return Address Spoofing
+target_operating_system: windows

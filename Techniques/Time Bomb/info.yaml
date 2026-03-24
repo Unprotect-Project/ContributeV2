@@ -1,0 +1,13 @@
+name: Time Bomb
+categories:
+- Sandbox Evasion
+- Others
+resources:
+- https://en.wikipedia.org/wiki/Time_bomb_(software)
+tags:
+- timebomb
+- change date
+- sandbox environments
+- isolate malware
+- analyze malware
+- clock

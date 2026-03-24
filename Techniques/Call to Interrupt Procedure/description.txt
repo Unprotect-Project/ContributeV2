@@ -1,0 +1,5 @@
+This anti-debugging technique involves using the `INT n` instruction to generate a call to the interrupt or exception handler specified with the destination operand.
+
+To implement this technique, the int `0x03` instruction is executed, followed by a `ret` (0xCD03, 0xC3) nested in a `__try, __except block`. If a debugger is present, the except block will not be executed, and the function will return TRUE, indicating that a debugger is running.
+
+This technique can be used to prevent analysts from analyzing and manipulating the malware's code during runtime.

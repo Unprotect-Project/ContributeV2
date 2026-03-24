@@ -1,0 +1,3 @@
+This code uses the random and datetime modules to generate a random number using the current date and time as a seed. It then constructs a domain name by concatenating the base domain name with the generated number. Finally, it prints the generated domain name.
+
+Note that this is just an example, and there are many different ways that a DGA could be implemented. In a real-world scenario, the malware would use the generated domain name to communicate with its command and control server, and the domain name would be generated periodically using a pseudorandom number generator.

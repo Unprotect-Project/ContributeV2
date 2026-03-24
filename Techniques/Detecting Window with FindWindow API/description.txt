@@ -1,0 +1,11 @@
+The [FindWindowA](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-findwindowa) / [FindWindowW](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-findwindoww) function can be used to search for windows by name or class.
+
+It is also possible to use [EnumWindows](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-enumwindows) API in conjunction with [GetWindowTextLength](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowtextlengthw) and [GetWindowText](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-getwindowtextw) to locate a piece of string that could reveal the presence of a known debugger.
+
+### Some Known Debuggers
+
+* ImmunityDebugger
+* OllyDbg
+* IDA
+* x64dbg / x32dbg
+* WinDbg

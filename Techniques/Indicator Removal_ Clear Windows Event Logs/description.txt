@@ -1,0 +1,5 @@
+Event logging is a process that records important software and hardware events from various sources and stores them in a centralized location called an event log. This service is commonly used by applications and operating systems to track and troubleshoot issues, and can be a valuable tool for forensic investigations.
+
+Event logs can provide valuable information about the actions taken by an attacker during a security breach, including the time and date of the attack, the source of the attack, and any changes made to the system. However, attackers may attempt to delete or clear event logs to conceal their actions and evade detection.
+
+Forensic investigators can look for signs of event log tampering by checking for the presence of event clear ID 1102, which indicates that the audit log has been cleared. This can be an indication that an attacker has attempted to cover their tracks.

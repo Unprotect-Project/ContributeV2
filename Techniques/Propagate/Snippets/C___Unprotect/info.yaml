@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Propagate
+target_operating_system: windows

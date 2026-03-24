@@ -1,0 +1,4 @@
+language: C++
+contributors: Glacius
+associated_technique: OLEUM
+target_operating_system: windows

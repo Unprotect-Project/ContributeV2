@@ -1,0 +1,13 @@
+PPEB pPEB = (PPEB)__readgsqword(0x60);
+PVOID params = (PVOID) * (PQWORD)((PBYTE)pPEB + 0x20);
+PWSTR environmental_variables = (PWSTR) * (PQWORD)((PBYTE)params + 0x80);
+
+while (environmental_variables)
+{
+    PWSTR m = wcsstr(environmental_variables, L"COMPUTERNAME=");
+    if (m) break;
+    environmental_variables += wcslen(environmental_variables) + 1;
+}
+PWSTR computerName = wcsstr(environmental_variables, L"=") + 1;
+wcslwr(computerName);
+wprintf(L"%s", computerName);

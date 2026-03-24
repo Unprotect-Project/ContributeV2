@@ -1,0 +1,4 @@
+language: C
+contributors: d4rksystem
+associated_technique: NtDelayExecution
+target_operating_system: windows

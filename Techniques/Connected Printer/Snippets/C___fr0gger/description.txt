@@ -1,0 +1,1 @@
+This code uses the Windows API function `EnumPrinters` to enumerate the local printers installed on the system. If `EnumPrinters` is successful, the code prints the number of printers found and their names.

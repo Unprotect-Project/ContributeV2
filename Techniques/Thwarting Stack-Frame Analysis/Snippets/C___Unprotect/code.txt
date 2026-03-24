@@ -1,0 +1,58 @@
+#include <stdio.h>
+#include <Windows.h>
+
+// Function to obfuscate the names of APIs
+unsigned long hash(const char *str)
+{
+    unsigned long hash = 5381;
+    int c;
+
+    while (c = *str++)
+        hash = ((hash << 5) + hash) + c; /* hash * 33 + c */
+
+    return hash;
+}
+
+// Function to thwart stack-frame analysis
+void thwart_stack_frame()
+{
+    // Use complex control flow structures to make it
+    // difficult for the disassembler to track the flow
+    // of execution
+    int i, j, k;
+    for (i = 0; i < 10; i++)
+    {
+        if (i % 2 == 0)
+        {
+            for (j = 0; j < 10; j++)
+            {
+                if (j % 2 == 1)
+                {
+                    for (k = 0; k < 10; k++)
+                    {
+                        if (k % 2 == 0)
+                        {
+                            // Use API hashing to hide the names
+                            // of the APIs we want to call
+                            HMODULE hKernel32 = LoadLibrary((LPCSTR) hash("kernel32.dll"));
+                            LPVOID lpExitProcess = GetProcAddress(hKernel32, (LPCSTR) hash("ExitProcess"));
+
+                            // Call the ExitProcess API
+                            ((void (WINAPI *)(UINT))lpExitProcess)(0);
+
+                            // Clean up
+                            FreeLibrary(hKernel32);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+int main()
+{
+    thwart_stack_frame();
+
+    return 0;
+}

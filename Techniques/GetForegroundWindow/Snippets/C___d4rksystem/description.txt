@@ -1,0 +1,1 @@
+This technique is using the API `GetForegroundWindow`.

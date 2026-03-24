@@ -1,0 +1,12 @@
+name: 'Trusted Developer Utilities Proxy Execution: MSBuild'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1127/001/
+tags:
+- Defense Evasion
+- proxy execution of malicious code
+- MSBuild.exe (Microsoft Build Engine)
+- execute arbitrary code
+- bypass application control defenses
+- .NET Framework 4

@@ -1,0 +1,1 @@
+Packer tool developed in C/C++. Full implementation of the linker, dynamic decompression and spraying in memory to complete file mapping.

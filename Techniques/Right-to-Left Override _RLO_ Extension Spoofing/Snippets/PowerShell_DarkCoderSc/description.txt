@@ -1,0 +1,1 @@
+In this example `malware.exe` becomes `Annexe.jpeg` but keeps its executable properties.

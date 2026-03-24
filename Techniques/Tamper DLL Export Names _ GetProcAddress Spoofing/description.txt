@@ -1,0 +1,5 @@
+When a process is running, it is possible to change the results of the call to `GetProcAddress` API, for the exported functions of a module along with modifying the export's offsets and name at runtime. 
+
+For example, the offset of `kernel32.dll's` function `VirtualAlloc` can be change to the offset of another function. When `VirtualAlloc` is called (after getting its address from `GetProcAddress`), the second function will be called instead. 
+
+To achieve this, it is possible to use the WINAPI `MapAndLoad` from `ImageHlp.h`, then use `ImageDirectoryEntryToData` to get the list of exports. Then the `ImageRvaToVa`  API can be used to retrieve each exported functions names offset; if desired the export name can be overwritten, resulting in calls to `GetProcAddress` with that export name to fail or be directed to another function.

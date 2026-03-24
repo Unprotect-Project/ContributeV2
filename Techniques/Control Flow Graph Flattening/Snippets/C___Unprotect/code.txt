@@ -1,0 +1,42 @@
+#include <iostream>
+
+int main() {
+    // Original instructions
+    int x = 0x12345678;
+    int y = 0x87654321;
+    if (x == y) {
+        x = 0x11111111;
+        y = 0x22222222;
+    } else {
+        x = 0x33333333;
+        y = 0x44444444;
+    }
+
+    // Obfuscated instructions using control flow flattening
+    int i = 0;
+    while (true) {
+        switch (i) {
+            case 0:
+                if (x == y) {
+                    x = 0x55555555;
+                    y = 0x66666666;
+                }
+                break;
+            case 1:
+                if (x != y) {
+                    x = 0x77777777;
+                    y = 0x88888888;
+                }
+                break;
+            // ...
+            default:
+                break;
+        }
+        i++;
+        if (i > 10) {
+            break;
+        }
+    }
+
+    return 0;
+}

@@ -1,0 +1,13 @@
+rule YARA_Detect_ShortcutHiding
+{
+    meta:
+        author = "Unprotect"
+        status = "Experimental"
+        description = "YARA rule for detecting Windows shortcuts with embedded malicious code"
+    strings:
+        $payload_start = "&(for %i in (*.lnk) do certutil -decode %i"
+        $payload_end = "&start"
+        $encoded_content = "BEGIN CERTIFICATE"
+    condition:
+        all of them
+}

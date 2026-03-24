@@ -1,0 +1,4 @@
+language: cmd
+contributors: hackeT
+associated_technique: Volume Shadow Copy Service (VSC,VSS) Deletion
+target_operating_system: windows

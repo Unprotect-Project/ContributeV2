@@ -1,0 +1,5 @@
+Instead of passing the address of the LoadLibrary, malware can copy its malicious code into an existing open process and force it to execute (either via a small shellcode, or by calling `CreateRemoteThread`).
+
+One advantage of PE injection over the `LoadLibrary` technique is that the malware does not have to drop a malicious DLL on the disk. The malware allocates memory in a host process (e.g. `VirtualAllocEx`), and instead of writing a “DLL path” it writes its malicious code by calling `WriteProcessMemory`. However, the obstacle with this approach is the change of the base address of the copied image.
+
+When a malware injects its PE into another process it will have a new base address which is unpredictable, requiring it to dynamically recompute the fixed addresses of its PE. To overcome this, the malware needs to find its relocation table address in the host process and resolve the absolute addresses of the copied image by looping through its relocation descriptors.

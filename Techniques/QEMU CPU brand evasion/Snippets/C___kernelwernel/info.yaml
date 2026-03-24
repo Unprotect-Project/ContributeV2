@@ -1,0 +1,4 @@
+language: C++
+contributors: kernelwernel
+associated_technique: QEMU CPU brand evasion
+target_operating_system: windows

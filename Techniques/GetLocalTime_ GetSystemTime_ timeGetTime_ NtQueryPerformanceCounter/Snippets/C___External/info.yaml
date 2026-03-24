@@ -1,0 +1,4 @@
+language: C++
+contributors: External
+associated_technique: GetLocalTime, GetSystemTime, timeGetTime, NtQueryPerformanceCounter
+target_operating_system: windows

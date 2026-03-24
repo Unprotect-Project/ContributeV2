@@ -1,0 +1,342 @@
+rule Mew_11_SE_v12_Eng_Northfox_: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C ?? ?? 00 00 00 00 00 00 00 00 00 ?? ?? ?? 00 0C }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Mew_10_V10_Eng_Northfox: PEiD
+{
+    strings:
+        $a = { 33 C0 E9 ?? ?? FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_v10_Northfox_additional: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C ?? 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? 00 0C ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_12: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C ?? 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? 00 0C ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+        $b = { E9 ?? ?? ?? ?? 0C ?? ?? ?? 00 00 00 00 00 00 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule _PseudoSigner_02_MEW_11_SE_10_Anorganix: PEiD
+{
+    strings:
+        $a = { E9 09 00 00 00 00 00 00 02 00 00 00 0C 90 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_12_additional: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? ?? 0C ?? ?? ?? 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_v11: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C ?? 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_v12: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C ?? 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? 00 0C ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+        $b = { E9 ?? ?? ?? FF 0C ?? 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? 00 0C ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule MEW_11_SE_11_Northfox_additional: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? ?? 00 00 00 02 00 00 00 0C 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_10_Northfox: PEiD
+{
+    strings:
+        $a = { 33 C0 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Mew_501_NorthFox_HCC: PEiD
+{
+    strings:
+        $a = { BE 5B 00 40 00 AD 91 AD 93 53 AD 96 56 5F AC C0 C0 ?? 04 ?? C0 C8 ?? AA E2 F4 C3 00 ?? ?? 00 ?? ?? ?? 00 00 10 40 00 4D 45 57 20 30 2E 31 20 62 79 20 4E 6F 72 74 68 66 6F 78 00 4D 45 57 20 30 2E 31 20 62 79 20 4E 6F 72 74 68 66 6F 78 00 4D 45 57 20 30 2E 31 20 62 79 20 4E 6F 72 74 68 66 6F 78 00 4D 45 57 20 30 2E 31 20 62 79 20 4E 6F 72 74 68 66 6F 78 00 4D }
+        $b = { BE 5B 00 40 00 AD 91 AD 93 53 AD 96 56 5F AC C0 C0 ?? 04 ?? C0 C8 ?? AA E2 F4 C3 00 ?? ?? 00 ?? ?? ?? 00 00 10 40 00 4D 45 57 20 30 2E 31 20 62 79 20 4E 6F 72 74 68 66 6F 78 00 4D 45 57 20 30 2E 31 20 62 79 20 4E 6F 72 74 68 66 6F 78 00 4D 45 57 20 30 2E }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule PseudoSigner_02_MEW_11_SE_10: PEiD
+{
+    strings:
+        $a = { E9 09 00 00 00 00 00 00 02 00 00 00 0C 90 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Mew_10_v10_Eng_Northfox: PEiD
+{
+    strings:
+        $a = { 33 C0 E9 ?? ?? ?? FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_v12_NorthfoxHCC_additional: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C ?? ?? 00 00 00 00 00 00 00 00 00 ?? ?? ?? 00 0C ?? ?? 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_11_Northfox: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? ?? 0C ?? ?? ?? 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Mew_11_SE_v12_Eng_Northfox: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C ?? ?? 00 00 00 00 00 00 00 00 00 ?? ?? ?? 00 0C }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_10_packer_v10_Northfox: PEiD
+{
+    strings:
+        $a = { 33 C0 E9 ?? ?0 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_10_by_Northfox: PEiD
+{
+    strings:
+        $a = { 33 C0 E9 ?? ?? FF FF ?? 1C ?? ?? 40 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_v11_additional: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C ?? 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PseudoSigner_02_MEW_11_SE_10_Anorganix: PEiD
+{
+    strings:
+        $a = { E9 09 00 00 00 00 00 00 02 00 00 00 0C 90 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Mew_11_SE_v12_Eng_Northfox_additional: PEiD
+{
+    strings:
+        $a = { 06 1E 52 B8 ?? ?? 1E CD 21 86 E0 3D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_v12_NorthfoxHCC: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C ?? ?? 00 00 00 00 00 00 00 00 00 ?? ?? ?? 00 0C ?? ?? 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_MEW_11_SE_10: PEiD
+{
+    strings:
+        $a = { E9 09 00 00 00 00 00 00 02 00 00 00 0C 90 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_02_MEW_11_SE_10: PEiD
+{
+    strings:
+        $a = { E9 09 00 00 00 00 00 00 02 00 00 00 0C 90 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_5_10_Northfox_additional: PEiD
+{
+    strings:
+        $a = { BE 48 01 ?? ?? ?? ?? ?? 95 A5 33 C0 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_v12_Northfox: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? EB 02 FA 04 E8 49 00 00 00 69 E8 49 00 00 00 95 E8 4F 00 00 00 68 E8 1F 00 00 00 49 E8 E9 FF FF FF 67 E8 1F 00 00 00 93 E8 31 00 00 00 78 E8 DD FF FF FF 38 E8 E3 FF FF FF 66 E8 0D 00 00 00 04 E8 E3 FF FF FF 70 E8 CB FF FF FF 69 E8 DD FF FF FF 58 E8 DD FF FF FF 69 E8 E3 FF FF FF 79 E8 BF FF FF FF 69 83 C4 40 E8 00 00 00 00 5D 81 ED 9D 11 40 00 8D 95 B4 11 40 00 E8 CB 2E 00 00 33 C0 F7 F0 69 8D B5 05 12 40 00 B9 5D 2E 00 00 8B FE AC }
+        $b = { EB 02 FA 04 E8 49 00 00 00 69 E8 49 00 00 00 95 E8 4F 00 00 00 68 E8 1F 00 00 00 49 E8 E9 FF FF FF 67 E8 1F 00 00 00 93 E8 31 00 00 00 78 E8 DD FF FF FF 38 E8 E3 FF FF FF 66 E8 0D 00 00 00 04 E8 E3 FF FF FF 70 E8 CB FF FF FF 69 E8 DD FF FF FF 58 E8 DD FF FF FF 69 E8 E3 FF FF FF 79 E8 BF FF FF FF 69 83 C4 40 E8 00 00 00 00 5D 81 ED 9D 11 40 00 8D 95 B4 11 40 00 E8 CB 2E 00 00 33 C0 F7 F0 69 8D B5 05 12 40 00 B9 5D 2E 00 00 8B FE AC }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule MEW_5_Northfox: PEiD
+{
+    strings:
+        $a = { BE ?? ?? ?? ?? AD 91 AD 93 53 AD 96 56 5F AC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PseudoSigner_01_MEW_11_SE_10_Anorganix: PEiD
+{
+    strings:
+        $a = { E9 09 00 00 00 00 00 00 02 00 00 00 0C 90 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_MEW_11_SE_10_Anorganix: PEiD
+{
+    strings:
+        $a = { E9 09 00 00 00 00 00 00 02 00 00 00 0C 90 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_v11_Northfox: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? ?? 0C ?? ?? ?? 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_v10_Northfox: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? ?? 00 00 00 02 00 00 00 0C ?0 }
+        $b = { E9 ?? ?? ?? FF 0C ?? 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? 00 0C ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule Mew_501_NorthFox_HCC_additional: PEiD
+{
+    strings:
+        $a = { BE 5B 00 40 00 AD 91 AD 93 53 AD 96 56 5F AC C0 C0 ?? 04 ?? C0 C8 ?? AA E2 F4 C3 00 ?? ?? 00 ?? ?? ?? 00 00 10 40 00 4D 45 57 20 30 2E 31 20 62 79 20 4E 6F 72 74 68 66 6F 78 00 4D 45 57 20 30 2E 31 20 62 79 20 4E 6F 72 74 68 66 6F 78 00 4D 45 57 20 30 2E }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_10_by_Northfox_additional: PEiD
+{
+    strings:
+        $a = { 33 C0 E9 ?? ?? FF FF ?? 1C ?? ?? 40 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Mew_10_exe_coder_10_Northfox_HCC: PEiD
+{
+    strings:
+        $a = { 33 C0 E9 ?? ?? FF FF 6A ?? ?? ?? ?? ?? 70 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Mew_10_v10_Northfox: PEiD
+{
+    strings:
+        $a = { 33 C0 E9 ?? ?? FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_v11_Northfox_HCC: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C }
+        $b = { E9 ?? ?? ?? FF 0C ?0 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule MEW_11_SE_v12_additional: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C ?? 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? 00 0C ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Mew_10_exe_coder_10_Northfox_HCC_additional: PEiD
+{
+    strings:
+        $a = { 33 C0 E9 ?? ?? FF FF 6A ?? ?? ?? ?? ?? 70 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_10_Northfox: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? ?? 00 00 00 02 00 00 00 0C 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_5_10_Northfox: PEiD
+{
+    strings:
+        $a = { BE 5B 00 40 00 AD 91 AD 93 53 AD 96 56 5F AC C0 C0 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Mew_10_v10_Eng_Northfox_additional: PEiD
+{
+    strings:
+        $a = { 33 C0 E9 ?? ?? ?? FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MEW_11_SE_v11_Northfox_HCC_additional: PEiD
+{
+    strings:
+        $a = { E9 ?? ?? ?? FF 0C }
+    condition:
+        $a at pe.entry_point
+
+}

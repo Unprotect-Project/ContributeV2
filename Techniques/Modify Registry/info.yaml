@@ -1,0 +1,17 @@
+name: Modify Registry
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1112/
+tags:
+- Defense Evasion
+- APT19
+- APT32
+- APT38
+- APT41
+- Windows Registry
+- Registry keys
+- Registry modifications
+- pseudo-hidden keys
+- remote Registry service
+- UAC bypass

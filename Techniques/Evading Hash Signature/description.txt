@@ -1,0 +1,1 @@
+AV are able to detect if it's a known malware by calculating the file hash, by changing a simple bit into the binary can sometimes allow the sample to evade hash detection. This technique is unlikely to work anymore.

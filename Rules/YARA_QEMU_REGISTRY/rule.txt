@@ -1,0 +1,16 @@
+rule Qemu_Detection
+{
+	meta:
+		Author = "Thomas Roccia - @fr0gger_ - Unprotect Project"
+		Description = "Checks for QEMU Registry Key"
+	strings:
+		$desc1 = "HARDWARE\\Description\\System" nocase wide ascii
+		$desc2 = "SystemBiosVersion" nocase wide ascii
+		$desc3 = "QEMU" wide nocase ascii
+
+		$dev1 = "HARDWARE\\DEVICEMAP\\Scsi\\Scsi Port 0\\Scsi Bus 0\\Target Id 0\\Logical Unit Id 0" nocase wide ascii
+		$dev2 = "Identifier" nocase wide ascii
+		$dev3 = "QEMU" wide nocase ascii
+	condition:
+		any of ($desc*) or any of ($dev*)
+}

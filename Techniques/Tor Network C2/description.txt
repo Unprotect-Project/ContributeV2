@@ -1,0 +1,3 @@
+Tor is a free and open-source network that enables anonymous communication. It uses a network of volunteer-operated servers, known as "relays," to route internet traffic in a way that conceals the user's location and usage from surveillance and traffic analysis. By routing traffic through multiple relays, Tor makes it difficult to trace internet activity back to the user.
+
+Malware can use the Tor network to communicate with a command and control (C&C) server in a way that is harder to detect. Ransomware often uses Tor to host the payment page and even data leak pages. By using the anonymity provided by Tor, the attackers can make it more difficult for authorities to track them down and shut down their operations.

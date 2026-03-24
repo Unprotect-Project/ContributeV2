@@ -1,0 +1,24 @@
+from geopy import Point
+from geopy.distance import great_circle
+
+def is_within_geofence(target_lat, target_lon, center_lat, center_lon, radius_km):
+    center_point = Point(center_lat, center_lon)
+    target_point = Point(target_lat, target_lon)
+
+    distance = great_circle(center_point, target_point).km
+
+    return distance <= radius_km
+
+# Example usage
+target_latitude = 40.7128
+target_longitude = -74.0060
+
+center_latitude = 40.730610
+center_longitude = -73.935242
+
+radius = 5  # 5 km
+
+if is_within_geofence(target_latitude, target_longitude, center_latitude, center_longitude, radius):
+    print("Target is within the geofence.")
+else:
+    print("Target is outside the geofence.")

@@ -1,0 +1,1 @@
+Here is a short example demonstrating the reflective loading of a Dynamic Link Library (DLL) into memory, whether sourced from disk or memory (supporting streams). This approach supports both 32-bit (PE) and 64-bit (PE+) DLLs. The technique enables the loading of exported functions either by their ordinal value or by the exported function name.

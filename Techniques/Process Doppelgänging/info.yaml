@@ -1,0 +1,19 @@
+name: "Process Doppelg\xE4nging"
+categories:
+- Process Manipulating
+resources:
+- https://www.blackhat.com/docs/eu-17/materials/eu-17-Liberman-Lost-In-Transaction-Process-Doppelganging.pdf
+tags:
+- Transactional NTFS
+- Windows
+- data integrity
+- write
+- modify file
+- unexpected error
+- transactional mode
+- commit
+- process injection
+- malicious file
+- legitimate file
+featured_apis:
+- NtCreateSection

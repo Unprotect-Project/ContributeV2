@@ -1,0 +1,30 @@
+title: Execute DLL with spoofed extension
+status: experimental
+description: Execute DLL with spoofed extension
+author: Joe Security
+date: 2020-03-24
+id: 200068
+threatname:
+behaviorgroup: 1
+classification: 8
+mitreattack:
+
+logsource:
+      category: process_creation
+      product: windows
+detection:
+      selection:      
+          CommandLine:
+              - '*rundll32*.html,DllRegisterServer*'
+              - '*rundll32*.htm,DllRegisterServer*'
+              - '*rundll32*.txt,DllRegisterServer*'
+              - '*rundll32*.png,DllRegisterServer*'
+              - '*rundll32*.jpeg,DllRegisterServer*'
+              - '*rundll32*.jpg,DllRegisterServer*'
+              - '*regsvr32 c:\programdata\\*.pdf*'
+              - '*regsvr32 c:\programdata\\*.txt*'
+              - '*regsvr32 c:\users\public\\*.pdf*'
+              - '*regsvr32 c:\users\public\\*.txt*'
+              
+      condition: selection
+level: critical

@@ -1,0 +1,1 @@
+https://anti-debug.checkpoint.com/techniques/interactive.html#suspendthread

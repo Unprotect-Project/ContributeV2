@@ -1,0 +1,1 @@
+The entry point is the starting point of an executable file during execution. Some malware use techniques such as changing or relocating the real entry point to protect their code from analysis. This makes it difficult for security software to identify and detect the malware as the code is not executed in the usual way.

@@ -1,0 +1,19 @@
+rule SysmonEvasion
+{
+    strings:
+        // Check for the LoadLibrary() function call
+        $load_library = "LoadLibrary"
+
+        // Check for the GetProcAddress() function call
+        $get_proc_address = "GetProcAddress"
+
+        // Check for the Unload() function call
+        $unload = "Unload"
+
+        // Check for the sysmondrv string
+        $sysmondrv = "sysmondrv"
+
+    condition:
+        // Check if all the required strings are present in the code
+        all of them
+}

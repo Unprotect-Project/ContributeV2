@@ -1,0 +1,3 @@
+This technique is used to store the function body in an encrypted form. They will only be decrypted just before the execution of that code and will be re-encrypted after the code has been executed. 
+
+This technique is used by SmokeLoader to evade anti-virus and EDRs, since the function body is in encrypted form except at the time of execution of the function. It also makes the static analysis of SmokeLoader harder.

@@ -1,0 +1,8 @@
+name: Process Herpaderping
+categories:
+- Process Manipulating
+resources:
+- https://github.com/jxy-s/herpaderping
+featured_apis:
+- NtCreateSection
+- ReadProcessMemory

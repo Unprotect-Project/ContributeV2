@@ -1,0 +1,1 @@
+CheckRemoteDebuggerPresent is a kernel32.dll function that sets (-1)0xffffffff in the DebuggerPresent parameter if a debugger is present.  Internally, it also uses NtQueryInformationProcess with ProcessDebugPort as a ProcessInformationClass parameter.

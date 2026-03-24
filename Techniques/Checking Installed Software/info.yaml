@@ -1,0 +1,15 @@
+name: Checking Installed Software
+categories:
+- Sandbox Evasion
+resources:
+- https://www.theguardian.com/technology/blog/2011/nov/08/sandboxing-malware-failure
+- https://evasions.checkpoint.com/techniques/human-like-behavior.html
+tags:
+- installed software
+- sandbox
+featured_apis:
+- RegEnumKeyExW
+- RegOpenKeyExW
+- RegQueryValueExW
+contributors:
+- RussianPanda

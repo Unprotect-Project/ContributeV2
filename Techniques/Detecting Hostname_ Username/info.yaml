@@ -1,0 +1,5 @@
+name: Detecting Hostname, Username
+categories:
+- Sandbox Evasion
+resources:
+- https://www.first.org/resources/papers/conf2017/Countering-Innovative-Sandbox-Evasion-Techniques-Used-by-Malware.pdf

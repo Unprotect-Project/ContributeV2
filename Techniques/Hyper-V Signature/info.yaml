@@ -1,0 +1,8 @@
+name: Hyper-V Signature
+categories:
+- Sandbox Evasion
+resources:
+- https://github.com/kernelwernel/VMAware
+- https://learn.microsoft.com/en-us/virtualization/hyper-v-on-windows/tlfs/feature-discovery
+contributors:
+- kernelwernel

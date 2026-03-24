@@ -1,0 +1,3 @@
+Malware often employs techniques to evade detection and hinder the efforts of security experts in analyzing its behavior. One notable method involves terminating processes associated with anti-virus software or monitoring tools.
+
+For example, malware may specifically target processes like wireshark.exe, ida.exe, or procmon.exe, which are frequently used by analysts to observe and scrutinize running processes on a system. By terminating these processes, malware effectively obstruct security experts from acquiring insight into its operations and impedes their ability to analyze its inner workings.

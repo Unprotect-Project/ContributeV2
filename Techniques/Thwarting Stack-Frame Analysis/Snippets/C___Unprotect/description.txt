@@ -1,0 +1,1 @@
+In this code, the thwart_stack_frame function uses complex control flow structures and API hashing to make it more difficult for a disassembler to analyze the code and understand its behavior. By using these techniques, malware authors can thwart stack-frame analysis and make it harder for security analysts to reverse engineer and understand their code.

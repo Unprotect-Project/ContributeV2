@@ -1,0 +1,12 @@
+name: PyArmor
+categories:
+- Packers
+resources:
+- http://pyarmor.dashingsoft.com/
+- https://github.com/dashingsoft/pyarmor
+tags:
+- python
+- obfuscation
+contributors:
+- fr0gger
+- Jonathan Peters

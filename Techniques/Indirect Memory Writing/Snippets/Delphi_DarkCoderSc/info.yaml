@@ -1,0 +1,4 @@
+language: Delphi
+contributors: DarkCoderSc
+associated_technique: Indirect Memory Writing
+target_operating_system: windows

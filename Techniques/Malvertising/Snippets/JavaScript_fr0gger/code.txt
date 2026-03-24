@@ -1,0 +1,4 @@
+// Code to insert malicious ad onto webpage
+var adElement = document.createElement("div");
+adElement.innerHTML = "<a href='http://malicious-site.com'><img src='http://malicious-site.com/malicious-ad.jpg' /></a>";
+document.body.appendChild(adElement);

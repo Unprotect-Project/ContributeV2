@@ -1,0 +1,12 @@
+name: XProtect Encryption Abuse
+categories:
+- Data Obfuscation
+resources:
+- https://research.checkpoint.com/2025/banshee-macos-stealer-that-stole-code-from-macos-xprotect/
+tags:
+- macOS
+- malware
+- XProtect
+- string encryption
+contributors:
+- fr0gger

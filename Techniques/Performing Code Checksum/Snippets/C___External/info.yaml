@@ -1,0 +1,4 @@
+language: C++
+contributors: External
+associated_technique: Performing Code Checksum
+target_operating_system: windows

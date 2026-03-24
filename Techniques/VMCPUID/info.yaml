@@ -1,0 +1,12 @@
+name: VMCPUID
+categories:
+- Sandbox Evasion
+resources:
+- https://www.cert.pl/en/news/single/necurs-hybrid-spam-botnet/
+tags:
+- VMCPUID
+- instruction
+- malware
+- detection
+- virtual environment
+- x86 architecture

@@ -1,0 +1,15 @@
+name: 'Pre-OS Boot: System Firmware'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1542/001/
+tags:
+- Persistence
+- Defense Evasion
+- BIOS (Basic Input/Output System)
+- Unified Extensible Firmware Interface (UEFI)
+- Extensible Firmware Interface (EFI)
+- overwrite system firmware
+- malicious firmware updates
+- rootkit
+- BIOS modification

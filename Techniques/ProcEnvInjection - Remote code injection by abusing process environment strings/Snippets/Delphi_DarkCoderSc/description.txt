@@ -1,0 +1,1 @@
+This code snippet demonstrate how to Inject a DLL in a remote process without using `WriteProcessMemory` and `VirtualAlloc(Ex)`.

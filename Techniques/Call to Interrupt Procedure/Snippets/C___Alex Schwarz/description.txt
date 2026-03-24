@@ -1,0 +1,5 @@
+This code is implementing an anti-debugging technique that checks if a debugger is present in the environment. The TestDebugger() function generates a software interrupt (INT 3) using inline assembly code in x86 architecture.
+
+If a debugger is present, it would intercept this interrupt, and the __except block will not execute, resulting in the TestDebugger() function returning false. On the other hand, if no debugger is present, the __except block will be executed, and the function will return true.
+
+The main() function calls the TestDebugger() function and prints a message indicating whether a debugger was found or not. This code could be used as a security measure to protect against reverse engineering or malicious attacks by detecting if a debugger is present during runtime.

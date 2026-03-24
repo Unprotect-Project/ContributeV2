@@ -1,0 +1,12 @@
+name: 'System Binary Proxy Execution: Msiexec'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1218/007/
+tags:
+- Defense Evasion
+- malicious installation packages (.msi)
+- malicious DLLs
+- bypass application control solutions
+- privilege escalation
+- AlwaysInstallElevated

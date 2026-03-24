@@ -1,0 +1,1 @@
+This code opens the relevant key in the Windows Registry and modifies the value to point to the path of the malicious executable. When the COM object is used, it will execute the malicious code instead of the legitimate system component.

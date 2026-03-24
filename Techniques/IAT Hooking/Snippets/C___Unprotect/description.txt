@@ -1,0 +1,1 @@
+Original source code: https://www.ired.team/offensive-security/code-injection-process-injection/import-adress-table-iat-hooking

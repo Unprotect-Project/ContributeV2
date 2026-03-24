@@ -1,0 +1,3 @@
+Sysmon is a tool that can be used to monitor system activity on Windows systems. It records various types of events, such as process creation, network connections, and registry changes, and stores them in the Windows Event Log. Security analysts can use this information to detect and investigate malicious activity on a system.
+
+One way that malware can evade detection by Sysmon is by unloading the Sysmon driver. The Sysmon driver is the kernel-mode component of Sysmon that is responsible for recording the events that Sysmon monitors. By unloading this driver, the malware can prevent Sysmon from recording any further events, and thus avoid being detected.

@@ -1,0 +1,11 @@
+name: hXOR Packer
+categories:
+- Packers
+resources:
+- https://github.com/fscene8/hXOR-Packer
+tags:
+- hxor
+- packer
+contributors:
+- fr0gger
+- SI_FalconTeam

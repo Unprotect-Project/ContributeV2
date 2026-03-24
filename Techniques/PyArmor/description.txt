@@ -1,0 +1,7 @@
+Pyarmor is a command-line tool primarily used for the obfuscation of Python scripts. While its original design aims to protect Python code from unauthorized access and reverse engineering, its capabilities also make it a tool of interest for malware obfuscation. Pyarmor achieves this through several key features, each with potential applications in both legitimate protection and malicious exploitation:
+
+- Code Obfuscation: Pyarmor transforms original Python scripts into a form that is significantly more difficult to understand and decompile. This obfuscation process, which alters code structure, names, and other identifiable features while preserving functionality, is a common tactic in malware to conceal harmful operations and evade detection by analysis tools and researchers.
+
+- Machine Binding: The tool offers the option to bind obfuscated scripts to a specific machine. In legitimate use, this adds security and control over script distribution. In a malware context, this can be misused to target specific victims or to avoid execution in analysis environments, thus evading detection and analysis.
+
+- Expiration Setting: Pyarmor can set an expiration date for the obfuscated scripts. While beneficial for creating trial software in legitimate scenarios, this feature can be exploited in malware to limit the script's lifespan, making post-infection analysis and reverse engineering more challenging.

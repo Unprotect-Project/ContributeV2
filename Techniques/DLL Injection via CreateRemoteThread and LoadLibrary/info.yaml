@@ -1,0 +1,29 @@
+name: DLL Injection via CreateRemoteThread and LoadLibrary
+categories:
+- Process Manipulating
+resources:
+- https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process
+tags:
+- DLL Injection
+- CreateRemoteThread
+- LoadLibrary
+- malware
+- hook injection
+- process
+- system
+- code injection
+- legitimate process
+- virtual address space
+- remote thread
+- target process
+- LoadLibrary function
+- malicious DLL
+- execution
+featured_apis:
+- CreateRemoteThread
+- VirtualAlloc
+- VirtualAllocEx
+- VirtualAllocExNuma
+- WriteProcessMemory
+- OpenProcess
+- GetProcAddress

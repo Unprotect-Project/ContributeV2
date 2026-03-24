@@ -1,0 +1,1 @@
+Feel free to edit both `fw_debuggers` and `contains_in_title` to extend the search of known debuggers.

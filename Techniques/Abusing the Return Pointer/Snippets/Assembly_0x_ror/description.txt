@@ -1,0 +1,19 @@
+1) The code starts with a normal function call to establish legitimacy
+
+2) Then it abuses the return pointer by:
+
+- Pushing a calculated address into the middle of function2
+- Using RET to jump there instead of actually returning
+
+3) This tricks disassemblers because:
+
+- They expect RET to mark the end of a function
+- They can't easily track the dynamic control flow
+- They may miss the code after the jump target
+
+ Analysis Impact:
+
+- Static analysis tools will likely show incorrect control flow
+- Disassemblers may miss chunks of code entirely
+- Function boundaries become unclear
+- Makes it harder to understand the actual execution path

@@ -1,0 +1,13 @@
+Process hollowing is a technique used by malware to evade detection by injecting malicious code into a legitimate process. This technique involves creating a new instance of a legitimate process and replacing its original code with the malicious payload. 
+
+The process is the following:
+
+* `CreateProcess`: in a suspended mode with the CreationFlag at 0x0000 0004.
+* `GetThreadContext`: retrieves the context of the specified thread.
+* `ZwUnmapViewOfSection`: Unmaps a view of a section from the virtual address space of a
+subject process.
+* `VirtualAllocEx`: allocates memory within the suspended process’s address space.
+* `WriteProcessMemory`: writes data of the PE file into the memory just allocated within the
+suspended process.
+* `SetThreadContext`: sets the EAX register to the entry point of the executable written.
+* `ResumeThread`: resumes the thread of the suspended process.

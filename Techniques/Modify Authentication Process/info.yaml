@@ -1,0 +1,16 @@
+name: Modify Authentication Process
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1556/
+tags:
+- Credential Access
+- Defense Evasion
+- Persistence
+- modify authentication mechanisms
+- Local Security Authentication Server (LSASS)
+- Security Accounts Manager (SAM)
+- bypass authentication mechanisms
+- credential reveal
+- bypass access controls
+- intercept private keys

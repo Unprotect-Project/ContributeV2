@@ -1,0 +1,11 @@
+name: Direct Volume Access
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1006/
+tags:
+- Defense Evasion
+- bypass file action control
+- bypass file system monitoring
+- direct access to logical volumes
+- NinjaCopy

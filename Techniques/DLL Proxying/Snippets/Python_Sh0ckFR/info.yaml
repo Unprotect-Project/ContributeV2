@@ -1,0 +1,4 @@
+language: Python
+contributors: Sh0ckFR
+associated_technique: DLL Proxying
+target_operating_system: windows

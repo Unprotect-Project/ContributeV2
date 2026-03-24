@@ -1,0 +1,19 @@
+name: CLIPBRDWNDCLASS
+categories:
+- Process Manipulating
+resources:
+- https://modexp.wordpress.com/2019/05/24/4066/
+tags:
+- Object Linking & Embedding (OLE) library
+- Private clipboard
+- CLIPBRDWNDCLASS window class
+- OLE library
+- Clipboard data
+- ClipboardDataObjectInterface
+- ClipboardRootDataObjectInterface
+- ClipboardDataObjectInterfaceMTA
+featured_apis:
+- VirtualAlloc
+- VirtualAllocEx
+- WriteProcessMemory
+- OpenProcess

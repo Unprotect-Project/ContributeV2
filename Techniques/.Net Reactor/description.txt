@@ -1,0 +1,1 @@
+.NET Reactor is used to prevent reverse engineering by adding different protection layers to .NET assemblies. Beside standard obfuscation techniques it includes special features like NecroBit, Virtualization, x86 Code Generation or Anti Tampering.

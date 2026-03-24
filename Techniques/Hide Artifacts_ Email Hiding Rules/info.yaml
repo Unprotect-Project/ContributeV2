@@ -1,0 +1,13 @@
+name: 'Hide Artifacts: Email Hiding Rules'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1564/008/
+tags:
+- Defense Evasion
+- New-InboxRule
+- Set-InboxRule
+- mailbox rules
+- mailbox folders
+- inbound emails
+- phishing

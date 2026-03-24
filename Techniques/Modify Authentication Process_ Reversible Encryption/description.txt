@@ -1,0 +1,11 @@
+An adversary may abuse Active Directory authentication encryption properties to gain access to credentials on Windows systems. The AllowReversiblePasswordEncryption property specifies whether reversible password encryption for an account is enabled or disabled. By default this property is disabled (instead storing user credentials as the output of one-way hashing functions) and should not be enabled unless legacy or other software require it.
+
+If the property is enabled and/or a user changes their password after it is enabled, an adversary may be able to obtain the plaintext of passwords created/changed after the property was enabled. To decrypt the passwords, an adversary needs four components:
+
+Encrypted password (G$RADIUSCHAP) from the Active Directory user-structure userParameters
+16 byte randomly-generated value (G$RADIUSCHAPKEY) also from userParameters
+Global LSA secret (G$MSRADIUSCHAPKEY)
+Static key hardcoded in the Remote Access Subauthentication DLL (RASSFM.DLL)
+With this information, an adversary may be able to reproduce the encryption key and subsequently decrypt the encrypted password value.
+
+An adversary may set this property at various scopes through Local Group Policy Editor, user properties, Fine-Grained Password Policy (FGPP), or via the ActiveDirectory PowerShell module. For example, an adversary may implement and apply a FGPP to users or groups if the Domain Functional Level is set to "Windows Server 2008" or higher. In PowerShell, an adversary may make associated changes to user settings using commands similar to Set-ADUser -AllowReversiblePasswordEncryption $true.

@@ -1,0 +1,8 @@
+This technique detects virtual environment processes by looking for common process names associated with virtualization software like VMware and VirtualBox.
+
+It works by:
+
+* 1. Maintaining a list of known virtual environment process names
+* 2. Taking a snapshot of currently running processes
+* 3. Comparing each running process against the known list
+* 4. Returns true if any virtual environment process is found

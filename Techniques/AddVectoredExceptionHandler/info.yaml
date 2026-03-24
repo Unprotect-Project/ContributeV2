@@ -1,0 +1,14 @@
+name: AddVectoredExceptionHandler
+categories:
+- Anti-Debugging
+resources:
+- https://learn.microsoft.com/en-us/windows/win32/api/errhandlingapi/nf-errhandlingapi-addvectoredexceptionhandler
+tags:
+- Anti-debugging
+- Vectored Exception Handlers
+- AddVectoredExceptionHandler
+- Debugging
+- Exception handling
+- EXCEPTION_SINGLE_STEP
+featured_apis:
+- AddVectoredExceptionHandler

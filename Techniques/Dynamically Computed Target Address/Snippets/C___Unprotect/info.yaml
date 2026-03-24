@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Dynamically Computed Target Address
+target_operating_system: windows

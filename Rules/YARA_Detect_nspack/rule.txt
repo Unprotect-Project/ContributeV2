@@ -1,0 +1,696 @@
+rule NsPacK_V33_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 BD ?? ?? ?? ?? 01 AD 54 3A 40 ?? FF B5 50 3A 40 ?? 6A 40 FF 95 88 3A 40 ?? 50 50 2D ?? ?? ?? ?? 89 85 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_30_North_Star_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 66 8B 06 66 83 F8 00 74 15 8B F5 8D B5 ?? ?? FF FF 66 8B 06 66 83 F8 01 0F 84 42 02 00 00 C6 06 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPacK_V31_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? ?? ?? 8A 03 3C 00 74 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPacK_V30_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 2E C6 06 ?? ?? ?? 2E C6 06 ?? ?? ?? 2E C6 06 ?? ?? ?? E9 ?? ?? E8 ?? ?? 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_34_North_Star: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 85 ?? ?? FF FF 80 38 01 0F 84 42 02 00 00 C6 00 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? FF FF 85 C0 0F 84 6A 03 00 00 89 85 ?? ?? FF FF E8 00 00 00 00 5B B9 68 03 00 00 03 D9 50 53 E8 B1 02 00 00 61 8B 36 8B FD 03 BD ?? ?? FF FF 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 36 01 13 8B 33 03 7B 04 57 51 52 53 FF B5 ?? ?? FF FF FF B5 ?? ?? FF FF 8B D6 8B CF 8B 85 ?? ?? FF FF 05 AA 05 00 00 FF D0 5B 5A 59 5F 83 F9 00 74 05 83 C3 08 EB C5 }
+        $b = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 85 ?? ?? FF FF 80 38 01 0F 84 42 02 00 00 C6 00 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? FF FF 85 C0 0F 84 6A 03 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule NsPack_V14_LiuXingPing_: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B1 85 40 00 2D AA 85 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Anti007_V25_V26_NsPacK_Private: PEiD
+{
+    strings:
+        $a = { 00 00 00 4C 6F 61 64 4C 69 62 72 61 72 79 41 00 00 00 47 65 74 50 72 6F 63 41 64 64 72 65 73 73 00 00 00 56 69 72 74 75 61 6C 50 72 6F 74 65 63 74 00 00 00 56 69 72 74 75 61 6C 41 6C 6C 6F 63 00 00 00 56 69 72 74 75 61 6C 46 72 65 65 00 00 00 47 65 74 53 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_29_North_Star: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 8A 06 3C 00 74 12 8B F5 8D B5 ?? ?? FF FF 8A 06 3C 01 0F 84 42 02 00 00 C6 06 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? FF FF 85 C0 0F 84 6A 03 00 00 89 85 ?? ?? FF FF E8 00 00 00 00 5B B9 68 03 00 00 03 D9 50 53 E8 B1 02 00 00 61 8B 36 8B FD 03 BD ?? ?? FF FF 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 36 }
+        $b = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 8A 06 3C 00 74 12 8B F5 8D B5 ?? ?? FF FF 8A 06 3C 01 0F 84 42 02 00 00 C6 06 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule NsPack_v37_North_Star: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 8D ?? ?? ?? FF 80 39 01 0F 84 42 02 00 00 C6 01 01 8B C5 2B 85 ?? ?? ?? FF 89 85 ?? ?? ?? FF 01 85 ?? ?? ?? FF 8D B5 ?? ?? ?? FF 01 06 55 56 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? ?? FF 85 C0 0F 84 69 03 00 00 89 85 ?? ?? ?? FF E8 00 00 00 00 5B B9 67 03 00 00 03 D9 50 53 E8 B0 02 00 00 5E 5D 8B 36 8B FD 03 BD ?? ?? ?? FF 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 34 01 13 8B 33 03 7B 04 57 51 53 FF B5 ?? ?? ?? FF FF B5 ?? ?? ?? FF 8B D6 8B CF 8B 85 ?? ?? ?? FF 05 AA 05 00 00 FF D0 5B 59 5F 83 F9 00 74 05 83 C3 08 EB C7 68 00 80 00 00 6A 00 FF B5 ?? ?? ?? FF FF 95 ?? ?? ?? FF 8D B5 ?? ?? ?? FF 8B 4E 08 8D 56 10 8B 36 8B FE 83 F9 00 74 3F 8A 07 47 2C E8 3C 01 77 F7 8B 07 80 7A 01 00 74 14 8A 1A 38 1F 75 E9 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 EB 0A 8A 5F 04 86 C4 C1 C0 10 86 C4 2B C7 03 C6 89 07 83 C7 05 80 EB E8 8B C3 E2 C6 E8 3A 01 00 00 8D 8D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_v31_North_Star: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? FF FF 8A 03 3C 00 74 10 8D 9D ?? ?? FF FF 8A 03 3C 01 0F 84 42 02 00 00 C6 03 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 }
+        $b = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? FF FF 8A 03 3C 00 74 10 8D 9D ?? ?? FF FF 8A 03 3C 01 0F 84 42 02 00 00 C6 03 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? FF FF 85 C0 0F 84 6A 03 00 00 89 85 ?? ?? FF FF E8 00 00 00 00 5B B9 68 03 00 00 03 D9 50 53 E8 B1 02 00 00 61 8B 36 8B FD 03 BD ?? ?? FF FF 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 36 01 13 8B 33 03 7B 04 57 51 52 53 FF B5 ?? ?? FF FF FF B5 ?? ?? FF FF 8B D6 8B CF 8B 85 ?? ?? FF FF 05 AA 05 00 00 FF D0 5B 5A 59 5F 83 F9 00 74 05 83 C3 08 EB C5 68 00 80 00 00 6A 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule NsPacK_V36_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D ?? ?? ?? ?? ?? 83 38 01 0F 84 47 02 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_31_by_North_Star_Liu_Xing_Ping: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? FF FF 8A 03 3C 00 74 10 8D 9D ?? ?? FF FF 8A 03 3C 01 0F 84 42 02 00 00 C6 03 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Anti007_V27_V35_NsPacK_Private_additional: PEiD
+{
+    strings:
+        $a = { 00 00 00 4C 6F 61 64 4C 69 62 72 61 72 79 41 00 00 00 47 65 74 50 72 6F 63 41 64 64 72 65 73 73 00 00 00 56 69 72 74 75 61 6C 50 72 6F 74 65 63 74 00 00 00 56 69 72 74 75 61 6C 41 6C 6C 6F 63 00 00 00 56 69 72 74 75 61 6C 46 72 65 65 00 00 00 47 65 74 54 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_v23_North_Star_h: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 8B 06 83 F8 00 74 11 8D B5 ?? ?? FF FF 8B 06 83 F8 01 0F 84 4B 02 00 00 C7 06 01 00 00 00 8B D5 8B 85 ?? ?? FF FF 2B D0 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 8B 36 8B FD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_14_Liuxingping_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 ?? ?? 40 00 2D ?? ?? 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_v37_North_Star_h: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 8D ?? ?? ?? FF 80 39 01 0F 84 42 02 00 00 C6 01 01 8B C5 2B 85 ?? ?? ?? FF 89 85 ?? ?? ?? FF 01 85 ?? ?? ?? FF 8D B5 ?? ?? ?? FF 01 06 55 56 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? ?? FF 85 C0 0F 84 69 03 00 00 89 85 ?? ?? ?? FF E8 00 00 00 00 5B B9 67 03 00 00 03 D9 50 53 E8 B0 02 00 00 5E 5D 8B 36 8B FD 03 BD ?? ?? ?? FF 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 34 01 13 8B 33 03 7B 04 57 51 53 FF B5 ?? ?? ?? FF FF B5 ?? ?? ?? FF 8B D6 8B CF 8B 85 ?? ?? ?? FF 05 AA 05 00 00 FF D0 5B 59 5F 83 F9 00 74 05 83 C3 08 EB C7 68 00 80 00 00 6A 00 FF B5 ?? ?? ?? FF FF 95 ?? ?? ?? FF 8D B5 ?? ?? ?? FF 8B 4E 08 8D 56 10 8B 36 8B FE 83 F9 00 74 3F 8A 07 47 2C E8 3C 01 77 F7 8B 07 80 7A 01 00 74 14 8A 1A 38 1F 75 E9 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 EB 0A 8A 5F 04 86 C4 C1 C0 10 86 C4 2B C7 03 C6 89 07 83 C7 05 80 EB E8 8B C3 E2 C6 E8 3A 01 00 00 8D 8D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_032a_fake_nSPack_13_emadicius: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B3 85 40 00 2D AC 85 40 00 2B E8 8D B5 D3 FE FF FF 8B 06 83 F8 00 74 11 8D B5 DF FE FF FF 8B 06 83 F8 01 0F 84 F1 01 00 00 61 9D EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_30_by_North_Star_Liu_Xing_Ping_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 55 F9 FF FF 66 8B 06 66 83 F8 00 74 15 8B F5 8D B5 7D F9 FF FF 66 8B 06 66 83 F8 01 0F 84 42 02 00 00 C6 06 01 8B D5 2B 95 11 F9 FF FF 89 95 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Anti007_NsPacK_Private_additional: PEiD
+{
+    strings:
+        $a = { 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 10 00 00 00 00 00 00 ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_v032a_fake_nSPack_13_emadicius_h: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B3 85 40 00 2D AC 85 40 00 2B E8 8D B5 D3 FE FF FF 8B 06 83 F8 00 74 11 8D B5 DF FE FF FF 8B 06 83 F8 01 0F 84 F1 01 00 00 61 9D EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 2B 04 24 74 04 75 02 EB 02 EB 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_14_by_North_Star_Liu_Xing_Ping_: PEiD
+{
+    strings:
+        $a = { 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 2D 01 13 8B 33 03 7B 04 57 51 52 53 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPacK_V36_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D ?? ?? ?? ?? ?? 83 38 01 0F 84 47 02 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_31_North_Star_h: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? FF FF 8A 03 3C 00 74 10 8D 9D ?? ?? FF FF 8A 03 3C 01 0F 84 42 02 00 00 C6 03 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPacK_V34_V35_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 85 ?? ?? ?? ?? 80 38 01 0F 84 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NSPack_Nort_Star_Software_urlwwwnsdsncom: PEiD
+{
+    strings:
+        $a = { 83 F9 00 74 28 43 8D B5 ?? ?? FF FF 8B 16 56 51 53 52 56 FF 33 FF 73 04 8B 43 08 03 C2 50 FF 95 ?? ?? FF FF 5A 5B 59 5E 83 C3 0C E2 E1 61 9D E9 ?? ?? ?? FF 8B B5 ?? ?? FF FF 0B F6 0F 84 97 00 00 00 8B 95 ?? ?? FF FF 03 F2 83 3E 00 75 0E 83 7E 04 00 75 08 83 7E 08 00 75 02 EB 7A 8B 5E 08 03 DA 53 52 56 8D BD ?? ?? FF FF 03 7E 04 83 C6 0C 57 }
+        $b = { 83 F9 00 74 28 43 8D B5 ?? ?? FF FF 8B 16 56 51 53 52 56 FF 33 FF 73 04 8B 43 08 03 C2 50 FF 95 ?? ?? FF FF 5A 5B 59 5E 83 C3 0C E2 E1 61 9D E9 ?? ?? ?? FF 8B B5 ?? ?? FF FF 0B F6 0F 84 97 00 00 00 8B 95 ?? ?? FF FF 03 F2 83 3E 00 75 0E 83 7E 04 00 75 08 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule NsPacK_Net_LiuXingPing_Sign_by_fly: PEiD
+{
+    strings:
+        $a = { 56 69 72 74 75 61 6C 50 72 6F 74 65 63 74 00 00 BB 01 47 65 74 53 79 73 74 65 6D 49 6E 66 6F 00 4B 45 52 4E 45 4C 33 32 2E 64 6C 6C 00 00 5E 00 5F 43 6F 72 ?? ?? ?? 4D 61 69 6E 00 6D 73 63 6F 72 65 65 2E 64 6C 6C }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSPack_2x3x_NET_North_StarLiu_Xing_Ping: PEiD
+{
+    strings:
+        $a = { FF 25 A4 ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+        $b = { FF 25 A4 ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule NsPacK_V34_V35_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 85 ?? ?? ?? ?? 80 38 01 0F 84 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_v37_North_Star_h_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 8D ?? ?? ?? FF 80 39 01 0F 84 42 02 00 00 C6 01 01 8B C5 2B 85 ?? ?? ?? FF 89 85 ?? ?? ?? FF 01 85 ?? ?? ?? FF 8D B5 ?? ?? ?? FF 01 06 55 56 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? ?? FF 85 C0 0F 84 69 03 00 00 89 85 ?? ?? ?? FF E8 00 00 00 00 5B B9 67 03 00 00 03 D9 50 53 E8 B0 02 00 00 5E 5D 8B 36 8B FD 03 BD ?? ?? ?? FF 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 34 01 13 8B 33 03 7B 04 57 51 53 FF B5 ?? ?? ?? FF FF B5 ?? ?? ?? FF 8B D6 8B CF 8B 85 ?? ?? ?? FF 05 AA 05 00 00 FF D0 5B 59 5F 83 F9 00 74 05 83 C3 08 EB C7 68 00 80 00 00 6A 00 FF B5 ?? ?? ?? FF FF 95 ?? ?? ?? FF 8D B5 ?? ?? ?? FF 8B 4E 08 8D 56 10 8B 36 8B FE 83 F9 00 74 3F 8A 07 47 2C E8 3C 01 77 F7 8B 07 80 7A 01 00 74 14 8A 1A 38 1F 75 E9 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 EB 0A 8A 5F 04 86 C4 C1 C0 10 86 C4 2B C7 03 C6 89 07 83 C7 05 80 EB E8 8B C3 E2 C6 E8 3A 01 00 00 8D 8D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_29_North_Star_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 8B 06 83 F8 00 74 11 8D B5 ?? ?? FF FF 8B 06 83 F8 01 0F 84 4B 02 00 00 C7 06 01 00 00 00 8B D5 8B 85 ?? ?? FF FF 2B D0 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 8B 36 8B FD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSpack_V11_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 57 84 40 00 2D 50 84 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSpack_V23_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 70 61 63 6B 24 40 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSpack_V30_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 2E C6 06 ?? ?? ?? 2E C6 06 ?? ?? ?? 2E C6 06 ?? ?? ?? E9 ?? ?? E8 ?? ?? 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSpack_V23_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 70 61 63 6B 24 40 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_v31_North_Star_h_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? FF FF 8A 03 3C 00 74 10 8D 9D ?? ?? FF FF 8A 03 3C 01 0F 84 42 02 00 00 C6 03 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? FF FF 85 C0 0F 84 6A 03 00 00 89 85 ?? ?? FF FF E8 00 00 00 00 5B B9 68 03 00 00 03 D9 50 53 E8 B1 02 00 00 61 8B 36 8B FD 03 BD ?? ?? FF FF 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 36 01 13 8B 33 03 7B 04 57 51 52 53 FF B5 ?? ?? FF FF FF B5 ?? ?? FF FF 8B D6 8B CF 8B 85 ?? ?? FF FF 05 AA 05 00 00 FF D0 5B 5A 59 5F 83 F9 00 74 05 83 C3 08 EB C5 68 00 80 00 00 6A 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSpack_V13_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B3 85 40 00 2D AC 85 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPacK_V37_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D ?? ?? ?? ?? ?? 80 39 01 0F ?? ?? ?? 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Anti007_V25_V26_NsPacK_Private_additional: PEiD
+{
+    strings:
+        $a = { 00 00 00 4C 6F 61 64 4C 69 62 72 61 72 79 41 00 00 00 47 65 74 50 72 6F 63 41 64 64 72 65 73 73 00 00 00 56 69 72 74 75 61 6C 50 72 6F 74 65 63 74 00 00 00 56 69 72 74 75 61 6C 41 6C 6C 6F 63 00 00 00 56 69 72 74 75 61 6C 46 72 65 65 00 00 00 47 65 74 53 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_14_by_North_Star_Liu_Xing_Ping: PEiD
+{
+    strings:
+        $a = { 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 2D 01 13 8B 33 03 7B 04 57 51 52 53 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NSPack_3x_Liu_Xing_Ping_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_31_Liu_Xing_Ping: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? ?? ?? 8A 03 3C 00 74 10 8D 9D ?? ?? FF FF 8A 03 3C 01 0F 84 42 02 00 00 C6 03 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPacK_V31_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? ?? ?? 8A 03 3C 00 74 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_V11_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 57 84 40 00 2D 50 84 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Anti007_V10_V2X_NsPacK_Private_additional: PEiD
+{
+    strings:
+        $a = { 00 00 00 4C 6F 61 64 4C 69 62 72 61 72 79 41 00 00 00 47 65 74 50 72 6F 63 41 64 64 72 65 73 73 00 00 00 56 69 72 74 75 61 6C 50 72 6F 74 65 63 74 00 00 00 56 69 72 74 75 61 6C 41 6C 6C 6F 63 00 00 00 56 69 72 74 75 61 6C 46 72 65 65 00 00 00 45 78 69 74 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSpack_V31_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? ?? ?? 8A 03 3C 00 74 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_V2X_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 6E 73 70 61 63 6B 24 40 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Anti007_V10_V2X_NsPacK_Private: PEiD
+{
+    strings:
+        $a = { 00 00 00 4C 6F 61 64 4C 69 62 72 61 72 79 41 00 00 00 47 65 74 50 72 6F 63 41 64 64 72 65 73 73 00 00 00 56 69 72 74 75 61 6C 50 72 6F 74 65 63 74 00 00 00 56 69 72 74 75 61 6C 41 6C 6C 6F 63 00 00 00 56 69 72 74 75 61 6C 46 72 65 65 00 00 00 45 78 69 74 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSpack_V2x_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 }
+        $b = { 6E 73 70 61 63 6B 24 40 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule MSLRH_v032a_fake_nSPack_13_emadicius: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B3 85 40 00 2D AC 85 40 00 2B E8 8D B5 D3 FE FF FF 8B 06 83 F8 00 74 11 8D B5 DF FE FF FF 8B 06 83 F8 01 0F 84 F1 01 00 00 61 9D EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 2B 04 24 74 04 75 02 EB 02 EB 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSpack_V2x_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_032a_fake_nSPack_13_emadicius_additional: PEiD
+{
+    strings:
+        $a = { E9 A6 00 00 00 B0 7B 40 00 78 60 40 00 7C 60 40 00 00 00 00 00 B0 3F 00 00 12 62 40 00 4E 65 6F 4C 69 74 65 20 45 78 65 63 75 74 61 62 6C 65 20 46 69 6C 65 20 43 6F 6D 70 72 65 73 73 6F 72 0D 0A 43 6F 70 79 72 69 67 68 74 20 28 63 29 20 31 39 39 38 2C 31 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_V13_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B3 85 40 00 2D AC 85 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_31_by_North_Star_Liu_Xing_Ping_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? FF FF 8A 03 3C 00 74 10 8D 9D ?? ?? FF FF 8A 03 3C 01 0F 84 42 02 00 00 C6 03 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_V11_LiuXingPing_: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 57 84 40 00 2D 50 84 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Anti007_V27_V35_NsPacK_Private: PEiD
+{
+    strings:
+        $a = { 00 00 00 4C 6F 61 64 4C 69 62 72 61 72 79 41 00 00 00 47 65 74 50 72 6F 63 41 64 64 72 65 73 73 00 00 00 56 69 72 74 75 61 6C 50 72 6F 74 65 63 74 00 00 00 56 69 72 74 75 61 6C 41 6C 6C 6F 63 00 00 00 56 69 72 74 75 61 6C 46 72 65 65 00 00 00 47 65 74 54 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_v23_North_Star_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 8B 06 83 F8 00 74 11 8D B5 ?? ?? FF FF 8B 06 83 F8 01 0F 84 4B 02 00 00 C7 06 01 00 00 00 8B D5 8B 85 ?? ?? FF FF 2B D0 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 8B 36 8B FD 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? FF FF 85 C0 0F 84 56 03 00 00 89 85 ?? ?? FF FF E8 00 00 00 00 5B B9 54 03 00 00 03 D9 50 53 E8 9D 02 00 00 61 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPacK_V37_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D ?? ?? ?? ?? ?? 80 39 01 0F ?? ?? ?? 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_v23_North_Star: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 8B 06 83 F8 00 74 11 8D B5 ?? ?? FF FF 8B 06 83 F8 01 0F 84 4B 02 00 00 C7 06 01 00 00 00 8B D5 8B 85 ?? ?? FF FF 2B D0 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 8B 36 8B FD }
+        $b = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 8B 06 83 F8 00 74 11 8D B5 ?? ?? FF FF 8B 06 83 F8 01 0F 84 4B 02 00 00 C7 06 01 00 00 00 8B D5 8B 85 ?? ?? FF FF 2B D0 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 8B 36 8B FD 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? FF FF 85 C0 0F 84 56 03 00 00 89 85 ?? ?? FF FF E8 00 00 00 00 5B B9 54 03 00 00 03 D9 50 53 E8 9D 02 00 00 61 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule NsPack_v23_North_Star_h_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 8B 06 83 F8 00 74 11 8D B5 ?? ?? FF FF 8B 06 83 F8 01 0F 84 4B 02 00 00 C7 06 01 00 00 00 8B D5 8B 85 ?? ?? FF FF 2B D0 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 8B 36 8B FD 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? FF FF 85 C0 0F 84 56 03 00 00 89 85 ?? ?? FF FF E8 00 00 00 00 5B B9 54 03 00 00 03 D9 50 53 E8 9D 02 00 00 61 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSPack_2x_North_StarLiu_Xing_Ping_additional: PEiD
+{
+    strings:
+        $a = { FF FF 8B 4E 08 8D 56 10 8B 36 8B FE 83 F9 00 74 3F 8A 07 47 2C E8 3C 01 77 F7 8B 07 80 7A 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NSPack_3x_Liu_Xing_Ping: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 85 ?? ?? FF FF ?? 38 01 0F 84 ?? 02 00 00 ?? 00 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NSPack_Nort_Star_Software_httpwwwnsdsncom: PEiD
+{
+    strings:
+        $a = { 83 F9 00 74 28 43 8D B5 ?? ?? FF FF 8B 16 56 51 53 52 56 FF 33 FF 73 04 8B 43 08 03 C2 50 FF 95 ?? ?? FF FF 5A 5B 59 5E 83 C3 0C E2 E1 61 9D E9 ?? ?? ?? FF 8B B5 ?? ?? FF FF 0B F6 0F 84 97 00 00 00 8B 95 ?? ?? FF FF 03 F2 83 3E 00 75 0E 83 7E 04 00 75 08 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_V2X_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 6E 73 70 61 63 6B 24 40 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_3x_Liu_Xing_Ping: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_31_North_Star_h_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? ?? ?? 8A 03 3C 00 74 10 8D 9D ?? ?? FF FF 8A 03 3C 01 0F 84 42 02 00 00 C6 03 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_14_Liuxingping: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 ?? ?? 40 00 2D ?? ?? 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_14_by_North_Star_Liu_Xing_Ping_additional: PEiD
+{
+    strings:
+        $a = { 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 2D 01 13 8B 33 03 7B 04 57 51 52 53 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPacK_V30_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? ?? ?? 66 8B 06 66 83 F8 00 74 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_V14_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B1 85 40 00 2D AA 85 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NSPack_Nort_Star_Software_urlwwwnsdsncom_additional: PEiD
+{
+    strings:
+        $a = { 83 F9 00 74 28 43 8D B5 ?? ?? FF FF 8B 16 56 51 53 52 56 FF 33 FF 73 04 8B 43 08 03 C2 50 FF 95 ?? ?? FF FF 5A 5B 59 5E 83 C3 0C E2 E1 61 9D E9 ?? ?? ?? FF 8B B5 ?? ?? FF FF 0B F6 0F 84 97 00 00 00 8B 95 ?? ?? FF FF 03 F2 83 3E 00 75 0E 83 7E 04 00 75 08 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSpack_V29_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? ?? ?? 8A 06 3C 00 74 12 8B F5 8D B5 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_23_Liu_Xing_Ping: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 8B 06 83 F8 00 74 11 8D B5 ?? ?? FF FF 8B 06 83 F8 01 0F 84 4B 02 00 00 C7 06 01 00 00 00 8B D5 8B 85 ?? ?? FF FF 2B D0 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 8B 36 8B FD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_30_by_North_Star_Liu_Xing_Ping: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 55 F9 FF FF 66 8B 06 66 83 F8 00 74 15 8B F5 8D B5 7D F9 FF FF 66 8B 06 66 83 F8 01 0F 84 42 02 00 00 C6 06 01 8B D5 2B 95 11 F9 FF FF 89 95 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_V14_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B1 85 40 00 2D AA 85 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSpack_V13_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B3 85 40 00 2D AC 85 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSPack_2x3x_NET_North_StarLiu_Xing_Ping_additional: PEiD
+{
+    strings:
+        $a = { FF 25 A4 ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_v31_North_Star_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? FF FF 8A 03 3C 00 74 10 8D 9D ?? ?? FF FF 8A 03 3C 01 0F 84 42 02 00 00 C6 03 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? FF FF 85 C0 0F 84 6A 03 00 00 89 85 ?? ?? FF FF E8 00 00 00 00 5B B9 68 03 00 00 03 D9 50 53 E8 B1 02 00 00 61 8B 36 8B FD 03 BD ?? ?? FF FF 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 36 01 13 8B 33 03 7B 04 57 51 52 53 FF B5 ?? ?? FF FF FF B5 ?? ?? FF FF 8B D6 8B CF 8B 85 ?? ?? FF FF 05 AA 05 00 00 FF D0 5B 5A 59 5F 83 F9 00 74 05 83 C3 08 EB C5 68 00 80 00 00 6A 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPacK_V33_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 85 ?? ?? ?? ?? 80 38 00 74 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSPack_2x_North_StarLiu_Xing_Ping: PEiD
+{
+    strings:
+        $a = { FF FF 8B 4E 08 8D 56 10 8B 36 8B FE 83 F9 00 74 3F 8A 07 47 2C E8 3C 01 77 F7 8B 07 80 7A 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule nSPack_1x2x_North_StarLiu_Xing_Ping: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Anti007_NsPacK_Private: PEiD
+{
+    strings:
+        $a = { 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 10 00 00 00 00 00 00 ?? ?? ?? ?? 00 00 00 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_V11_LiuXingPing_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 57 84 40 00 2D 50 84 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_v31_North_Star_h: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 9D ?? ?? FF FF 8A 03 3C 00 74 10 8D 9D ?? ?? FF FF 8A 03 3C 01 0F 84 42 02 00 00 C6 03 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPacK_Net_LiuXingPing: PEiD
+{
+    strings:
+        $a = { 56 69 72 74 75 61 6C 50 72 6F 74 65 63 74 00 00 BB 01 47 65 74 53 79 73 74 65 6D 49 6E 66 6F 00 4B 45 52 4E 45 4C 33 32 2E 64 6C 6C 00 00 5E 00 5F 43 6F 72 ?? ?? ?? 4D 61 69 6E 00 6D 73 63 6F 72 65 65 2E 64 6C 6C }
+    condition:
+        $a at pe.entry_point
+
+}
+rule NsPack_30_North_Star: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 66 8B 06 66 83 F8 00 74 15 8B F5 8D B5 ?? ?? FF FF 66 8B 06 66 83 F8 01 0F 84 42 02 00 00 C6 06 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? FF FF 85 C0 0F 84 6A 03 00 00 89 85 ?? ?? FF FF E8 00 00 00 00 5B B9 68 03 00 00 03 D9 50 53 E8 B1 02 00 00 61 8B 36 8B FD 03 BD ?? ?? FF FF 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 36 }
+        $b = { 9C 60 E8 00 00 00 00 5D B8 07 00 00 00 2B E8 8D B5 ?? ?? FF FF 66 8B 06 66 83 F8 00 74 15 8B F5 8D B5 ?? ?? FF FF 66 8B 06 66 83 F8 01 0F 84 42 02 00 00 C6 06 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule NsPack_34_North_Star_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D 83 ED 07 8D 85 ?? ?? FF FF 80 38 01 0F 84 42 02 00 00 C6 00 01 8B D5 2B 95 ?? ?? FF FF 89 95 ?? ?? FF FF 01 95 ?? ?? FF FF 8D B5 ?? ?? FF FF 01 16 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 ?? ?? FF FF 85 C0 0F 84 6A 03 00 00 89 85 ?? ?? FF FF E8 00 00 00 00 5B B9 68 03 00 00 03 D9 50 53 E8 B1 02 00 00 61 8B 36 8B FD 03 BD ?? ?? FF FF 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 36 01 13 8B 33 03 7B 04 57 51 52 53 FF B5 ?? ?? FF FF FF B5 ?? ?? FF FF 8B D6 8B CF 8B 85 ?? ?? FF FF 05 AA 05 00 00 FF D0 5B 5A 59 5F 83 F9 00 74 05 83 C3 08 EB C5 }
+    condition:
+        $a at pe.entry_point
+
+}

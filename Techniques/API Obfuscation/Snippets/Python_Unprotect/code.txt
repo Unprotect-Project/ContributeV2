@@ -1,0 +1,23 @@
+import ctypes
+
+# Hash function to obfuscate the API names
+def hash(str):
+    hash = 5381
+    for c in str:
+        hash = (hash * 33 + ord(c)) % 2**32
+    return hash
+
+# Load the kernel32.dll library
+hKernel32 = ctypes.windll.kernel32
+
+# Use the hash function to obfuscate the names of the APIs
+# we want to call from the library
+lpLoadLibraryA = hKernel32.GetProcAddress(hKernel32, hash("LoadLibraryA"))
+lpMessageBoxA = hKernel32.GetProcAddress(hKernel32, hash("MessageBoxA"))
+
+# Call the APIs using the hashed names
+hUser32 = ctypes.CFUNCTYPE(ctypes.c_void_p)(lpLoadLibraryA)("user32.dll")
+ctypes.CFUNCTYPE(ctypes.c_int, ctypes.c_void_p, ctypes.c_char_p, ctypes.c_char_p, ctypes.c_uint)(lpMessageBoxA)(None, "Hello World!", "API Hashing", 0)
+
+# Clean up
+hKernel32.FreeLibrary(hUser32)

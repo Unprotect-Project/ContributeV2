@@ -1,0 +1,4 @@
+language: C++
+contributors: External
+associated_technique: INT3 Instruction Scanning
+target_operating_system: windows

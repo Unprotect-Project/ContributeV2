@@ -1,0 +1,3 @@
+Cryptography is a technique often used by malware to protect against analysis or to perform malicious actions such as in ransomware attacks. In these cases, malware will use cryptography to encrypt their payloads or communication channels in order to make it difficult for security tools and forensic investigators to detect and analyze their activities. 
+
+Additionally, cryptography can be used by malware to make their payloads more difficult to reverse engineer, making it harder for researchers to understand their inner workings and develop effective countermeasures.

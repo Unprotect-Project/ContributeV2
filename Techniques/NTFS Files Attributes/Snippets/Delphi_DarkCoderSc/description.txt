@@ -1,0 +1,13 @@
+This code let you handle Alternate Data Streams using two different techniques.
+
+* `FindFirstStreamW` / `FindNextStreamW` : Available since Windows Vista and easier to use.
+* `BackupRead` : Available since Windows XP and more tricky to use.
+
+You can:
+
+* Enumerate ADS Files attached to a target file.
+* Backup ADS File(s) attached to a target file.
+* Copy any file to target file ADS.
+* Delete ADS File(s) attached to a target file.
+
+If you want to learn more about how to use this tiny library you can check [this example project on Github](https://github.com/DarkCoderSc/ADS-Revealer).

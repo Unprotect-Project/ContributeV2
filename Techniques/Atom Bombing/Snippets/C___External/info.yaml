@@ -1,0 +1,4 @@
+language: C++
+contributors: External
+associated_technique: Atom Bombing
+target_operating_system: windows

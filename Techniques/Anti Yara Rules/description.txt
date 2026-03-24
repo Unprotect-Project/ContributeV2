@@ -1,0 +1,3 @@
+Yara rules are used by malware researchers to identify and classify malware based on specific characteristics and behaviors. These rules are powerful because they allow researchers to quickly and accurately detect malware, even if it has been modified to avoid detection. However, attackers can also modify their malware to avoid detection by Yara rules. 
+
+This is often seen with ransomware, where attackers will update the content of their ransom notes in an attempt to evade detection. By constantly modifying their malware, attackers can make it more difficult for researchers to track and detect their malware.

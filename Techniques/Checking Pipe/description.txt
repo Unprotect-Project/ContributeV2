@@ -1,0 +1,9 @@
+Cuckoo is an open-source automated malware analysis system that performs dynamic analysis by running suspicious files in isolated virtual environments. 
+
+To facilitate communication between the host system (analysis environment) and the guest system (execution environment), Cuckoo uses a named pipe:  \\.\pipe\cuckoo
+
+### Detection Technique 
+
+Malware running inside the guest can check for the existence of this named pipe. If the pipe is present, it indicates that the sample is being executed within a Cuckoo-monitored virtual machine. 
+
+Based on this detection, the malware may alter its behavior to evade analysis, such as avoiding malicious actions or delaying execution.

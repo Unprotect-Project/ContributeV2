@@ -1,0 +1,11 @@
+name: Checking Specific Folder Name
+categories:
+- Sandbox Evasion
+resources:
+- https://www.slideshare.net/ThomasRoccia/sandbox-evasion-cheat-sheet
+tags:
+- Special path
+- Cuckoo
+- Guest system
+- Malware
+- Sandbox evasion

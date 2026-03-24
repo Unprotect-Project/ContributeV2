@@ -1,0 +1,11 @@
+name: 'Masquerading: Right-to-Left Override'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1036/002/
+tags:
+- Defense Evasion
+- RTLO
+- RLO
+- obfuscate filenames
+- reverse executable names

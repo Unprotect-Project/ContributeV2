@@ -1,0 +1,11 @@
+name: Indirect Memory Writing
+categories:
+- Antivirus/EDR Evasion
+- Data Obfuscation
+resources:
+- https://github.com/mimorep/Indirect-Shellcode-Executor
+- https://github.com/chmod760/CopyReadProcessMemory
+tags:
+- AMSI Bypass
+contributors:
+- DarkCoderSc

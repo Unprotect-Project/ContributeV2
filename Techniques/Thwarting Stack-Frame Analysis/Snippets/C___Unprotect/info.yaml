@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Thwarting Stack-Frame Analysis
+target_operating_system: windows

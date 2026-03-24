@@ -1,0 +1,1 @@
+The HookFunction is injected as a hook using the SetWindowsHookEx function, and it still calls the CallNextHookEx function to continue the normal flow of execution. The main function installs the hook, runs the message loop to receive events, and then uninstalls the hook when finished.

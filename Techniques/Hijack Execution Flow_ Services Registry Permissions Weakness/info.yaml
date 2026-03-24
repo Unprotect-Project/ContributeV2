@@ -1,0 +1,17 @@
+name: 'Hijack Execution Flow: Services Registry Permissions Weakness'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1574/011/
+tags:
+- Persistence
+- Privilege Escalation
+- Defense Evasion
+- registry key manipulation
+- service hijack
+- FailureCommand
+- Performance key
+- Create Subkey permission
+- Parameters key
+- malicious DLL
+- HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\servicename\Parameters\ServiceDll

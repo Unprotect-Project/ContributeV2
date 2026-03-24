@@ -1,0 +1,18 @@
+; Initialize registers
+mov eax, 0
+mov ebx, 0
+
+; Perform some operations on the registers
+add eax, 1
+add ebx, 2
+
+; Reassign the registers
+mov ebx, eax
+mov eax, ebx
+
+; Perform more operations on the registers
+add eax, 1
+add ebx, 2
+
+; Return the result
+ret

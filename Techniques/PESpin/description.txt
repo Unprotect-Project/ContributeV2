@@ -1,0 +1,1 @@
+PESpin is a Windows executable files protector, compressor coded in Win32ASM using MASM. Overall, this application will enable the compression of the entire executable - code, data, and resources, thus leaving the file protected against patching or disassembling.

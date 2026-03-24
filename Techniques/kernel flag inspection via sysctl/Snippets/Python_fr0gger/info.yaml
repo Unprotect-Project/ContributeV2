@@ -1,0 +1,4 @@
+language: Python
+contributors: fr0gger
+associated_technique: kernel flag inspection via sysctl
+target_operating_system: macos

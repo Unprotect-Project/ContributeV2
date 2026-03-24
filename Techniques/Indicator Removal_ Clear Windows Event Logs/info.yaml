@@ -1,0 +1,20 @@
+name: 'Indicator Removal: Clear Windows Event Logs'
+categories:
+- Anti-Forensic
+- Defense Evasion [Mitre]
+resources:
+- https://0x00sec.org/t/anti-forensic-and-file-less-malware/10008#221-disabling-event-logging
+- https://attack.mitre.org/techniques/T1070/001/
+- https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-1102
+tags:
+- Defense Evasion
+- event
+- log
+- wevtutil cl system
+- wevtutil cl application
+- wevtutil cl security
+- wipe logs
+- APT28
+- APT32
+- APT38
+- APT41

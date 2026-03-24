@@ -1,0 +1,12 @@
+name: 'Hide Artifacts: Run Virtual Instance'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1564/006/
+tags:
+- Defense Evasion
+- virtualization
+- VirtualBox
+- VMWare
+- HyperV
+- compromise host

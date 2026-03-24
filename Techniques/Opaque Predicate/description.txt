@@ -1,0 +1,3 @@
+Opaque predicate is a term used in programming to refer to decision making where there is only one possible outcome. This can be achieved through the use of complex or hard-to-understand logic, such as calculating a value that will always return True. 
+
+Opaque predicates are often used as anti-disassembling techniques, as they can make it difficult for an analyst to understand the code and determine its intent. By using opaque predicates, malware authors can make their code more difficult to reverse engineer, which can help to evade detection and analysis.

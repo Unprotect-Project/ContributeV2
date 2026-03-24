@@ -1,0 +1,22 @@
+name: C2 via FTP(S)
+categories:
+- Network Evasion
+resources:
+- https://github.com/DarkCoderSc/SharpFtpC2
+tags:
+- C2
+- FTP
+- FTPS
+- File
+featured_apis:
+- InternetOpenW
+- InternetConnectW
+- FtpOpenFileW
+- InternetWriteFile
+- InternetReadFile
+- FtpGetCurrentDirectoryW
+- InternetOpenA
+- InternetConnectA
+- FtpOpenFileA
+contributors:
+- DarkCoderSc

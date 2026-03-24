@@ -1,0 +1,5 @@
+Return Address Spoofing is a technique used in x64 architecture to bypass the limitations of the x64 fastcall mechanism. The traditional method of spoofing return addresses in x86 (e.g. using a ret in a game module as a trampoline) is not feasible in x64 due to caller cleanup and red zone.
+
+To overcome this, the code creates a temporary storage for the shellcode on the stack, where the address of a gadget and the called function are stored. An extra 8 bytes are reserved for the shellcode. The address of the storage is then passed to the shellcode, which reads the addresses, stores the original return address, the original content of the nonvolatile register (rbx), and the shellcode's return address.
+
+The shellcode then jumps into the called function, which runs and returns to the gadget (jmp [rbx]). The remaining shellcode restores rbx, aligns the stack, and "returns" to the original return address using a jump instruction. This technique enables the shellcode to hide its presence from endpoint security software and memory scanners, while maintaining its malicious functionality.

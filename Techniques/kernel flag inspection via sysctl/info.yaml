@@ -1,0 +1,5 @@
+name: kernel flag inspection via sysctl
+categories:
+- Anti-Debugging
+resources:
+- https://www.elastic.co/security-labs/beyond-the-wail

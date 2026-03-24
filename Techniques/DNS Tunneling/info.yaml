@@ -1,0 +1,16 @@
+name: DNS Tunneling
+categories:
+- Network Evasion
+- Defense Evasion [Mitre]
+resources:
+- https://securelist.com/use-of-dns-tunneling-for-cc-communications/78203/
+- https://attack.mitre.org/techniques/T1048/003/
+tags:
+- DNS tunneling
+- Domain Name System (DNS)
+- Data transfer
+- Encrypted
+- Covert
+- External network connectivity
+- Authoritative DNS server
+- Server-side tunneling

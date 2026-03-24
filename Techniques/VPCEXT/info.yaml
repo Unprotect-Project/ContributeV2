@@ -1,0 +1,7 @@
+name: VPCEXT
+categories:
+- Sandbox Evasion
+resources:
+- https://www.cert.pl/en/news/single/necurs-hybrid-spam-botnet/
+- https://shasaurabh.blogspot.com/2017/07/virtual-machine-detection-techniques.html
+- https://www.codeproject.com/Articles/9823/Detect-if-your-program-is-running-inside-a-Virtual

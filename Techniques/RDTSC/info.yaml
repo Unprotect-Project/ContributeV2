@@ -1,0 +1,8 @@
+name: RDTSC
+categories:
+- Anti-Debugging
+resources:
+- https://www.codeproject.com/Articles/30815/An-Anti-Reverse-Engineering-Guide
+- https://www.aldeid.com/wiki/RDTSC-Read-Time-Stamp-Counter
+tags:
+- RDTSC

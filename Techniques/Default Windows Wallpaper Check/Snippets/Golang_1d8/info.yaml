@@ -1,0 +1,4 @@
+language: Golang
+contributors: 1d8
+associated_technique: Default Windows Wallpaper Check
+target_operating_system: windows

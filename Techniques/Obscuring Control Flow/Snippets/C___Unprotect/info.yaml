@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Obscuring Control Flow
+target_operating_system: windows

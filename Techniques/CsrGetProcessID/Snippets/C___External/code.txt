@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <windows.h>
+typedef HANDLE (*_CsrGetProcessId)();
+
+int main(void)
+{
+    HMODULE nt=GetModuleHandle("ntdll.dll");
+    _CsrGetProcessId CsrGetProcessId=(_CsrGetProcessId)GetProcAddress(nt,"CsrGetProcessId");
+    HANDLE proc = OpenProcess(PROCESS_ALL_ACCESS,FALSE,CsrGetProcessId());
+
+    if(!proc)
+    {
+        printf("debugger is present!");
+    }
+}

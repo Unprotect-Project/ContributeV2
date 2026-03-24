@@ -1,0 +1,10 @@
+Requires Administrator privileges
+
+Targeted DLL: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Windows`
+
+The following keys must be set to the respective values:
+- **AppInitDLLs** - Set this to the full path of the malicious DLL (`C:\Users\Administrator\Desktop\inject.dll`)
+- **LoadAppInit_DLLs** - 1
+- **RequireSignedAppInit_Dlls** - 0
+	
+Then any process that uses WinAPI within Windows will trigger execution of our malicious DLL

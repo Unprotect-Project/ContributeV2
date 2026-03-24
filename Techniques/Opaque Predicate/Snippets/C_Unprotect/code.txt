@@ -1,0 +1,21 @@
+int main() {
+    int x = 3;
+    int y = 5;
+    int z = x * y;
+
+    // Opaque predicate: z will always be equal to 15,
+    // so this if statement will always be true
+    if (z == 15) {
+        // Do something malicious
+
+        // Create another opaque predicate
+        int a = 10;
+        int b = 5;
+        int c = a - b;
+
+        // This if statement will also always be true
+        if (c == 5) {
+            // Do something even more malicious
+        }
+    }
+}

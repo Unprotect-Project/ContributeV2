@@ -1,0 +1,44 @@
+include 'win32ax.inc'
+
+main:
+
+
+
+     stdcall [GetModuleFileName],0,modulename,80
+     stdcall [CreateFile],BatFile,GENERIC_WRITE,0,0,CREATE_ALWAYS,FILE_ATTRIBUTE_NORMAL,0
+
+     mov [myfile], eax
+     cmp eax, 0xffffff
+     jz .exit
+
+     stdcall [wsprintf],buf,MainStr,modulename,modulename
+     stdcall [WriteFile],[myfile],buf,bufsize,byteswritten,0
+     stdcall [CloseHandle],[myfile]
+
+
+     stdcall [ShellExecute],0,0,BatFile,0,0,SW_HIDE
+
+.exit:	stdcall [ExitProcess],0
+
+
+
+ MainStr db ":Repeat",13,10,\
+	   "del %s",13,10,\
+	   "if exist %s goto Repeat",13,10,\
+	   "del del.bat",0
+
+ BatFile db "del.bat",0
+
+ modulename rb 80
+ buf	    rb	0xff
+ bufsize = $ - buf
+
+ myfile 		 dd ?
+ byteswritten	     dd ?
+
+data import
+library kernel32,"kernel32.dll",user32,"user32.dll",shell32,"shell32.dll"
+include "%include%/api/shell32.inc"
+include "%include%/api/kernel32.inc"
+include "%include%/api/user32.inc"
+end data

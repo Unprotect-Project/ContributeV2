@@ -1,0 +1,1 @@
+Some forms of malware are programmed to disable antivirus software and evade detection by security measures. These malicious programs can use specific commands or techniques to undermine the antivirus software's effectiveness and remain hidden from detection..

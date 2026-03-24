@@ -1,0 +1,3 @@
+EXE Packer is able to compress executable files (type EXE) or DLL-files. Already compressed files may also be decompressed with this program. There exist 12 different levels for file-compression. This program is also able to create backups of the files that shall be compressed.
+
+If a file is compressed the physical file-size is reduced on the respective device. A compressed file decompresses itself while being executed and can be used without this program. This program is freeware. It requires the .NET-framework 2.0 (already included in operation system since Windows Vista).

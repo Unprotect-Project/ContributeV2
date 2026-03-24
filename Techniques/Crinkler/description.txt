@@ -1,0 +1,1 @@
+Crinkler is a compressing linker for Windows, specifically targeted towards executables with a size of just a few kilobytes.

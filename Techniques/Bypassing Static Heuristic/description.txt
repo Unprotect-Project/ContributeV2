@@ -1,0 +1,1 @@
+Dynamic heuristic engines are implemented in the form of hooks (in user-land or kernel-land) or based on emulation. User-land hooks (HIPS) can be easily bypass by malware by patching back the entry point of the hooked function. For kernel-land hook, malware has to run in kernel space by installing a driver or abusing a kernel-level vulnerability.

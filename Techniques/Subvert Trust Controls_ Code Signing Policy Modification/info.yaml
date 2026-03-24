@@ -1,0 +1,17 @@
+name: 'Subvert Trust Controls: Code Signing Policy Modification'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1553/006/
+tags:
+- Defense Evasion
+- execution of unsigned code
+- execution of self-signed code
+- Driver Signature Enforcement (DSE)
+- bcdedit.exe -set TESTSIGNING ON
+- disable RequireSigned
+- g_CiOptions
+- Privilege Escalation
+- APT39
+- enable TESTSIGNING
+- disable driver signing verification

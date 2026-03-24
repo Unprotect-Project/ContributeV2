@@ -1,0 +1,25 @@
+name: 'Modify Authentication Process: Hybrid Identity'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1556/007/
+tags:
+- Credential Access
+- Defense Evasion
+- Persistence
+- backdoor cloud authentication processes
+- bypass authentication mechanisms
+- modifying authentication processes
+- access credentials
+- enable persistent access
+- Active Directory
+- Azure AD
+- Password Hash Synchronization (PHS)
+- Pass Through Authentication (PTA)
+- Active Directory Federation Services (ADFS)
+- AzureADConnectAuthenticationAgentService
+- Microsoft.IdentityServer.Servicehost configuration file
+- hybrid identity authentication process
+- credentia harvesting
+- APT29
+- inject malicious DLL

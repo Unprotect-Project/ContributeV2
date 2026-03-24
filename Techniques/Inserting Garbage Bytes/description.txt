@@ -1,0 +1,5 @@
+Garbage bytes are random or meaningless data that is inserted into a program's code in order to make reverse engineering and analysis more difficult. This is an anti-disassembling technique, as the insertion of these random bytes can cause disassemblers to misinterpret the code and produce incorrect disassembly results.
+
+The insertion of garbage bytes is usually used in conjunction with other techniques, such as code transposition or register reassignment. This can make the code even harder to analyze and understand, as the disassembler will not only have to deal with the incorrect disassembly caused by the garbage bytes, but also with the other obfuscation techniques that are being used.
+
+The goal of this technique is to make it more difficult for a reverse engineer or disassembler to understand the code's behavior and intentions. By inserting random or meaningless data into the code, the disassembler will be unable to accurately reconstruct the original program, making it harder to analyze and understand.

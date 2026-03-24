@@ -1,0 +1,4 @@
+language: C++
+contributors: "Ka\u011Fan I\u015EILDAK"
+associated_technique: Detecting Online Sandbox
+target_operating_system: windows

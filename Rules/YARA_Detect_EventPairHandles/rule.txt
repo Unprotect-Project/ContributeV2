@@ -1,0 +1,12 @@
+rule Detect_EventPairHandles: AntiDebug {
+    meta: 
+        description = "Detect EventPairHandlesas anti-debug"
+        author = "Unprotect"
+        comment = "Experimental rule"
+    strings:
+        $1 = "EventPairHandles" fullword ascii
+        $2 = "RtlCreateQueryDebugBuffer" fullword ascii
+        $3 = "RtlQueryProcessHeapInformation" fullword ascii
+    condition:   
+       uint16(0) == 0x5A4D and filesize < 1000KB and 2 of them 
+}

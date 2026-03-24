@@ -1,0 +1,1 @@
+Original Source code: https://www.ired.team/offensive-security/defense-evasion/parent-process-id-ppid-spoofing

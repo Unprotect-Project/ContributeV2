@@ -1,0 +1,4 @@
+language: C++
+contributors: Unprotect
+associated_technique: Checking Installed Software
+target_operating_system: windows

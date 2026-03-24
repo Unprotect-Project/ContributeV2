@@ -1,0 +1,1 @@
+Fingerprinting the AV emulator can allow the malware to detect the AV. For example, specific mutex can be used by the AV emulator, trying to detect it allow the sample to detect the AV.

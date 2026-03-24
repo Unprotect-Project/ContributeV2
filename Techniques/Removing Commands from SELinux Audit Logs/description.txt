@@ -1,0 +1,70 @@
+SELinux audit logs record all executed commands and policy enforcement actions, including commands like `/bin/web`, `setenforce`, `mount`, and `/bin/rm`. Using `sed -i`, attackers delete specific entries from these logs that could reveal the commands they executed. This manipulation ensures that traces of their activity, such as disabling security policies or deleting evidence, are erased from the audit trail.
+
+SELinux audit logs provide granular visibility into command execution and policy violations. Attackers exploit this by removing traces of commands that could indicate tampering with the system (e.g., mounting file systems to access restricted areas or deleting files to remove evidence). This eliminates key forensic evidence and blinds investigators to critical actions taken during or after exploitation, reducing the likelihood of detection and hindering incident response efforts.
+
+--linux--
+### How SELinux Audit Log Manipulation Works on Linux
+
+#### What Are SELinux Audit Logs?
+SELinux (Security-Enhanced Linux) audit logs provide detailed records of:
+- **Executed Commands:** Logs all commands run on the system (e.g., `/bin/web`, `setenforce`, `mount`, `/bin/rm`).
+- **Policy Enforcement:** Tracks SELinux policy actions, including denials, permission changes, and access violations.
+- These logs are typically stored in files like `/var/log/audit/audit.log`.
+
+SELinux audit logs are critical for understanding command execution, policy violations, and system behavior.
+
+---
+
+#### How Are SELinux Audit Logs Manipulated?
+Attackers use tools like `sed` to remove specific entries from the audit logs. For example:
+
+```bash
+# Remove entries matching specific commands
+sed -i '/bin\/web/d' /data/var/log/audit/audit.log
+sed -i '/setenforce/d' /data/var/log/audit/audit.log
+sed -i '/mount/d' /data/var/log/audit/audit.log
+sed -i '/bin\/rm/d' /data/var/log/audit/audit.log
+```
+
+### How `sed` Manipulates SELinux Audit Logs
+
+#### **Pattern Matching**
+- The `sed` command searches for log entries containing specific patterns (e.g., `/bin/web` or `setenforce`) and deletes those lines.
+
+#### **In-Place Editing (`-i`)**
+- The `-i` flag rewrites the log file directly, without creating a backup, effectively erasing the selected entries permanently.
+
+---
+
+### **How It Works Internally**
+1. **Log Parsing:**
+   - The `sed` command scans the audit log file line by line, looking for patterns defined by the attacker.
+2. **Line Deletion:**
+   - Any line containing the specified command or activity is removed from the output.
+3. **File Overwriting:**
+   - The modified log file is written back to the original file, leaving no visible trace of the tampering.
+
+---
+
+### **How It Can Be Abused**
+
+#### **Erasing Evidence of Malicious Commands**
+- **SELinux logs commands** that might reveal attacker activity, such as:
+  - `/bin/rm` to delete critical files.
+  - `mount` to gain access to restricted file systems.
+- **By removing these entries, attackers conceal their actions**, making it difficult for investigators to detect malicious behavior.
+
+#### **Concealing Policy Violations**
+- SELinux enforces strict access controls. If attackers:
+  - Bypass or disable policies (e.g., using `setenforce` to change the SELinux mode), the logs would normally record these actions.
+- **Manipulating logs erases evidence** of these violations, making it appear as if SELinux policies were never altered.
+
+#### **Hindering Forensic Analysis**
+- SELinux audit logs are a key resource for incident responders. By removing specific entries, attackers:
+  - Blind investigators to critical activities.
+  - Make it harder to identify attack vectors or reconstruct the timeline of events.
+
+#### **Evading Detection**
+- Tools or scripts monitoring SELinux logs for suspicious patterns:
+  - Will not detect tampered activities because the relevant entries have been erased.
+--end--

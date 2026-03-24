@@ -1,0 +1,1 @@
+Warning: the code below is a simple MBR wiper. It is currently not operational for obvious reasons.

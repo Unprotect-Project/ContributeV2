@@ -1,0 +1,10 @@
+name: ICE 0xF1
+categories:
+- Anti-Debugging
+tags:
+- '0xf1'
+- icebp
+featured_apis:
+- IsDebuggerPresent
+contributors:
+- fr0gger

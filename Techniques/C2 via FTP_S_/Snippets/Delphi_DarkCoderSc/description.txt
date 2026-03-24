@@ -1,0 +1,1 @@
+This code snippet utilizes the Windows API, specifically the [Wininet](https://learn.microsoft.com/en-us/windows/win32/wininet/about-wininet?FWT_mc_id=DSEC-MVP-5005282) library, to execute FTP operations.

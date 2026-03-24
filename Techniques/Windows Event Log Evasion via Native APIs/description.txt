@@ -1,0 +1,9 @@
+Attackers can leverage native Windows API calls to install malicious services without generating correlating entries in the event log. Using native APIs to install services instead of the standard API calls allow attackers to bypass security controls and event logging. This technique was utilised by Stuxnet.
+
+Services are typically created through a standard Windows API call `CreateServiceA` or `CreateService`. This API is also called by the service creating Windows native tool “sc.exe” to register a service on a machine. A call to this API subsequently generates entries in the event log which corresponds to the service creation event IDs. 
+
+Attackers can create services without relying on the typical API call `CreateServiceA` by directly interacting with the Windows native API calls instead. For example, the `StartService` API will a make a call to the native API `NdrClientCall2` along with registering the service start events in the event logs. 
+
+By directly calling `NdrClientCall2` to start a service that’s had the registry keys manually created, the service is started and running, and no event logs are created allowing to evade forensic analysis. This will result in a malicious service running and without any event log entry. 
+
+To take this a step further, attackers can remove the evidence in the registry and any correlating evidence loaded in the memory of “services.exe”. This leaves with no registry artefacts and no event log information to analyse.

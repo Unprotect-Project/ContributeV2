@@ -1,0 +1,11 @@
+name: 'Indicator Removal: Clear Persistence'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1070/009/
+tags:
+- Defense Evasion
+- evidence removal
+- evidence clean-up
+- artifacts of persistence removal
+- registry key removal

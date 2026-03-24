@@ -1,0 +1,7 @@
+This code is an example of using the AddVectoredExceptionHandler function to register a top-level exception handler in a Windows program. The goal of this handler is to detect the presence of VEH (Vectored Exception Handler) debuggers, which can be used to step through code and inspect the program's memory.
+
+The main function of the code calls the AddVectoredExceptionHandler function, which registers the TopLevelHandler function as the top-level exception handler. The first parameter to AddVectoredExceptionHandler is 1, which means that this handler will be the first one to be called.
+
+The TopLevelHandler function takes an EXCEPTION_POINTERS pointer as its parameter, which contains information about the exception that was raised. If the exception code is EXCEPTION_SINGLE_STEP, this means that a VEH debugger has single-stepped through the code, and the CaughtVEHDebugger flag is set to true.
+
+Finally, the main function prints whether the VEH debugger was caught or not based on the value of the CaughtVEHDebugger flag. If the flag is true, this means that a VEH debugger was detected, and the program prints "Caught VEH debugger: true". If the flag is false, this means that no VEH debugger was detected, and the program prints "Caught VEH debugger: false".

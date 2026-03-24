@@ -1,0 +1,22 @@
+name: SuspendThread
+categories:
+- Anti-Debugging
+resources:
+- https://anti-reversing.com/Downloads/Anti-Reversing/The_Ultimate_Anti-Reversing_Reference.pdf
+- https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-suspendthread
+- http://undocumented.ntinternals.net/index.html?page=UserMode%2FUndocumented%20Functions%2FNT%20Objects%2FThread%2FNtSuspendThread.htmlhttps://secret.club/2021/01/04/thread-stuff.html
+tags:
+- SuspendThread
+- NtSuspendThread
+- Debugging
+- Anti-debugging
+- Thread enumeration
+- Process enumeration
+featured_apis:
+- OpenThread
+- Process32First
+- Process32Next
+- CreateToolhelp32Snapshot
+- Thread32First
+- Thread32Next
+- SuspendThread

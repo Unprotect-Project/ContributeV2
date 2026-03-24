@@ -1,0 +1,1 @@
+This code compiles a C program on Windows that tests if it's running in an emulation environment by attempting to configure a bogus device string with BuildCommDCBAndTimeouts; if the call succeeds, it terminates the program, suggesting it might not be running on a genuine Windows system.

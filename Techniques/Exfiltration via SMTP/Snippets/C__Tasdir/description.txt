@@ -1,0 +1,1 @@
+This code demonstrates a data exfiltration technique where a file (report.pdf) is sent as an email attachment to an attacker-controlled email address using SMTP, leveraging hardcoded credentials and SSL/TLS encryption for transmission.

@@ -1,0 +1,3 @@
+Hook injection is a technique used by malware to alter the behavior of internal functions in an operating system or application. This is typically achieved by inserting malicious code into existing function calls, allowing the malware to intercept and manipulate the normal flow of execution.
+
+In the case of Windows, the `SetWindowsHookEx` function can be used by programs to install hooks that monitor events such as mouse clicks and keyboard key presses. This can enable malware to monitor user actions and steal sensitive information or perform other malicious actions. By using hook injection, malware can evade detection and continue to operate stealthily within a system.

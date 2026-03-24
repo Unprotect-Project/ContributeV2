@@ -1,0 +1,1 @@
+PELock is a software security solution designed for the protection of any 32 bit Windows applications against cracking, tampering and reverse engineering analysis.

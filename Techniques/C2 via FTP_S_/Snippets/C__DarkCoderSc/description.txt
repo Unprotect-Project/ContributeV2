@@ -1,0 +1,3 @@
+his code snippet is written in C# (.NET Core) and facilitates request/response interactions via FTP, supporting both standard FTP and secure FTP (FTPS).
+
+The [WebRequest](https://learn.microsoft.com/en-us/dotnet/api/system.net.webrequest?view=net-7.0?WT_mc_id=SEC-MVP-5005282) / [FtpWebRequest](https://learn.microsoft.com/en-us/dotnet/api/system.net.ftpwebrequest?view=net-7.0?WT_mc_id=SEC-MVP-5005282) classes are employed for executing FTP requests.

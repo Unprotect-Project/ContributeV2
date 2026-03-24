@@ -1,0 +1,5 @@
+Edit controls, including Rich Edit controls, are a common type of Windows control found in many applications. They can be embedded directly in the application or as subclassed windows. 
+
+When these controls display text in multiline mode, they use a callback function called `EditWordBreakProc`. This function is called every time the control needs to do something related to word wrapping. 
+
+Additionally, when a Rich Edit control receives the `EM_STREAMIN` message, it uses the information provided in an `EDITSTREAM` structure to transfer data into or out of the control. The `pfnCallback` field of this structure can be used to point to a payload in memory, allowing for the injection of malicious code.

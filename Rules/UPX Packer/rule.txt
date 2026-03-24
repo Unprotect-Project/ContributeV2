@@ -1,0 +1,1802 @@
+rule UPX_v30_EXE_LZMA_Markus_Oberhumer_Laszlo_Molnar_John_Reiser_additional: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? FF 57 89 E5 8D 9C 24 80 C1 FF FF 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? 00 57 83 C3 04 53 68 ?? ?? ?? 00 56 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v070_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { 8C CB B9 ?? ?? BE ?? ?? 89 F7 1E A9 ?? ?? 8D ?? ?? ?? 8E D8 05 ?? ?? 8E C0 FD F3 A5 FC 2E ?? ?? ?? ?? 73 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_020_EXE: PEiD
+{
+    strings:
+        $a = { 8C CB B9 00 00 BE 00 00 89 F7 1E A9 B5 80 8D 87 05 00 8E D8 05 00 00 8E C0 FD F3 A5 FC 2E 80 6C 13 10 73 E8 AF AD 0E 0E 0E 06 1F 07 16 68 00 00 BD FF FF F7 E1 93 CB 55 50 58 21 03 03 02 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0896_v102_v105_v122_Delphi_stub_additional: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? C7 87 ?? ?? ?? ?? ?? ?? ?? ?? 57 83 CD FF EB 0E ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 8B }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Protector_v10x_2: PEiD
+{
+    strings:
+        $a = { EB ?? ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_302: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 89 E5 8D 9C }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Scrambler_RC_v1x: PEiD
+{
+    strings:
+        $a = { 90 61 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF }
+        $b = { 66 C7 05 ?? ?? ?? ?? 75 07 E9 ?? FE FF FF 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_v0896_v102_v105_v122_Delphi_stub_Laszlo_Markus: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? C7 87 ?? ?? ?? ?? ?? ?? ?? ?? 57 83 CD FF EB 0E ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 8B }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Modified_Stub_b_Farb_rausch_Consumer_Consulting: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF FC B2 80 31 DB A4 B3 02 E8 6D 00 00 00 73 F6 31 C9 E8 64 00 00 00 73 1C 31 C0 E8 5B 00 00 00 73 23 B3 02 41 B0 10 E8 4F 00 00 00 10 C0 73 F7 75 3F AA EB D4 E8 4D 00 00 00 29 D9 75 10 E8 42 00 00 00 EB 28 AC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_v3042005_One_layer_encryption_MANtiCORE: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? 00 B9 ?? 01 00 00 80 34 08 ?? E2 FA 61 68 ?? ?? ?? 00 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Modified_Stub_c_Farb_rausch_Consumer_Consulting: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF FC B2 80 E8 00 00 00 00 5B 83 C3 66 A4 FF D3 73 FB 31 C9 FF D3 73 14 31 C0 FF D3 73 1D 41 B0 10 FF D3 10 C0 73 FA 75 3C AA EB E2 E8 4A 00 00 00 49 E2 10 E8 40 00 00 00 EB 28 AC D1 E8 74 45 11 C9 EB 1C 91 48 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_200_30X_Markus_Oberhumer_amp_Laszlo_Molnar_amp_John_Reiser: PEiD
+{
+    strings:
+        $a = { 5E 89 F7 B9 ?? ?? ?? ?? 8A 07 47 2C E8 3C 01 77 F7 80 3F ?? 75 F2 8B 07 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 29 F8 80 EB E8 01 F0 89 07 83 C7 05 88 D8 E2 D9 8D ?? ?? ?? ?? ?? 8B 07 09 C0 74 3C 8B 5F 04 8D ?? ?? ?? ?? ?? ?? 01 F3 50 83 C7 08 FF ?? ?? ?? ?? ?? 95 8A 07 47 08 C0 74 DC 89 F9 57 48 F2 AE 55 FF ?? ?? ?? ?? ?? 09 C0 74 07 89 03 83 C3 04 EB E1 FF ?? ?? ?? ?? ?? 8B AE ?? ?? ?? ?? 8D BE 00 F0 FF FF BB 00 10 00 00 50 54 6A 04 53 57 FF D5 8D 87 ?? ?? ?? ?? 80 20 7F 80 60 28 7F 58 50 54 50 53 57 FF D5 58 61 8D 44 24 80 6A 00 39 C4 75 FA 83 EC 80 E9 }
+        $b = { 5E 89 F7 B9 ?? ?? ?? ?? 8A 07 47 2C E8 3C 01 77 F7 80 3F ?? 75 F2 8B 07 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 29 F8 80 EB E8 01 F0 89 07 83 C7 05 88 D8 E2 D9 8D ?? ?? ?? ?? ?? 8B 07 09 C0 74 3C 8B 5F 04 8D ?? ?? ?? ?? ?? ?? 01 F3 50 83 C7 08 FF }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_070_PE_DLL: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 99 01 00 00 60 E8 00 00 00 00 58 83 E8 48 50 8D B8 00 00 00 FF 57 66 81 87 00 00 00 00 00 00 8D B0 FC 01 00 00 83 CD FF 31 DB EB 0C 90 90 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Alternative_stub_additional: PEiD
+{
+    strings:
+        $a = { B9 ?? ?? BE ?? ?? BF C0 FF FD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_123_Markus_Laszlo: PEiD
+{
+    strings:
+        $a = { 31 2E 32 33 00 55 50 58 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_071_072_PE: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 83 CD FF 31 DB 5E 8D BE FA 00 00 FF 57 66 81 87 00 00 00 00 00 00 81 C6 B3 01 00 00 EB 0A 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 77 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Modified_Stub_b_Farb_rausch_Consumer_Consulting_: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF FC B2 80 31 DB A4 B3 02 E8 6D 00 00 00 73 F6 31 C9 E8 64 00 00 00 73 1C 31 C0 E8 5B 00 00 00 73 23 B3 02 41 B0 10 E8 4F 00 00 00 10 C0 73 F7 75 3F AA EB D4 E8 4D 00 00 00 29 D9 75 10 E8 42 00 00 00 EB 28 AC D1 E8 74 4D 11 C9 EB 1C 91 48 C1 E0 08 AC E8 2C 00 00 00 3D 00 7D 00 00 73 0A 80 FC 05 73 06 83 F8 7F 77 02 41 41 95 89 E8 B3 01 56 89 FE 29 C6 F3 A4 5E EB 8E 00 D2 75 05 8A 16 46 10 D2 C3 31 C9 41 E8 EE FF FF FF 11 C9 E8 E7 FF FF FF 72 F2 C3 31 C0 31 DB 31 C9 5E 89 F7 B9 ?? ?? ?? ?? 8A 07 47 2C E8 3C 01 77 F7 80 3F ?? 75 F2 8B 07 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 29 F8 80 EB E8 01 F0 89 07 83 C7 05 89 D8 E2 D9 8D BE ?? ?? ?? ?? 8B 07 09 C0 74 45 8B 5F 04 8D 84 30 ?? ?? ?? ?? 01 F3 50 83 C7 08 FF 96 ?? ?? ?? ?? 95 8A 07 47 08 C0 74 DC 89 F9 79 07 0F B7 07 47 50 47 B9 57 48 F2 AE 55 FF 96 ?? ?? ?? ?? 09 C0 74 07 89 03 83 C3 04 EB D8 FF 96 ?? ?? ?? ?? 61 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v062_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 ?? ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 8D B0 EC 01 ?? ?? 83 CD FF 31 DB EB 07 90 8A 06 46 88 07 47 01 DB 75 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PackerUPX_CompresorGratuito_wwwupxsourceforgenet: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?0 ?? 00 8D BE ?? ?? F? FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_050_070: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_071_072_PE_DLL: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 95 01 00 00 60 E8 00 00 00 00 83 CD FF 31 DB 5E 8D BE EF 00 00 FF 57 66 81 87 00 00 00 00 00 00 81 C6 B1 01 00 00 EB 07 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0761_dos_exe_additional: PEiD
+{
+    strings:
+        $a = { B9 ?? ?? BE ?? ?? 89 F7 1E A9 ?? ?? 8C C8 05 ?? ?? 8E D8 05 ?? ?? 8E C0 FD F3 A5 FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_v3042005_One_layer_encryption_MANtiCORE_: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? 00 B9 ?? 01 00 00 80 34 08 ?? E2 FA 61 68 ?? ?? ?? 00 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_V194_Markus_Oberhumer_Laszlo_Molnar_John_Reiser: PEiD
+{
+    strings:
+        $a = { FF D5 80 A7 ?? ?? ?? ?? ?? 58 50 54 50 53 57 FF D5 58 61 8D 44 24 ?? 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_v3042005_multi_layer_encryption_MANtiCORE_: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? ?? B9 18 00 00 00 80 34 08 ?? E2 FA 61 68 ?? ?? ?? ?? C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_com: PEiD
+{
+    strings:
+        $a = { B9 ?? ?? BE ?? ?? BF C0 FF FD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Alternative_stub_Laszlo_Markus: PEiD
+{
+    strings:
+        $a = { EB 02 EB EA EB FC 8A 06 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v080_v084_additional: PEiD
+{
+    strings:
+        $a = { 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 ?? ?? ?? 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 ?? 75 ?? 8B 1E 83 EE FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v071_DLL_additional: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 95 01 00 00 60 E8 00 00 00 00 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v072_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 83 ?? ?? 31 DB 5E 8D ?? ?? ?? ?? ?? 57 66 ?? ?? ?? ?? ?? ?? ?? ?? 81 ?? ?? ?? ?? ?? EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXLock_v11_CyberDoom_Bob_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? ?? 00 60 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Upx_Lock_10_12_CyberDoom_Team_X_BoB_BobSoft: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 48 12 40 00 60 E8 2B 03 00 00 61 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0896_v102_v105_v122_DLL_additional: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 ?? ?? ?? 00 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_p_ECLiPSE_layer: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? B9 ?? ?? ?? ?? 33 D2 EB 01 0F 56 EB 01 0F E8 03 00 00 00 EB 01 0F EB 01 0F 5E EB 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXHiT_001_sibaway7yahoocom: PEiD
+{
+    strings:
+        $a = { E2 FA 94 FF E0 61 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_v032a_fake_UPX_0896_102_105_124_emadicius_h: PEiD
+{
+    strings:
+        $a = { 60 BE 00 90 8B 00 8D BE 00 80 B4 FF 57 83 CD FF EB 3A 90 90 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 0B 75 19 8B 1E 83 EE FC 11 DB 72 10 58 61 90 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v20_Markus_Laszlo_Reiser_h_additional: PEiD
+{
+    strings:
+        $a = { 55 FF 96 ?? ?? ?? ?? 09 C0 74 07 89 03 83 C3 04 EB ?? FF 96 ?? ?? ?? ?? 8B AE ?? ?? ?? ?? 8D BE 00 F0 FF FF BB 00 10 00 00 50 54 6A 04 53 57 FF D5 8D 87 ?? ?? 00 00 80 20 7F 80 60 28 7F 58 50 54 50 53 57 FF D5 58 61 8D 44 24 80 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_V3042005_MANtiCORE_additional: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? ?? B9 ?? ?? ?? ?? ?? ?? ?? ?? E2 FA 61 68 ?? ?? ?? ?? C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_v3042005_multi_layer_encryption_additional: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? ?? B9 18 00 00 00 80 34 08 ?? E2 FA 61 68 ?? ?? ?? ?? C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Upx_Lock_v10_CyberDoom_Team_X: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 48 12 40 00 60 E8 2B 03 00 00 61 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v081_v084_Modified: PEiD
+{
+    strings:
+        $a = { 01 DB 07 8B 1E 83 EE FC 11 DB ED B8 01 ?? ?? ?? 01 DB 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 }
+        $b = { 01 DB ?? 07 8B 1E 83 EE FC 11 DB ?? ED B8 01 00 00 00 01 DB ?? 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 77 EF }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_V194_Markus_Oberhumer_Laszlo_Molnar_John_Reiser_additional: PEiD
+{
+    strings:
+        $a = { FF D5 80 A7 ?? ?? ?? ?? ?? 58 50 54 50 53 57 FF D5 58 61 8D 44 24 ?? 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_p_ECLiPSE_layer_additional: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? B9 ?? ?? ?? ?? 33 D2 EB 01 0F 56 EB 01 0F E8 03 00 00 00 EB 01 0F EB 01 0F 5E EB 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_120_Markus_Laszlo: PEiD
+{
+    strings:
+        $a = { 31 2E 32 30 00 55 50 58 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_124_Markus_Laszlo: PEiD
+{
+    strings:
+        $a = { 31 2E 32 34 00 55 50 58 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Modifier_v01x: PEiD
+{
+    strings:
+        $a = { 50 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0761_pe_exe: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D ?? ?? ?? ?? ?? 66 ?? ?? ?? ?? ?? ?? 57 83 ?? ?? 31 DB EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Modified_stub_additional: PEiD
+{
+    strings:
+        $a = { 50 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_v3042005_multi_layer_encryption: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? ?? B8 ?? ?? ?? ?? 8A 14 08 80 F2 ?? 88 14 08 41 83 F9 ?? 75 F1 }
+        $b = { 60 B8 ?? ?? ?? 00 B9 18 00 00 00 80 34 08 ?? E2 FA 61 68 ?? ?? ?? 00 C3 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPXHiT_v001_DJ_Siba: PEiD
+{
+    strings:
+        $a = { 94 BC ?? ?? ?? 00 B9 ?? 00 00 00 80 34 0C ?? E2 FA 94 FF E0 61 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v060_v061: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 58 83 E8 3D 50 8D B8 FF 57 66 81 87 8D B0 F0 01 83 CD FF 31 DB 90 90 90 EB 08 90 90 8A 06 46 88 07 47 01 DB 75 }
+        $b = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 ?? ?? ?? FF 57 8D B0 E8 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_293_LZMA: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 89 E5 8D 9C 24 ?? ?? ?? ?? 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? ?? 57 83 C3 04 53 68 ?? ?? ?? ?? 56 83 C3 04 53 50 C7 03 03 00 02 00 90 90 90 90 90 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_wwwupxsourceforgenet_additional: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? 00 8D BE ?? ?? ?? FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_051_PE: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 00 00 00 FF 57 8D B0 D8 01 00 00 83 CD FF 31 DB 90 90 90 90 01 DB 75 07 8B 1E 83 EE FC 11 DB 73 0B 8A 06 46 88 07 47 EB EB 90 90 90 B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 77 EF 75 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v062_DLL_additional: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 95 01 00 00 60 E8 00 00 00 00 58 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXFreak_v01_Borland_Delphi_HMX0101_additional: PEiD
+{
+    strings:
+        $a = { BE ?? ?? ?? ?? 83 C6 01 FF E6 00 00 00 ?? ?? ?? 00 03 00 00 00 ?? ?? ?? ?? 00 10 00 00 00 00 ?? ?? ?? ?? 00 00 ?? F6 ?? 00 B2 4F 45 00 ?? F9 ?? 00 EF 4F 45 00 ?? F6 ?? 00 8C D1 42 00 ?? 56 ?? 00 ?? ?? ?? 00 ?? ?? ?? 00 ?? ?? ?? 00 ?? 24 ?? 00 ?? ?? ?? 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_200_30X_Markus_Oberhumer_amp_Laszlo_Molnar_amp_John_Reiser_additional: PEiD
+{
+    strings:
+        $a = { 5E 89 F7 B9 ?? ?? ?? ?? 8A 07 47 2C E8 3C 01 77 F7 80 3F ?? 75 F2 8B 07 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 29 F8 80 EB E8 01 F0 89 07 83 C7 05 88 D8 E2 D9 8D ?? ?? ?? ?? ?? 8B 07 09 C0 74 3C 8B 5F 04 8D ?? ?? ?? ?? ?? ?? 01 F3 50 83 C7 08 FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v30_DLL_LZMA_Markus_Oberhumer_Laszlo_Molnar_John_Reiser_additional: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 C7 0B 00 00 60 BE 00 ?? ?? ?? 8D BE 00 ?? ?? FF 57 89 E5 8D 9C 24 80 C1 FF FF 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PseudoSigner_02_UPX_06_Anorganix: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 00 00 00 FF 57 8D B0 E8 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0896_v102_v105_v122: PEiD
+{
+    strings:
+        $a = { 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 8A 07 72 EB B8 01 ?? ?? ?? 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 }
+        $b = { 80 7C 24 08 01 0F 85 ?? ?? ?? 00 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_Modified_Stub_b_Farb_rausch_Consumer_Consulting_additional: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D ?? ?? ?? ?? ?? 66 ?? ?? ?? ?? ?? ?? 57 83 ?? ?? 31 DB EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v080_v084: PEiD
+{
+    strings:
+        $a = { 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB }
+        $b = { 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 ?? ?? ?? 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 77 EF 75 09 8B 1E 83 EE FC }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule SkD_Undetectabler_Pro_20_No_UPX_Method_SkD: PEiD
+{
+    strings:
+        $a = { 55 8B EC 83 C4 F0 B8 FC 26 00 10 E8 EC F3 FF FF 6A 0F E8 15 F5 FF FF E8 64 FD FF FF E8 BB ED FF FF 8D 40 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v103_v104_Modified_additional: PEiD
+{
+    strings:
+        $a = { 01 DB ?? 07 8B 1E 83 EE FC 11 DB 8A 07 ?? EB B8 01 00 00 00 01 DB ?? 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 EF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v20_Markus_Laszlo_Reiser: PEiD
+{
+    strings:
+        $a = { 55 FF 96 ?? ?? ?? ?? 09 C0 74 07 89 03 83 C3 04 EB ?? FF 96 ?? ?? ?? ?? 8B AE ?? ?? ?? ?? 8D BE 00 F0 FF FF BB 00 10 00 00 50 54 6A 04 53 57 FF D5 8D 87 ?? ?? 00 00 80 20 7F 80 60 28 7F 58 50 54 50 53 57 FF D5 58 61 8D 44 24 80 6A 00 39 C4 75 FA 83 EC 80 }
+        $b = { 55 FF 96 ?? ?? ?? ?? 09 C0 74 07 89 03 83 C3 04 EB ?? FF 96 ?? ?? ?? ?? 8B AE ?? ?? ?? ?? 8D BE 00 F0 FF FF BB 00 10 00 00 50 54 6A 04 53 57 FF D5 8D 87 ?? ?? 00 00 80 20 7F 80 60 28 7F 58 50 54 50 53 57 FF D5 58 61 8D 44 24 80 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_V194_Markus_Oberhumer_amp_Laszlo_Molnar_amp_John_Reiser: PEiD
+{
+    strings:
+        $a = { FF D5 80 A7 ?? ?? ?? ?? ?? 58 50 54 50 53 57 FF D5 58 61 8D 44 24 ?? 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_0896_102_PE: PEiD
+{
+    strings:
+        $a = { 60 BE 00 00 00 00 8D BE 00 00 00 FF 57 83 CD FF EB 10 90 90 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 EF 75 09 8B 1E 83 EE FC 11 DB 73 E4 31 C9 83 E8 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Unknown_UPX_modifyer: PEiD
+{
+    strings:
+        $a = { E8 02 00 00 00 CD 03 5A 81 C2 ?? ?? ?? ?? 81 C2 ?? ?? ?? ?? 89 D1 81 C1 3C 05 00 00 52 81 2A 33 53 45 12 83 C2 04 39 CA 7E F3 89 CA 8B 42 04 8D 18 29 02 BB 78 56 00 00 83 EA 04 3B 14 24 7D EC C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_030_EXE: PEiD
+{
+    strings:
+        $a = { 8C CB B9 00 00 BE 00 00 89 F7 1E A9 B5 80 8D 87 05 00 8E D8 05 00 00 8E C0 FD F3 A5 FC 2E 80 6C 13 10 73 E8 AF AD 0E 0E 0E 06 1F 07 16 68 00 00 BD FF FF F7 E1 93 CB 55 50 58 21 04 03 02 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXHiT_v001: PEiD
+{
+    strings:
+        $a = { 94 BC ?? ?? ?? 00 B9 ?? 00 00 00 80 34 0C ?? E2 FA 94 FF E0 61 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Password_Protector_for_the_UPX_030_g0d_additional: PEiD
+{
+    strings:
+        $a = { C8 50 01 00 60 E8 EC 00 00 00 00 47 65 74 4D 6F 64 75 6C 65 48 61 6E 64 6C 65 41 00 00 55 53 45 52 33 32 2E 64 6C 6C 00 44 69 61 6C 6F 67 42 6F 78 49 6E 64 69 72 65 63 74 50 61 72 61 6D 41 00 53 65 6E 64 4D 65 73 73 61 67 65 41 00 45 6E 64 44 69 61 6C 6F 67 00 00 00 55 8B EC 57 BF 00 00 00 00 33 C0 81 6D 0C 10 01 00 00 75 03 40 EB 13 83 7D 0C 01 75 0D 66 83 7D 10 0B 75 0B FF 75 14 8F 47 E4 5F 5D C2 10 00 66 83 7D 10 02 77 F4 74 0E 8D 4F A0 51 6A 40 6A 0D FF 77 E4 FF 57 E8 50 FF 75 08 FF 57 EC EB DB 84 08 C8 90 00 00 00 00 01 00 64 00 64 00 64 00 14 00 00 00 00 00 45 00 6E 00 74 00 65 00 72 00 20 00 50 00 61 00 73 00 73 00 77 00 6F 00 72 00 64 00 00 00 A0 00 00 50 00 00 02 00 05 00 05 00 5A 00 0A 00 0B 00 FF FF 81 00 00 00 00 00 5E FC 8D BE AA FE FF FF 8D 86 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_0896_PE_DLL: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 00 00 00 00 60 BE 1A 00 00 00 8D BE E6 00 00 FF 57 83 CD FF EB 0D 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 EF 75 09 8B 1E 83 EE FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Protector_v10x_additional: PEiD
+{
+    strings:
+        $a = { EB ?? ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PseudoSigner_02_UPX_06: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 00 00 00 FF 57 8D B0 E8 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_072_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 83 CD FF 31 DB 5E }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_290_LZMA_Delphi_stub_Markus_Oberhumer_Laszlo_Molnar_John_Reiser: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? C7 87 ?? ?? ?? ?? ?? ?? ?? ?? 57 83 CD FF 89 E5 8D 9C 24 ?? ?? ?? ?? 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? ?? 57 83 C3 04 53 68 ?? ?? ?? ?? 56 83 C3 04 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_200_Markus_Laszlo: PEiD
+{
+    strings:
+        $a = { 32 2E 30 30 00 55 50 58 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v103_v104_Laszlo_Markus: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 8A 07 72 EB B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 ?? 75 ?? 8B 1E 83 EE FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v30_DLL_LZMA_Markus_Oberhumer_Laszlo_Molnar_John_Reiser: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 C7 0B 00 00 60 BE 00 ?? ?? ?? 8D BE 00 ?? ?? FF 57 89 E5 8D 9C 24 80 C1 FF FF 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_SCRAMBLER_306_OnToL_additional: PEiD
+{
+    strings:
+        $a = { E8 00 00 00 00 59 83 C1 07 51 C3 C3 BE ?? ?? ?? ?? 83 EC 04 89 34 24 B9 80 00 00 00 81 36 ?? ?? ?? ?? 50 B8 04 00 00 00 50 03 34 24 58 58 83 E9 03 E2 E9 EB D6 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXHiT_001_DJ_Siba: PEiD
+{
+    strings:
+        $a = { E2 FA 94 FF E0 61 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_com_additional: PEiD
+{
+    strings:
+        $a = { B9 ?? ?? BE ?? ?? BF C0 FF FD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Shit_v01_500mhz: PEiD
+{
+    strings:
+        $a = { E8 00 00 00 00 5E 83 C6 14 AD 89 C7 AD 89 C1 AD 30 07 47 E2 FB AD FF E0 C3 00 ?? ?? 00 ?? ?? ?? 00 ?? ?? ?? 01 ?? ?? ?? 00 55 50 58 2D 53 68 69 74 20 76 30 2E 31 20 2D 20 77 77 77 2E 62 6C 61 63 6B 6C 6F 67 69 63 2E 6E 65 74 20 2D 20 63 6F 64 65 20 62 79 }
+        $b = { E8 00 00 00 00 5E 83 C6 14 AD 89 C7 AD 89 C1 AD 30 07 47 E2 FB AD FF E0 C3 00 ?? ?? 00 ?? ?? ?? 00 ?? ?? ?? 01 ?? ?? ?? 00 55 50 58 2D 53 68 69 74 20 76 30 2E 31 20 2D 20 77 77 77 2E 62 6C 61 63 6B 6C 6F 67 69 63 2E 6E 65 74 20 2D 20 63 6F 64 65 20 62 79 20 5B 35 30 30 6D 68 7A 5D }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_v070_Laszlo_Markus: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 ?? ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 8D B0 EC 01 ?? ?? 83 CD FF 31 DB EB 07 90 8A 06 46 88 07 47 01 DB 75 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_200_30X_Markus_Oberhumer_Laszlo_Molnar_John_Reiser: PEiD
+{
+    strings:
+        $a = { 5E 89 F7 B9 ?? ?? ?? ?? 8A 07 47 2C E8 3C 01 77 F7 80 3F ?? 75 F2 8B 07 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 29 F8 80 EB E8 01 F0 89 07 83 C7 05 88 D8 E2 D9 8D ?? ?? ?? ?? ?? 8B 07 09 C0 74 3C 8B 5F 04 8D ?? ?? ?? ?? ?? ?? 01 F3 50 83 C7 08 FF ?? ?? ?? ?? ?? 95 8A 07 47 08 C0 74 DC 89 F9 57 48 F2 AE 55 FF ?? ?? ?? ?? ?? 09 C0 74 07 89 03 83 C3 04 EB E1 FF ?? ?? ?? ?? ?? 8B AE ?? ?? ?? ?? 8D BE 00 F0 FF FF BB 00 10 00 00 50 54 6A 04 53 57 FF D5 8D 87 ?? ?? ?? ?? 80 20 7F 80 60 28 7F 58 50 54 50 53 57 FF D5 58 61 8D 44 24 80 6A 00 39 C4 75 FA 83 EC 80 E9 }
+        $b = { 5E 89 F7 B9 ?? ?? ?? ?? 8A 07 47 2C E8 3C 01 77 F7 80 3F ?? 75 F2 8B 07 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 29 F8 80 EB E8 01 F0 89 07 83 C7 05 88 D8 E2 D9 8D ?? ?? ?? ?? ?? 8B 07 09 C0 74 3C 8B 5F 04 8D ?? ?? ?? ?? ?? ?? 01 F3 50 83 C7 08 FF }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_093_UnHack32_11: PEiD
+{
+    strings:
+        $a = { 60 BE 00 80 43 00 8D BE 00 90 FC FF C7 87 D0 64 04 00 26 81 74 8D 57 83 CD FF EB 0E 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 EF 75 09 8B 1E 83 EE FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_093_UnHack32_12: PEiD
+{
+    strings:
+        $a = { 60 BE 00 A0 43 00 8D BE 00 70 FC FF C7 87 D0 84 04 00 98 C1 DF 2D 57 83 CD FF EB 0E 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 EF 75 09 8B 1E 83 EE FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Upx_v12_Marcus_Lazlo: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF EB 05 A4 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 F2 31 C0 40 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 75 07 8B 1E 83 EE FC 11 DB 73 E6 31 C9 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Protector_v10x_2_additional: PEiD
+{
+    strings:
+        $a = { EB ?? ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v062_DLL: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 95 01 00 00 60 E8 00 00 00 00 58 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXFreak_v01_Borland_Delphi_HMX0101: PEiD
+{
+    strings:
+        $a = { BE ?? ?? ?? ?? 83 C6 01 FF E6 00 00 00 ?? ?? ?? 00 03 00 00 00 ?? ?? ?? ?? 00 10 00 00 00 00 ?? ?? ?? ?? 00 00 ?? F6 ?? 00 B2 4F 45 00 ?? F9 ?? 00 EF 4F 45 00 ?? F6 ?? 00 8C D1 42 00 ?? 56 ?? 00 ?? ?? ?? 00 ?? ?? ?? 00 ?? ?? ?? 00 ?? 24 ?? 00 ?? ?? ?? 00 }
+        $b = { BE ?? ?? ?? ?? 83 C6 01 FF E6 00 00 00 ?? ?? ?? 00 03 00 00 00 ?? ?? ?? ?? 00 10 00 00 00 00 ?? ?? ?? ?? 00 00 ?? F6 ?? 00 B2 4F 45 00 ?? F9 ?? 00 EF 4F 45 00 ?? F6 ?? 00 8C D1 42 00 ?? 56 ?? 00 ?? ?? ?? 00 ?? ?? ?? 00 ?? ?? ?? 00 ?? 24 ?? 00 ?? ?? ?? 00 34 50 45 00 ?? ?? ?? 00 FF FF 00 00 ?? 24 ?? 00 ?? 24 ?? 00 ?? ?? ?? 00 40 00 00 C0 00 00 ?? ?? ?? ?? 00 00 ?? 00 00 00 ?? 1E ?? 00 ?? F7 ?? 00 A6 4E 43 00 ?? 56 ?? 00 AD D1 42 00 ?? F7 ?? 00 A1 D2 42 00 ?? 56 ?? 00 0B 4D 43 00 ?? F7 ?? 00 ?? F7 ?? 00 ?? 56 ?? 00 ?? ?? ?? ?? ?? 00 00 00 ?? ?? ?? ?? ?? ?? ?? 77 ?? ?? ?? 00 ?? ?? ?? 00 ?? ?? ?? 77 ?? ?? 00 00 ?? ?? ?? 00 ?? ?? ?? ?? ?? ?? 00 00 ?? ?? ?? 00 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 00 ?? ?? ?? ?? 00 00 00 00 ?? ?? ?? 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_Inliner_v10_by_GPcH: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B3 85 40 00 2D AC 85 40 00 2B E8 8D B5 D5 FE FF FF 8B 06 83 F8 00 74 11 8D B5 E1 FE FF FF 8B 06 83 F8 01 0F 84 F1 01 00 00 C7 06 01 00 00 00 8B D5 8B 85 B1 FE FF FF 2B D0 89 95 B1 FE FF FF 01 95 C9 FE FF FF 8D B5 E5 FE FF FF 01 }
+        $b = { 9C 60 E8 00 00 00 00 5D B8 B3 85 40 00 2D AC 85 40 00 2B E8 8D B5 D5 FE FF FF 8B 06 83 F8 00 74 11 8D B5 E1 FE FF FF 8B 06 83 F8 01 0F 84 F1 01 00 00 C7 06 01 00 00 00 8B D5 8B 85 B1 FE FF FF 2B D0 89 95 B1 FE FF FF 01 95 C9 FE FF FF 8D B5 E5 FE FF FF 01 16 8B 36 8B FD 60 6A 40 68 00 10 00 00 68 00 10 00 00 6A 00 FF 95 05 FF FF FF 85 C0 0F 84 06 03 00 00 89 85 C5 FE FF FF E8 00 00 00 00 5B B9 31 89 40 00 81 E9 2E 86 40 00 03 D9 50 53 E8 3D 02 00 00 61 03 BD A9 FE FF FF 8B DF 83 3F 00 75 0A 83 C7 04 B9 00 00 00 00 EB 16 B9 01 00 00 00 03 3B 83 C3 04 83 3B 00 74 2D 01 13 8B 33 03 7B 04 57 51 52 53 FF B5 09 FF FF FF FF B5 05 FF FF FF 56 57 FF 95 C5 FE FF FF 5B 5A 59 5F 83 F9 00 74 05 83 C3 08 EB CE 68 00 80 00 00 6A 00 FF B5 C5 FE FF FF FF 95 09 FF FF FF 8D }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_070_PE: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 00 00 00 FF 57 66 81 87 00 00 00 00 00 00 8D B0 EC 01 00 00 83 CD FF 31 DB EB 07 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Scrambler_by_GurueXe: PEiD
+{
+    strings:
+        $a = { 66 C7 05 ?? ?? ?? ?? 75 07 E9 ?? FE FF FF 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_099_100_101_PE_DLL: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 00 00 00 00 60 BE AE 00 00 00 8D BE 52 00 00 FF 57 83 CD FF EB 0D 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 EF 75 09 8B 1E 83 EE FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v071_v072: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 ?? 60 BE 8D BE 57 83 CD }
+        $b = { 60 E8 00 00 00 00 83 CD FF 31 DB 5E 8D BE FA ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 81 C6 B3 01 ?? ?? EB 0A ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_v0896_v102_v105_v122_DLL_Laszlo_Markus: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 ?? ?? ?? 00 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_com_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { B9 ?? ?? BE ?? ?? BF C0 FF FD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v062_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 58 83 ?? ?? 50 8D ?? ?? ?? ?? ?? 57 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 83 ?? ?? 31 DB ?? ?? ?? EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_V200_V290_Markus_Oberhumer_Laszlo_Molnar_John_Reiser_additional: PEiD
+{
+    strings:
+        $a = { FF D5 8D 87 ?? ?? ?? ?? 80 20 ?? 80 60 ?? ?? 58 50 54 50 53 57 FF D5 58 61 8D 44 24 ?? 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0896_v102_v105_v124_Markus_Laszlo_overlay: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 EB 0B 90 8A 06 46 88 07 47 01 DB 75 ?? 8B 1E 83 ?? ?? 11 DB 72 ?? B8 01 00 00 00 01 DB 75 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_SCRAMBLER_306: PEiD
+{
+    strings:
+        $a = { E8 00 00 00 00 59 83 C1 07 51 C3 C3 BE ?? ?? ?? ?? 83 EC 04 89 34 24 B9 80 00 00 00 81 36 ?? ?? ?? ?? 50 B8 04 00 00 00 50 03 34 24 58 58 83 E9 03 E2 E9 EB D6 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXLock_v10_CyberDoom: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? ?? ?? 60 E8 2B 03 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXHiT_v001_additional: PEiD
+{
+    strings:
+        $a = { 94 BC ?? ?? ?? 00 B9 ?? 00 00 00 80 34 0C ?? E2 FA 94 FF E0 61 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Shit_01_500mhz: PEiD
+{
+    strings:
+        $a = { E8 00 00 00 00 5E 83 C6 14 AD 89 C7 AD 89 C1 AD 30 07 47 E2 FB AD FF E0 C3 00 ?? ?? 00 ?? ?? ?? 00 ?? ?? ?? 01 ?? ?? ?? 00 55 50 58 2D 53 68 69 74 20 76 30 2E 31 20 2D 20 77 77 77 2E 62 6C 61 63 6B 6C 6F 67 69 63 2E 6E 65 74 20 2D 20 63 6F 64 65 20 62 79 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0896_v102_v105_v124_Markus_Laszlo_overlay_additional: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 EB 0B 90 8A 06 46 88 07 47 01 DB 75 ?? 8B 1E 83 ?? ?? 11 DB 72 ?? B8 01 00 00 00 01 DB 75 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PseudoSigner_01_UPX_06_Anorganix: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 00 00 00 FF 57 8D B0 E8 00 00 00 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Shit_01_500mhz_additional: PEiD
+{
+    strings:
+        $a = { E8 00 00 00 00 5E 83 C6 14 AD 89 C7 AD 89 C1 AD 30 07 47 E2 FB AD FF E0 C3 00 ?? ?? 00 ?? ?? ?? 00 ?? ?? ?? 01 ?? ?? ?? 00 55 50 58 2D 53 68 69 74 20 76 30 2E 31 20 2D 20 77 77 77 2E 62 6C 61 63 6B 6C 6F 67 69 63 2E 6E 65 74 20 2D 20 63 6F 64 65 20 62 79 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Protector_v10x: PEiD
+{
+    strings:
+        $a = { EB EC ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 }
+        $b = { EB ?? ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_v060_v061_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 ?? ?? ?? FF 57 8D B0 E8 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Shit_06_snaker: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? B9 15 00 00 00 80 34 08 ?? E2 FA E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v081_v084_Modified_additional: PEiD
+{
+    strings:
+        $a = { 01 DB ?? 07 8B 1E 83 EE FC 11 DB ?? ED B8 01 00 00 00 01 DB ?? 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 77 EF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_050_070_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_040_051_EXE: PEiD
+{
+    strings:
+        $a = { 8C CB B9 00 00 BE 00 00 89 F7 1E A9 B5 80 8D 87 05 00 8E D8 05 00 00 8E C0 FD F3 A5 FC 2E 80 6C 13 10 73 E8 00 00 00 00 00 0E 0E 00 00 00 00 00 00 00 00 00 00 00 00 55 50 58 21 05 00 02 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_081_083_EXE: PEiD
+{
+    strings:
+        $a = { B9 00 00 BE 00 00 89 F7 1E A9 B5 80 8C C8 05 05 00 8E D8 05 00 00 8E C0 FD F3 A5 FC 2E 80 6C 12 10 73 E7 92 AF AD 0E 0E 0E 06 1F 07 16 BD 00 00 BB 00 80 55 CB 55 50 58 21 0A 03 03 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_293_300_LZMA: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 89 E5 8D 9C 24 ?? ?? ?? ?? 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? ?? 57 83 C3 04 53 68 ?? ?? ?? ?? 56 83 C3 04 53 50 C7 03 03 00 02 00 90 90 90 90 90 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0761_pe_exe_additional: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D ?? ?? ?? ?? ?? 66 ?? ?? ?? ?? ?? ?? 57 83 ?? ?? 31 DB EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_200_30X_Markus_Oberhumer_Laszlo_Molnar_John_Reiser_additional: PEiD
+{
+    strings:
+        $a = { 5E 89 F7 B9 ?? ?? ?? ?? 8A 07 47 2C E8 3C 01 77 F7 80 3F ?? 75 F2 8B 07 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 29 F8 80 EB E8 01 F0 89 07 83 C7 05 88 D8 E2 D9 8D ?? ?? ?? ?? ?? 8B 07 09 C0 74 3C 8B 5F 04 8D ?? ?? ?? ?? ?? ?? 01 F3 50 83 C7 08 FF ?? ?? ?? ?? ?? 95 8A 07 47 08 C0 74 DC 89 F9 57 48 F2 AE 55 FF ?? ?? ?? ?? ?? 09 C0 74 07 89 03 83 C3 04 EB E1 FF ?? ?? ?? ?? ?? 8B AE ?? ?? ?? ?? 8D BE 00 F0 FF FF BB 00 10 00 00 50 54 6A 04 53 57 FF D5 8D 87 ?? ?? ?? ?? 80 20 7F 80 60 28 7F 58 50 54 50 53 57 FF D5 58 61 8D 44 24 80 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_293_LZMA_additional: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 89 E5 8D 9C 24 ?? ?? ?? ?? 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? ?? 57 83 C3 04 53 68 ?? ?? ?? ?? 56 83 C3 04 53 50 C7 03 03 00 02 00 90 90 90 90 90 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v081_v084_Modified_Laszlo_Markus: PEiD
+{
+    strings:
+        $a = { 01 DB ?? 07 8B 1E 83 EE FC 11 DB ?? ED B8 01 00 00 00 01 DB ?? 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 77 EF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v071_DLL_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 95 01 00 00 60 E8 00 00 00 00 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_092_101_COM: PEiD
+{
+    strings:
+        $a = { 81 FC 00 00 77 02 CD 20 B9 00 00 BE 00 00 BF 00 00 BB 00 80 FD F3 A4 FC 87 F7 83 EE C6 19 ED 57 57 E9 00 00 55 50 58 21 0B 01 04 07 00 00 00 00 00 00 00 00 00 00 00 00 06 00 FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXFreak_V01_HMX0101_additional: PEiD
+{
+    strings:
+        $a = { BE ?? ?? ?? ?? 83 C6 01 FF E6 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXHiT_001_sibaway7yahoocom_additional: PEiD
+{
+    strings:
+        $a = { E2 FA 94 FF E0 61 00 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_090_101_EXE: PEiD
+{
+    strings:
+        $a = { B9 00 00 BE 00 00 89 F7 1E A9 B5 80 8C C8 05 05 00 8E D8 05 00 00 8E C0 FD F3 A5 FC 2E 80 6C 12 10 73 E7 92 AF AD 0E 0E 0E 06 1F 07 16 BD 00 00 BB 00 80 55 CB 55 50 58 21 0B 03 03 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0896_v102_v105_v122_Delphi_stub: PEiD
+{
+    strings:
+        $a = { 01 DB 07 8B 1E 83 EE FC 11 DB ED B8 01 ?? ?? ?? 01 DB 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 77 }
+        $b = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? C7 87 ?? ?? ?? ?? ?? ?? ?? ?? 57 83 CD FF EB 0E ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 8B }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_v30_EXE_LZMA_Markus_Oberhumer_Laszlo_Molnar_John_Reiser: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? FF 57 89 E5 8D 9C 24 80 C1 FF FF 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? 00 57 83 C3 04 53 68 ?? ?? ?? 00 56 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_V200_V290_Markus_Oberhumer_amp_Laszlo_Molnar_amp_John_Reiser: PEiD
+{
+    strings:
+        $a = { FF D5 8D 87 ?? ?? ?? ?? 80 20 ?? 80 60 ?? ?? 58 50 54 50 53 57 FF D5 58 61 8D 44 24 ?? 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXcrypter_archphaseNWC_additional: PEiD
+{
+    strings:
+        $a = { BF ?? ?? ?? 00 81 FF ?? ?? ?? 00 74 10 81 2F ?? 00 00 00 83 C7 04 BB 05 ?? ?? 00 FF E3 BE ?? ?? ?? 00 FF E6 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v070_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 58 83 ?? ?? 50 8D ?? ?? ?? ?? ?? 57 66 ?? ?? ?? ?? ?? ?? ?? ?? 8D ?? ?? ?? ?? ?? 83 ?? ?? 31 DB EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_UPX_06_Anorganix_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 00 00 00 FF 57 8D B0 E8 00 00 00 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v072_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 83 ?? ?? 31 DB 5E 8D ?? ?? ?? ?? ?? 57 66 ?? ?? ?? ?? ?? ?? ?? ?? 81 ?? ?? ?? ?? ?? EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_v032a_fake_UPX_0896_102_105_124_emadicius: PEiD
+{
+    strings:
+        $a = { 60 BE 00 90 8B 00 8D BE 00 80 B4 FF 57 83 CD FF EB 3A 90 90 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 0B 75 19 8B 1E 83 EE FC 11 DB 72 10 58 61 90 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_062_EXE: PEiD
+{
+    strings:
+        $a = { 8C CB B9 00 00 BE 00 00 89 F7 1E A9 B5 80 8D 87 05 00 8E D8 05 00 00 8E C0 FD F3 A5 FC 2E 80 6C 13 10 73 E8 00 00 00 00 00 0E 0E 00 00 00 00 00 00 00 00 00 00 00 CB 55 50 58 21 07 00 02 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_7bit_Scrambler_102: PEiD
+{
+    strings:
+        $a = { 0F 83 FA }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_092_094_PE_DLL: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 00 00 00 00 60 BE 2B 00 00 00 8D BE D5 00 00 FF 57 83 CD FF EB 0D 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 EF 75 09 8B 1E 83 EE FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_081_084_PE_DLL: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 00 00 00 00 60 BE D9 00 00 00 8D BE 27 00 00 FF 57 83 CD FF EB 0D 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 77 EF 75 09 8B 1E 83 EE FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule VisualUPX_02_emadicius: PEiD
+{
+    strings:
+        $a = { 66 C7 05 ?? ?? ?? 00 75 07 E9 ?? FE FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_v3042005_multi_layer_encryption_MANtiCORE: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? 00 B9 18 00 00 00 80 34 08 ?? E2 FA 61 68 ?? ?? ?? 00 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Scrambler_RC_v1x_additional: PEiD
+{
+    strings:
+        $a = { 66 C7 05 ?? ?? ?? ?? 75 07 E9 ?? FE FF FF 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 ?? ?? 00 00 00 ?? ?? 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_081_084_PE: PEiD
+{
+    strings:
+        $a = { 60 BE 00 00 00 00 8D BE 00 00 00 FF 57 83 CD FF EB 10 90 90 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 77 EF 75 09 8B 1E 83 EE FC 11 DB 73 E4 31 C9 83 E8 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v072: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 83 ?? ?? 31 DB 5E 8D ?? ?? ?? ?? ?? 57 66 ?? ?? ?? ?? ?? ?? ?? ?? 81 ?? ?? ?? ?? ?? EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v070: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 83 CD FF 31 DB 5E 8D BE FA FF 57 66 81 87 81 C6 B3 01 EB 0A 8A 06 46 88 07 47 01 DB 75 }
+        $b = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 ?? ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 8D B0 EC 01 ?? ?? 83 CD FF 31 DB EB 07 90 8A 06 46 88 07 47 01 DB 75 07 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_v062_Laszlo_Markus: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 ?? ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 8D B0 F0 01 ?? ?? 83 CD FF 31 DB 90 90 90 EB 08 90 90 8A 06 46 88 07 47 01 DB 75 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXcrypter_archphaseNWC: PEiD
+{
+    strings:
+        $a = { BF ?? ?? ?? 00 81 FF ?? ?? ?? 00 74 10 81 2F ?? 00 00 00 83 C7 04 BB 05 ?? ?? 00 FF E3 BE ?? ?? ?? 00 FF E6 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_v3042005_multi_layer_encryption_MANtiCORE_additional: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? ?? B8 ?? ?? ?? ?? 8A 14 08 80 F2 ?? 88 14 08 41 83 F9 ?? 75 F1 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v103_v104_Modified: PEiD
+{
+    strings:
+        $a = { 01 DB ?? 07 8B 1E 83 EE FC 11 DB 8A 07 ?? EB B8 01 00 00 00 01 DB ?? 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 EF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule VisualUPX_02_emadicius_additional: PEiD
+{
+    strings:
+        $a = { 66 C7 05 ?? ?? ?? 00 75 07 E9 ?? FE FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_V200_V3X_Markus_Oberhumer_Laszlo_Molnar_John_Reiser: PEiD
+{
+    strings:
+        $a = { 5E 89 F7 B9 ?? ?? ?? ?? 8A 07 47 2C E8 3C 01 77 F7 80 3F ?? 75 F2 8B 07 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 29 F8 80 EB E8 01 F0 89 07 83 C7 05 88 D8 E2 D9 8D ?? ?? ?? ?? ?? 8B 07 09 C0 74 3C 8B 5F 04 8D ?? ?? ?? ?? ?? ?? 01 F3 50 83 C7 08 FF ?? ?? ?? ?? ?? 95 8A 07 47 08 C0 74 DC 89 F9 57 48 F2 AE 55 FF ?? ?? ?? ?? ?? 09 C0 74 07 89 03 83 C3 04 EB E1 FF ?? ?? ?? ?? ?? 8B AE ?? ?? ?? ?? 8D BE 00 F0 FF FF BB 00 10 00 00 50 54 6A 04 53 57 FF D5 8D 87 ?? ?? ?? ?? 80 20 7F 80 60 28 7F 58 50 54 50 53 57 FF D5 58 61 8D 44 24 80 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXLock_v11_CyberDoom_Bob: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? ?? 00 60 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v051: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 58 83 E8 3D 50 8D B8 FF 57 8D B0 }
+        $b = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 ?? ?? ?? FF 57 8D B0 D8 01 ?? ?? 83 CD FF 31 DB ?? ?? ?? ?? 01 DB 75 07 8B 1E 83 EE FC 11 DB 73 0B 8A 06 46 88 07 47 EB EB 90 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPXFreak_V01_HMX0101: PEiD
+{
+    strings:
+        $a = { BE ?? ?? ?? ?? 83 C6 01 FF E6 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_290_LZMA: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF EB 10 90 90 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB }
+        $b = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF 89 E5 8D 9C 24 ?? ?? ?? ?? 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? ?? 57 83 C3 04 53 68 ?? ?? ?? ?? 56 83 C3 04 53 50 C7 03 ?? ?? ?? ?? 90 90 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_v0761_pe_exe_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D ?? ?? ?? ?? ?? 66 ?? ?? ?? ?? ?? ?? 57 83 ?? ?? 31 DB EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXShit_006_additional: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? 43 00 B9 15 00 00 00 80 34 08 ?? E2 FA E9 D6 FF FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_v3042005_One_layer_encryption_additional: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? 00 B9 ?? 01 00 00 80 34 08 ?? E2 FA 61 68 ?? ?? ?? 00 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v103_v104_additional: PEiD
+{
+    strings:
+        $a = { 01 DB ?? 07 8B 1E 83 EE FC 11 DB 8A 07 ?? EB B8 01 00 00 00 01 DB ?? 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 EF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_062_PE: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 00 00 00 FF 57 66 81 87 00 00 00 00 00 00 8D B0 F0 01 00 00 83 CD FF 31 DB 90 90 90 EB 08 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v071_v072_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 83 CD FF 31 DB 5E 8D BE FA ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 81 C6 B3 01 ?? ?? EB 0A ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_032a_fake_UPX_0896_102_105_124_emadicius: PEiD
+{
+    strings:
+        $a = { 60 BE 00 90 8B 00 8D BE 00 80 B4 FF 57 83 CD FF EB 3A 90 90 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 0B 75 19 8B 1E 83 EE FC 11 DB 72 10 58 61 90 EB 05 E8 EB 04 40 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v20_Markus_Laszlo_Reiser_h: PEiD
+{
+    strings:
+        $a = { 55 FF 96 ?? ?? ?? ?? 09 C0 74 07 89 03 83 C3 04 EB ?? FF 96 ?? ?? ?? ?? 8B AE ?? ?? ?? ?? 8D BE 00 F0 FF FF BB 00 10 00 00 50 54 6A 04 53 57 FF D5 8D 87 ?? ?? 00 00 80 20 7F 80 60 28 7F 58 50 54 50 53 57 FF D5 58 61 8D 44 24 80 6A 00 39 C4 75 FA 83 EC 80 }
+        $b = { 55 FF 96 ?? ?? ?? ?? 09 C0 74 07 89 03 83 C3 04 EB ?? FF 96 ?? ?? ?? ?? 8B AE ?? ?? ?? ?? 8D BE 00 F0 FF FF BB 00 10 00 00 50 54 6A 04 53 57 FF D5 8D 87 ?? ?? 00 00 80 20 7F 80 60 28 7F 58 50 54 50 53 57 FF D5 58 61 8D 44 24 80 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule _PseudoSigner_02_UPX_06: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 00 00 00 FF 57 8D B0 E8 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_121_Markus_Laszlo: PEiD
+{
+    strings:
+        $a = { 31 2E 32 31 00 55 50 58 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_062_PE_DLL: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 95 01 00 00 60 E8 00 00 00 00 58 83 E8 48 50 8D B8 00 00 00 FF 57 66 81 87 00 00 00 00 00 00 8D B0 F8 01 00 00 83 CD FF 31 DB EB 08 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_V200_V290_Markus_Oberhumer_Laszlo_Molnar_John_Reiser: PEiD
+{
+    strings:
+        $a = { FF D5 8D 87 ?? ?? ?? ?? 80 20 ?? 80 60 ?? ?? 58 50 54 50 53 57 FF D5 58 61 8D 44 24 ?? 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_UPX_06: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 00 00 00 FF 57 8D B0 E8 00 00 00 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Inliner_v10_by_GPcH_additional: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B3 85 40 00 2D AC 85 40 00 2B E8 8D B5 D5 FE FF FF 8B 06 83 F8 00 74 11 8D B5 E1 FE FF FF 8B 06 83 F8 01 0F 84 F1 01 00 00 C7 06 01 00 00 00 8B D5 8B 85 B1 FE FF FF 2B D0 89 95 B1 FE FF FF 01 95 C9 FE FF FF 8D B5 E5 FE FF FF 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Shit_v01_500mhz_additional: PEiD
+{
+    strings:
+        $a = { E8 00 00 00 00 5D 8B CD 81 ED 7A 29 40 00 89 AD 0F 6D 40 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Modified_stub: PEiD
+{
+    strings:
+        $a = { 79 07 0F B7 07 47 50 47 B9 57 48 F2 AE 55 FF 96 84 ?? 00 00 09 C0 74 07 89 03 83 C3 04 EB D8 FF 96 88 ?? 00 00 61 E9 ?? ?? ?? FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Modifier_v01x_additional: PEiD
+{
+    strings:
+        $a = { 50 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_290_LZMA_Markus_Oberhumer_Laszlo_Molnar_John_Reiser: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF 89 E5 8D 9C 24 ?? ?? ?? ?? 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? ?? 57 83 C3 04 53 68 ?? ?? ?? ?? 56 83 C3 04 53 50 C7 03 ?? ?? ?? ?? 90 90 }
+        $b = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF EB 10 90 90 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_v062: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 58 83 E8 3D 50 8D B8 FF 57 66 81 87 8D B0 EC 01 83 CD FF 31 DB EB 07 90 8A 06 46 88 07 47 01 DB 75 }
+        $b = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 ?? ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 8D B0 F0 01 ?? ?? 83 CD FF 31 DB 90 90 90 EB 08 90 90 8A 06 46 88 07 47 01 DB 75 07 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_Modified_Stub_c_Farb_rausch_Consumer_Consulting_: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF FC B2 80 E8 00 00 00 00 5B 83 C3 66 A4 FF D3 73 FB 31 C9 FF D3 73 14 31 C0 FF D3 73 1D 41 B0 10 FF D3 10 C0 73 FA 75 3C AA EB E2 E8 4A 00 00 00 49 E2 10 E8 40 00 00 00 EB 28 AC D1 E8 74 45 11 C9 EB 1C 91 48 C1 E0 08 AC E8 2A 00 00 00 3D 00 7D 00 00 73 0A 80 FC 05 73 06 83 F8 7F 77 02 41 41 95 89 E8 56 89 FE 29 C6 F3 A4 5E EB 9F 00 D2 75 05 8A 16 46 10 D2 C3 31 C9 41 FF D3 11 C9 FF D3 72 F8 C3 31 C0 31 DB 31 C9 5E 89 F7 B9 ?? ?? ?? ?? 8A 07 47 2C E8 3C 01 77 F7 80 3F 0E 75 F2 8B 07 8A 5F 04 66 C1 E8 08 C1 C0 10 86 C4 29 F8 80 EB E8 01 F0 89 07 83 C7 05 89 D8 E2 D9 8D BE ?? ?? ?? ?? 8B 07 09 C0 74 45 8B 5F 04 8D 84 30 ?? ?? ?? ?? 01 F3 50 83 C7 08 FF 96 ?? ?? ?? ?? 95 8A 07 47 08 C0 74 DC 89 F9 79 07 0F B7 07 47 50 47 B9 57 48 F2 AE 55 FF 96 ?? ?? ?? ?? 09 C0 74 07 89 03 83 C3 04 EB D8 FF 96 ?? ?? ?? ?? 61 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_v3042005_One_layer_encryption_MANtiCORE_additional: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? 00 B9 ?? 01 00 00 80 34 08 ?? E2 FA 61 68 ?? ?? ?? 00 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0896_v102_v105_v122_Modified_additional: PEiD
+{
+    strings:
+        $a = { 01 DB ?? 07 8B 1E 83 EE FC 11 DB ?? ED B8 01 00 00 00 01 DB ?? 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 ?? 75 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0896_v102_v105_v122_Modified: PEiD
+{
+    strings:
+        $a = { 01 DB 07 8B 1E 83 EE FC 11 DB 8A 07 EB B8 01 ?? ?? ?? 01 DB 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 }
+        $b = { 01 DB ?? 07 8B 1E 83 EE FC 11 DB ?? ED B8 01 00 00 00 01 DB ?? 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 ?? 75 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_v051_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 ?? ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 8D B0 F0 01 ?? ?? 83 CD FF 31 DB 90 90 90 EB 08 90 90 8A 06 46 88 07 47 01 DB 75 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXHiT_001_dj_siba: PEiD
+{
+    strings:
+        $a = { 94 BC ?? ?? 43 00 B9 ?? 00 00 00 80 34 0C ?? E2 FA 94 FF E0 61 00 00 00 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Alternative_stub: PEiD
+{
+    strings:
+        $a = { 01 DB 07 8B 1E 83 EE FC 11 DB ED B8 01 00 00 00 01 DB 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 0B }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_293_300_LZMA_Markus_Oberhumer_Laszlo_Molnar_John_Reiser: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 89 E5 8D 9C 24 ?? ?? ?? ?? 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? ?? 57 83 C3 04 53 68 ?? ?? ?? ?? 56 83 C3 04 53 50 C7 03 03 00 02 00 90 90 90 90 90 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_v3042005_One_layer_encryption: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? 00 B9 ?? 01 00 00 80 34 08 ?? E2 FA 61 68 ?? ?? ?? 00 C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v103_v104: PEiD
+{
+    strings:
+        $a = { ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 8A 07 72 EB B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 ?? 75 ?? 8B 1E 83 EE FC }
+        $b = { 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 8A 07 72 EB B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 ?? 75 ?? 8B 1E 83 EE FC }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_071_072_EXE: PEiD
+{
+    strings:
+        $a = { 8C CB B9 00 00 BE 00 00 89 F7 1E A9 B5 80 8D 87 05 00 8E D8 05 00 00 8E C0 FD F3 A5 FC 2E 80 6C 13 10 73 E8 00 00 00 00 00 0E 0E 00 00 00 00 00 00 00 00 00 00 00 CB 55 50 58 21 09 00 02 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Inliner_10_by_GPcH: PEiD
+{
+    strings:
+        $a = { 9C 60 E8 00 00 00 00 5D B8 B3 85 40 00 2D AC 85 40 00 2B E8 8D B5 D5 FE FF FF 8B 06 83 F8 00 74 11 8D B5 E1 FE FF FF 8B 06 83 F8 01 0F 84 F1 01 00 00 C7 06 01 00 00 00 8B D5 8B 85 B1 FE FF FF 2B D0 89 95 B1 FE FF FF 01 95 C9 FE FF FF 8D B5 E5 FE FF FF 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_02_UPX_06_Anorganix: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 00 00 00 FF 57 8D B0 E8 00 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_0991_0993_PE_DLL: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 00 00 00 00 60 BE B0 00 00 00 8D BE 50 00 00 FF 57 83 CD FF EB 0D 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 73 EF 75 09 8B 1E 83 EE FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0896_v102_v105_v122_DLL: PEiD
+{
+    strings:
+        $a = { 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB }
+        $b = { 80 7C 24 08 01 0F 85 ?? ?? ?? 00 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPXLock_v10_CyberDoom_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? ?? ?? 60 E8 2B 03 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_122_Markus_Laszlo: PEiD
+{
+    strings:
+        $a = { 31 2E 32 32 00 55 50 58 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_SCRAMBLER_306_OnToL: PEiD
+{
+    strings:
+        $a = { E8 00 00 00 00 59 83 C1 07 51 C3 C3 BE ?? ?? ?? ?? 83 EC 04 89 34 24 B9 80 00 00 00 81 36 ?? ?? ?? ?? 50 B8 04 00 00 00 50 03 34 24 58 58 83 E9 03 E2 E9 EB D6 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_082_083_COM: PEiD
+{
+    strings:
+        $a = { 81 FC 00 00 77 02 CD 20 B9 00 00 BE 00 00 BF 00 00 BB 00 80 FD F3 A4 FC 87 F7 83 EE C6 19 ED 57 57 E9 00 00 55 50 58 21 0A 01 04 07 00 00 00 00 00 00 00 00 00 00 00 00 06 00 FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_290_LZMA_Markus_Oberhumer_Laszlo_Molnar_John_Reiser_additional: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF 89 E5 8D 9C 24 ?? ?? ?? ?? 31 C0 50 39 DC 75 FB 46 46 53 68 ?? ?? ?? ?? 57 83 C3 04 53 68 ?? ?? ?? ?? 56 83 C3 04 53 50 C7 03 ?? ?? ?? ?? 90 90 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule SkD_Undetectabler_Pro_20_No_UPX_Method_SkD_additional: PEiD
+{
+    strings:
+        $a = { 55 8B EC 83 C4 F0 B8 FC 26 00 10 E8 EC F3 FF FF 6A 0F E8 15 F5 FF FF E8 64 FD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_V200_V300_Markus_Oberhumer_Laszlo_Molnar_John_Reiser: PEiD
+{
+    strings:
+        $a = { FF D5 8D 87 ?? ?? ?? ?? 80 20 ?? 80 60 ?? ?? 58 50 54 50 53 57 FF D5 58 61 8D 44 24 ?? 6A 00 39 C4 75 FA 83 EC 80 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v071_DLL: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 95 01 00 00 60 E8 00 00 00 00 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0761_dos_exe: PEiD
+{
+    strings:
+        $a = { B9 ?? ?? BE ?? ?? 89 F7 1E A9 ?? ?? 8C C8 05 ?? ?? 8E D8 05 ?? ?? 8E C0 FD F3 A5 FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Shit_05_snaker: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? ?? ?? B9 ?? ?? ?? ?? 83 F9 00 7E 06 80 30 ?? 40 E2 F5 E9 ?? ?? ?? FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_032a_fake_UPX_0896_102_105_124_emadicius_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 06 00 00 00 64 A0 23 00 00 00 83 C5 06 61 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXShit_006: PEiD
+{
+    strings:
+        $a = { B8 ?? ?? 43 00 B9 15 00 00 00 80 34 08 ?? E2 FA E9 D6 FF FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_070_EXE: PEiD
+{
+    strings:
+        $a = { 8C CB B9 00 00 BE 00 00 89 F7 1E A9 B5 80 8D 87 05 00 8E D8 05 00 00 8E C0 FD F3 A5 FC 2E 80 6C 13 10 73 E8 00 00 00 00 00 0E 0E 00 00 00 00 00 00 00 00 00 00 00 CB 55 50 58 21 08 00 02 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v071_v072_Laszlo_Markus: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 83 CD FF 31 DB 5E 8D BE FA ?? ?? FF 57 66 81 87 ?? ?? ?? ?? ?? ?? 81 C6 B3 01 ?? ?? EB 0A ?? ?? ?? ?? 8A 06 46 88 07 47 01 DB 75 07 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v070_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 58 83 ?? ?? 50 8D ?? ?? ?? ?? ?? 57 66 ?? ?? ?? ?? ?? ?? ?? ?? 8D ?? ?? ?? ?? ?? 83 ?? ?? 31 DB EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Upx_Lock_10_12_CyberDoom_Team_X_BoB_BobSoft_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 48 12 40 00 60 E8 2B 03 00 00 61 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Simple_UPX_Cryptor_V3042005_MANtiCORE: PEiD
+{
+    strings:
+        $a = { 60 B8 ?? ?? ?? ?? B9 ?? ?? ?? ?? ?? ?? ?? ?? E2 FA 61 68 ?? ?? ?? ?? C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Upx_v12_Marcus_Lazlo_additional: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF EB 05 A4 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 F2 31 C0 40 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB 75 07 8B 1E 83 EE FC 11 DB 73 E6 31 C9 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0896_v102_v105_v122_additional: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 ?? ?? ?? 00 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Password_Protector_for_the_UPX_030_g0d: PEiD
+{
+    strings:
+        $a = { C8 50 01 00 60 E8 EC 00 00 00 00 47 65 74 4D 6F 64 75 6C 65 48 61 6E 64 6C 65 41 00 00 55 53 45 52 33 32 2E 64 6C 6C 00 44 69 61 6C 6F 67 42 6F 78 49 6E 64 69 72 65 63 74 50 61 72 61 6D 41 00 53 65 6E 64 4D 65 73 73 61 67 65 41 00 45 6E 64 44 69 61 6C 6F 67 00 00 00 55 8B EC 57 BF 00 00 00 00 33 C0 81 6D 0C 10 01 00 00 75 03 40 EB 13 83 7D 0C 01 75 0D 66 83 7D 10 0B 75 0B FF 75 14 8F 47 E4 5F 5D C2 10 00 66 83 7D 10 02 77 F4 74 0E 8D 4F A0 51 6A 40 6A 0D FF 77 E4 FF 57 E8 50 FF 75 08 FF 57 EC EB DB 84 08 C8 90 00 00 00 00 01 00 64 00 64 00 64 00 14 00 00 00 00 00 45 00 6E 00 74 00 65 00 72 00 20 00 50 00 61 00 73 00 73 00 77 00 6F 00 72 00 64 00 00 00 A0 00 00 50 00 00 02 00 05 00 05 00 5A 00 0A 00 0B 00 FF FF 81 00 00 00 00 00 5E FC 8D BE AA FE FF FF 8D 86 }
+        $b = { C8 50 01 00 60 E8 EC 00 00 00 00 47 65 74 4D 6F 64 75 6C 65 48 61 6E 64 6C 65 41 00 00 55 53 45 52 33 32 2E 64 6C 6C 00 44 69 61 6C 6F 67 42 6F 78 49 6E 64 69 72 65 63 74 50 61 72 61 6D 41 00 53 65 6E 64 4D 65 73 73 61 67 65 41 00 45 6E 64 44 69 61 6C 6F }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_290_LZMA_additional: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF EB 10 90 90 90 90 90 90 8A 06 46 88 07 47 01 DB 75 07 8B 1E 83 EE FC 11 DB 72 ED B8 01 00 00 00 01 DB 75 07 8B 1E 83 EE FC 11 DB 11 C0 01 DB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_UPX_06_Anorganix: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 58 83 E8 3D 50 8D B8 00 00 00 FF 57 8D B0 E8 00 00 00 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_Modified_Stub_c_Farb_rausch_Consumer_Consulting_additional: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF FC B2 80 E8 00 00 00 00 5B 83 C3 66 A4 FF D3 73 FB 31 C9 FF D3 73 14 31 C0 FF D3 73 1D 41 B0 10 FF D3 10 C0 73 FA 75 3C AA EB E2 E8 4A 00 00 00 49 E2 10 E8 40 00 00 00 EB 28 AC D1 E8 74 45 11 C9 EB 1C 91 48 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_wwwupxsourceforgenet: PEiD
+{
+    strings:
+        $a = { 60 BE ?? ?? ?? 00 8D BE ?? ?? ?? FF }
+        $b = { 60 BE ?? ?0 ?? 00 8D BE ?? ?? F? FF }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule UPX_030_040_COM: PEiD
+{
+    strings:
+        $a = { B9 00 00 BE 00 00 BF C0 FF BD FF FF FD F3 A4 FC F7 E1 93 87 F7 83 C6 00 57 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Unknown_UPX_modifyer_additional: PEiD
+{
+    strings:
+        $a = { E8 02 00 00 00 CD 03 5A 81 C2 ?? ?? ?? ?? 81 C2 ?? ?? ?? ?? 89 D1 81 C1 3C 05 00 00 52 81 2A 33 53 45 12 83 C2 04 39 CA 7E F3 89 CA 8B 42 04 8D 18 29 02 BB 78 56 00 00 83 EA 04 3B 14 24 7D EC C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_020_COM: PEiD
+{
+    strings:
+        $a = { B9 00 00 BE 00 00 BF C0 FF BD FF FF FD F3 A4 FC F7 E1 93 87 F7 83 C6 31 57 57 E9 3C FE 55 50 58 21 03 01 02 87 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_125_Markus_Laszlo: PEiD
+{
+    strings:
+        $a = { 31 2E 32 35 00 55 50 58 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v0761_dos_exe_Hint_DOS_EP: PEiD
+{
+    strings:
+        $a = { B9 ?? ?? BE ?? ?? 89 F7 1E A9 ?? ?? 8C C8 05 ?? ?? 8E D8 05 ?? ?? 8E C0 FD F3 A5 FC }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_072: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 83 CD FF 31 DB 5E }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPXFreak_01_Borland_Delphi_HMX0101: PEiD
+{
+    strings:
+        $a = { BE ?? ?? ?? ?? 83 C6 01 FF E6 00 00 00 ?? ?? ?? 00 03 00 00 00 ?? ?? ?? ?? 00 10 00 00 00 00 ?? ?? ?? ?? 00 00 ?? F6 ?? 00 B2 4F 45 00 ?? F9 ?? 00 EF 4F 45 00 ?? F6 ?? 00 8C D1 42 00 ?? 56 ?? 00 ?? ?? ?? 00 ?? ?? ?? 00 ?? ?? ?? 00 ?? 24 ?? 00 ?? ?? ?? 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Unknown_UPX_Scrambler_vna: PEiD
+{
+    strings:
+        $a = { C7 45 FC ?? ?? ?? ?? 6A 04 6A 00 6A 00 68 FF FF FB FF FF 15 ?? ?? ?? ?? 85 C0 7E ?? 6A 00 FF 15 ?? ?? ?? ?? 8B 45 FC 8B 40 04 83 E8 03 8B 4D FC 89 41 04 83 65 F4 00 EB ?? 8B 45 F4 40 89 45 F4 8B 45 FC 8B 4D F4 3B 48 04 73 ?? 8B 45 FC 8B 40 04 2B 45 F4 8B 4D FC 8B 09 8B 55 FC 8B 44 01 FF 33 42 0C 8B 4D FC 8B 49 04 2B 4D F4 8B 55 FC 8B 12 89 44 11 FF EB ?? 8B 45 FC 8B 40 08 89 45 F8 8B 45 F8 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Unknown_UPX_or_File_modifyer: PEiD
+{
+    strings:
+        $a = { E8 02 00 00 00 CD 03 5A 81 C2 86 EA FE FF 81 C2 45 23 01 00 89 D1 81 C1 3C 05 00 00 52 81 2A 33 53 45 12 83 C2 04 39 CA 7E F3 89 CA 8B 42 04 8D 18 29 02 BB 78 56 00 00 83 EA 04 3B 14 24 7D EC C3 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_v062_DLL_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { 80 7C 24 08 01 0F 85 95 01 00 00 60 E8 00 00 00 00 58 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule UPX_051_072_COM: PEiD
+{
+    strings:
+        $a = { B9 00 00 BE 00 00 BF C0 FF FD F3 A4 FC F7 E1 93 87 F7 83 EE 00 19 ED 57 }
+    condition:
+        $a at pe.entry_point
+
+}

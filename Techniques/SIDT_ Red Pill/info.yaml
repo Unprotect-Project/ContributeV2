@@ -1,0 +1,13 @@
+name: SIDT, Red Pill
+categories:
+- Sandbox Evasion
+resources:
+- https://litigationconferences.com/wp-content/uploads/2017/05/Introduction-to-Evasive-Techniques-v1.0.pdf
+tags:
+- Anti-VM technique
+- SIDT instruction
+- IDTR register
+- IDT
+- Interrupts
+- Virtual machine
+- Interrupt Descriptor Table (IDT)

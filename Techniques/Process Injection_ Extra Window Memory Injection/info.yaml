@@ -1,0 +1,14 @@
+name: 'Process Injection: Extra Window Memory Injection'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1055/011/
+tags:
+- Defense Evasion
+- Privilege Escalation.
+- malicious code injection
+- memory access
+- evade process-based defenses
+- privilege escalation
+- writing payloads to shared sections
+- overwrite function pointer

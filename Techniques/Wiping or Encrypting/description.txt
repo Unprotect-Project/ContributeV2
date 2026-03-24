@@ -1,0 +1,5 @@
+Anti-forensic techniques are methods used by malware to prevent security professionals from detecting and analyzing it. One way that malware can accomplish this is by using wiping or encryption techniques to remove its own trace from the system. 
+
+ In some cases, malware may use wiping or encryption as a decoy, in order to distract security professionals and hide its true purpose. In other cases, it may use these techniques as part of a sabotage operation, in order to destroy data or cause other damage to the system. 
+
+Overall, wiping and encryption techniques are just one of the many anti-forensic techniques that malware can use to evade detection and cause harm to computer systems.

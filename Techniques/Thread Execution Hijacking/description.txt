@@ -1,0 +1,3 @@
+Thread execution hijacking is a technique used by malware to evade detection by targeting an existing thread of a process and avoiding any noisy process or thread creation operations. This technique allows the malware to run its code within the context of the targeted thread, without creating new processes or threads, which can be easily detected by security software.
+
+During analysis, it is possible to observe calls to `CreateToolhelp32Snapshot` and `Thread32First` functions followed by `OpenThread`, which are used by the malware to enumerate and select the target thread.

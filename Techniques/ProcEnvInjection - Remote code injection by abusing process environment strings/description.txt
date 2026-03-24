@@ -1,0 +1,16 @@
+This method allows to inject custom code into a remote process without using `WriteProcessMemory` - It will use the `lpEnvironment` parameter in `CreateProcess` to copy the code into the target process. This technique can be used to load a DLL into a remote process, or simply execute a block of code.
+
+The `lpEnvironment` parameter in `CreateProcess` allows us to specify a custom environment string for the target process. The environment string contains a set of environment variable entries, such as `PATH=C:\Windows\system32;C:\Windows`. Each environment variable in the list is separated by a null terminator character, and the final entry in the list is a blank string (two null terminator characters). When a new process is created, the environment string will be copied to the virtual memory of the process and it can then be accessed via the PEB.
+
+In summary, the injector process takes the following steps:
+
+1. Create a generic "code loader" block which doesn't contain any 0x00 characters - values will be encoded with XOR if necessary.
+2. Use `GetEnvironmentStringsW` to retrieve the existing environment string and copy this to a temporary buffer. Our "generic code loader" entry will be appended to the end of the existing entries. Some programs make use of the environment variables, so it is not a good idea to overwrite the existing entries.
+3. Create a suspended instance of the target EXE process using `CreateProcess` with our custom environment string `lpEnvironment`. We will also use the `CREATE_UNICODE_ENVIRONMENT` flag to specify a wide-char environment value, otherwise the string will be converted from ANSI to wide-char which will break our loader code.
+4. Use `NtQueryInformationProcess` to retrieve the PEB address for the target process.
+5. Call `NtCreateThreadEx` to call Sleep(0) in the target process and wait for the thread to exit. This will force the necessary PEB fields to become initialised in the target process.
+6. Calculate the address of the environment string in the target process (PEB-> `RtlUserProcessParameters` -> Environment)
+7. Locate the address of our loader code within the environment string. Call `VirtualProtectEx` to make this data executable.
+8. Call `NtCreateThreadEx` to execute the loader code within the target process. This code will read the final payload back from the injector process and execute it.
+9. Restore the original memory protection after the payload has finished executing.
+10. Call `ResumeThread` to continue normal execution of the target process.

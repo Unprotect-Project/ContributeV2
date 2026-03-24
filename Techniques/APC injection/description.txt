@@ -1,0 +1,5 @@
+Malware can take advantage of Asynchronous Procedure Calls (APC) to force another thread to execute their custom code by attaching it to the APC Queue of the target thread.
+
+Each thread has a queue of APCs which are waiting for execution upon the target thread entering alterable state.
+
+A thread enters an alert table state if it calls `SleepEx`, `SignalObjectAndWait`, `MsgWaitForMultipleObjectsEx`, `WaitForMultipleObjectsEx`, or `WaitForSingleObjectEx` functions. The malware usually looks for any thread that is in an alterable state, and then calls `OpenThread` and `QueueUserAPC` to queue an APC to a thread.

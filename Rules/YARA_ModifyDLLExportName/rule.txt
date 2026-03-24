@@ -1,0 +1,11 @@
+rule ModifyDLLExportName {
+  strings:
+    $map_and_load = "MapAndLoad"
+    $entry_to_data = "ImageDirectoryEntryToData"
+    $rva_to_va = "ImageRvaToVa"
+    $modify = "ModifyDLLExportName"
+    $virtual_protect = "VirtualProtect"
+    $virtual_alloc = "VirtualAlloc"
+  condition:
+    all of them
+}

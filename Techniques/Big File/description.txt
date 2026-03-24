@@ -1,0 +1,1 @@
+Because of the imposed file size limit, you can trick the scanner into skipping a file by changing the file’s size to make it larger than the hard-coded size limit. This file size limit applies especially with heuristic engines based on static data (data extracted from the portable executable, or PE, header). This is an old trick still apply in the wild.

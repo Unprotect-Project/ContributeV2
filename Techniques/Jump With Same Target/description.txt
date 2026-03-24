@@ -1,0 +1,13 @@
+Jump with the same target is an anti-disassembling technique that involves using back-to-back conditional jump instructions that both point to the same target. This can make it difficult for a disassembler to accurately reconstruct the original instructions of the program, as the disassembler will not be able to determine the intended behavior of the program without actually executing it.
+
+For example, suppose a program contains the following instructions:
+
+```assembly
+mov eax, 0x12345678
+jz loc_512
+jnz loc_512
+```
+
+In this case, the jz and jnz instructions are back-to-back conditional jump instructions that both point to the same target, loc_512. This means that the program will always jump to the loc_512 location, regardless of the value of the eax register. However, a disassembler that is working correctly would not be able to determine this intended behavior, as it only disassembles one instruction at a time and does not consider the behavior of the program as a whole.
+
+In this case, the jz and jnz instructions are back-to-back conditional jump instructions that both point to the same target, loc_512. This means that the program will always jump to the loc_512 location, regardless of the value of the eax register. However, a disassembler that is working correctly would not be able to determine this intended behavior, as it only disassembles one instruction at a time and does not consider the behavior of the program as a whole.

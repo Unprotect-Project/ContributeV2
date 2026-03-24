@@ -1,0 +1,3 @@
+This code ncludes a real function, my_function, which is called by the original and obfuscated instructions. This allows the code to demonstrate the intended behavior of the original instructions, which is to declare and initialize the variable x, declare and initialize the pointer ptr, and use the pointer ptr to dereference and modify the value of x.
+
+However, the obfuscated instructions use pointers in a more complex way, by declaring and initializing two additional pointers, ptr1 and ptr2. This makes it more difficult for the disassembler to accurately interpret the instructions and generate correct disassembly output.

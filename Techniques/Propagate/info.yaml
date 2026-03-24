@@ -1,0 +1,16 @@
+name: Propagate
+categories:
+- Process Manipulating
+resources:
+- http://www.hexacorn.com/blog/2017/10/26/propagate-a-new-code-injection-trick/
+tags:
+- Window Subclassing
+- Windows functionality
+- internal structure
+- UxSubclassInfo
+- CC32SubclassInfo
+- shellcode
+- target process
+- payload
+- message
+- injection

@@ -1,0 +1,10 @@
+name: CryptOne
+categories:
+- Packers
+resources:
+- https://www.deepinstinct.com/blog/a-deep-dive-into-packing-software-cryptone
+- https://github.com/Tera0017/de-CryptOne
+tags:
+- cryptone
+contributors:
+- fr0gger

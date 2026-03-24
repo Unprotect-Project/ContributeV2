@@ -1,0 +1,4 @@
+language: C++
+contributors: Alex Schwarz
+associated_technique: Change Module Name at Runtime
+target_operating_system: windows

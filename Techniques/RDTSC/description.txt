@@ -1,0 +1,3 @@
+The Read-Time-Stamp-Counter (RDTSC) instruction can be used by malware to determine how quicky the processor executes the program's instructions. It returns the count of the number of ticks since the last system reboot as a 64-bit value placed into `EDX:EAX`.
+
+It will execute RDTSC twice and then calculate the difference between low order values and check it with CMP condition. If the difference lays below `0FFFh` no debugger is found if it is above or equal, then application is debugged.

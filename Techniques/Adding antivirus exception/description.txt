@@ -1,0 +1,1 @@
+This technique involves searching for active antivirus-related processes or modules and terminating execution if any are found. By detecting loaded antivirus libraries, malware can determine whether it is running in a monitored environment and exit to avoid detection.

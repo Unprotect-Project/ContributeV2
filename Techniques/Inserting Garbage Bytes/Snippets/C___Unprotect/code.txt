@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    // Insert garbage bytes into the code
+    char* garbage = malloc(10);
+    for (int i = 0; i < 10; i++)
+    {
+        garbage[i] = rand() % 256;
+    }
+
+    // Use the garbage bytes to confuse a disassembler
+    int a = 5;
+    int b = 10;
+    int c = a + b;
+
+    printf("The result is: %d\n", c);
+
+    return 0;
+}

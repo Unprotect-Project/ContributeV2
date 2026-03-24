@@ -1,0 +1,20 @@
+This code demonstrate how to use `QueueUserAPC` to run code in a remote process. 
+
+PoC Steps:
+
+- Create a new process in suspended state.
+
+Method N°1:
+* Allocate RWX memory in remote process to host our shellcode.
+* Copy shellcode to new memory location.
+
+Method N°2:
+* Create a new memory section.
+* Map new memory section to current process.
+* Share new memory section with target process.
+* Copy shellcode to shared memory location.
+
+- Implement our shellcode to target process main thread APC queue.
+- Resume target process main thread to execute our shellcode.
+
+⚠️ Embedded shellcode will show a message box on behalf of target process. It is harmless but I always recommend to avoid blindly running shellcode you may find in proof of concepts. Feel free to patch both x86-32 / x86-64 version with your own version.

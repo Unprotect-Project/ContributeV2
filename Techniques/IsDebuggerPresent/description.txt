@@ -1,0 +1,3 @@
+This function checks specific flag in the Process Environment Block (PEB) for the field IsDebugged which will return zero if the process is not running into a debugger or a nonzero if a debugger is attached.
+
+If you want to understand the underlying process of [IsDebuggerPresent](https://docs.microsoft.com/en-us/windows/win32/api/debugapi/nf-debugapi-isdebuggerpresent) API you can check the code snippet section for the following method: [IsDebugged Flag](https://search.unprotect.it/map/anti-debugging/isdebugged-flag/).

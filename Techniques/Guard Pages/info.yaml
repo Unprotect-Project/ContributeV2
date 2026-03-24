@@ -1,0 +1,12 @@
+name: Guard Pages
+categories:
+- Anti-Debugging
+resources:
+- http://antukh.com/blog/2015/01/19/malware-techniques-cheat-sheet/
+tags:
+- Memory breakpoints
+- Guard pages
+- Debugger detection
+- STATUS_GUARD_PAGE_VIOLATION
+featured_apis:
+- VirtualAlloc

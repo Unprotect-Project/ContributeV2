@@ -1,0 +1,14 @@
+name: 'Traffic Signaling: Socket Filters'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1205/002/
+tags:
+- Defense Evasion
+- Persistence
+- Command and Control
+- network socket filtering
+- activate backdoors
+- Winpcap
+- Protocol Tunneling
+- raw socket connections

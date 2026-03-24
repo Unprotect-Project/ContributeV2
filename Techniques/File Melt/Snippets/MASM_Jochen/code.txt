@@ -1,0 +1,86 @@
+include 'win64ax.inc'
+include 'pe.inc'
+entry start
+
+
+start:
+
+       sub rsp, 8 ; Align stack
+
+       fastcall [GetModuleFileNameA], 0, modulename, 50 ; Get full path of this file
+
+       mov rax,[gs:60h]    ; PEB
+       mov rax,[rax+10h]   ; ImageBaseAddress
+
+       mov [ImageBaseAddress], rax
+
+       movsxd  rax, dword [rax+IMAGE_DOS_HEADER.e_lfanew]
+       add rax,[ImageBaseAddress]
+
+       mov eax, dword [rax+IMAGE_NT_HEADERS64.OptionalHeader.SizeOfImage]
+       mov [dwSize], eax
+
+       ; To work for Win10 we must clear the sinfo struct (104 Bytes)
+
+       cinvoke memset, sinfo, 0, 104d
+       mov  [sinfo.cb], 104d
+
+       ; Now we create the process to inject our code in with CREATE_SUSPENDED flag so it does not actually run :)
+
+       fastcall [CreateProcessA], 0, sCalc, 0, 0, FALSE, CREATE_SUSPENDED, 0, 0, sinfo, pinfo
+
+
+       ; Allocate memory in the remote process (Calc.exe)
+
+       fastcall [VirtualAllocEx], [pinfo.hProcess], [ImageBaseAddress], [dwSize], MEM_COMMIT or MEM_RESERVE, PAGE_EXECUTE_READWRITE
+
+       ; Write it to the remote process
+
+       fastcall [WriteProcessMemory], [pinfo.hProcess], rax, [ImageBaseAddress], [dwSize], 0
+
+       ; execute the code pointed by HijackedThread into the remote process
+
+       fastcall [CreateRemoteThread], [pinfo.hProcess], 0, 0, HijackedThread, 0, 0, 0
+
+exit:  fastcall [ExitProcess], 0  ; exit this process so the injected code can delete this file !
+
+
+
+ HijackedThread:
+
+       sub rsp, 8
+
+       invoke DeleteFileA, modulename  ; <-- modulename contains the full path of this file
+       invoke ExitProcess,0
+
+
+
+section '.data' data readable writeable
+
+
+sCalc  db  'calc.exe',0  ; <-- process where we inject our code in
+
+
+ modulename  rb 50
+
+
+
+ pinfo	      PROCESS_INFORMATION
+ sinfo	      STARTUPINFO
+
+ ImageBaseAddress     dq 0
+ dwSize 	      dd 0
+
+
+section '.idata' import data readable writeable
+
+  library kernel32,'KERNEL32.DLL',\
+	  user32,'USER32.DLL',\
+	  msvcrt,'msvcrt.dll'
+
+
+ import msvcrt,\
+	memset,'memset'
+
+  include 'api\kernel32.inc'
+  include 'api\user32.inc'

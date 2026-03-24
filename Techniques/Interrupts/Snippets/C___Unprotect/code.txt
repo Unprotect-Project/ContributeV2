@@ -1,0 +1,36 @@
+#include <iostream>
+#include <Windows.h>
+
+// Function to check if the code is being executed in a debugger
+bool IsDebuggerPresent()
+{
+    __try
+    {
+        // Trigger an interrupt instruction to generate an exception
+        __debugbreak();
+    }
+    __except (EXCEPTION_EXECUTE_HANDLER)
+    {
+        // If the exception is handled, it means the code is being executed in a debugger
+        return true;
+    }
+
+    // If the exception is not handled, it means the code is not being executed in a debugger
+    return false;
+}
+
+int main()
+{
+    if (IsDebuggerPresent())
+    {
+        std::cout << "Debugger detected" << std::endl;
+        // Take appropriate action, such as exiting or altering behavior
+    }
+    else
+    {
+        std::cout << "No debugger detected" << std::endl;
+        // Continue with normal execution
+    }
+
+    return 0;
+}

@@ -1,0 +1,1 @@
+In this code, the hash function is used to obfuscate the names of the APIs that are imported from the kernel32.dll library. The hashed names are then used to call the APIs using the GetProcAddress and LoadLibrary functions. When the code is disassembled, the actual names of the APIs will be hidden and replaced with the hashed values.

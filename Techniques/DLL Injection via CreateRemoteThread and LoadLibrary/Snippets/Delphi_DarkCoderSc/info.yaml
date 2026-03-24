@@ -1,0 +1,4 @@
+language: Delphi
+contributors: DarkCoderSc
+associated_technique: DLL Injection via CreateRemoteThread and LoadLibrary
+target_operating_system: windows

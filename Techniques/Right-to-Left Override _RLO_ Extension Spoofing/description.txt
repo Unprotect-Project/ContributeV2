@@ -1,0 +1,5 @@
+The **Right-to-Left Override** (RLO) character (`U+202E`) is a Unicode control character used for bidirectional text formatting. It affects the way text is displayed, causing text following the RLO character to be rendered from right to left, which is typically used in languages like Arabic and Hebrew.
+
+However, malicious actors have found a way to exploit this Unicode character to deceive users by using it in file extensions. By strategically placing the RLO character within a file name, they can manipulate the visual appearance of the extension while maintaining its actual content.
+
+For example, consider a file named "invoice.pdf" with the RLO character followed by malicious code: `invoice\u202Efdp.exe`. When displayed in certain contexts, it may appear as `invoiceexe.pdf` (hiding the ".exe" extension) instead of the actual "invoice.pdf.exe". This tactic aims to trick users into believing the file is harmless when, in reality, it could be a dangerous executable.

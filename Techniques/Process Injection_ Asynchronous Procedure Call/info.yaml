@@ -1,0 +1,19 @@
+name: 'Process Injection: Asynchronous Procedure Call'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1055/004/
+tags:
+- Defense Evasion
+- Privilege Escalation
+- asynchronous procedure call (APC) queue
+- evade process-based defenses
+- privilege elevation
+- mimic legitimate process
+- APC injection
+- OpenThread
+- QueueUserAPC
+- LoadLibrayA
+- Early Bird injection
+- AtomBombing
+- malicious code injection

@@ -1,0 +1,1 @@
+An old trick consists to split the malicious file into different parts and analyse all of them separately with and AV. The chunk where the detection is still being triggered is actually the part of the file that need to change to evade the antivirus software you are targeting.

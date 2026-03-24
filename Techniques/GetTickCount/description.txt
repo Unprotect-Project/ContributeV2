@@ -1,0 +1,5 @@
+This is typical timing function which is used to measure time needed to execute some function/instruction set. If the difference is more than fixed threshold, the process exits.
+
+`GetTickCount` reads from the `KUSER_SHARED_DATA` page. This page is mapped read-only into the user mode range of the virtual address and read-write in the kernel range. The system clock tick updates the system time, which is stored directly in this page.
+
+`ZwGetTickCount` is used the same way as `GetTickCount`. Using `KiGetTickCount` is faster than calling `ZwGetTickCount`, but slightly slower than reading from the `KUSER_SHARED_DATA` page directly.

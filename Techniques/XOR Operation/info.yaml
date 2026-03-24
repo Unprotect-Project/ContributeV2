@@ -1,0 +1,14 @@
+name: XOR Operation
+categories:
+- Data Obfuscation
+resources:
+- https://isc.sans.edu/forums/diary/Malware+and+XOR+Part+1/22486/
+tags:
+- XOR operation
+- Key
+- Ciphertext
+- Reversible function
+- Encode
+- Decode
+- Encrypt
+- Decrypt

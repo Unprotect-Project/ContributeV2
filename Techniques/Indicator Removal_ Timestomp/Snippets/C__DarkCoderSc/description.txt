@@ -1,0 +1,13 @@
+This tiny code snippet demonstrate the principle of file time stomping.
+
+Steps:
+
+* Enumerate files in current directory (excluding the target file).
+* Sort enumerated files by modification date.
+* Takes the most recent file and apply its **File Creation Date**, **File Last Modification** and **File Last Access** to our target file.
+
+Additional information:
+
+* Supports relative target file. 
+* If no files lives inside the current directory, then current directory (parent folder) date information are used.
+* If no files lives inside the current directory and current directory is a root path, then timestomp procedure fails.

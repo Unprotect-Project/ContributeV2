@@ -1,0 +1,7 @@
+name: IAT Hooking
+categories:
+- Process Manipulating
+resources:
+- https://0x00sec.org/t/user-mode-rootkits-iat-and-inline-hooking/1108
+tags:
+- iat

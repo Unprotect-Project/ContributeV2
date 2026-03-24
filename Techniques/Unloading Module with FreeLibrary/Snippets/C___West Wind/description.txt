@@ -1,0 +1,6 @@
+This code demonstrates how the `GetModuleHandleA` and `FreeLibrary` functions can be used to unload a DLL from a process's memory. 
+
+- `GetModuleHandleA` retrieves a handle to a module (such as a DLL) that is already loaded.
+- `FreeLibrary` frees a loaded DLL from the process's memory.
+
+This technique can be used maliciously to unload security-related DLLs used by antivirus or EDR solutions. As such, it is important to use such code ethically and responsibly, within the bounds of the law and ethical considerations.

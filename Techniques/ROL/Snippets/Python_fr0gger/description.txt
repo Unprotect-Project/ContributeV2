@@ -1,0 +1,1 @@
+The original message is first encoded using the ROL algorithm and the defined rotation value. The encoded message is then printed to the screen. The same rotation value is then used to decode the encoded message, resulting in the original message. This example demonstrates how the ROL algorithm can be used to encode and decode messages in a simple and easily reversible way.

@@ -1,0 +1,20 @@
+name: 'System Binary Proxy Execution: Regsvr32'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1218/010/
+tags:
+- Defense Evasion
+- bypass application control
+- load COM scriptlets
+- execute DLLs
+- uniform resource locator (URL)
+- external web server
+- Squiblydoo
+- Component Object Model Hijacking
+- APT19
+- APT32
+- maintain persistence
+- execute malicious code
+- execute malicious DLLs
+- execute malicious scripts

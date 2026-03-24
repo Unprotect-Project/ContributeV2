@@ -1,0 +1,1 @@
+This script encodes a given plaintext shellcode using a combination of XOR, ADD, SUB, ROL, and ROR operations with a randomly generated key. The purpose of the encoding is to make the shellcode more difficult to detect and analyze.

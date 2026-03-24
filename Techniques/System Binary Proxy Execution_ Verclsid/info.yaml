@@ -1,0 +1,16 @@
+name: 'System Binary Proxy Execution: Verclsid'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1218/012/
+tags:
+- Defense Evasion
+- verclsid.exe
+- Extension CLSID Verification Host
+- verifying shell extensions
+- execute malicious payloads
+- verclsid.exe /S /C {CLSID}
+- COM objects
+- bypass application control solutions
+- download malicious scripts
+- execute malicious scripts

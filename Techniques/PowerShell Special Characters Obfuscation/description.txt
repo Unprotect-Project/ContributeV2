@@ -1,0 +1,3 @@
+PowerShell scripts can be obfuscated using methods that encode commands exclusively with special characters. This technique aims to complicate analysis and potentially evade detection mechanisms. 
+
+Attackers frequently employ these tactics to hide the true functionalities of the script, making the analysis more challenging.

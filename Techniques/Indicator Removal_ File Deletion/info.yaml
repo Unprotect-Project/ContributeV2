@@ -1,0 +1,10 @@
+name: 'Indicator Removal: File Deletion'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1070/004/
+tags:
+- Defense Evasion
+- infection clean-up
+- del
+- evidence removal

@@ -1,0 +1,19 @@
+name: Rogue Domain Controller
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1207/
+tags:
+- Defense Evasion
+- Persistence
+- Active Directory manipulation
+- DCShadow
+- mimic Domain Controller (DC)
+- nTDSDSA object
+- privilege elevation
+- KRBTGT hash
+- bypass system logging and security monitors
+- bypass security information and event management (SIEM)
+- alter and delete replication and metadata
+- SID-History Injection
+- manipulate AD objects

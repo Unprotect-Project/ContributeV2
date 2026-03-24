@@ -1,0 +1,7 @@
+Dirty Vanity is a process injection technique that exploits the Windows forking (process reflection and snapshotting) feature to inject code into a new process. 
+
+It uses the `RtlCreateProcessReflection` or `NtCreateProcess[Ex]` primitives, along with the `PROCESS_VM_OPERATION`, `PROCESS_CREATE_THREAD`, and `PROCESS_DUP_HANDLE` flags to reflect and execute code in a new process. 
+
+The technique also makes use of various methods, such as `NtCreateSection` and `NtMapViewOfSection`, `VirtualAllocEx` and `WriteProcessMemory`, and `NtSetContextThread` (also known as Ghost Writing), to write the injected code into the new process. 
+
+This technique is designed to evade detection by endpoint security solutions, as the injected code appears to have been written to the new process, rather than being injected from an external source.

@@ -1,0 +1,9 @@
+name: CloseHandle, NtClose
+categories:
+- Anti-Debugging
+resources:
+- https://www.symantec.com/connect/articles/windows-anti-debug-reference
+- https://anti-debug.checkpoint.com/techniques/object-handles.html#closehandle
+tags:
+- closehandle
+- ntclose

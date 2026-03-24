@@ -1,0 +1,7 @@
+name: EventPairHandles
+categories:
+- Anti-Debugging
+resources:
+- https://www.evilfingers.com/publications/research_EN/EventPairsHandle.pdf
+tags:
+- EventPairHandles

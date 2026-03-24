@@ -1,0 +1,13 @@
+name: 'Process Injection: Thread Local Storage'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1055/005/
+tags:
+- Defense Evasion
+- Privilege Escalation
+- thread local storage (TLS) callbacks
+- evade process-based defenses
+- privilege escalation
+- mimic legitimate process
+- process injection

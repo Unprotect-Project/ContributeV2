@@ -1,0 +1,20 @@
+name: 'Virtualization/Sandbox Evasion: System Checks'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1497/001/
+tags:
+- Defense Evasion
+- Discovery
+- virtual machine environment (VME) detection
+- sandbox detection
+- VME artifacts
+- Windows Management Instrumentation
+- PowerShell
+- System Information Discovery
+- Query Registry
+- host/domain name
+- network traffic
+- hardware info
+- VMWare
+- virtualisation

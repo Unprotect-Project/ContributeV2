@@ -1,0 +1,11 @@
+name: 'Access Token Manipulation: Make and Impersonate Token'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1134/003/
+tags:
+- Defense Evasion
+- Privilege Escalation
+- LogonUser
+- SetThreadToken
+- Cobalt Strike

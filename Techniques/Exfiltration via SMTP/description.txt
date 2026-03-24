@@ -1,0 +1,5 @@
+Exfiltration via SMTP is a technique where attackers leverage the Simple Mail Transfer Protocol (SMTP) to exfiltrate data. This method involves sending stolen data, such as sensitive files or system information, via email to an attacker-controlled email account. By using email traffic, attackers can often bypass traditional network monitoring solutions since SMTP traffic is usually deemed legitimate.
+
+To execute such exfiltration, attackers can embed hardcoded credentials within malware to connect to an email server. The malware sends the exfiltrated data as email attachments, taking advantage of popular SMTP providers like Gmail or Outlook to facilitate the transfer. The use of SSL/TLS encryption for securing emails further complicates detection efforts.
+
+Although this specific example is focused on data exfiltration, SMTP can also be adapted to function as a communication channel for C2 by encoding commands and responses within email messages.

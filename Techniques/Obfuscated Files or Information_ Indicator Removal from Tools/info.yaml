@@ -1,0 +1,12 @@
+name: 'Obfuscated Files or Information: Indicator Removal from Tools'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1027/005/
+tags:
+- Defense Evasion
+- malicious file modification
+- payload modification
+- signature evasion
+- unique hash
+- APT3

@@ -1,0 +1,13 @@
+name: 'Hide Artifacts: Hidden Files and Directories'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1564/001/
+tags:
+- Defense Evasion
+- hidden files
+- hidden folders
+- attrib.exe
+- .ssh
+- APT28
+- APT32

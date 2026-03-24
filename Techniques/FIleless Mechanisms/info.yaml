@@ -1,0 +1,14 @@
+name: FIleless Mechanisms
+categories:
+- Process Manipulating
+resources:
+- https://blog.minerva-labs.com/deconstructing-fileless-attacks-into-4-underlying-techniques
+tags:
+- Fileless malware
+- Memory
+- Email attachments
+- Malicious websites
+- Exploit kits
+- System settings
+- Legitimate processes
+- Fileless malware-specific tools

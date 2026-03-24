@@ -1,0 +1,11 @@
+#include <windows.h>
+
+int main() {
+    UINT drives = GetLogicalDrives();
+    for (int i = 0; i < 26; i++) {
+        if ((drives & (1 << i)) && GetDriveTypeA((char)('A' + i) + ":\\") == DRIVE_REMOVABLE) {
+            printf("USB drive detected: %c:\n", 'A' + i);
+        }
+    }
+    return 0;
+}

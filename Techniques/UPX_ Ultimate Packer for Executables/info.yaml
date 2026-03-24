@@ -1,0 +1,14 @@
+name: 'UPX: Ultimate Packer for Executables'
+categories:
+- Packers
+resources:
+- https://en.wikipedia.org/wiki/UPX
+- https://upx.github.io/
+tags:
+- UPX
+- Executable packer
+- Compression
+- Encryption
+- Portability
+- Extendability
+- High performance

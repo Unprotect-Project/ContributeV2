@@ -1,0 +1,20 @@
+name: File Melt
+categories:
+- Others
+tags:
+- File melting
+- File deletion
+- Overwriting
+- Random data
+- Recovery
+- Encryption
+- Hiding
+- Remove trace
+featured_apis:
+- CreateRemoteThread
+- VirtualAlloc
+- VirtualAllocEx
+- WriteProcessMemory
+- CreateProcessA
+- CreateProcessW
+- GetProcAddress

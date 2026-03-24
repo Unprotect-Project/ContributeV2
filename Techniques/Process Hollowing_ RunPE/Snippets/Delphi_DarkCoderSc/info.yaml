@@ -1,0 +1,4 @@
+language: Delphi
+contributors: DarkCoderSc
+associated_technique: Process Hollowing, RunPE
+target_operating_system: windows

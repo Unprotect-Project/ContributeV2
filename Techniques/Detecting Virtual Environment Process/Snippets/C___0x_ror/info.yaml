@@ -1,0 +1,4 @@
+language: C++
+contributors: 0x_ror
+associated_technique: Detecting Virtual Environment Process
+target_operating_system: windows

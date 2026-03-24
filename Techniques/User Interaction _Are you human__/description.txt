@@ -1,0 +1,1 @@
+You can get an advantage against sandboxes by using user interaction techniques. For example, The average user has a username and password and as long as the user you are targeting does not enter their password correctly, you can prevent your malware execution and bypass the possible sandbox control.

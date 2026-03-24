@@ -1,0 +1,3 @@
+The `NtSetDebugFilterState` and `DbgSetDebugFilterState` functions are used by malware to detect the presence of a kernel mode debugger. These functions allow the malware to set up a debug filter, which is a mechanism that can be used to detect and respond to the presence of a debugger.
+
+When a kernel mode debugger is present, the debug filter will be triggered, and the malware can then take actions to evade detection and continue to operate. This technique is commonly used by malware to avoid analysis by security researchers and avoid being detected by security software. By using these functions, the malware can operate stealthily and evade detection, making it difficult for analysts to reverse engineer the malware and understand its capabilities and behaviors.

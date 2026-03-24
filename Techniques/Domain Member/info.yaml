@@ -1,0 +1,15 @@
+name: Domain Member
+categories:
+- Sandbox Evasion
+tags:
+- technique
+- Active Directory Domain
+- enterprise sandboxes
+- malicious payload
+- LoggonServer
+- ComputerName
+- domain controller
+- hostname
+- process memory
+- undetectable
+- API calls

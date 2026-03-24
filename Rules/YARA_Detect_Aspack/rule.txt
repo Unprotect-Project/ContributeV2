@@ -1,0 +1,1029 @@
+rule ASPack_v107b_DLL: PEiD
+{
+    strings:
+        $a = { 90 90 90 75 }
+        $b = { 60 E8 00 00 00 00 5D ?? ?? ?? ?? ?? ?? B8 ?? ?? ?? ?? 03 C5 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPAck_1061b: PEiD
+{
+    strings:
+        $a = { 90 90 75 00 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_108: PEiD
+{
+    strings:
+        $a = { 90 90 90 75 01 90 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v212_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v2xx: PEiD
+{
+    strings:
+        $a = { 60 E8 70 05 ?? ?? EB }
+        $b = { A8 03 00 00 61 75 08 B8 01 00 00 00 C2 0C 00 68 00 00 00 00 C3 8B 85 26 04 00 00 8D 8D 3B 04 00 00 51 50 FF 95 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v21_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_102b: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 96 78 43 00 B8 90 78 43 00 03 C5 2B 85 7D 7C 43 00 89 85 89 7C 43 00 80 BD 74 7C 43 00 00 75 15 FE 85 74 7C 43 00 E8 1D 00 00 00 E8 F7 01 00 00 E8 8E 02 00 00 8B 85 75 7C 43 00 03 85 89 7C 43 00 89 44 24 1C 61 FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v21: PEiD
+{
+    strings:
+        $a = { 60 E9 3D }
+        $b = { 60 E8 72 05 00 00 EB 33 87 DB 90 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule PackerAspack_v212_wwwaspackcom: PEiD
+{
+    strings:
+        $a = { ?8 ?? ?0 00 ?? ?? ?? ?? ?D ?? ?? ?? ?? ?? ?? ?? ?? ?? 5? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?3 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?F ?? ?? ?3 ?? ?? ?? 8? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?0 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?F 95 ?? ?? ?? ?? 8? ?? ?D ?? ?? ?? ?? 5? }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v211c_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 02 00 00 00 EB 09 5D 55 81 ED 39 39 44 00 C3 E9 59 04 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v104b_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? ?? ?? B8 ?? ?? ?? ?? 03 C5 2B 85 ?? 0B DE ?? 89 85 17 DE ?? ?? 80 BD 01 DE }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_105b_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED CE 3A 44 00 B8 C8 3A 44 00 03 C5 2B 85 B5 3E 44 00 89 85 C1 3E 44 00 80 BD AC 3E 44 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Aspack_v212_wwwaspackcom_additional: PEiD
+{
+    strings:
+        $a = { ?8 ?? ?0 00 ?? ?? ?? ?? ?D ?? ?? ?? ?? ?? ?? ?? ?? ?? 5? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?3 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?F ?? ?? ?3 ?? ?? ?? 8? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?0 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?F 95 ?? ?? ?? ?? 8? ?? ?D ?? ?? ?? ?? 5? }
+    condition:
+        $a at pe.entry_point
+
+}
+rule AHTeam_EP_Protector_03_fake_ASPack_212_FEUERRADER: PEiD
+{
+    strings:
+        $a = { 90 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 90 FF E0 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_108_additional: PEiD
+{
+    strings:
+        $a = { 90 90 90 75 01 90 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_v032a_fake_ASPack_211d_emadicius: PEiD
+{
+    strings:
+        $a = { 60 E8 02 00 00 00 EB 09 5D 55 81 ED 39 39 44 00 C3 61 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v102a_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED 3E D9 43 ?? B8 38 ?? ?? ?? 03 C5 2B 85 0B DE 43 ?? 89 85 17 DE 43 ?? 80 BD 01 DE 43 ?? ?? 75 15 FE 85 01 DE 43 ?? E8 1D ?? ?? ?? E8 79 02 ?? ?? E8 12 03 ?? ?? 8B 85 03 DE 43 ?? 03 85 17 DE 43 ?? 89 44 24 1C 61 FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v2000_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 70 05 00 00 EB 4C }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_v032a_fake_ASPack_211d_emadicius_h: PEiD
+{
+    strings:
+        $a = { 60 E8 02 00 00 00 EB 09 5D 55 81 ED 39 39 44 00 C3 61 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_105b_by_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { 75 00 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_1083: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 0A 4A 44 00 BB 04 4A 44 00 03 DD 2B 9D B1 50 44 00 83 BD AC 50 44 00 00 89 9D BB 4E 44 00 0F 85 17 05 00 00 8D 85 D1 50 44 00 50 FF 95 94 51 44 00 89 85 CD 50 44 00 8B F8 8D 9D DE 50 44 00 53 50 FF 95 90 51 44 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v108_additional: PEiD
+{
+    strings:
+        $a = { 90 75 01 FF E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_102a_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 3E D9 43 00 B8 38 ?? ?? 00 03 C5 2B 85 0B DE 43 00 89 85 17 DE 43 00 80 BD 01 DE 43 00 00 75 15 FE 85 01 DE 43 00 E8 1D 00 00 00 E8 79 02 00 00 E8 12 03 00 00 8B 85 03 DE 43 00 03 85 17 DE 43 00 89 44 24 1C 61 FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v106b_additional: PEiD
+{
+    strings:
+        $a = { 90 61 BE ?? ?? ?? ?? 8D BE ?? ?? ?? ?? 57 83 CD FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v211d_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 02 00 00 00 CD 20 E8 00 00 00 00 5E 2B C9 58 74 02 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v212: PEiD
+{
+    strings:
+        $a = { 60 E8 03 ?? ?? ?? E9 EB 04 5D 45 55 C3 E8 }
+        $b = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v211: PEiD
+{
+    strings:
+        $a = { 60 E8 02 ?? ?? ?? EB 09 5D 55 81 ED 39 39 44 ?? C3 E9 3D }
+        $b = { 60 E9 3D 04 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule _PseudoSigner_01_ASPack_2xx_Heuristic_Anorganix: PEiD
+{
+    strings:
+        $a = { 90 90 90 90 68 ?? ?? ?? ?? 67 64 FF 36 00 00 67 64 89 26 00 00 F1 90 90 90 90 A8 03 00 00 61 75 08 B8 01 00 00 00 C2 0C 00 68 00 00 00 00 C3 8B 85 26 04 00 00 8D 8D 3B 04 00 00 51 50 FF 95 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_101b_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED D2 2A 44 00 B8 CC 2A 44 00 03 C5 2B 85 A5 2E 44 00 89 85 B1 2E 44 00 80 BD 9C 2E 44 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule Aspack_v212_wwwaspackcom: PEiD
+{
+    strings:
+        $a = { ?8 ?? ?0 00 ?? ?? ?? ?? ?D ?? ?? ?? ?? ?? ?? ?? ?? ?? 5? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?3 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?F ?? ?? ?3 ?? ?? ?? 8? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?0 ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?F 95 ?? ?? ?? ?? 8? }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v2xx_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { A8 03 00 00 61 75 08 B8 01 00 00 00 C2 0C 00 68 00 00 00 00 C3 8B 85 26 04 00 00 8D 8D 3B 04 00 00 51 50 FF 95 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v2001_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 72 05 00 00 EB 4C }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_032a_fake_ASPack_212_emadicius: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 73 00 00 61 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B }
+        $b = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 A0 02 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule _PseudoSigner_01_ASPack_2xx_Heuristic_Anorganix_additional: PEiD
+{
+    strings:
+        $a = { 90 90 90 90 68 ?? ?? ?? ?? 67 64 FF 36 00 00 67 64 89 26 00 00 F1 90 90 90 90 A8 03 00 00 61 75 08 B8 01 00 00 00 C2 0C 00 68 00 00 00 00 C3 8B 85 26 04 00 00 8D 8D 3B 04 00 00 51 50 FF 95 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v107b_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? ?? ?? 60 E8 2B 03 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v100b_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED 3E D9 43 ?? B8 38 ?? ?? ?? 03 C5 2B 85 0B DE 43 ?? 89 85 17 DE 43 ?? 80 BD 01 DE 43 ?? ?? 75 15 FE 85 01 DE 43 ?? E8 1D ?? ?? ?? E8 79 02 ?? ?? E8 12 03 ?? ?? 8B 85 03 DE 43 ?? 03 85 17 DE 43 ?? 89 44 24 1C 61 FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v211c_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 02 00 00 00 EB 09 5D 55 81 ED 39 39 44 00 C3 E9 59 04 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v211b_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 02 00 00 00 EB 09 5D 55 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_105b_by: PEiD
+{
+    strings:
+        $a = { 75 00 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_v032a_fake_ASPack_212_emadicius_h_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 A0 02 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v10802_additional: PEiD
+{
+    strings:
+        $a = { 90 75 01 90 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v2001_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 72 05 00 00 EB 33 87 DB 90 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v107b: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D B8 03 }
+        $b = { 60 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? ?? ?? B8 ?? ?? ?? ?? 03 C5 2B 85 ?? 0B DE ?? 89 85 17 DE ?? ?? 80 BD 01 DE }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_100b_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 92 1A 44 00 B8 8C 1A 44 00 03 C5 2B 85 CD 1D 44 00 89 85 D9 1D 44 00 80 BD C4 1D 44 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v101b_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED CE 3A 44 ?? B8 C8 3A 44 ?? 03 C5 2B 85 B5 3E 44 ?? 89 85 C1 3E 44 ?? 80 BD AC 3E 44 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v10801_additional: PEiD
+{
+    strings:
+        $a = { 60 EB 0A 5D EB 02 FF 25 45 FF E5 E8 E9 E8 F1 FF FF FF E9 81 ED 23 6A 44 00 BB 10 ?? 44 00 03 DD 2B 9D 72 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v10802_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { 90 75 01 90 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v2xx_additional: PEiD
+{
+    strings:
+        $a = { A8 03 ?? ?? 61 75 08 B8 01 ?? ?? ?? C2 0C ?? 68 ?? ?? ?? ?? C3 8B 85 26 04 ?? ?? 8D 8D 3B 04 ?? ?? 51 50 FF 95 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v101b: PEiD
+{
+    strings:
+        $a = { 60 E8 5D 81 ED 3E D9 43 B8 38 03 C5 2B 85 0B DE 43 89 85 17 DE 43 80 BD 01 DE 43 75 15 FE 85 01 DE 43 E8 1D E8 79 02 E8 12 03 8B }
+        $b = { 60 E8 ?? ?? ?? ?? 5D 81 ED D2 2A 44 ?? B8 CC 2A 44 ?? 03 C5 2B 85 A5 2E 44 ?? 89 85 B1 2E 44 ?? 80 BD 9C 2E 44 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v10803_additional: PEiD
+{
+    strings:
+        $a = { 55 57 51 53 E8 ?? ?? ?? ?? 5D 8B C5 81 ED ?? ?? ?? ?? 2B 85 ?? ?? ?? ?? 83 E8 09 89 85 ?? ?? ?? ?? 0F B6 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_104b_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED ?? ?? ?? 00 B8 ?? ?? ?? 00 03 C5 2B 85 ?? 12 9D ?? 89 85 1E 9D ?? 00 80 BD 08 9D ?? 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_107b_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 90 75 ?? E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v103b: PEiD
+{
+    strings:
+        $a = { 60 E8 5D 81 ED CE 3A 44 B8 C8 3A 44 03 C5 2B 85 B5 3E 44 89 85 C1 3E 44 80 BD AC 3E }
+        $b = { 60 E8 ?? ?? ?? ?? 5D 81 ED AE 98 43 ?? B8 A8 98 43 ?? 03 C5 2B 85 18 9D 43 ?? 89 85 24 9D 43 ?? 80 BD 0E 9D 43 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_102b_or_10803: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v211d: PEiD
+{
+    strings:
+        $a = { 60 E8 03 ?? ?? ?? E9 EB 04 5D 45 55 C3 E8 01 ?? ?? ?? EB 5D BB ED FF FF FF 03 DD 81 }
+        $b = { 60 E8 02 00 00 00 EB 09 5D 55 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v211b: PEiD
+{
+    strings:
+        $a = { 60 E8 02 ?? ?? ?? EB 09 5D 55 81 ED 39 39 44 ?? C3 E9 59 }
+        $b = { 60 E8 02 00 00 00 EB 09 5D 55 81 ED 39 39 44 00 C3 E9 3D 04 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v211c: PEiD
+{
+    strings:
+        $a = { 60 E8 02 ?? ?? ?? EB 09 5D }
+        $b = { 60 E8 02 00 00 00 EB 09 5D 55 81 ED 39 39 44 00 C3 E9 59 04 00 00 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v105b_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED CE 3A 44 ?? B8 C8 3A 44 ?? 03 C5 2B 85 B5 3E 44 ?? 89 85 C1 3E 44 ?? 80 BD AC 3E 44 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_032a_fake_ASPack_212_emadicius_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 02 00 00 00 EB 09 5D 55 81 ED 39 39 44 00 C3 61 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v102b_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 96 78 43 00 B8 90 78 43 00 03 C5 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_108_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 90 75 01 FF E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v1061b_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED EA A8 43 ?? B8 E4 A8 43 ?? 03 C5 2B 85 78 AD 43 ?? 89 85 84 AD 43 ?? 80 BD 6E AD 43 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v102a_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED 06 ?? ?? ?? 64 A0 23 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_2xwithouth_Poly_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { ?? 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB EC FF FF FF 03 DD 81 EB 00 40 1C 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_1061b_DLL: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED EA A8 43 00 B8 E4 A8 43 00 03 C5 2B 85 78 AD 43 00 89 85 84 AD 43 00 80 BD 6E AD 43 00 00 75 15 FE 85 6E AD 43 00 E8 1D 00 00 00 E8 73 02 00 00 E8 0A 03 00 00 8B 85 70 AD 43 00 03 85 84 AD 43 00 89 44 24 1C 61 FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v10804: PEiD
+{
+    strings:
+        $a = { A8 03 61 75 08 B8 01 C2 0C 68 C3 8B 85 26 04 8D 8D 3B 04 51 50 FF }
+        $b = { 60 E8 41 06 00 00 EB 41 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v100b_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED 92 1A 44 ?? B8 8C 1A 44 ?? 03 C5 2B 85 CD 1D 44 ?? 89 85 D9 1D 44 ?? 80 BD C4 1D 44 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v10804_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_10801_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 90 75 ?? 90 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_101b: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED D2 2A 44 00 B8 CC 2A 44 00 03 C5 2B 85 A5 2E 44 00 89 85 B1 2E 44 00 80 BD 9C 2E 44 00 00 75 15 FE 85 9C 2E 44 00 E8 1D 00 00 00 E8 E4 01 00 00 E8 7A 02 00 00 8B 85 9D 2E 44 00 03 85 B1 2E 44 00 89 44 24 1C 61 FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v10804_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 41 06 00 00 EB 41 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_103b_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED AE 98 43 00 B8 A8 98 43 00 03 C5 2B 85 18 9D 43 00 89 85 24 9D 43 00 80 BD 0E 9D 43 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v103b_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED AE 98 43 ?? B8 A8 98 43 ?? 03 C5 2B 85 18 9D 43 ?? 89 85 24 9D 43 ?? 80 BD 0E 9D 43 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_v032a_fake_ASPack_212_emadicius_h: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 73 00 00 61 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 2B 04 24 74 04 75 02 EB 02 EB 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v101b_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED D2 2A 44 ?? B8 CC 2A 44 ?? 03 C5 2B 85 A5 2E 44 ?? 89 85 B1 2E 44 ?? 80 BD 9C 2E 44 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v10802_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 EB 0A 5D EB 02 FF 25 45 FF E5 E8 E9 E8 F1 FF FF FF E9 81 ED 23 6A 44 00 BB 10 ?? 44 00 03 DD 2B 9D 72 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_105b: PEiD
+{
+    strings:
+        $a = { 75 00 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule PseudoSigner_01_ASPack_2xx_Heuristic: PEiD
+{
+    strings:
+        $a = { 90 90 90 90 68 ?? ?? ?? ?? 67 64 FF 36 00 00 67 64 89 26 00 00 F1 90 90 90 90 A8 03 00 00 61 75 08 B8 01 00 00 00 C2 0C 00 68 00 00 00 00 C3 8B 85 26 04 00 00 8D 8D 3B 04 00 00 51 50 FF 95 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule MSLRH_v032a_fake_ASPack_212_emadicius: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 A0 02 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF }
+        $b = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 73 00 00 61 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 2B 04 24 74 04 75 02 EB 02 EB 01 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_1061b_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED EA A8 43 00 B8 E4 A8 43 00 03 C5 2B 85 78 AD 43 00 89 85 84 AD 43 00 80 BD 6E AD 43 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v21_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 72 05 00 00 EB 33 87 DB 90 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v2000_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 48 11 00 00 C3 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_106b_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 90 75 00 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v10804_Hint_WIN_EP: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? EB }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v2000: PEiD
+{
+    strings:
+        $a = { 60 E8 72 05 ?? ?? EB }
+        $b = { 60 E8 70 05 00 00 EB 4C }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v2001: PEiD
+{
+    strings:
+        $a = { 60 E8 72 05 ?? ?? EB 33 87 DB }
+        $b = { 60 E8 72 05 00 00 EB 4C }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule MSLRH_032a_fake_ASPack_211d_emadicius: PEiD
+{
+    strings:
+        $a = { 60 E8 02 00 00 00 EB 09 5D 55 81 ED 39 39 44 00 C3 61 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v103b_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? ?? ?? E8 0D ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? ?? 58 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v211d_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 02 00 00 00 EB 09 5D 55 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v108x: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D BB 03 }
+        $b = { 60 EB 03 5D FF E5 E8 F8 FF FF FF 81 ED 1B 6A 44 00 BB 10 6A 44 00 03 DD 2B 9D 2A }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v1061b: PEiD
+{
+    strings:
+        $a = { 60 E8 5D 81 ED B8 03 C5 2B 85 0B DE 89 85 17 DE 80 BD 01 }
+        $b = { 60 E8 ?? ?? ?? ?? 5D 81 ED EA A8 43 ?? B8 E4 A8 43 ?? 03 C5 2B 85 78 AD 43 ?? 89 85 84 AD 43 ?? 80 BD 6E AD 43 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v10801: PEiD
+{
+    strings:
+        $a = { 60 EB 0A 5D EB 02 FF 25 45 FF E5 E8 E9 E8 F1 FF FF FF E9 81 44 BB 10 44 03 DD 2B }
+        $b = { 60 EB 0A 5D EB 02 FF 25 45 FF E5 E8 E9 E8 F1 FF FF FF E9 81 ?? ?? ?? 44 00 BB 10 ?? 44 00 03 DD 2B 9D }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v10802: PEiD
+{
+    strings:
+        $a = { 60 EB 03 5D FF E5 E8 F8 FF FF FF 81 ED 1B 6A 44 ?? BB 10 6A 44 ?? 03 DD 2B 9D }
+        $b = { 60 EB 0A 5D EB 02 FF 25 45 FF E5 E8 E9 E8 F1 FF FF FF E9 81 ED 23 6A 44 00 BB 10 ?? 44 00 03 DD 2B 9D 72 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v10803: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED 0A 4A 44 ?? BB 04 4A 44 ?? 03 }
+        $b = { 60 E8 00 00 00 00 5D 81 ED 0A 4A 44 00 BB 04 4A 44 00 03 DD }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_107b_DLL: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 3E D9 43 00 B8 38 D9 43 00 03 C5 2B 85 0B DE 43 00 89 85 17 DE 43 00 80 BD 01 DE 43 00 00 75 15 FE 85 01 DE 43 00 E8 1D 00 00 00 E8 79 02 00 00 E8 12 03 00 00 8B 85 03 DE 43 00 03 85 17 DE 43 00 89 44 24 1C 61 FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v107b_DLL_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D ?? ?? ?? ?? ?? ?? B8 ?? ?? ?? ?? 03 C5 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule _PseudoSigner_01_ASPack_2xx_Heuristic: PEiD
+{
+    strings:
+        $a = { 90 90 90 90 68 ?? ?? ?? ?? 67 64 FF 36 00 00 67 64 89 26 00 00 F1 90 90 90 90 A8 03 00 00 61 75 08 B8 01 00 00 00 C2 0C 00 68 00 00 00 00 C3 8B 85 26 04 00 00 8D 8D 3B 04 00 00 51 50 FF 95 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v211_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 F9 11 00 00 C3 83 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v10802_Hint_WIN_EP_additional: PEiD
+{
+    strings:
+        $a = { 90 90 75 01 90 E9 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_212withouth_Poly_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { ?? E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v10803_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 0A 4A 44 00 BB 04 4A 44 00 03 DD }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v212_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v104b: PEiD
+{
+    strings:
+        $a = { 75 ?? }
+        $b = { 60 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? ?? ?? B8 ?? ?? ?? ?? 03 C5 2B 85 ?? 12 9D ?? 89 85 1E 9D ?? ?? 80 BD 08 9D }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v105b: PEiD
+{
+    strings:
+        $a = { 90 75 ?? }
+        $b = { 60 E8 ?? ?? ?? ?? 5D 81 ED CE 3A 44 ?? B8 C8 3A 44 ?? 03 C5 2B 85 B5 3E 44 ?? 89 85 C1 3E 44 ?? 80 BD AC 3E 44 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule MSLRH_032a_fake_ASPack_211d_emadicius_additional: PEiD
+{
+    strings:
+        $a = { EB 03 3A 4D 3A 1E EB 02 CD 20 9C EB 02 CD 20 EB 02 CD 20 60 EB 02 C7 05 EB 02 CD 20 E8 03 00 00 00 E9 EB 04 58 40 50 C3 61 9D 1F EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v108: PEiD
+{
+    strings:
+        $a = { 90 90 75 01 FF }
+        $b = { 90 75 01 FF E9 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule MSLRH_v032a_fake_ASPack_212_emadicius_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD 81 EB 00 A0 02 EB 05 E8 EB 04 40 00 EB FA E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF 83 C4 08 74 04 75 02 EB 02 EB 01 81 50 E8 02 00 00 00 29 5A 58 6B C0 03 E8 02 00 00 00 29 5A 83 C4 04 58 74 04 75 02 EB 02 EB 01 81 0F 31 50 0F 31 E8 0A 00 00 00 E8 EB 0C 00 00 E8 F6 FF FF FF E8 F2 FF FF FF }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v102b_additional: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 8A 1C 40 00 B9 9E 00 00 00 8D BD 4C 23 40 00 8B F7 33 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v106b: PEiD
+{
+    strings:
+        $a = { 90 90 75 ?? }
+        $b = { 90 90 90 75 00 E9 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v104b_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? ?? ?? B8 ?? ?? ?? ?? 03 C5 2B 85 ?? 12 9D ?? 89 85 1E 9D ?? ?? 80 BD 08 9D }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_V22_Alexey_Solodovnikov_StarForce_2009408: PEiD
+{
+    strings:
+        $a = { 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB ED FF FF FF 03 DD ?? ?? ?? ?? ?? ?? 83 BD 7D 04 00 00 00 89 9D 7D 04 00 00 0F 85 C0 03 00 00 8D 85 89 04 00 00 50 FF 95 09 0F 00 00 89 85 81 04 00 00 8B F0 8D 7D 51 57 56 FF 95 05 0F 00 00 AB B0 00 AE 75 FD 38 07 75 EE 8D 45 7A FF E0 56 69 72 74 75 61 6C 41 6C 6C 6F 63 00 56 69 72 74 75 61 6C 46 72 65 65 00 56 69 72 74 75 61 6C 50 72 6F 74 65 63 74 00 00 8B 9D 8D 05 00 00 0B DB 74 0A 8B 03 87 85 91 05 00 00 89 03 8D B5 BD 05 00 00 83 3E 00 0F 84 15 01 00 00 6A 04 68 00 10 00 00 68 00 18 00 00 6A 00 FF 55 51 89 85 53 01 00 00 8B 46 04 05 0E 01 00 00 6A 04 68 00 10 00 00 50 6A 00 FF 55 51 89 85 4F 01 00 00 56 8B 1E 03 9D 7D 04 00 00 FF B5 53 01 00 00 FF 76 04 50 53 E8 2D 05 00 00 B3 00 80 FB 00 75 5E FE 85 E9 00 00 00 8B 3E 03 BD 7D 04 00 00 FF 37 C6 07 C3 FF D7 8F 07 50 51 56 53 8B C8 83 E9 06 8B B5 4F 01 00 00 33 DB 0B C9 74 2E 78 2C AC 3C E8 74 0A EB 00 3C E9 74 04 43 49 EB EB 8B 06 EB 00 ?? ?? ?? 75 F3 24 00 C1 C0 18 2B C3 89 06 83 C3 05 83 C6 04 83 E9 05 EB CE 5B 5E 59 58 EB 08 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v107b_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED ?? ?? ?? ?? B8 ?? ?? ?? ?? 03 C5 2B 85 ?? 0B DE ?? 89 85 17 DE ?? ?? 80 BD 01 DE }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v108x_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 EB 03 5D FF E5 E8 F8 FF FF FF 81 ED 1B 6A 44 00 BB 10 6A 44 00 03 DD 2B 9D 2A }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v10801_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 EB 0A 5D EB 02 FF 25 45 FF E5 E8 E9 E8 F1 FF FF FF E9 81 ?? ?? ?? 44 00 BB 10 ?? 44 00 03 DD 2B 9D }
+        $b = { 60 EB ?? 5D EB ?? FF ?? ?? ?? ?? ?? E9 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v100b: PEiD
+{
+    strings:
+        $a = { 60 E8 5D 81 ED D2 2A 44 B8 CC 2A 44 03 C5 2B 85 A5 2E 44 89 85 B1 2E 44 80 BD 9C 2E }
+        $b = { 60 E8 ?? ?? ?? ?? 5D 81 ED 92 1A 44 ?? B8 8C 1A 44 ?? 03 C5 2B 85 CD 1D 44 ?? 89 85 D9 1D 44 ?? 80 BD C4 1D 44 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_102b_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D 81 ED 96 78 43 00 B8 90 78 43 00 03 C5 2B 85 7D 7C 43 00 89 85 89 7C 43 00 80 BD 74 7C 43 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v102a: PEiD
+{
+    strings:
+        $a = { 60 E8 5D 81 ED 96 78 43 B8 90 78 43 03 C5 2B 85 7D 7C 43 89 85 89 7C 43 80 BD 74 7C }
+        $b = { 60 E8 ?? ?? ?? ?? 5D 81 ED 3E D9 43 ?? B8 38 ?? ?? ?? 03 C5 2B 85 0B DE 43 ?? 89 85 17 DE 43 ?? 80 BD 01 DE 43 ?? ?? 75 15 FE 85 01 DE 43 ?? E8 1D ?? ?? ?? E8 79 02 ?? ?? E8 12 03 ?? ?? 8B 85 03 DE 43 ?? 03 85 17 DE 43 ?? 89 44 24 1C 61 FF }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v102b: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED 96 78 43 ?? B8 90 78 43 ?? 03 }
+        $b = { 60 E8 00 00 00 00 5D 81 ED 96 78 43 00 B8 90 78 43 00 03 C5 }
+    condition:
+        for any of ($*) : ( $ at pe.entry_point )
+
+}
+rule ASPack_v108x_additional: PEiD
+{
+    strings:
+        $a = { 60 E9 ?? ?? ?? ?? EF 40 03 A7 07 8F 07 1C 37 5D 43 A7 04 B9 2C 3A }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v211b_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 02 00 00 00 EB 09 5D 55 81 ED 39 39 44 00 C3 E9 3D 04 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v105b_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED CE 3A 44 ?? B8 C8 3A 44 ?? 03 C5 2B 85 B5 3E 44 ?? 89 85 C1 3E 44 ?? 80 BD AC 3E 44 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_211_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { 60 E9 3D 04 00 00 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_212b_Solodovnikov_Alexey: PEiD
+{
+    strings:
+        $a = { ?? 60 E8 03 00 00 00 E9 EB 04 5D 45 55 C3 E8 01 00 00 00 EB 5D BB EC FF FF FF 03 DD 81 EB 00 ?? ?? 00 83 BD 22 04 00 00 00 89 9D 22 04 00 00 0F 85 65 03 00 00 8D 85 2E 04 00 00 50 FF 95 4C 0F 00 00 89 85 26 04 00 00 8B F8 8D 5D 5E 53 50 FF 95 48 0F 00 00 89 85 4C 05 00 00 8D 5D 6B 53 57 FF 95 48 0F }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v1061b_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 ?? ?? ?? ?? 5D 81 ED EA A8 43 ?? B8 E4 A8 43 ?? 03 C5 2B 85 78 AD 43 ?? 89 85 84 AD 43 ?? 80 BD 6E AD 43 }
+    condition:
+        $a at pe.entry_point
+
+}
+rule ASPack_v107b_DLL_Alexey_Solodovnikov: PEiD
+{
+    strings:
+        $a = { 60 E8 00 00 00 00 5D ?? ?? ?? ?? ?? ?? B8 ?? ?? ?? ?? 03 C5 }
+    condition:
+        $a at pe.entry_point
+
+}

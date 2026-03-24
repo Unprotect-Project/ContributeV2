@@ -1,0 +1,3 @@
+The Delphi programming language can be an easy way to write applications and programs that leverage Windows API functions. In fact, some actors deliberately include the default libraries as a diversion to hamper static analysis and make the application "look legit" during dynamic analysis. 
+
+The packer goes to great lengths to ensure that it is not running in an analysis environment. Normal user activity involves many application windows being rotated or changed over a period of time. The first variant of the packer uses `GetForegroundWindow` API to check for the user activity of changing windows at least three times before it executes further. If it does not see the change of windows, it puts itself into an infinite sleep.

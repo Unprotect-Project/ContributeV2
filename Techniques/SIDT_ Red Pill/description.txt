@@ -1,0 +1,5 @@
+Red Pill is a technique used by malware to determine whether it is running on a physical machine or a virtual machine. The Red Pill technique involves executing the SIDT instruction, which retrieves the value of the Interrupt Descriptor Table Register (IDTR) and stores it in a memory location. 
+
+On a physical machine, the IDTR will contain the address of the Interrupt Descriptor Table (IDT), which is a data structure used by the operating system to manage interrupts. However, on a virtual machine, the IDTR will contain the address of the IDT for the virtual machine, which is different from the IDT for the host machine. 
+
+By comparing the IDTR on a physical and a virtual machine, malware can determine whether it is running on a physical or a virtual machine. This information can be used by the malware to adjust its behavior accordingly.

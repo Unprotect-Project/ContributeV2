@@ -1,0 +1,16 @@
+name: 'Modify Authentication Process: Domain Controller Authentication'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1556/001/
+tags:
+- Credential Access
+- Defense Evasion
+- Persistence
+- bypass authentication mechanisms
+- inject false credentials
+- Skeleton key
+- LSASS
+- domain authentication
+- NTLM authentication
+- enterprise domain controller authentication

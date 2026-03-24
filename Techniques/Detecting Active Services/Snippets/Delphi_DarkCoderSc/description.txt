@@ -1,0 +1,1 @@
+Two methods are demonstrated in this example (Windows Registry and Windows Service Manager API).

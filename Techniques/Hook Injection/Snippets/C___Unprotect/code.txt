@@ -1,0 +1,26 @@
+#include <windows.h>
+
+// The function to be injected as a hook
+LRESULT CALLBACK HookFunction(int code, WPARAM wParam, LPARAM lParam) {
+  // Perform malicious actions here
+  
+  // Return the result of the next hook in the chain
+  return CallNextHookEx(NULL, code, wParam, lParam);
+}
+
+int main() {
+  // Install the hook
+  HHOOK hHook = SetWindowsHookEx(WH_MOUSE_LL, HookFunction, NULL, 0);
+  
+  // Run the message loop to receive events
+  MSG msg;
+  while (GetMessage(&msg, NULL, 0, 0)) {
+    TranslateMessage(&msg);
+    DispatchMessage(&msg);
+  }
+  
+  // Uninstall the hook
+  UnhookWindowsHookEx(hHook);
+  
+  return 0;
+}

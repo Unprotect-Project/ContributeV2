@@ -1,0 +1,4 @@
+language: C
+contributors: HoIIovv
+associated_technique: Checking Pipe
+target_operating_system: windows

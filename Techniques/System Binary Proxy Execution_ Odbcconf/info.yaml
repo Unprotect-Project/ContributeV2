@@ -1,0 +1,11 @@
+name: 'System Binary Proxy Execution: Odbcconf'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1218/008/
+tags:
+- Defense Evasion
+- Open Database Connectivity (ODBC)
+- bypass application control solutions
+- REGSVR
+- execution of malicious DLL files

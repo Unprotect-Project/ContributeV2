@@ -1,0 +1,5 @@
+This technique involves modifying the internal properties of a window in order to intercept and modify or monitor the behavior of the window when it receives messages. To do this, an application creates a buffer containing shellcode and injects it into the target process. 
+
+Then, it modifies the internal structure used by the specific properties, such as UxSubclassInfo and CC32SubclassInfo, to point to the payload. 
+
+Finally, the application modifies the property of the window. When a message is sent to the window, the shellcode is executed. This technique is known as Window Subclassing and is often used by adversaries to achieve persistence or execute malicious code.

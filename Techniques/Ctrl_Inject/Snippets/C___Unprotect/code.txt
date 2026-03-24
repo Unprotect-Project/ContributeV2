@@ -1,0 +1,28 @@
+#include <Windows.h>
+#include <cstdio>
+
+// callback function for control signal handlers
+BOOL WINAPI ControlSignalHandler(DWORD dwCtrlType)
+{
+    // inject malicious code here
+
+    return TRUE;
+}
+
+int main()
+{
+    // bypass pointer encoding
+    void* encodedPointer = EncodePointer((PVOID)ControlSignalHandler);
+    void* decodedPointer = DecodePointer(encodedPointer);
+
+    // bypass control flow guard
+    SetProcessValidCallTargets(GetCurrentProcess(), (UINT_PTR)decodedPointer, sizeof(void*));
+
+    // set callback function for control signal handlers
+    SetConsoleCtrlHandler((PHANDLER_ROUTINE)decodedPointer, TRUE);
+
+    // trigger control signal (Ctrl+C)
+    GenerateConsoleCtrlEvent(CTRL_C_EVENT, 0);
+
+    return 0;
+}

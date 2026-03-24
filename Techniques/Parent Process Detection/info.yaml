@@ -1,0 +1,17 @@
+name: Parent Process Detection
+categories:
+- Anti-Monitoring
+resources:
+- https://cysinfo.com/detecting-malicious-processes-psinfo-volatility-plugin/
+tags:
+- Process
+- Spawn
+- Explorer.exe
+- Monitoring
+- Evasive action
+- Termination
+- Encryption
+featured_apis:
+- Process32First
+- Process32Next
+- CreateToolhelp32Snapshot

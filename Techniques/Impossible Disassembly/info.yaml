@@ -1,0 +1,15 @@
+name: Impossible Disassembly
+categories:
+- Anti-Disassembly
+resources:
+- https://www.slideshare.net/SamBowne/practical-malware-analysis-ch-15-antidisassembly
+- https://medium.com/swlh/assembly-wrapping-a-new-technique-for-anti-disassembly-c144eb90e036
+- https://gelven4sec.github.io/posts/rogue_byte/
+tags:
+- Impossible disassembly
+- Anti-disassembling
+- Disassembler
+- Conditional jump
+- Data byte
+- Disassembly output
+- Disassembly accuracy

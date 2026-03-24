@@ -1,0 +1,1 @@
+This code uses the dnslib and socket modules to encode the specified data as a base64 string and send it as a DNS query to the specified DNS server. The DNS query uses the domain name and subdomain that the attacker controls, with the encoded data as the subdomain label. The code then receives a DNS response from the server, decodes the data payload, and prints it.

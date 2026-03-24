@@ -1,0 +1,12 @@
+name: TLS Callback
+categories:
+- Anti-Debugging
+resources:
+- https://resources.infosecinstitute.com/debugging-tls-callbacks/#gref
+- https://isc.sans.edu/diary/How+Malware+Defends+Itself+Using+TLS+Callback+Functions/6655
+tags:
+- TLS callbacks
+- anti-debugging technique
+- thread
+- main entry point
+- debugger

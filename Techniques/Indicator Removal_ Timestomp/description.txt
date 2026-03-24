@@ -1,0 +1,3 @@
+Timestomping is a technique used by adversaries to modify the timestamps of a file, such as the modify, access, create, and change times. This technique is often used to hide the fact that a file has been modified or created by the adversary, making it more difficult for forensic investigators or file analysis tools to detect the changes. 
+
+By modifying the timestamps of a file, the adversary can make it appear as if the file has been present on the system for a longer period of time, or that it was last accessed or modified at a different time than it actually was. This can help the adversary avoid detection and continue operating on a compromised system without being detected.

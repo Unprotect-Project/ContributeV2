@@ -1,0 +1,3 @@
+This function retrieves information about a running  process. Malware are able to detect if the process is currently being attached to a debugger using the `ProcessDebugPort (0x7)` information class.
+
+A nonzero value returned by the call indicates that the process is being debugged.

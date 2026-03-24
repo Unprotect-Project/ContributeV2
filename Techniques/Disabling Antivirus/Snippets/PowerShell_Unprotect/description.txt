@@ -1,0 +1,1 @@
+This command sets the `DisableRealtimeMonitoring` parameter in the Windows Defender preferences to `true`, effectively disabling the real-time monitoring feature of Windows Defender.

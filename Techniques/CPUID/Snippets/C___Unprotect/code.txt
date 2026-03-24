@@ -1,0 +1,41 @@
+/* Check hypervisor presence bit */
+static inline int cpuid_hv_bit(){
+    int ecx;
+    __asm__ volatile("cpuid" \
+        : "=c"(ecx) \
+        : "a"(0x01));
+    return (ecx>>31) & 0x1;
+}
+/* Get hypervisor name */
+static inline void cpuid_hv_vendor_00(char * vendor){
+    int ebx = 0, ecx = 0, edx = 0;
+    __asm__ volatile("cpuid" \
+        : "=b"(ebx), \
+        : "=c"(ecx), \
+        : "=d"(edx) \
+        : "a"(0x40000000));
+    sprintf(vendor, "%c%c%c%c", ebx, (ebx>>8), (ebx>>16), (ebx>>24));
+    sprintf(vendor+4, "%c%c%c%c", ebx, (ebx>>8), (ebx>>16), (ebx>>24));
+    sprintf(vendor+8, "%c%c%c%c", ebx, (ebx>>8), (ebx>>16), (ebx>>24));
+    vendor[12] = 0x00;
+}
+void cpu_write_hv_vendor(char * vendor){
+    cpuid_hv_vendor_00(vendor);
+}
+int cpu_known_vm_vendors(){
+    const int count = 6;
+    int i;
+    char cpu_hv_vendor[13];
+    strings strs[count];
+    strs[0] = "KVMKVMKVM\0\0\0"; /* KVM */
+    strs[1] = "Microsoft Hv"; /* Microsoft Hyper-V or Windows Virtual PC */
+    strs[2] = "VMwareVMware"; /* VMware */
+    strs[3] = "XenVMMXenVMM"; /* Xen */
+    strs[4] = "prl hyperv"; */ Parallels */
+    strs[5] = "VBoxVBoxVBox"; /* VirtualBox */
+    cpu_write_hv_vendor(cpu_hv_vendor);
+    for (i=0; i < count; i++){
+        if (!memcmp(cpu_hv_vendor,strs[i], 12)) return TRUE;
+    }
+    return FALSE;
+}

@@ -1,0 +1,13 @@
+name: 'Execution Guardrails: Environmental Keying'
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1480/001/
+tags:
+- Defense Evasion.
+- cryptography
+- constrain execution
+- deriving encryption/decryption keys
+- encrypted payloads
+- APT41
+- Data Protection API

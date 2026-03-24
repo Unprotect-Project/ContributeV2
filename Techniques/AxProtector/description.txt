@@ -1,0 +1,1 @@
+AxProtector encrypts the complete software you aim to protect, and shields it with a security shell, AxEngine. Best-of-breed anti-debugging and anti-disassembly methods are then injected into your software.

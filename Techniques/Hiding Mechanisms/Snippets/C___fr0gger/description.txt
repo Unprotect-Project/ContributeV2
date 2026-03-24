@@ -1,0 +1,1 @@
+The code uses the Windows API to open a registry key and create a new value within that key. The value is set to a binary data type, which could be used to store the malware itself. This code would need to be compiled and executed on a system to hide the malware in the registry.

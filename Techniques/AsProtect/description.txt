@@ -1,0 +1,5 @@
+ASProtect is a multifunctional EXE packing tool designed for software developers to protect 32-bit applications with in-built application copy protection system.
+
+It includes software compression, provides protection methods and tools for software from unauthorized copying, analysis, disassemblers and debuggers.
+
+ASProtect 32 also provides enhanced work with registration keys and the ability to create a single application that can change its functionality or expiration, depending on the entered particular key.

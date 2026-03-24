@@ -1,0 +1,13 @@
+name: INT 0x2D
+categories:
+- Anti-Debugging
+resources:
+- https://www.autosectools.com/anti-debugging-with-exceptions.pdf
+- https://anti-debug.checkpoint.com/techniques/assembly.html#int2d
+tags:
+- int2d
+featured_apis:
+- IsDebuggerPresent
+- AddVectoredExceptionHandler
+contributors:
+- fr0gger

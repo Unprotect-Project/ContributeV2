@@ -1,0 +1,5 @@
+Atom Bombing is a technique that utilizes Windows Atom Tables, which provide a global storage mechanism for strings, to inject malicious code into a target process. 
+
+The technique involves storing a shellcode in an Atom Table, then using the `NtQueueApcThread` function to force the targeted process to access the specific Atom, causing the injection to occur. To bypass Data Execution Prevention (DEP), the technique also employs Return Oriented Programming (ROP) chains. 
+
+Atom Bombing is a form of process injection that abuses legitimate Windows functions to store and execute malicious code in a target process.

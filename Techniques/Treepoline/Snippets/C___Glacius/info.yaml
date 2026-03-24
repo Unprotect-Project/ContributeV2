@@ -1,0 +1,4 @@
+language: C++
+contributors: Glacius
+associated_technique: Treepoline
+target_operating_system: windows

@@ -1,0 +1,9 @@
+Malware often checks for artifacts left by virtualization platforms to determine if it is running inside a virtual environment. Detecting such artifacts allows the malware to adapt its behavior, delay execution, or avoid exposing malicious functionality during analysis.
+
+- QEMU: QEMU registers artifacts in the Windows registry. For example, the key `HARDWARE\DEVICEMAP\Scsi\Scsi Port 0\Scsi Bus 0\Target Id 0\Logical Unit Id 0` contains the value `Identifier` with data `QEMU`. Another check is the key `HARDWARE\Description\System` with the value `SystemBiosVersion` and data `QEMU`.
+
+- VirtualBox: The VirtualBox Guest Additions leave multiple registry artifacts. Searching the registry for the string `VBOX` often reveals keys that expose the presence of VirtualBox.
+
+- VMware (Registry & Files): VMware installs tools in `C:\Program Files\VMware\VMware Tools`, and related registry entries may also contain information about the virtual hard drive, network adapters, or virtual mouse. Searching the registry for `VMware` can reveal these indicators.
+
+- VMware (Memory): VMware also leaves artifacts in memory. Critical processor structures may be moved or altered inside a VM, leaving recognizable footprints. Malware can scan physical memory for strings such as `VMware` to confirm that it is running in a virtualized environment.

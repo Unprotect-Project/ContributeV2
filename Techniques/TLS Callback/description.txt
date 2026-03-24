@@ -1,0 +1,5 @@
+TLS (Thread Local Storage) callbacks are a mechanism in Windows that allows a program to define a function that will be called when a thread is created. These callbacks can be used to perform various tasks, such as initializing thread-specific data or modifying the behavior of the thread.
+
+As an anti-debugging technique, a program can use a TLS callback to execute code before the main entry point of the program, which is defined in the PE (Portable Executable) header. This allows the program to run secretly in a debugger, as the debugger will typically start at the main entry point and may not be aware of the TLS callback.
+
+The program can use the TLS callback to detect whether it is being debugged, and if it is, it can terminate the process or take other actions to evade debugging. This technique can be used to make it more difficult for a debugger to attach to the process and to hinder reverse engineering efforts.

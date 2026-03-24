@@ -1,0 +1,3 @@
+hXOR Packer is a PE (Portable Executable) packer with Huffman Compression and Xor encryption.
+
+The unpacker will decompress and decrypt the packed PE and execute it directly from memory without needing any hard disk space to execute.

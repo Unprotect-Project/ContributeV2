@@ -1,0 +1,9 @@
+A homograph attack is a type of phishing attack that uses homoglyphs (characters that look similar to other characters) to create domain names or URLs that appear to be legitimate, but are actually controlled by an attacker. Homograph attacks take advantage of the fact that many languages have characters that are visually similar to characters used in other languages.
+
+For example, the letter "a" in the Latin alphabet and the character "а" in the Cyrillic alphabet are visually similar. An attacker can register a domain name using the Cyrillic "а" and create a website that looks like a legitimate website, but is actually controlled by the attacker.
+
+The attack works by exploiting the way domain names are encoded in Punycode. Punycode is a way of representing Unicode characters with the limited character subset of ASCII used for Internet host names. This allows for domain names containing non-Latin characters, such as Chinese or Arabic, to be represented in an ASCII format that can be understood by systems that only support ASCII characters.
+
+This means that an attacker can register a domain name that uses characters from different languages that look similar to characters from the Latin alphabet, like "а" instead of "a" and create a website that looks almost identical to a legitimate website.
+
+These attacks are very similar to typosquatting. Browser vendors have implemented features to help protect users from homograph attacks by displaying the Punycode version of domain names containing non-Latin characters.

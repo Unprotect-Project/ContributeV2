@@ -1,0 +1,40 @@
+import ctypes
+import psutil
+import sys
+
+def is_av_present():
+    av_signatures = [
+        "avghookx.dll", "avghooka.dll",  # AVG
+        "snxhk.dll", "sf2.dll",  # Avast
+        "sbiedll.dll",  # Sandboxie
+        "dbghelp.dll",  # WindBG, WINE
+        "api_log.dll", "dir_watch.dll",  # iDefense Lab
+        "pstorec.dll",  # SunBelt Sandbox
+        "vmcheck.dll",  # Virtual PC
+        "wpespy.dll",  # WPE Pro
+        "cmdvrt64.dll", "cmdvrt32.dll",  # Comodo Container
+        "sxin.dll",  # 360 SOFTWARE
+        "printfhelp.dll",  # Unknown Sandbox
+        "ekrn.exe",  # ESET
+        "avguard.exe", "avscan.exe",  # Avira
+        "ccSvcHst.exe", "norton.exe",  # Norton
+        "mcshield.exe", "mcupdate.exe",  # McAfee
+        "fsav.exe", "fsgk32.exe",  # F-Secure
+        "kav.exe", "kavsvc.exe",  # Kaspersky
+        "msmpeng.exe", "mpcmdrun.exe"  # Windows Defender
+    ]
+
+    for proc in psutil.process_iter(attrs=['pid', 'name']):
+        try:
+            if any(av.lower() in proc.info['name'].lower() for av in av_signatures):
+                print(f"Detected AV process: {proc.info['name']} (PID: {proc.info['pid']})")
+                return True
+        except (psutil.NoSuchProcess, psutil.AccessDenied, psutil.ZombieProcess):
+            pass
+    return False
+
+if is_av_present():
+    print("Antivirus detected! Exiting process to avoid detection.")
+    sys.exit(0)
+
+print("No antivirus detected. Proceeding with execution.")

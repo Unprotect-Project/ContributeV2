@@ -1,0 +1,3 @@
+Avoiding Memory Scanners is a technique that enables malware creators to bypass the detection of endpoint security software and reverse engineers by using memory scanning to locate shellcode and malware in Windows memory. 
+
+The technique involves understanding how memory scanners work and implementing a stable evasion method for each of the memory scanning tools, such as PE-sieve, MalMemDetect, Moneta, Volatility malfind, and YARA. The goal of this technique is to hide the presence of malware from these tools and maintain its malicious functionality.

@@ -1,0 +1,5 @@
+name: Detecting Virtual Environment Files
+categories:
+- Sandbox Evasion
+resources:
+- https://securingtomorrow.mcafee.com/mcafee-labs/stopping-malware-fake-virtual-machine/

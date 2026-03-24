@@ -1,0 +1,1 @@
+VMwareService.exe runs the VMware Tools Service as a child of services.exe. It can be identified by listing services.

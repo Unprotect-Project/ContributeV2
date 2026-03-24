@@ -1,0 +1,3 @@
+In many sandboxes, due to virtualization constraints, the number of CPUs may be limited to one. However, in the real world, all x86 CPUs have been sold with multiple cores or at least hyperthreading for over a decade. 
+
+As a result, it is sometimes possible to detect virtualization or sandboxing by examining the number of CPUs on the system. This information can be obtained without making API calls, simply by checking the PEB, which holds this information. The presence of hyperthreading can also be detected by directly asking the CPU using the CPUID instruction.

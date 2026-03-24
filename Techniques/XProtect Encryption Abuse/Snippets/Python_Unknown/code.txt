@@ -1,0 +1,12 @@
+def macos_xprotect_string_decryption(encrypted: bytes, encr_key: int) -> str:
+    """
+    Author: @Check Point Research
+    Decrypts MacOS Xprotect binaries & Banshee Stealer encrypted strings.
+    """
+    decrypted = "".join(
+        chr(
+            (encr_key >> ((i * 8) & 0x38) & 0xFF) ^ encrypted[i]
+        )
+        for i in range(len(encrypted))
+    )
+    return decrypted.partition("\\x00")[0]

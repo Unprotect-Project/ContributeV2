@@ -1,0 +1,19 @@
+name: NOP Sled
+categories:
+- Anti-Disassembly
+resources:
+- https://silviocesare.wordpress.com/2009/05/13/removing-semantic-nops-from-malware/
+tags:
+- NOP sled
+- NOP ramp
+- NOP padding
+- NOP sequence
+- NOP-based execution
+- Instruction padding
+- Code slide
+- Buffer overflow
+- Return-oriented programming
+- Exploit mitigation
+- Shellcode execution
+featured_apis:
+- VirtualAlloc

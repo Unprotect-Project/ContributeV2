@@ -1,0 +1,17 @@
+The "Control Signal Handler Callback" technique involves injecting malicious code into a process by using a callback function for control signal handlers. When a control signal, such as Ctrl+C, is received by a process, the system creates a new thread to execute a function to handle the signal. This thread is typically created by the legitimate process "csrss.exe" in the system, making it more difficult to detect the injected code.
+
+To successfully implement this technique, it is necessary to bypass certain Windows protections such as Pointer Encoding and Control Flow Guard. Pointer encoding is used to protect against pointer corruption, and the technique involves reproducing the encoding to appear legitimate. Control Flow Guard is a security mechanism that prevents memory corruption, such as buffer overflow, and the technique uses the API `SetProcessValidCallTargets` to validate the call target. By triggering a control signal, the injected code is executed.
+
+Here is a general outline of the process of injecting code using control signal handlers and callback functions:
+
+1. Determine the address of the callback function for control signals in the target process.
+
+2. Create a trampoline function that will be used to execute the original code from the callback function after the injection has been applied.
+
+3. Calculate the relative address of the trampoline function and store it in a jump instruction.
+
+4. Overwrite the callback function with the jump instruction and the address of the injected code.
+
+5. Modify the injected code to transfer control back to the trampoline function after executing the desired processing.
+
+6. Trigger a control signal, such as Ctrl+C, in the target process to execute the injected code.

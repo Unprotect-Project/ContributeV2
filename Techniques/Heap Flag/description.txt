@@ -1,0 +1,16 @@
+`ProcessHeap` is located at `0x18` in the PEB structure. This first heap contains a header with fields used to tell the kernel whether the heap was created within a debugger. The heap contains two fields which are affected by the presence of a debugger.  These fields are `Flags` and `ForceFlags`.
+
+The values of `Flags and ForceFlags` are normally set to `HEAP_GROWABLE` and `0`, respectively.
+
+On 64-bit Windows XP, and Windows Vista and higher, if a debugger is present, the Flags field is set to a combination of these flags:
+
+- `HEAP_GROWABLE (2)`
+- `HEAP_TAIL_CHECKING_ENABLED (0x20)`
+- `HEAP_FREE_CHECKING_ENABLED (0x40)`
+- `HEAP_VALIDATE_PARAMETERS_ENABLED (0x40000000)`
+
+When a debugger is present, the ForceFlags field is set to a combination of these flags:
+
+- `HEAP_TAIL_CHECKING_ENABLED (0x20)`
+- `HEAP_FREE_CHECKING_ENABLED (0x40)`
+- `HEAP_VALIDATE_PARAMETERS_ENABLED (0x40000000)`

@@ -1,0 +1,4 @@
+language: bash
+contributors: Unprotect
+associated_technique: Deleting Troubleshoot Information and Core Dumps
+target_operating_system: linux

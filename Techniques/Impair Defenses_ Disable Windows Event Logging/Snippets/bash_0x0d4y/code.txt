@@ -1,0 +1,12 @@
+# Disable Windows Event Log through service
+sc config eventlog start=disabled
+# Disable each Windows Event Log Category through auditpool
+auditpol /set /category:"Account Logon" /success:disable /failure:disable
+auditpol /set /category:"Detailed Tracking" /success:disable /failure:disable
+# Clear and Disable all Categories
+auditpol /clear /y
+auditpol /remove /allusers
+# Disable Windows Event Log Category through wevtutil
+wevtutil sl Security /e:false
+# Disable Windows Event Log thourgh Regitry Log Channels
+reg add "HKEY_LOCAL_MACHINE\Microsoft\Windows\CurrentVersion\WINEVT\Channels\<anychannel>" /v Enabled /t REG_DWORD /d 0 /f

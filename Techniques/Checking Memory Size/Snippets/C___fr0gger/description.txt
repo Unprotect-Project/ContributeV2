@@ -1,0 +1,1 @@
+This code uses the MEMORYSTATUSEX structure and the GlobalMemoryStatusEx function from the Windows API to retrieve information about the system's memory status, including the total physical memory and the available physical memory.

@@ -1,0 +1,7 @@
+Anti-UPX Unpacking is the technique to prevent malware from being unpacked by tools like UPX. UPX packed binary indicates that the section names starting with UPX followed by a number (UPX0 and UPX1) and the string “UPX!” at the end of the PE header. This UPX reference structure is located at the end of the PE header and the header includes checksums, packed and unpacked sizes, and compression details.
+
+There are some methods to bypass unpacking using "upx -d" since a long time ago.
+
+One easy way is to change section names to different strings, this is the example. The normal section names packed by UPX are "UPX0", "UPX1" .. and ".rsrc". The unpacking command "upx -d" raises this kind of exception of "CantUnpackException: file is possibly modified/hacked/protected; take care!" in this case and results in preventing from unpacking.
+
+Another method is zero-padding against any size or checksum infos in UPX reference structure. The "upx -d" raises this kind of exception of "CantUnpackException: header corrupted" at this time and results in preventing from unpacking.

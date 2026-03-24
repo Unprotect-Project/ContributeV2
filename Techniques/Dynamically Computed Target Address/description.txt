@@ -1,0 +1,20 @@
+Dynamically computed target addresses is an anti-disassembling technique that involves using dynamically computed addresses as the targets of branch instructions in a program. This can make it difficult for a disassembler to accurately reconstruct the original instructions of the program, as the disassembler will not be able to determine the correct target addresses for the branch instructions without actually executing the program.
+
+
+For example, suppose a program contains the following instructions:
+
+```assembly
+mov eax, 0x12345678
+call eax
+```
+
+In this case, the call instruction uses a dynamically computed target address, as the value of the eax register is not known until the program is actually executed. This means that a disassembler will not be able to determine the correct target address for the call instruction without executing the program. If the disassembler tries to disassemble the program without executing it, it might generate incorrect disassembly output, like this:
+
+```assembly
+0x00000000: mov eax, 0x12345678
+0x00000004: call eax
+```
+
+In this case, the disassembler has assumed that the target address of the call instruction is the value stored in the eax register at the time the disassembler was run, but this is not necessarily the correct target address. The actual target address could be different if the program is executed, and the disassembler will not be able to determine the correct target address without executing the program.
+
+This technique can be used by malware authors and other attackers to make it more difficult for analysts to disassemble and understand their programs. It can also make it more difficult for other tools, such as debuggers, to accurately interpret the program's behavior. This can be especially effective when the snapshot of the program is taken at a point during its execution when the resolution of the dynamically computed target address has not yet taken place in the code, as this can make it even more difficult for a disassembler to determine the correct target addresses.

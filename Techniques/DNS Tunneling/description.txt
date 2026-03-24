@@ -1,0 +1,5 @@
+DNS tunneling is a technique that uses the Domain Name System (DNS) protocol to transfer data in an encrypted and covert manner. It involves encoding the data of other programs or protocols in DNS queries and responses, and using DNS servers as a means of communication.
+
+To carry out DNS tunneling, the attacker typically needs access to a compromised system with external network connectivity and an internal DNS server with network access. The attacker also needs to control a domain and a server that can act as an authoritative DNS server in order to execute the server-side tunneling and data payload programs.
+
+DNS tunneling can be used for various purposes, such as to control remote servers and applications, transfer data, or bypass firewall restrictions. It can be difficult to detect, as the DNS protocol is commonly used for legitimate purposes and is typically not heavily scrutinized by security systems.

@@ -1,0 +1,1 @@
+This snippet has been originally published here: http://www.openrce.org/reference_library/anti_reversing_view/8/OllyDbg%20Filename%20Format%20String/

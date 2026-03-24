@@ -1,0 +1,7 @@
+Code transposition is a technique used by malware authors to evade detection and analysis by rearranging the instructions of a piece of code without changing its behavior. This technique is used to make the code more difficult to read and understand for disassemblers and reverse engineers, as well as to hide the true intent of the code.
+
+There are two main methods of implementing code transposition. The first method involves the use of a random number generator to randomly rearrange the instructions of the code. This makes it difficult for analysts to determine the original order of the instructions, and can make the code difficult to follow and understand.
+
+The second method of code transposition involves the use of a mathematical function to rearrange the instructions in a predictable and consistent manner. This allows the code to be easily transposed back to its original form if necessary, but still makes it difficult for analysts to follow and understand the code.
+
+Overall, code transposition is a technique used by malware authors to make their code more difficult to analyze and understand, and to evade detection by security tools and analysts.

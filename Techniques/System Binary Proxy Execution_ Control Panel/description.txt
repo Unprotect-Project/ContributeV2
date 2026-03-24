@@ -1,0 +1,7 @@
+Adversaries may abuse control.exe to proxy execution of malicious payloads. The Windows Control Panel process binary (control.exe) handles execution of Control Panel items, which are utilities that allow users to view and adjust computer settings.
+
+Control Panel items are registered executable (.exe) or Control Panel (.cpl) files, the latter are actually renamed dynamic-link library (.dll) files that export a CPlApplet function. For ease of use, Control Panel items typically include graphical menus available to users after being registered and loaded into the Control Panel. Control Panel items can be executed directly from the command line, programmatically via an application programming interface (API) call, or by simply double-clicking the file.
+
+Malicious Control Panel items can be delivered via Phishing campaigns or executed as part of multi-stage malware. Control Panel items, specifically CPL files, may also bypass application and/or file extension allow lists.
+
+Adversaries may also rename malicious DLL files (.dll) with Control Panel file extensions (.cpl) and register them to HKCU\Software\Microsoft\Windows\CurrentVersion\Control Panel\Cpls. Even when these registered DLLs do not comply with the CPL file specification and do not export CPlApplet functions, they are loaded and executed through its DllEntryPoint when Control Panel is executed. CPL files not exporting CPlApplet are not directly executable.

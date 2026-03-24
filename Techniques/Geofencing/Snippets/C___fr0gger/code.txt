@@ -1,0 +1,43 @@
+#include <Windows.h>
+#include <winreg.h>
+
+#define LANG_KEY "SYSTEM\\CurrentControlSet\\Control\\Nls\\Language"
+#define RUSSIAN_LCID 1049
+
+// Check if the specified LCID is installed on the system
+bool IsLanguageInstalled(LCID lcid)
+{
+  HKEY hKey;
+  if (RegOpenKeyEx(HKEY_LOCAL_MACHINE, LANG_KEY, 0, KEY_READ, &hKey) == ERROR_SUCCESS)
+  {
+    DWORD dwIndex = 0;
+    WCHAR szValueName[32];
+    DWORD dwValueNameLen = sizeof(szValueName);
+    while (RegEnumValue(hKey, dwIndex++, szValueName, &dwValueNameLen, NULL, NULL, NULL, NULL) == ERROR_SUCCESS)
+    {
+      LCID lcidValue = _wtoi(szValueName);
+      if (lcidValue == lcid)
+      {
+        RegCloseKey(hKey);
+        return true;
+      }
+    }
+    RegCloseKey(hKey);
+  }
+  return false;
+}
+
+int main()
+{
+  if (IsLanguageInstalled(RUSSIAN_LCID))
+  {
+    // Russian language is installed, do not run malware
+    return 0;
+  }
+  else
+  {
+    // Russian language is not installed, run malware
+    // ...
+  }
+  return 0;
+}

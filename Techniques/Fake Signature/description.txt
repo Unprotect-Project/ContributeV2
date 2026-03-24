@@ -1,0 +1,1 @@
+Every exe file contain metadata that allow users to trust the third party that distribute the program. Malware are able to usurp the metadata in order to fool the user but also the security tools.

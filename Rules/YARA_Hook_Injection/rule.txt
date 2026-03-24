@@ -1,0 +1,13 @@
+rule HookInjection {
+  condition:
+    (
+      // SetWindowsHookEx is often used to install hooks
+      (uint32(0) == 0x00EC8B55 and (pe.exports("SetWindowsHookExA") or pe.exports("SetWindowsHookExW")))
+      
+      // UnhookWindowsHookEx is often used to remove hooks
+      or (uint32(0) == 0x00EC8B55 and (pe.exports("UnhookWindowsHookEx")))
+      
+      // A hook function often calls CallNextHookEx
+      or (uint32(0) == 0x00EC8B55 and (pe.exports("CallNextHookEx")))
+    )
+}

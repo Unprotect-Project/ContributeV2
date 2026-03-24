@@ -1,0 +1,5 @@
+C2 via FTP is a technique that utilizes the File Transfer Protocol (FTP) to establish command and control communication between an attacker and victim systems. It involves sending commands and receiving responses within FTP sessions, effectively using FTP as a conduit for covert communication.
+
+To implement C2 via FTP, an attacker needs control over an FTP server, and must establish a connection to a compromised system that has access to an external network. The victim’s system must be capable of initiating FTP sessions with the attacker's server. Additionally, the attacker could employ various means of obfuscation to make the traffic appear innocuous and blend in with legitimate FTP traffic.
+
+C2 via FTP can serve diverse objectives, such as remotely executing commands, managing malware, or orchestrating multistage attacks. Detecting C2 via FTP can be challenging, as FTP is a widely-used protocol for legitimate file transfers, and the malicious traffic may not raise alarms in a network’s security monitoring systems. Moreover, if FTPS (FTP Secure) is used, the data is encrypted, adding an additional layer of complexity to detection.

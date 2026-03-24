@@ -1,0 +1,1 @@
+In this example, a new div element is created and inserted into the webpage using JavaScript. The div contains a link to a malicious website and an image from that website, which would be displayed as an ad on the page. Of course, in a real-world scenario, the code would be more complex and obfuscated to avoid detection.

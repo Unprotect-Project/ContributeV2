@@ -1,0 +1,57 @@
+rule VBox_Detection
+{
+	meta:
+		Author = "Thomas Roccia - @fr0gger_ - Unprotect Project"
+		Description = "Checks for VBOX Registry Key"
+	strings:
+		$desc1 = "HARDWARE\\Description\\System" nocase wide ascii
+		$desc2 = "SystemBiosVersion" nocase wide ascii
+		$desc3 = "VideoBiosVersion" nocase wide ascii
+
+		$data1 = "VBOX" nocase wide ascii
+		$data2 = "VIRTUALBOX" nocase wide ascii
+		
+		$dev1 = "HARDWARE\\DEVICEMAP\\Scsi\\Scsi Port 0\\Scsi Bus 0\\Target Id 0\\Logical Unit Id 0" nocase wide ascii
+		$dev2 = "Identifier" nocase wide ascii
+		$dev3 = "VBOX" nocase wide ascii
+
+		$soft1 = "SOFTWARE\\Oracle\\VirtualBox Guest Additions"
+		$soft2 = "HARDWARE\\ACPI\\DSDT\\VBOX__"
+		$soft3 = "HARDWARE\\ACPI\\FADT\\VBOX__"
+		$soft4 = "HARDWARE\\ACPI\\RSDT\\VBOX__"
+		$soft5 = "SYSTEM\\ControlSet001\\Services\\VBoxGuest"
+		$soft6 = "SYSTEM\\ControlSet001\\Services\\VBoxService"
+		$soft7 = "SYSTEM\\ControlSet001\\Services\\VBoxMouse"
+		$soft8 = "SYSTEM\\ControlSet001\\Services\\VBoxVideo"
+
+		$virtualbox1 = "VBoxHook.dll" nocase
+	        $virtualbox2 = "VBoxService" nocase
+        	$virtualbox3 = "VBoxTray" nocase
+        	$virtualbox4 = "VBoxMouse" nocase
+        	$virtualbox5 = "VBoxGuest" nocase
+        	$virtualbox6 = "VBoxSF" nocase
+        	$virtualbox7 = "VBoxGuestAdditions" nocase
+        	$virtualbox8 = "VBOX HARDDISK"  nocase
+        	$virtualbox9 = "VBoxVideo" nocase
+		$virtualbox10 = "vboxhook" nocase
+		$virtualbox11 = "vboxmrxnp" nocase
+		$virtualbox12 = "vboxogl" nocase
+		$virtualbox13 = "vboxoglarrayspu" nocase
+		$virtualbox14 = "vboxoglcrutil"
+		$virtualbox15 = "vboxoglerrorspu" nocase
+		$virtualbox16 = "vboxoglfeedbackspu" nocase
+		$virtualbox17 = "vboxoglpackspu" nocase
+		$virtualbox18 = "vboxoglpassthroughspu" nocase
+		$virtualbox19 = "vboxcontrol" nocase
+
+        	// VirtualBox Mac Address
+        	$virtualbox_mac_1a = "08-00-27"
+        	$virtualbox_mac_1b = "08:00:27"
+        	$virtualbox_mac_1c = "080027"	
+	condition:
+		any of ($desc*) and 
+		1 of ($data*) or 
+		any of ($dev*) or 
+		any of ($soft*) or
+		any of ($virtualbox*)
+}

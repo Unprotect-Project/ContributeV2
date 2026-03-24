@@ -1,0 +1,1 @@
+Original source code: https://www.ired.team/offensive-security/defense-evasion/disabling-windows-event-logs-by-suspending-eventlog-service-threads

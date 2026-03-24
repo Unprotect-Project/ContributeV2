@@ -1,0 +1,13 @@
+Online sandboxes are widely used for malware analysis. To evade detection, many malware families implement checks to identify if they are running in such environments. Below are examples of detection techniques for Any.Run and Tria.ge.
+
+### Detecting Any.Run
+
+- Any.Run uses a fake root certificate to spy on sandbox traffic. System information can be obtained by querying the root certificate.
+
+- The QEMU Agent is modified and used to monitor applications in the virtual machine, allowing API hooking and process monitoring. If a process such as srvpost.exe is running and the libraries winanr.dll or winsanr.dll are loaded, this indicates the Any.Run agent.
+
+- Any.Run applies time restrictions depending on the subscription package. For example, the Searcher package allows 5 minutes of analysis (extendable to 10 minutes in interactive mode). The agent’s sechost.dll manages and transmits these timing metrics. If this thread is suspended, Any.Run stops counting time, and the analysis continues until timeout.
+
+### Detecting Tria.ge
+
+Tria.ge creates a default wallpaper file in the environment. Malware can detect the sandbox by checking for this artifact. If the file exists, the sample is most likely running inside the Tria.ge sandbox.

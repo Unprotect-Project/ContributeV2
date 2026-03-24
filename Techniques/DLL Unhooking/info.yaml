@@ -1,0 +1,8 @@
+name: DLL Unhooking
+categories:
+- Antivirus/EDR Evasion
+resources:
+- https://github.com/optiv/Freeze
+- https://www.ired.team/offensive-security/defense-evasion/how-to-unhook-a-dll-using-c++
+contributors:
+- Dreamkinn

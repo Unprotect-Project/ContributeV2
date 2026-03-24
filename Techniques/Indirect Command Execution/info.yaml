@@ -1,0 +1,10 @@
+name: Indirect Command Execution
+categories:
+- Defense Evasion [Mitre]
+resources:
+- https://attack.mitre.org/techniques/T1202/
+tags:
+- Defense Evasion
+- Command execution concealment
+- perform arbitrary execution
+- Exploit CLIs

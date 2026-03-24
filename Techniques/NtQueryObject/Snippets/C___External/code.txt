@@ -1,0 +1,154 @@
+/**
+Anti-Debugging in NtQueryObject - ObjectAllTypesInformation
+Copyright (C) 2018 soxfmr@foxmail.com
+
+This program is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+This program is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with this program.  If not, see <https://www.gnu.org/licenses/>.
+*/
+#include <tchar.h>
+#include <Windows.h>
+
+#define DEBUG_OBJECT_NAME L"DebugObject"
+
+typedef struct _UNICODE_STRING {
+	USHORT Length;
+	USHORT MaximumLength;
+	PWSTR Buffer;
+} UNICODE_STRING;
+
+typedef enum _OBJECT_INFORMATION_CLASS {
+    ObjectBasicInformation = 0,
+    ObjectNameInformation = 1,
+    ObjectTypeInformation = 2,
+    ObjectAllTypesInformation = 3,
+    ObjectHandleInformation = 4
+} OBJECT_INFORMATION_CLASS;
+
+
+/**
+* The following structure contains partial members of the entire data structure
+* As the public documentation shown, the TotalNumberOfObjects should follows by
+* TotalNumberOfHandles instead of in reverseing order (Represent in code snippet of book <<逆向工程核心原理>>)
+* For the completely structure information: https://doxygen.reactos.org/d6/d07/struct__OBJECT__TYPE__INFORMATION.html
+*/
+typedef struct _OBJECT_TYPE_INFORMATION {
+	UNICODE_STRING TypeName;
+	ULONG TotalNumberOfObjects;
+	ULONG TotalNumberOfHandles;
+} OBJECT_TYPE_INFORMATION, *POBJECT_TYPE_INFORMATION;
+
+typedef struct _OBJECT_ALL_TYPES_INFORMATION {
+	ULONG NumberOfObjectTypes;
+	OBJECT_TYPE_INFORMATION ObjectTypeInformation[1];
+} OBJECT_ALL_TYPES_INFORMATION, *POBJECT_ALL_TYPES_INFORMATION;
+
+typedef NTSTATUS (NTAPI *PNTQUERYOBJECT)(
+	HANDLE Handle,
+	OBJECT_INFORMATION_CLASS ObjectInformationClass,
+	PVOID ObjectInformation,
+	ULONG ObjectInformationLength,
+	PULONG ReturnLength
+);
+
+VOID WriteLog(TCHAR* lpMessage)
+{
+	HANDLE hOutput = GetStdHandle(STD_OUTPUT_HANDLE);
+	WriteConsole(hOutput, lpMessage, _tcslen(lpMessage), NULL, NULL);
+}
+
+/**
+* If you were compile the program in Debug mode, you must disable the RTC runtime check option (/RTCu)
+* Otherwise the RTC runtime function will be call at the end of this function and overwrite the return value of `eax`
+*/
+BOOL NtQueryObjectDebuggerDetect()
+{
+	ULONG i = 0;
+	BOOL bRet = FALSE;
+
+	PNTQUERYOBJECT pNtQueryObject = NULL;
+	POBJECT_TYPE_INFORMATION pObjectTypeInfo = NULL;
+	POBJECT_ALL_TYPES_INFORMATION pObjectAllTypesInfo = NULL;
+	
+	UCHAR *pNextTypeLocation = NULL;
+	UCHAR *pObjectTypeLocation = NULL;
+	
+	ULONG dwObjAllTypesLen = 0;
+	PVOID pObjectAllTypesBuffer = NULL;
+
+	pNtQueryObject = (PNTQUERYOBJECT) GetProcAddress(GetModuleHandle(L"ntdll.dll"), 
+		"NtQueryObject");
+	if (pNtQueryObject == NULL)
+	{
+		WriteLog(L"Cannot obtain the address of NtQueryObject\n");
+		return bRet;
+	}
+
+	pNtQueryObject(NULL, ObjectAllTypesInformation, &dwObjAllTypesLen, sizeof(dwObjAllTypesLen), &dwObjAllTypesLen);
+
+	pObjectAllTypesBuffer = VirtualAlloc(NULL, dwObjAllTypesLen, MEM_RESERVE | MEM_COMMIT, PAGE_READWRITE); 
+	if (0 != pNtQueryObject((HANDLE) -1, ObjectAllTypesInformation, pObjectAllTypesBuffer, dwObjAllTypesLen, NULL))
+	{
+		WriteLog(L"Cannot obtain the object of all types info\n");
+		goto release;
+	}
+
+	pObjectAllTypesInfo = (POBJECT_ALL_TYPES_INFORMATION) pObjectAllTypesBuffer;
+	pObjectTypeLocation = (UCHAR*) pObjectAllTypesInfo->ObjectTypeInformation;
+
+	for (i = 0; i < pObjectAllTypesInfo->NumberOfObjectTypes; i++)
+	{
+		pObjectTypeInfo = (POBJECT_TYPE_INFORMATION) pObjectTypeLocation;
+		if (wcscmp(DEBUG_OBJECT_NAME, pObjectTypeInfo->TypeName.Buffer) == 0)
+		{
+			bRet = pObjectTypeInfo->TotalNumberOfObjects > 0 ? TRUE : FALSE;
+			break;
+		}
+		
+		// This make me confuse a bit, but seems the Buffer is locate at the end
+		// of OBJECT_TYPE_INFORMATION object (I guess :) )
+		pObjectTypeLocation = (UCHAR*) pObjectTypeInfo->TypeName.Buffer;
+		pObjectTypeLocation += pObjectTypeInfo->TypeName.MaximumLength;
+		// Address align, 0xFFFFFFFC on x86, and 0xFFFFFFFFFFFFFFF8 for AMD64
+		pNextTypeLocation = (UCHAR*) ((ULONG) pObjectTypeLocation & -sizeof(void*));
+		// If the alignment operation reduce the address which is lesser than 
+		// the desire size of the buffer, then we should add the alignment size to it
+		if (pNextTypeLocation < pObjectTypeLocation)
+			pNextTypeLocation += sizeof(ULONG);
+
+		pObjectTypeLocation = pNextTypeLocation;
+	}
+
+release:
+	
+	if (pObjectAllTypesBuffer != NULL)
+	{
+		VirtualFree(pObjectAllTypesBuffer, 0, MEM_RELEASE);
+	}
+
+	return bRet;
+}
+
+int main()
+{
+	if (NtQueryObjectDebuggerDetect())
+	{
+		WriteLog(L"[-] Debugger Detected!\n");
+	} else 
+	{
+		WriteLog(L"[+] Pass!\n");
+	}
+	
+	system("pause");
+
+	return 0;
+}

@@ -1,0 +1,12 @@
+name: FLIRT Signatures Evasion
+categories:
+- Anti-Disassembly
+resources:
+- https://hex-rays.com/products/ida/tech/flirt/in_depth/
+- https://github.com/Maktm/FLIRTDB
+- https://www.virustotal.com/gui/file/a41ba65405a032f4450ba80882cdd01d715d9d1684f4204050566be29a6dedb0
+tags:
+- FLIRT (Fast Library Identification and Recognition Technology)
+- Signature evasion
+- Code modification
+- Legitimate functions

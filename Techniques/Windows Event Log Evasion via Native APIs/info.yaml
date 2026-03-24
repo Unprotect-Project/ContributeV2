@@ -1,0 +1,11 @@
+name: Windows Event Log Evasion via Native APIs
+categories:
+- Anti-Forensic
+resources:
+- https://www.inversecos.com/2022/03/windows-event-log-evasion-via-native.html
+tags:
+- stuxnet
+- antiforensic
+featured_apis:
+- CreateServiceA
+- GetTickCount

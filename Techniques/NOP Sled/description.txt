@@ -1,0 +1,11 @@
+In computer security, a NOP slide is a sequence of NOP (no-operation) instructions that is inserted at the beginning of a code section. When a program branches to the start of this code section, it will "slide" through the NOP instructions until it reaches the desired, final destination. This technique is commonly used in software exploits to direct program execution when the target of a branch instruction is not known precisely.
+
+For example, suppose an attacker has found a buffer overflow vulnerability in a program and wants to exploit it to execute arbitrary code. They might insert a NOP slide at the start of the buffer, followed by the code they want to execute. When the program overflows the buffer and branches to the start of the buffer, it will slide through the NOP instructions until it reaches the attacker's code, which will then be executed.
+
+The NOP slide technique can be used in conjunction with shellcode to create more effective exploits. Shellcode is a small piece of code that is used as the payload in a software exploit. It typically contains the instructions needed to perform a specific action, such as spawning a shell, creating a network connection, or injecting code into another process.
+
+To use a NOP slide with shellcode, the attacker would first insert a NOP sequence at the start of the code section they are targeting. They would then insert their shellcode after the NOP sequence, so that it is located at the final, desired destination. When the program branches to the start of the code section, it will slide through the NOP instructions until it reaches the shellcode, which will then be executed.
+
+Using a NOP slide with shellcode can help to make exploits more reliable, as it provides a "buffer" of NOP instructions that can help to align the program's execution flow with the shellcode. This can help to prevent the exploit from failing due to small variations in the branch target address. It can also make it more difficult for defenses to detect and block the exploit, as the NOP instructions can help to obscure the shellcode.
+
+NOP slides are a simple but effective technique for directing program execution in situations where the exact branch target is not known. They can also be used in conjunction with other exploit techniques, such as return-oriented programming, to create more complex and powerful exploits.

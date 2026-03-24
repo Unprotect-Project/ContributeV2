@@ -1,0 +1,12 @@
+BOOL IsDebuggerPresent_IceBp()
+{
+    __try
+    { 
+        __asm __emit 0xF1 
+    }
+    __except(1) 
+    { 
+        return FALSE; 
+    }
+    return TRUE;
+}

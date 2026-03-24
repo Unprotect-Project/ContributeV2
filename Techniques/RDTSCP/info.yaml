@@ -1,0 +1,7 @@
+name: RDTSCP
+categories:
+- Sandbox Evasion
+resources:
+- https://www.hexacorn.com/blog/2014/06/15/rdtscp-a-recooked-antire-trick/
+tags:
+- RDTSCP

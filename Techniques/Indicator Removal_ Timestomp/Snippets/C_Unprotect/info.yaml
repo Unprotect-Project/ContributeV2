@@ -1,0 +1,4 @@
+language: C
+contributors: Unprotect
+associated_technique: 'Indicator Removal: Timestomp'
+target_operating_system: windows

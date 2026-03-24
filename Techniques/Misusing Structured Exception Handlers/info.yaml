@@ -1,0 +1,11 @@
+name: Misusing Structured Exception Handlers
+categories:
+- Anti-Disassembly
+resources:
+- https://1malware1.medium.com/anti-disassembly-techniques-e012338f2ae0
+tags:
+- Structured Exception Handlers (SEH)
+- Exception handling
+- Thread Environment Block (TEB)
+- Structured Exception Handler (SEH) chain
+- FS segment register

@@ -1,0 +1,4 @@
+language: C++
+contributors: Alex Schwarz
+associated_technique: AddVectoredExceptionHandler
+target_operating_system: windows

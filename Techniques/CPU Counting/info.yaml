@@ -1,0 +1,19 @@
+name: CPU Counting
+categories:
+- Sandbox Evasion
+tags:
+- Sandbox
+- virtualization constraint
+- CPU count
+- workstations
+- servers
+- x86 CPU
+- multi-core
+- hyperthreading
+- virtualization detection
+- Windows API
+- WMI
+- registry
+- PEB
+- hyperthreading detection
+- CPUID instruction

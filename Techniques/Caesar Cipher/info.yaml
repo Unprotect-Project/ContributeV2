@@ -1,0 +1,15 @@
+name: Caesar Cipher
+categories:
+- Data Obfuscation
+resources:
+- https://blog.malwarebytes.com/threat-analysis/2013/03/obfuscation-malwares-best-friend/
+tags:
+- Caesar Cipher
+- Encoding algorithm
+- Roman Empire
+- Secret message
+- Monoalphabetic substitution cipher
+- Plaintext
+- Ciphertext
+- Shift value
+- Frequency analysis

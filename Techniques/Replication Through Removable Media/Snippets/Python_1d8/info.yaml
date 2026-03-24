@@ -1,0 +1,4 @@
+language: Python
+contributors: 1d8
+associated_technique: Replication Through Removable Media
+target_operating_system: linux

@@ -1,0 +1,1 @@
+Default invalid parameter values of Al-Khaser's Anti-Debug technique (VirtualAlloc/MEM_WRITE_WATCH). Used for checking API hooks in debuggers/sandboxes.

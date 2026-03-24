@@ -1,0 +1,1 @@
+This decryption function, authored by Check Point Research, uses a bitwise right-shift and XOR operation with a provided encryption key to decrypt MacOS XProtect binaries and similar encrypted strings, terminating at the first null character.

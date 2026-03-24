@@ -1,0 +1,10 @@
+name: Bad String Format
+categories:
+- Anti-Debugging
+resources:
+- http://www.openrce.org/reference_library/anti_reversing_view/8/OllyDbg%20Filename%20Format%20String/
+tags:
+- Bad string format
+- OllyDbg
+- Debugger evasion
+- String manipulation

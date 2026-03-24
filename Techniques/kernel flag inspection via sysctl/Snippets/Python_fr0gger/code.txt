@@ -1,0 +1,75 @@
+import ctypes
+import os
+import sys
+import platform
+
+def is_debugger_attached():
+    try:
+        libc = ctypes.CDLL('/usr/lib/libc.dylib')
+        
+        # Define function prototype for sysctl
+        libc.sysctl.argtypes = [
+            ctypes.POINTER(ctypes.c_int),
+            ctypes.c_uint,
+            ctypes.c_void_p,
+            ctypes.POINTER(ctypes.c_size_t),
+            ctypes.c_void_p,
+            ctypes.c_size_t
+        ]
+        
+        # flags
+        kinfo_proc = (ctypes.c_byte * 648)()  # Size for arm64
+        size = ctypes.c_size_t(ctypes.sizeof(kinfo_proc))
+        
+        # MIB for sysctl
+        CTL_KERN = 1
+        KERN_PROC = 14
+        KERN_PROC_PID = 1
+        
+        mib = (ctypes.c_int * 4)(CTL_KERN, KERN_PROC, KERN_PROC_PID, os.getpid())
+        
+
+        ret = libc.sysctl(mib, 4, kinfo_proc, ctypes.byref(size), None, 0)
+        print(f"sysctl return: {ret}")
+        
+        if ret == 0:
+            # The p_flag field is at offset 0x18 (24) in arm64
+            p_flag = int.from_bytes(kinfo_proc[24:28], byteorder='little')
+            print(f"Process flags: {p_flag:08x}")
+            
+            P_TRACED = 0x00000800    # Being traced (debugged)
+            P_TRACED_SYS = 0x00000200  # System trace flag
+            
+            is_traced = bool(p_flag & (P_TRACED | P_TRACED_SYS))
+            print(f"Trace flags check: {p_flag & (P_TRACED | P_TRACED_SYS):08x}")
+            return is_traced
+            
+    except Exception as e:
+        print(f"Error: {str(e)}")
+        return False
+
+# Alternative method using vmmap
+def check_debugger_vmmap():
+    try:
+        import subprocess
+        cmd = f"vmmap {os.getpid()}"
+        result = subprocess.run(cmd.split(), capture_output=True, text=True)
+        return "LLDB" in result.stdout or "debugserver" in result.stdout
+    except:
+        return False
+
+print("Starting debugger check...")
+print(f"Current PID: {os.getpid()}")
+print(f"Platform: {platform.machine()}")
+
+print("\nMethod 1: sysctl")
+if is_debugger_attached():
+    print("⚠️ Debugger detected!")
+else:
+    print("✅ No debugger attached")
+
+print("\nMethod 2: vmmap")
+if check_debugger_vmmap():
+    print("⚠️ Debugger detected!")
+else:
+    print("✅ No debugger attached")

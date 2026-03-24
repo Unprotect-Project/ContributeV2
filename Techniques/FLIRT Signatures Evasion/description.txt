@@ -1,0 +1,5 @@
+FLIRT Signature evasion is a technique used by malware to hide malicious code inside legitimate functions from known libraries. FLIRT (Fast Library Identification and Recognition Technology) is a database that contains signature patterns for identifying known functions from legitimate libraries. 
+
+Malware authors can abuse these signatures by modifying or adding specific bytes to the code, so that it appears to be a legitimate function when scanned by a FLIRT database. This can trick reverse engineering tools that rely on FLIRT signatures without performing further analysis, and make it more difficult for security analysts to identify and analyze the malware. 
+
+By using this technique, malware authors can evade detection and make their code more difficult to understand and analyze.

@@ -1,0 +1,1 @@
+To detect whether a program is running in a sandbox environment, malware can look for the presence of USB drives. Many sandboxes do not have USB ports or do not allow access to USB drives, and detecting the absence of USB drives can help identify whether the program is being run in a sandbox.

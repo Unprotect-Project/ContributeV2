@@ -1,0 +1,12 @@
+name: Obscuring Control Flow
+categories:
+- Anti-Disassembly
+resources:
+- https://www.malwinator.com/2015/11/27/anti-disassembly-techniques-used-by-malware-a-primer-part-2/
+tags:
+- Obscuring control flow
+- Anti-disassembling
+- Exception handling
+- Structure Exception Handling (SEH)
+- Control flow
+- Exception handler
