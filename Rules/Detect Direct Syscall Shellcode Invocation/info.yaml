@@ -1,0 +1,2 @@
+name: Detect Direct Syscall Shellcode Invocation
+type: YARA

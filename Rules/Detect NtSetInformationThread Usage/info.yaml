@@ -1,0 +1,2 @@
+name: Detect NtSetInformationThread Usage
+type: YARA

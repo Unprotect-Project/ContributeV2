@@ -1,0 +1,2 @@
+name: Detect Base64 En/Decoding Patterns in Golang Bins
+type: YARA

@@ -1,0 +1,2 @@
+name: Detect ScrubCrypt Obfuscated Batch
+type: YARA

@@ -1,0 +1,2 @@
+name: Detect TLSCallback Anti-Debug Trick
+type: YARA

@@ -1,0 +1,2 @@
+name: Detect AppLocker Bypass via Regsvr32
+type: SIGMA

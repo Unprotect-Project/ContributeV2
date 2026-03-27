@@ -1,0 +1,2 @@
+name: Detect QEMU Registry Artifacts
+type: YARA

@@ -1,0 +1,2 @@
+name: Detect OllyDbg Detection via FindWindow
+type: YARA

@@ -1,0 +1,2 @@
+name: Detect Encryption Artifacts
+type: YARA

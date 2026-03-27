@@ -1,0 +1,2 @@
+name: Detect DLL Execution with Spoofed Extension (Rundll32)
+type: SIGMA

@@ -1,0 +1,3 @@
+name: Detect SMTP Data Exfiltration
+type: YARA
+contributors: fr0gger

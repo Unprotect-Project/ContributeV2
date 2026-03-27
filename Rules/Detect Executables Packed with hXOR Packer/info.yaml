@@ -1,0 +1,2 @@
+name: Detect Executables Packed with hXOR Packer
+type: YARA

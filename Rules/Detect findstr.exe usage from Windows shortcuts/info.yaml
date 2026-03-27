@@ -1,0 +1,2 @@
+name: Detect findstr.exe usage from Windows shortcuts
+type: SIGMA

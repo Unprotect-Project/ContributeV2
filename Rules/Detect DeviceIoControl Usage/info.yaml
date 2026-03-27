@@ -1,0 +1,2 @@
+name: Detect DeviceIoControl Usage
+type: YARA
