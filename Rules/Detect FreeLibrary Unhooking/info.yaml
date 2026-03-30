@@ -1,2 +1,2 @@
-name: Detect FreeLibrary Unhooking
-type: CAPA
+name: "Detect FreeLibrary Unhooking"
+type: "CAPA"

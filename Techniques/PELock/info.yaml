@@ -1,5 +1,5 @@
-name: PELock
+name: "PELock"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.pelock.com/products/pelock
+    - "https://www.pelock.com/products/pelock"

@@ -1,7 +1,7 @@
-name: AsProtect
+name: "AsProtect"
 categories:
-- Packers
+    - "Packers"
 resources:
-- http://www.aspack.com/asprotect32.html
+    - "http://www.aspack.com/asprotect32.html"
 tags:
-- asprotect
+    - "asprotect"

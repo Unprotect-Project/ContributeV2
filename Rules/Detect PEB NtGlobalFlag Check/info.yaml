@@ -1,2 +1,2 @@
-name: Detect PEB NtGlobalFlag Check
-type: CAPA
+name: "Detect PEB NtGlobalFlag Check"
+type: "CAPA"

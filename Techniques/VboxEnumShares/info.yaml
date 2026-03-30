@@ -1,5 +1,5 @@
-name: VboxEnumShares
+name: "VboxEnumShares"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 contributors:
-- HoIIovv
+    - "HoIIovv"

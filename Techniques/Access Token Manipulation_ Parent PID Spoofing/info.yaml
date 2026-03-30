@@ -1,27 +1,27 @@
-name: 'Access Token Manipulation: Parent PID Spoofing'
+name: "Access Token Manipulation: Parent PID Spoofing"
 categories:
-- Process Manipulating
-- Defense Evasion [Mitre]
+    - "Process Manipulating"
+    - "Defense Evasion [Mitre]"
 resources:
-- https://github.com/hlldz/APC-PPID
-- https://attack.mitre.org/techniques/T1134/004/
+    - "https://github.com/hlldz/APC-PPID"
+    - "https://attack.mitre.org/techniques/T1134/004/"
 tags:
-- Defense Evasion
-- Privilege Escalation
-- parent process identifier (PPID)
-- evade process-monitoring defenses
-- CreateProcess API call
-- User Account Control (UAC)
-- inherited access token
+    - "Defense Evasion"
+    - "Privilege Escalation"
+    - "parent process identifier (PPID)"
+    - "evade process-monitoring defenses"
+    - "CreateProcess API call"
+    - "User Account Control (UAC)"
+    - "inherited access token"
 featured_apis:
-- VirtualAlloc
-- VirtualAllocEx
-- WriteProcessMemory
-- CreateProcessA
-- QueueUserAPC
-- ResumeThread
-- OpenProcess
-- Process32First
-- Process32Next
-- CreateToolhelp32Snapshot
-- HeapAlloc
+    - "VirtualAlloc"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "CreateProcessA"
+    - "QueueUserAPC"
+    - "ResumeThread"
+    - "OpenProcess"
+    - "Process32First"
+    - "Process32Next"
+    - "CreateToolhelp32Snapshot"
+    - "HeapAlloc"

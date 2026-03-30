@@ -1,2 +1,2 @@
-name: Detect Unhandled Exception Filters
-type: YARA
+name: "Detect Unhandled Exception Filters"
+type: "YARA"

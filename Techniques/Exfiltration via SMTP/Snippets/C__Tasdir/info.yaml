@@ -1,4 +1,4 @@
-language: C#
-contributors: Tasdir
-associated_technique: Exfiltration via SMTP
-target_operating_system: windows
+language: "C#"
+contributors: "Tasdir"
+associated_technique: "Exfiltration via SMTP"
+target_operating_system: "windows"

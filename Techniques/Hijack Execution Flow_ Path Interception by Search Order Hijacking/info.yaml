@@ -1,13 +1,13 @@
-name: 'Hijack Execution Flow: Path Interception by Search Order Hijacking'
+name: "Hijack Execution Flow: Path Interception by Search Order Hijacking"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1574/008/
+    - "https://attack.mitre.org/techniques/T1574/008/"
 tags:
-- Persistence
-- Privilege Escalation
-- Defense Evasion
-- search order hijacking
-- path interception
-- hijacking DLL loads
-- PATHEXT
+    - "Persistence"
+    - "Privilege Escalation"
+    - "Defense Evasion"
+    - "search order hijacking"
+    - "path interception"
+    - "hijacking DLL loads"
+    - "PATHEXT"

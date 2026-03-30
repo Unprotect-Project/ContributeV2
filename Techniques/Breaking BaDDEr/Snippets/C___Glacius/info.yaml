@@ -1,4 +1,4 @@
-language: C++
-contributors: Glacius
-associated_technique: Breaking BaDDEr
-target_operating_system: windows
+language: "C++"
+contributors: "Glacius"
+associated_technique: "Breaking BaDDEr"
+target_operating_system: "windows"

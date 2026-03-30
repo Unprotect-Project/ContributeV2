@@ -1,17 +1,17 @@
-name: ConsoleWindowClass
+name: "ConsoleWindowClass"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://modexp.wordpress.com/2018/09/12/process-injection-user-data/
+    - "https://modexp.wordpress.com/2018/09/12/process-injection-user-data/"
 tags:
-- Arbitrary code execution
-- Context of another process
-- SetWindowLongPtr API
-- GWLP_USERDATA parameter
-- User Data of a window
+    - "Arbitrary code execution"
+    - "Context of another process"
+    - "SetWindowLongPtr API"
+    - "GWLP_USERDATA parameter"
+    - "User Data of a window"
 featured_apis:
-- VirtualAlloc
-- VirtualAllocEx
-- WriteProcessMemory
-- OpenProcess
-- ReadProcessMemory
+    - "VirtualAlloc"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "OpenProcess"
+    - "ReadProcessMemory"

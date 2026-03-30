@@ -1,7 +1,7 @@
-name: NsPack
+name: "NsPack"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.sans.org/white-papers/33428/
+    - "https://www.sans.org/white-papers/33428/"
 tags:
-- NsPack
+    - "NsPack"

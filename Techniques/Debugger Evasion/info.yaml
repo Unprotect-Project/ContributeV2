@@ -1,15 +1,15 @@
-name: Debugger Evasion
+name: "Debugger Evasion"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1622/
+    - "https://attack.mitre.org/techniques/T1622/"
 tags:
-- Defense Evasion
-- Discovery
-- check for debugged environment
-- IsDebuggerPresent()
-- NtQueryInformationProcess()
-- BeingDebugged flag
-- Process Environment Block (PEB)
-- OutputDebugStringW()
-- debugging prevention
+    - "Defense Evasion"
+    - "Discovery"
+    - "check for debugged environment"
+    - "IsDebuggerPresent()"
+    - "NtQueryInformationProcess()"
+    - "BeingDebugged flag"
+    - "Process Environment Block (PEB)"
+    - "OutputDebugStringW()"
+    - "debugging prevention"

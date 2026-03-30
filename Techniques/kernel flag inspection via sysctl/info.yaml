@@ -1,5 +1,5 @@
-name: kernel flag inspection via sysctl
+name: "kernel flag inspection via sysctl"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://www.elastic.co/security-labs/beyond-the-wail
+    - "https://www.elastic.co/security-labs/beyond-the-wail"

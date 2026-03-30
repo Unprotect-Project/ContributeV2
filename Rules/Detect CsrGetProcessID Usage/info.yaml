@@ -1,2 +1,2 @@
-name: Detect CsrGetProcessID Usage
-type: YARA
+name: "Detect CsrGetProcessID Usage"
+type: "YARA"

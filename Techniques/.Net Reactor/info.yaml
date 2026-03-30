@@ -1,7 +1,7 @@
-name: .Net Reactor
+name: ".Net Reactor"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.eziriz.com/dotnet_reactor.htm
+    - "https://www.eziriz.com/dotnet_reactor.htm"
 contributors:
-- Jonathan Peters
+    - "Jonathan Peters"

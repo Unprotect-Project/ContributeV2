@@ -1,4 +1,4 @@
-language: Python
-contributors: Malfav.Win32
-associated_technique: Adding antivirus exception
-target_operating_system: windows
+language: "Python"
+contributors: "Malfav.Win32"
+associated_technique: "Adding antivirus exception"
+target_operating_system: "windows"

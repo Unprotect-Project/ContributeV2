@@ -1,2 +1,2 @@
-name: Detect Al-Khaser Anti-Debug Technique
-type: YARA
+name: "Detect Al-Khaser Anti-Debug Technique"
+type: "YARA"

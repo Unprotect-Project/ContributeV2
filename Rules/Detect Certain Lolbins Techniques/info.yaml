@@ -1,2 +1,2 @@
-name: Detect Certain Lolbins Techniques
-type: SIGMA
+name: "Detect Certain Lolbins Techniques"
+type: "SIGMA"

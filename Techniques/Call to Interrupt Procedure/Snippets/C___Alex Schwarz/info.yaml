@@ -1,4 +1,4 @@
-language: C++
-contributors: Alex Schwarz
-associated_technique: Call to Interrupt Procedure
-target_operating_system: windows
+language: "C++"
+contributors: "Alex Schwarz"
+associated_technique: "Call to Interrupt Procedure"
+target_operating_system: "windows"

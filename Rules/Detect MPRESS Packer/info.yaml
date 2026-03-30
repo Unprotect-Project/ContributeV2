@@ -1,2 +1,2 @@
-name: Detect MPRESS Packer
-type: YARA
+name: "Detect MPRESS Packer"
+type: "YARA"

@@ -1,2 +1,2 @@
-name: Detect File Melting via Attrib.exe
-type: SIGMA
+name: "Detect File Melting via Attrib.exe"
+type: "SIGMA"

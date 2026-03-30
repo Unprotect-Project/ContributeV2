@@ -1,2 +1,2 @@
-name: Detect NtQueryInformation Usage
-type: CAPA
+name: "Detect NtQueryInformation Usage"
+type: "CAPA"

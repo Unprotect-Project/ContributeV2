@@ -1,7 +1,7 @@
-name: GetForegroundWindow
+name: "GetForegroundWindow"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://archive.f-secure.com/weblog/archives/00002810.html
+    - "https://archive.f-secure.com/weblog/archives/00002810.html"
 tags:
-- GetForegroundWindow
+    - "GetForegroundWindow"

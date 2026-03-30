@@ -1,10 +1,10 @@
-name: Checking Memory Size
+name: "Checking Memory Size"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://www.botconf.eu/2015/sandbox-detection-for-the-masses-leak-abuse-test/
+    - "https://www.botconf.eu/2015/sandbox-detection-for-the-masses-leak-abuse-test/"
 tags:
-- memory
-- malware
-- sandbox
-- available memory size.
+    - "memory"
+    - "malware"
+    - "sandbox"
+    - "available memory size."

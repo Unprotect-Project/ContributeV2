@@ -1,14 +1,14 @@
-name: 'Masquerading: Double File Extension'
+name: "Masquerading: Double File Extension"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1036/007/
+    - "https://attack.mitre.org/techniques/T1036/007/"
 tags:
-- Defense Evasion
-- hidden file types
-- hide file types
-- secondary file extension
-- conceal malicious file types
-- user execution
-- hidden malware
-- dual-extension
+    - "Defense Evasion"
+    - "hidden file types"
+    - "hide file types"
+    - "secondary file extension"
+    - "conceal malicious file types"
+    - "user execution"
+    - "hidden malware"
+    - "dual-extension"

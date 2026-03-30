@@ -1,17 +1,17 @@
-name: 'Obfuscated Files or Information: HTML Smuggling'
+name: "Obfuscated Files or Information: HTML Smuggling"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1027/006/
+    - "https://attack.mitre.org/techniques/T1027/006/"
 tags:
-- Defense Evasion
-- bypass content filters
-- malicious HTML files
-- MIME files
-- HTML5 download attribute
-- JavaScript Blobs
-- text/plain
-- text/html
-- Data URLs
-- msSaveBlob
-- APT29
+    - "Defense Evasion"
+    - "bypass content filters"
+    - "malicious HTML files"
+    - "MIME files"
+    - "HTML5 download attribute"
+    - "JavaScript Blobs"
+    - "text/plain"
+    - "text/html"
+    - "Data URLs"
+    - "msSaveBlob"
+    - "APT29"

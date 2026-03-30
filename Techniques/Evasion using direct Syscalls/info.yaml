@@ -1,24 +1,24 @@
-name: Evasion using direct Syscalls
+name: "Evasion using direct Syscalls"
 categories:
-- Antivirus/EDR Evasion
+    - "Antivirus/EDR Evasion"
 resources:
-- https://medium.com/@merasor07/av-edr-evasion-using-direct-system-calls-user-mode-vs-kernel-mode-fad2fdfed01a
-- https://github.com/ghostpepper108/Evasion
+    - "https://medium.com/@merasor07/av-edr-evasion-using-direct-system-calls-user-mode-vs-kernel-mode-fad2fdfed01a"
+    - "https://github.com/ghostpepper108/Evasion"
 tags:
-- Kernel32.dll
-- VirtualAlloc
-- VirtualProtect
-- CreateThread
-- Call stack
-- Ntdll.dll
-- Syscall
-- NtProtectVirtualMemory
-- EDRs/AVs
-- Hook onto ntdll.dll
-- Direct syscalls
-- Assembly
-- Heap variable
+    - "Kernel32.dll"
+    - "VirtualAlloc"
+    - "VirtualProtect"
+    - "CreateThread"
+    - "Call stack"
+    - "Ntdll.dll"
+    - "Syscall"
+    - "NtProtectVirtualMemory"
+    - "EDRs/AVs"
+    - "Hook onto ntdll.dll"
+    - "Direct syscalls"
+    - "Assembly"
+    - "Heap variable"
 contributors:
-- d4rksystem
-- ghost_pepper108
-- Jonathan Peters
+    - "d4rksystem"
+    - "ghost_pepper108"
+    - "Jonathan Peters"

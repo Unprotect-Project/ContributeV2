@@ -1,19 +1,19 @@
-name: 'Impair Defenses: Impair Command History Logging'
+name: "Impair Defenses: Impair Command History Logging"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1562/003/
+    - "https://attack.mitre.org/techniques/T1562/003/"
 tags:
-- Defense Evasion
-- PSReadLine
-- ConsoleHost_history.txt
-- $env:APPDATA\Microsoft\Windows\PowerShell\PSReadLine\
-- Set-PSReadLineOption -HistorySavePath {File Path}
-- Set-PSReadlineOption -HistorySaveStyle SaveNothing
-- Network Device CLI
-- APT38
-- disable logging
-- disable historical command logging
+    - "Defense Evasion"
+    - "PSReadLine"
+    - "ConsoleHost_history.txt"
+    - "$env:APPDATA\\Microsoft\\Windows\\PowerShell\\PSReadLine\\"
+    - "Set-PSReadLineOption -HistorySavePath {File Path}"
+    - "Set-PSReadlineOption -HistorySaveStyle SaveNothing"
+    - "Network Device CLI"
+    - "APT38"
+    - "disable logging"
+    - "disable historical command logging"
 contributors:
-- DarkCoderSc
-- 1d8
+    - "DarkCoderSc"
+    - "1d8"

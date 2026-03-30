@@ -1,2 +1,2 @@
-name: Detect NET NixImports Loader 2
-type: YARA
+name: "Detect NET NixImports Loader 2"
+type: "YARA"

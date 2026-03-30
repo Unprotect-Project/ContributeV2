@@ -1,4 +1,4 @@
-language: Python
-contributors: fr0gger
-associated_technique: Custom Encoding
-target_operating_system: windows
+language: "Python"
+contributors: "fr0gger"
+associated_technique: "Custom Encoding"
+target_operating_system: "windows"

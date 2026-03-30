@@ -1,16 +1,16 @@
-name: Shellcode Injection via CreateThreadpoolWait
+name: "Shellcode Injection via CreateThreadpoolWait"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://www.ired.team/offensive-security/code-injection-process-injection/shellcode-execution-via-createthreadpoolwait
+    - "https://www.ired.team/offensive-security/code-injection-process-injection/shellcode-execution-via-createthreadpoolwait"
 tags:
-- Shellcode injection
-- Process injection
-- CreateThreadpoolWait
-- Event object
-- VirtualAlloc
-- Callback function
-- SetThreadpoolWait
-- WaitForSingleObject
+    - "Shellcode injection"
+    - "Process injection"
+    - "CreateThreadpoolWait"
+    - "Event object"
+    - "VirtualAlloc"
+    - "Callback function"
+    - "SetThreadpoolWait"
+    - "WaitForSingleObject"
 featured_apis:
-- VirtualAlloc
+    - "VirtualAlloc"

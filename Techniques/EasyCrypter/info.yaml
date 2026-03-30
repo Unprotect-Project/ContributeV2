@@ -1,10 +1,10 @@
-name: EasyCrypter
+name: "EasyCrypter"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://teletype.in/@dinerosell/EasyCrypterFAQ_RU
+    - "https://teletype.in/@dinerosell/EasyCrypterFAQ_RU"
 tags:
-- packers
-- easycrypter
+    - "packers"
+    - "easycrypter"
 contributors:
-- RussianPanda
+    - "RussianPanda"

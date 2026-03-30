@@ -1,2 +1,2 @@
-name: Detect Events Logs Wiping
-type: YARA
+name: "Detect Events Logs Wiping"
+type: "YARA"

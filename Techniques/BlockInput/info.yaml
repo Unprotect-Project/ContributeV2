@@ -1,10 +1,10 @@
-name: BlockInput
+name: "BlockInput"
 categories:
-- Others
+    - "Others"
 resources:
-- https://malware.news/t/art-of-anti-detection-4-self-defense/32182
+    - "https://malware.news/t/art-of-anti-detection-4-self-defense/32182"
 tags:
-- blockinput
-- keyboard
+    - "blockinput"
+    - "keyboard"
 contributors:
-- Serhii
+    - "Serhii"

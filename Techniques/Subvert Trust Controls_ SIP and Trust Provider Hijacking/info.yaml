@@ -1,25 +1,26 @@
-name: 'Subvert Trust Controls: SIP and Trust Provider Hijacking'
+name: "Subvert Trust Controls: SIP and Trust Provider Hijacking"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1553/003/
+    - "https://attack.mitre.org/techniques/T1553/003/"
 tags:
-- Defense Evasion
-- manipulate SIP
-- hijack SIP
-- manipulate trust provider components
-- Windows Authenticode
-- WinVerifyTrust
-- signature validation
-- Subject Interface Packages (SIPs)
-- globally unique identifiers (GUIDs)
-- subvert trust controls
-- bypass security policies
-- Dll Registry value
-- FuncName Registry value
-- CryptSIPDllGetSignedDataMsg function
-- HKLM\SOFTWARE[\WOW6432Node]Microsoft\Cryptography\OID\EncodingType 0\CryptSIPDllGetSignedDataMsg{SIP_GUID}
-- HKLM\SOFTWARE[WOW6432Node]Microsoft\Cryptography\OID\EncodingType 0\CryptSIPDllVerifyIndirectData{SIP_GUID}
-- HKLM\SOFTWARE[WOW6432Node]Microsoft\Cryptography\Providers\Trust\FinalPolicy{trust
-  provider GUID}
-- enable persistent code execution
+    - "Defense Evasion"
+    - "manipulate SIP"
+    - "hijack SIP"
+    - "manipulate trust provider components"
+    - "Windows Authenticode"
+    - "WinVerifyTrust"
+    - "signature validation"
+    - "Subject Interface Packages (SIPs)"
+    - "globally unique identifiers (GUIDs)"
+    - "subvert trust controls"
+    - "bypass security policies"
+    - "Dll Registry value"
+    - "FuncName Registry value"
+    - "CryptSIPDllGetSignedDataMsg function"
+    - "HKLM\\SOFTWARE[\\WOW6432Node]Microsoft\\Cryptography\\OID\\EncodingType 0\\\
+        CryptSIPDllGetSignedDataMsg{SIP_GUID}"
+    - "HKLM\\SOFTWARE[WOW6432Node]Microsoft\\Cryptography\\OID\\EncodingType 0\\CryptSIPDllVerifyIndirectData{SIP_GUID}"
+    - "HKLM\\SOFTWARE[WOW6432Node]Microsoft\\Cryptography\\Providers\\Trust\\FinalPolicy{trust\
+        \ provider GUID}"
+    - "enable persistent code execution"

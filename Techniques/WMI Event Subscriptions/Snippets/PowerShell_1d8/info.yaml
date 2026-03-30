@@ -1,4 +1,4 @@
-language: PowerShell
-contributors: 1d8
-associated_technique: WMI Event Subscriptions
-target_operating_system: windows
+language: "PowerShell"
+contributors: "1d8"
+associated_technique: "WMI Event Subscriptions"
+target_operating_system: "windows"

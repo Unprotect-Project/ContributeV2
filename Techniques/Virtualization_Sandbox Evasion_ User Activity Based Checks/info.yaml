@@ -1,11 +1,11 @@
-name: 'Virtualization/Sandbox Evasion: User Activity Based Checks'
+name: "Virtualization/Sandbox Evasion: User Activity Based Checks"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1497/002/
+    - "https://attack.mitre.org/techniques/T1497/002/"
 tags:
-- Defense Evasion
-- Discovery
-- virtual machine environment (VME)
-- sandbox
-- monitor mouse clicks
+    - "Defense Evasion"
+    - "Discovery"
+    - "virtual machine environment (VME)"
+    - "sandbox"
+    - "monitor mouse clicks"

@@ -1,11 +1,11 @@
-name: Milfuscator
+name: "Milfuscator"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://github.com/nelfo/Milfuscator
+    - "https://github.com/nelfo/Milfuscator"
 tags:
-- Zydis
-- AsmJit
-- Code mutation
-- Obfuscation
-- Packer
+    - "Zydis"
+    - "AsmJit"
+    - "Code mutation"
+    - "Obfuscation"
+    - "Packer"

@@ -1,2 +1,2 @@
-name: Detect Windows Sandbox via Registry
-type: CAPA
+name: "Detect Windows Sandbox via Registry"
+type: "CAPA"

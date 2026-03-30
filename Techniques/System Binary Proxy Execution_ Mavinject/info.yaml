@@ -1,13 +1,13 @@
-name: 'System Binary Proxy Execution: Mavinject'
+name: "System Binary Proxy Execution: Mavinject"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1218/013/
+    - "https://attack.mitre.org/techniques/T1218/013/"
 tags:
-- Defense Evasion
-- mavinject.exe
-- Microsoft Application Virtualization Injector
-- inject code into external processes
-- proxying execution
-- /HMODULE
-- mavinject.exe PID /INJECTRUNNING
+    - "Defense Evasion"
+    - "mavinject.exe"
+    - "Microsoft Application Virtualization Injector"
+    - "inject code into external processes"
+    - "proxying execution"
+    - "/HMODULE"
+    - "mavinject.exe PID /INJECTRUNNING"

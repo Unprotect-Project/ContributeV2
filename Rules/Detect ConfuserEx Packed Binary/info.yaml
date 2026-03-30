@@ -1,2 +1,2 @@
-name: Detect ConfuserEx Packed Binary
-type: YARA
+name: "Detect ConfuserEx Packed Binary"
+type: "YARA"

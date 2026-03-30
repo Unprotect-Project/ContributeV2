@@ -1,2 +1,2 @@
-name: Detect Themida Protector
-type: YARA
+name: "Detect Themida Protector"
+type: "YARA"

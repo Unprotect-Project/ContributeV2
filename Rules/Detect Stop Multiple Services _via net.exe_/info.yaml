@@ -1,2 +1,2 @@
-name: Detect Stop Multiple Services (via net.exe)
-type: SIGMA
+name: "Detect Stop Multiple Services (via net.exe)"
+type: "SIGMA"

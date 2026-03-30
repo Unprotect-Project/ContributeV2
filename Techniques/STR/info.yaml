@@ -1,5 +1,5 @@
-name: STR
+name: "STR"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://sites.google.com/site/bletchleypark2/malware-analysis/malware-technique/anti-vm
+    - "https://sites.google.com/site/bletchleypark2/malware-analysis/malware-technique/anti-vm"

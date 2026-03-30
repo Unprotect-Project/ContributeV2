@@ -1,4 +1,4 @@
-language: C++
-contributors: fr0gger
-associated_technique: Kill Process
-target_operating_system: windows
+language: "C++"
+contributors: "fr0gger"
+associated_technique: "Kill Process"
+target_operating_system: "windows"

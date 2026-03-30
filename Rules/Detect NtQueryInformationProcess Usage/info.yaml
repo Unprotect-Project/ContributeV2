@@ -1,2 +1,2 @@
-name: Detect NtQueryInformationProcess Usage
-type: YARA
+name: "Detect NtQueryInformationProcess Usage"
+type: "YARA"

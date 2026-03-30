@@ -1,5 +1,5 @@
-name: Detecting Mac Address
+name: "Detecting Mac Address"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://securingtomorrow.mcafee.com/mcafee-labs/overview-malware-self-defense-protection/
+    - "https://securingtomorrow.mcafee.com/mcafee-labs/overview-malware-self-defense-protection/"

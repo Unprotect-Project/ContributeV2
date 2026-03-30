@@ -1,13 +1,13 @@
-name: ProcEnvInjection - Remote code injection by abusing process environment strings
+name: "ProcEnvInjection - Remote code injection by abusing process environment strings"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://www.x86matthew.com/view_post?id=proc_env_injection
+    - "https://www.x86matthew.com/view_post?id=proc_env_injection"
 featured_apis:
-- CreateRemoteThread
-- VirtualAlloc
-- CreateProcessW
-- ResumeThread
-- OpenProcess
-- ReadProcessMemory
-- GetProcAddress
+    - "CreateRemoteThread"
+    - "VirtualAlloc"
+    - "CreateProcessW"
+    - "ResumeThread"
+    - "OpenProcess"
+    - "ReadProcessMemory"
+    - "GetProcAddress"

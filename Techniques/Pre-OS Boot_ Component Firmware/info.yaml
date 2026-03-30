@@ -1,12 +1,12 @@
-name: 'Pre-OS Boot: Component Firmware'
+name: "Pre-OS Boot: Component Firmware"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1542/002/
+    - "https://attack.mitre.org/techniques/T1542/002/"
 tags:
-- Persistence
-- Defense Evasion
-- modify component firmware
-- execute adversary code
-- patching legitimate device firmware
-- overwrite firmware
+    - "Persistence"
+    - "Defense Evasion"
+    - "modify component firmware"
+    - "execute adversary code"
+    - "patching legitimate device firmware"
+    - "overwrite firmware"

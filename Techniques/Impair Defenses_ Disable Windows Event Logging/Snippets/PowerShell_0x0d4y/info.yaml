@@ -1,4 +1,4 @@
-language: PowerShell
-contributors: 0x0d4y
-associated_technique: 'Impair Defenses: Disable Windows Event Logging'
-target_operating_system: windows
+language: "PowerShell"
+contributors: "0x0d4y"
+associated_technique: "Impair Defenses: Disable Windows Event Logging"
+target_operating_system: "windows"

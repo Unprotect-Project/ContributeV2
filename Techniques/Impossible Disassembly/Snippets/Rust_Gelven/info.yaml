@@ -1,4 +1,4 @@
-language: Rust
-contributors: Gelven
-associated_technique: Impossible Disassembly
-target_operating_system: linux
+language: "Rust"
+contributors: "Gelven"
+associated_technique: "Impossible Disassembly"
+target_operating_system: "linux"

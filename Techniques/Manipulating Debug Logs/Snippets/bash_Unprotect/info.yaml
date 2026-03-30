@@ -1,4 +1,4 @@
-language: bash
-contributors: Unprotect
-associated_technique: Manipulating Debug Logs
-target_operating_system: linux
+language: "bash"
+contributors: "Unprotect"
+associated_technique: "Manipulating Debug Logs"
+target_operating_system: "linux"

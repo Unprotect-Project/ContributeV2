@@ -1,24 +1,24 @@
-name: Homograph Attack (Punycode)
+name: "Homograph Attack (Punycode)"
 categories:
-- Network Evasion
+    - "Network Evasion"
 resources:
-- https://en.wikipedia.org/wiki/IDN_homograph_attack
-- https://en.wikipedia.org/wiki/Punycode
-- https://blog.securitybreak.io/fifty-shades-of-malware-strings-d33b0c7bee99
+    - "https://en.wikipedia.org/wiki/IDN_homograph_attack"
+    - "https://en.wikipedia.org/wiki/Punycode"
+    - "https://blog.securitybreak.io/fifty-shades-of-malware-strings-d33b0c7bee99"
 tags:
-- Homograph attack
-- phishing attack
-- homoglyphs
-- domain names
-- URLs
-- legitimate
-- attacker
-- encoding
-- Punycode
-- Unicode characters
-- ASCII
-- Internet host names
-- non-Latin characters
-- Latin alphabet
-- Cyrillic alphabet
-- typosquatting
+    - "Homograph attack"
+    - "phishing attack"
+    - "homoglyphs"
+    - "domain names"
+    - "URLs"
+    - "legitimate"
+    - "attacker"
+    - "encoding"
+    - "Punycode"
+    - "Unicode characters"
+    - "ASCII"
+    - "Internet host names"
+    - "non-Latin characters"
+    - "Latin alphabet"
+    - "Cyrillic alphabet"
+    - "typosquatting"

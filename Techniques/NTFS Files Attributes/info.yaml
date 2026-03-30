@@ -1,9 +1,9 @@
-name: NTFS Files Attributes
+name: "NTFS Files Attributes"
 categories:
-- Antivirus/EDR Evasion
+    - "Antivirus/EDR Evasion"
 resources:
-- https://blogs.technet.microsoft.com/askcore/2010/08/25/ntfs-file-attributes/
+    - "https://blogs.technet.microsoft.com/askcore/2010/08/25/ntfs-file-attributes/"
 tags:
-- ntfs
+    - "ntfs"
 featured_apis:
-- GetProcAddress
+    - "GetProcAddress"

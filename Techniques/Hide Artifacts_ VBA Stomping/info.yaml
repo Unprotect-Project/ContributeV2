@@ -1,14 +1,14 @@
-name: 'Hide Artifacts: VBA Stomping'
+name: "Hide Artifacts: VBA Stomping"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1564/007/
+    - "https://attack.mitre.org/techniques/T1564/007/"
 tags:
-- Defense Evasion
-- PerformanceCache
-- _VBA_PROJECT
-- Microsoft Office
-- Visual Basic for Applications (VBA)
-- p-code
-- project stream
-- malicious code
+    - "Defense Evasion"
+    - "PerformanceCache"
+    - "_VBA_PROJECT"
+    - "Microsoft Office"
+    - "Visual Basic for Applications (VBA)"
+    - "p-code"
+    - "project stream"
+    - "malicious code"

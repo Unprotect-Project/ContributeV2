@@ -1,13 +1,13 @@
-name: Code Transposition
+name: "Code Transposition"
 categories:
-- Anti-Disassembly
+    - "Anti-Disassembly"
 resources:
-- https://sensorstechforum.com/advanced-obfuscation-techniques-malware/
+    - "https://sensorstechforum.com/advanced-obfuscation-techniques-malware/"
 tags:
-- Instruction reordering
-- Anti-disassembling
-- Obfuscation
-- Code rearrangement
-- Random number generator
-- Mathematical function
-- Code complexity
+    - "Instruction reordering"
+    - "Anti-disassembling"
+    - "Obfuscation"
+    - "Code rearrangement"
+    - "Random number generator"
+    - "Mathematical function"
+    - "Code complexity"

@@ -1,18 +1,18 @@
-name: Constant Blinding
+name: "Constant Blinding"
 categories:
-- Data Obfuscation
+    - "Data Obfuscation"
 resources:
-- https://hal.inria.fr/hal-01382971/file/PID4513621.pdf
+    - "https://hal.inria.fr/hal-01382971/file/PID4513621.pdf"
 tags:
-- Constant blinding
-- Malware
-- Obfuscation
-- constant blinding techniques
-- encryption keys
-- code patterns
-- signature-based detection
-- recognizable patterns
-- exploit payloads
-- XORing
-- randomly generated key
-- encrypted communication
+    - "Constant blinding"
+    - "Malware"
+    - "Obfuscation"
+    - "constant blinding techniques"
+    - "encryption keys"
+    - "code patterns"
+    - "signature-based detection"
+    - "recognizable patterns"
+    - "exploit payloads"
+    - "XORing"
+    - "randomly generated key"
+    - "encrypted communication"

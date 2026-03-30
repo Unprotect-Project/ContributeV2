@@ -1,19 +1,19 @@
-name: 'Hijack Execution Flow: COR_PROFILER'
+name: "Hijack Execution Flow: COR_PROFILER"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1574/012/
+    - "https://attack.mitre.org/techniques/T1574/012/"
 tags:
-- Persistence
-- Privilege Escalation
-- Defense Evasion
-- .NET CLR
-- Common Language Runtime (CLR)
-- Component Object Model (COM)
-- COR_PROFILER_PATH
-- COR_PROFILER
-- Bypass User Account Control
-- Impair Defenses
-- malicious DLL
-- system environment variables
-- .NET Framework 4
+    - "Persistence"
+    - "Privilege Escalation"
+    - "Defense Evasion"
+    - ".NET CLR"
+    - "Common Language Runtime (CLR)"
+    - "Component Object Model (COM)"
+    - "COR_PROFILER_PATH"
+    - "COR_PROFILER"
+    - "Bypass User Account Control"
+    - "Impair Defenses"
+    - "malicious DLL"
+    - "system environment variables"
+    - ".NET Framework 4"

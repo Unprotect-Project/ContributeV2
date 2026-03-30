@@ -1,7 +1,7 @@
-name: OutputDebugString
+name: "OutputDebugString"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://msdn.microsoft.com/en-us/library/windows/desktop/aa363362(v=vs.85).aspx
+    - "https://msdn.microsoft.com/en-us/library/windows/desktop/aa363362(v=vs.85).aspx"
 tags:
-- outputdebugstring
+    - "outputdebugstring"

@@ -1,16 +1,16 @@
-name: XSL Script Processing
+name: "XSL Script Processing"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1220/
+    - "https://attack.mitre.org/techniques/T1220/"
 tags:
-- Defense Evasion
-- bypass application control
-- Extensible Stylesheet Language (XSL)
-- execute arbitrary files
-- Microsoft common line transformation utility binary (msxsl.exe)
-- execute malicious embedded JavaScript
-- XSL files
-- Squiblytwo
-- Windows Management Instrumentation
-- /FORMAT
+    - "Defense Evasion"
+    - "bypass application control"
+    - "Extensible Stylesheet Language (XSL)"
+    - "execute arbitrary files"
+    - "Microsoft common line transformation utility binary (msxsl.exe)"
+    - "execute malicious embedded JavaScript"
+    - "XSL files"
+    - "Squiblytwo"
+    - "Windows Management Instrumentation"
+    - "/FORMAT"

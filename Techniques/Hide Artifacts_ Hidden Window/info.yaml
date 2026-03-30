@@ -1,13 +1,13 @@
-name: 'Hide Artifacts: Hidden Window'
+name: "Hide Artifacts: Hidden Window"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1564/003/
+    - "https://attack.mitre.org/techniques/T1564/003/"
 tags:
-- Defense Evasion
-- -WindowStyle Hidden
-- supress windows
-- APT19
-- APT28
-- APT3
-- APT32
+    - "Defense Evasion"
+    - "-WindowStyle Hidden"
+    - "supress windows"
+    - "APT19"
+    - "APT28"
+    - "APT3"
+    - "APT32"

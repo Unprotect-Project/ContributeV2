@@ -1,2 +1,2 @@
-name: Detect RDTSC Check
-type: YARA
+name: "Detect RDTSC Check"
+type: "YARA"

@@ -1,13 +1,13 @@
-name: NixImports
+name: "NixImports"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://github.com/dr4k0nia/NixImports/tree/master
-- https://dr4k0nia.github.io/posts/NixImports-a-NET-loader-using-HInvoke/
+    - "https://github.com/dr4k0nia/NixImports/tree/master"
+    - "https://dr4k0nia.github.io/posts/NixImports-a-NET-loader-using-HInvoke/"
 tags:
-- NixImports
-- packer
-- .net
+    - "NixImports"
+    - "packer"
+    - ".net"
 contributors:
-- Jonathan Peters
-- dr4k0nia
+    - "Jonathan Peters"
+    - "dr4k0nia"

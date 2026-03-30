@@ -1,2 +1,2 @@
-name: Detect NtSetInformationThread Usage
-type: YARA
+name: "Detect NtSetInformationThread Usage"
+type: "YARA"

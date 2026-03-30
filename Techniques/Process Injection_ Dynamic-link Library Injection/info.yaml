@@ -1,23 +1,23 @@
-name: 'Process Injection: Dynamic-link Library Injection'
+name: "Process Injection: Dynamic-link Library Injection"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1055/001/
+    - "https://attack.mitre.org/techniques/T1055/001/"
 tags:
-- Defense Evasion
-- Privilege Escalation
-- executing arbitrary code in live process
-- native Windows API calls
-- VirtualAllocEx
-- WriteProcessMemory
-- CreateRemoteThread
-- LoadLibrary
-- reflective DLL injection
-- self-mapping DLL
-- Module Stomping
-- Module Overloading
-- DLL Hollowing
-- conceal injected code
-- AddressOfEntryPoint
-- malicious injection
-- encrypted DLLs
+    - "Defense Evasion"
+    - "Privilege Escalation"
+    - "executing arbitrary code in live process"
+    - "native Windows API calls"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "CreateRemoteThread"
+    - "LoadLibrary"
+    - "reflective DLL injection"
+    - "self-mapping DLL"
+    - "Module Stomping"
+    - "Module Overloading"
+    - "DLL Hollowing"
+    - "conceal injected code"
+    - "AddressOfEntryPoint"
+    - "malicious injection"
+    - "encrypted DLLs"

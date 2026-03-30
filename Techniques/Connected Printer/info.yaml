@@ -1,17 +1,17 @@
-name: Connected Printer
+name: "Connected Printer"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://www.slideshare.net/bz98/sandbox-detection-leak-abuse-test-hacktivity-2015
+    - "https://www.slideshare.net/bz98/sandbox-detection-leak-abuse-test-hacktivity-2015"
 tags:
-- sandbox
-- program
-- printers
-- connected
-- default
-- Windows
-- Adobe
-- OneNote
-- access
-- environment
-- detection
+    - "sandbox"
+    - "program"
+    - "printers"
+    - "connected"
+    - "default"
+    - "Windows"
+    - "Adobe"
+    - "OneNote"
+    - "access"
+    - "environment"
+    - "detection"

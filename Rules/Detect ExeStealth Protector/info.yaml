@@ -1,2 +1,2 @@
-name: Detect ExeStealth Protector
-type: YARA
+name: "Detect ExeStealth Protector"
+type: "YARA"

@@ -1,10 +1,10 @@
-name: ICE 0xF1
+name: "ICE 0xF1"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 tags:
-- '0xf1'
-- icebp
+    - "0xf1"
+    - "icebp"
 featured_apis:
-- IsDebuggerPresent
+    - "IsDebuggerPresent"
 contributors:
-- fr0gger
+    - "fr0gger"

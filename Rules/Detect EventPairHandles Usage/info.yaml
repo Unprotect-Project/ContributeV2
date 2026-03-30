@@ -1,2 +1,2 @@
-name: Detect EventPairHandles Usage
-type: YARA
+name: "Detect EventPairHandles Usage"
+type: "YARA"

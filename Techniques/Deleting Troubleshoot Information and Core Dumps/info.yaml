@@ -1,5 +1,5 @@
-name: Deleting Troubleshoot Information and Core Dumps
+name: "Deleting Troubleshoot Information and Core Dumps"
 categories:
-- Anti-Forensic
+    - "Anti-Forensic"
 resources:
-- https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day?hl=en
+    - "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day?hl=en"

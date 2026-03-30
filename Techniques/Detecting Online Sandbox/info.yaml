@@ -1,38 +1,38 @@
-name: Detecting Online Sandbox
+name: "Detecting Online Sandbox"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://malwation.com/offensive-approach-to-online-sandboxes-1-any-run/
-- https://gist.github.com/kaganisildak/4ff8adcaba2521a28a7029d61c265d16
-- https://app.any.run/tasks/5bff31df-4688-41b1-a73a-d15d30e7ac54/
-- https://app.any.run/
+    - "https://malwation.com/offensive-approach-to-online-sandboxes-1-any-run/"
+    - "https://gist.github.com/kaganisildak/4ff8adcaba2521a28a7029d61c265d16"
+    - "https://app.any.run/tasks/5bff31df-4688-41b1-a73a-d15d30e7ac54/"
+    - "https://app.any.run/"
 tags:
-- Hypervisor
-- virtualization
-- plateforms
-- KVM
-- Microsoft Hv
-- Hyper V
-- VMware
-- VirtualBox
-- QEMU
-- Xen
-- CPU flags
-- sandbox
-- triage
-- tria.ge
+    - "Hypervisor"
+    - "virtualization"
+    - "plateforms"
+    - "KVM"
+    - "Microsoft Hv"
+    - "Hyper V"
+    - "VMware"
+    - "VirtualBox"
+    - "QEMU"
+    - "Xen"
+    - "CPU flags"
+    - "sandbox"
+    - "triage"
+    - "tria.ge"
 featured_apis:
-- OpenThread
-- ResumeThread
-- OpenProcess
-- Process32First
-- Process32Next
-- CreateToolhelp32Snapshot
-- Thread32First
-- Thread32Next
-- AdjustTokenPrivileges
-- OpenProcessToken
-- SuspendThread
-- GetProcAddress
+    - "OpenThread"
+    - "ResumeThread"
+    - "OpenProcess"
+    - "Process32First"
+    - "Process32Next"
+    - "CreateToolhelp32Snapshot"
+    - "Thread32First"
+    - "Thread32Next"
+    - "AdjustTokenPrivileges"
+    - "OpenProcessToken"
+    - "SuspendThread"
+    - "GetProcAddress"
 contributors:
-- Futex
+    - "Futex"

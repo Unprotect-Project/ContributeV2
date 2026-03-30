@@ -1,19 +1,19 @@
-name: 'Hijack Execution Flow: KernelCallbackTable'
+name: "Hijack Execution Flow: KernelCallbackTable"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1574/013/
+    - "https://attack.mitre.org/techniques/T1574/013/"
 tags:
-- Persistence
-- Privilege Escalation
-- Defense Evasion
-- duplicate KernelCallbackTable
-- Process Environment Block (PEB)
-- user32.dll
-- Reflective Code Loading
-- Process Injection
-- hijack execution flow
-- hijack process control flow
-- memory tampering
-- malicious memory address
-- Windows message
+    - "Persistence"
+    - "Privilege Escalation"
+    - "Defense Evasion"
+    - "duplicate KernelCallbackTable"
+    - "Process Environment Block (PEB)"
+    - "user32.dll"
+    - "Reflective Code Loading"
+    - "Process Injection"
+    - "hijack execution flow"
+    - "hijack process control flow"
+    - "memory tampering"
+    - "malicious memory address"
+    - "Windows message"

@@ -1,2 +1,2 @@
-name: Detect DLL Export Name Modification
-type: YARA
+name: "Detect DLL Export Name Modification"
+type: "YARA"

@@ -1,14 +1,14 @@
-name: API Obfuscation
+name: "API Obfuscation"
 categories:
-- Anti-Disassembly
+    - "Anti-Disassembly"
 resources:
-- https://www.ired.team/offensive-security/defense-evasion/windows-api-hashing-in-malware
+    - "https://www.ired.team/offensive-security/defense-evasion/windows-api-hashing-in-malware"
 tags:
-- hashing
-- API
-- obfuscation
-- API hashing
-- Import Address Table (IAT)
-- Code obfuscation
+    - "hashing"
+    - "API"
+    - "obfuscation"
+    - "API hashing"
+    - "Import Address Table (IAT)"
+    - "Code obfuscation"
 featured_apis:
-- GetProcAddress
+    - "GetProcAddress"

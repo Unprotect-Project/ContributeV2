@@ -1,5 +1,5 @@
-name: Detecting Virtual Environment Artefacts
+name: "Detecting Virtual Environment Artefacts"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://www.slideshare.net/ThomasRoccia/sandbox-evasion-cheat-sheet
+    - "https://www.slideshare.net/ThomasRoccia/sandbox-evasion-cheat-sheet"

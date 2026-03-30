@@ -1,11 +1,11 @@
-name: CloudEye/DarkEye
+name: "CloudEye/DarkEye"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.securitycode.eu/
-- https://atlas-cybersecurity.com/cyber-threats/cloudeye-darkeye-evolved/
+    - "https://www.securitycode.eu/"
+    - "https://atlas-cybersecurity.com/cyber-threats/cloudeye-darkeye-evolved/"
 tags:
-- cloudeye
-- darkeye
+    - "cloudeye"
+    - "darkeye"
 contributors:
-- fr0gger
+    - "fr0gger"

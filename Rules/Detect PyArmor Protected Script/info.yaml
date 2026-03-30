@@ -1,2 +1,2 @@
-name: Detect PyArmor Protected Script
-type: YARA
+name: "Detect PyArmor Protected Script"
+type: "YARA"

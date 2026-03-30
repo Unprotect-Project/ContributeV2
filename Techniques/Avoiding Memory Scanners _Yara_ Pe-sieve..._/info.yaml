@@ -1,12 +1,12 @@
-name: Avoiding Memory Scanners (Yara, Pe-sieve...)
+name: "Avoiding Memory Scanners (Yara, Pe-sieve...)"
 categories:
-- Others
+    - "Others"
 resources:
-- https://youtu.be/9z9PHSk2MsY
-- https://github.com/kyleavery/AceLdr
+    - "https://youtu.be/9z9PHSk2MsY"
+    - "https://github.com/kyleavery/AceLdr"
 tags:
-- YARA
-- PE-SIEVE
-- Monetta
-- Endpoint
-- Memory Scan
+    - "YARA"
+    - "PE-SIEVE"
+    - "Monetta"
+    - "Endpoint"
+    - "Memory Scan"

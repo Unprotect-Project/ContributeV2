@@ -1,15 +1,15 @@
-name: 'Domain Policy Modification: Group Policy Modification'
+name: "Domain Policy Modification: Group Policy Modification"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1484/001/
+    - "https://attack.mitre.org/techniques/T1484/001/"
 tags:
-- Defense Evasion
-- Privilege Escalation
-- Persistence
-- Group Policy Objects (GPOs)
-- New-GPOImmediateTask
-- ScheduledTasks.xml
-- GptTmpl.inf
-- GPO modification privileges
-- delegate GPO access control permissions
+    - "Defense Evasion"
+    - "Privilege Escalation"
+    - "Persistence"
+    - "Group Policy Objects (GPOs)"
+    - "New-GPOImmediateTask"
+    - "ScheduledTasks.xml"
+    - "GptTmpl.inf"
+    - "GPO modification privileges"
+    - "delegate GPO access control permissions"

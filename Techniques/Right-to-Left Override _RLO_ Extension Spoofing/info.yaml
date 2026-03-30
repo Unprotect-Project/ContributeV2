@@ -1,11 +1,11 @@
-name: Right-to-Left Override (RLO) Extension Spoofing
+name: "Right-to-Left Override (RLO) Extension Spoofing"
 categories:
-- Others
+    - "Others"
 tags:
-- Extension
-- Spoof
-- RLO
-- Filename
+    - "Extension"
+    - "Spoof"
+    - "RLO"
+    - "Filename"
 contributors:
-- DarkCoderSc
-- Jonathan Peters
+    - "DarkCoderSc"
+    - "Jonathan Peters"

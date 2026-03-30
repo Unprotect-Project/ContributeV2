@@ -1,17 +1,17 @@
-name: 'Process Injection: Thread Execution Hijacking'
+name: "Process Injection: Thread Execution Hijacking"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1055/003/
+    - "https://attack.mitre.org/techniques/T1055/003/"
 tags:
-- Defense Evasion
-- Privilege Escalation
-- evade process-based defenses
-- OpenThread
-- SuspendThread
-- VirtualAllocEx
-- WriteProcessMemory
-- SetThreadContext
-- ResumeThread
-- existing process
-- mimic legitimate process
+    - "Defense Evasion"
+    - "Privilege Escalation"
+    - "evade process-based defenses"
+    - "OpenThread"
+    - "SuspendThread"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "SetThreadContext"
+    - "ResumeThread"
+    - "existing process"
+    - "mimic legitimate process"

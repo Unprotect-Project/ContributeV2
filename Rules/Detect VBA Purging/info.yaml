@@ -1,2 +1,2 @@
-name: Detect VBA Purging
-type: YARA
+name: "Detect VBA Purging"
+type: "YARA"

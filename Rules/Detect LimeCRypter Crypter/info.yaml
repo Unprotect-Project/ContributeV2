@@ -1,2 +1,2 @@
-name: Detect LimeCRypter Crypter
-type: YARA
+name: "Detect LimeCRypter Crypter"
+type: "YARA"

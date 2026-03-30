@@ -1,2 +1,2 @@
-name: Detect ConfuserEx Naming Pattern
-type: YARA
+name: "Detect ConfuserEx Naming Pattern"
+type: "YARA"

@@ -1,11 +1,11 @@
-name: NtGlobalFlag
+name: "NtGlobalFlag"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://www.aldeid.com/wiki/PEB-Process-Environment-Block/NtGlobalFlag
-- https://anti-debug.checkpoint.com/techniques/debug-flags.html#manual-checks-ntglobalflag
+    - "https://www.aldeid.com/wiki/PEB-Process-Environment-Block/NtGlobalFlag"
+    - "https://anti-debug.checkpoint.com/techniques/debug-flags.html#manual-checks-ntglobalflag"
 tags:
-- ntglobalflag
+    - "ntglobalflag"
 featured_apis:
-- OpenProcess
-- GetProcAddress
+    - "OpenProcess"
+    - "GetProcAddress"

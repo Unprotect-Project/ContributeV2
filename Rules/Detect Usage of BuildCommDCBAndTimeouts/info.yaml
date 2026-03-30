@@ -1,2 +1,2 @@
-name: Detect Usage of BuildCommDCBAndTimeouts
-type: YARA
+name: "Detect Usage of BuildCommDCBAndTimeouts"
+type: "YARA"

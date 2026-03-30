@@ -1,21 +1,21 @@
-name: Hook Injection
+name: "Hook Injection"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process
-- https://www.ired.team/offensive-security/code-injection-process-injection/setwindowhookex-code-injection
+    - "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process"
+    - "https://www.ired.team/offensive-security/code-injection-process-injection/setwindowhookex-code-injection"
 tags:
-- Hook injection
-- malware
-- internal functions
-- operating system
-- application
-- malicious code
-- existing function calls
-- intercept
-- manipulate
-- normal flow of execution
-- SetWindowsHookEx function
+    - "Hook injection"
+    - "malware"
+    - "internal functions"
+    - "operating system"
+    - "application"
+    - "malicious code"
+    - "existing function calls"
+    - "intercept"
+    - "manipulate"
+    - "normal flow of execution"
+    - "SetWindowsHookEx function"
 featured_apis:
-- UnhookWindowsHookEx
-- CallNextHookEx
+    - "UnhookWindowsHookEx"
+    - "CallNextHookEx"

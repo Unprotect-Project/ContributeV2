@@ -1,14 +1,14 @@
-name: Fast Flux
+name: "Fast Flux"
 categories:
-- Network Evasion
+    - "Network Evasion"
 resources:
-- https://unit42.paloaltonetworks.com/fast-flux-101/
+    - "https://unit42.paloaltonetworks.com/fast-flux-101/"
 tags:
-- Fast flux
-- DNS technique
-- Botnets
-- Phishing
-- Malware delivery sites
-- Compromised hosts
-- Proxies
-- Peer-to-peer networking
+    - "Fast flux"
+    - "DNS technique"
+    - "Botnets"
+    - "Phishing"
+    - "Malware delivery sites"
+    - "Compromised hosts"
+    - "Proxies"
+    - "Peer-to-peer networking"

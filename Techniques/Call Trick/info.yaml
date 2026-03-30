@@ -1,14 +1,14 @@
-name: Call Trick
+name: "Call Trick"
 categories:
-- Anti-Disassembly
+    - "Anti-Disassembly"
 resources:
-- https://media.blackhat.com/bh-us-12/Briefings/Branco/BH_US_12_Branco_Scientific_Academic_WP.pdf
+    - "https://media.blackhat.com/bh-us-12/Briefings/Branco/BH_US_12_Branco_Scientific_Academic_WP.pdf"
 tags:
-- Call trick
-- Return address modification
-- Anti-disassembling
-- Garbage bytes
-- Disassembler evasion
-- Function call interception
-- Recursive traversal disassembly
-- Linear sweep disassembly
+    - "Call trick"
+    - "Return address modification"
+    - "Anti-disassembling"
+    - "Garbage bytes"
+    - "Disassembler evasion"
+    - "Function call interception"
+    - "Recursive traversal disassembly"
+    - "Linear sweep disassembly"

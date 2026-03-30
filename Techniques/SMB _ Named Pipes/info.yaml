@@ -1,20 +1,20 @@
-name: SMB / Named Pipes
+name: "SMB / Named Pipes"
 categories:
-- Network Evasion
+    - "Network Evasion"
 resources:
-- https://learn.microsoft.com/en-us/windows/win32/ipc/named-pipes?WT_mc_id=SEC-MVP-5005282
-- https://learn.microsoft.com/en-us/dotnet/standard/io/pipe-operations?WT_mc_id=SEC-MVP-5005282
-- https://github.com/DarkCoderSc/SharpShellPipe
+    - "https://learn.microsoft.com/en-us/windows/win32/ipc/named-pipes?WT_mc_id=SEC-MVP-5005282"
+    - "https://learn.microsoft.com/en-us/dotnet/standard/io/pipe-operations?WT_mc_id=SEC-MVP-5005282"
+    - "https://github.com/DarkCoderSc/SharpShellPipe"
 tags:
-- Named Pipes
-- SMB
-- Network
-- Pivot
-- Evasion
+    - "Named Pipes"
+    - "SMB"
+    - "Network"
+    - "Pivot"
+    - "Evasion"
 featured_apis:
-- CreateNamedPipeW
-- CreateNamedPipeA
-- ConnectNamedPipe
-- CallNamedPipeW
+    - "CreateNamedPipeW"
+    - "CreateNamedPipeA"
+    - "ConnectNamedPipe"
+    - "CallNamedPipeW"
 contributors:
-- DarkCoderSc
+    - "DarkCoderSc"

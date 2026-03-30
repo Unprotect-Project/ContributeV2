@@ -1,5 +1,5 @@
-name: FSG
+name: "FSG"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.aldeid.com/wiki/Category:Digital-Forensics/Computer-Forensics/Anti-Reverse-Engineering/Packers/FSG
+    - "https://www.aldeid.com/wiki/Category:Digital-Forensics/Computer-Forensics/Anti-Reverse-Engineering/Packers/FSG"

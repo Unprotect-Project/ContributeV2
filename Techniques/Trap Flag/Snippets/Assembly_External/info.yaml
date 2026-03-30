@@ -1,4 +1,4 @@
-language: Assembly
-contributors: External
-associated_technique: Trap Flag
-target_operating_system: windows
+language: "Assembly"
+contributors: "External"
+associated_technique: "Trap Flag"
+target_operating_system: "windows"

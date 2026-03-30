@@ -1,9 +1,9 @@
-name: Thermal Zone Temperature
+name: "Thermal Zone Temperature"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://medium.com/@DebugActiveProcess/anti-vm-techniques-with-msacpi-thermalzonetemperature-32cfeecda802
-- https://social.msdn.microsoft.com/Forums/en-US/19520825-b1fc-4778-8704-c492124bc029/getting-cpu-temp?forum=vblanguage
+    - "https://medium.com/@DebugActiveProcess/anti-vm-techniques-with-msacpi-thermalzonetemperature-32cfeecda802"
+    - "https://social.msdn.microsoft.com/Forums/en-US/19520825-b1fc-4778-8704-c492124bc029/getting-cpu-temp?forum=vblanguage"
 tags:
-- thermal
-- temperature
+    - "thermal"
+    - "temperature"

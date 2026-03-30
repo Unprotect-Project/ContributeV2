@@ -1,8 +1,8 @@
-name: bochs CPU oversights evasion
+name: "bochs CPU oversights evasion"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://github.com/kernelwernel/VMAware
-- https://pferrie.tripod.com/papers/attacks2.pdf
+    - "https://github.com/kernelwernel/VMAware"
+    - "https://pferrie.tripod.com/papers/attacks2.pdf"
 contributors:
-- kernelwernel
+    - "kernelwernel"

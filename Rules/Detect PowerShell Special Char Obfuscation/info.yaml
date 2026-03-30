@@ -1,2 +1,2 @@
-name: Detect PowerShell Special Char Obfuscation
-type: YARA
+name: "Detect PowerShell Special Char Obfuscation"
+type: "YARA"

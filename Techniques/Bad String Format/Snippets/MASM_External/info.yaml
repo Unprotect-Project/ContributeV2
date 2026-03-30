@@ -1,4 +1,4 @@
-language: MASM
-contributors: External
-associated_technique: Bad String Format
-target_operating_system: windows
+language: "MASM"
+contributors: "External"
+associated_technique: "Bad String Format"
+target_operating_system: "windows"

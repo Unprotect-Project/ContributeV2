@@ -1,18 +1,18 @@
-name: Entry Point Modification
+name: "Entry Point Modification"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://www.mcafee.com/blogs/other-blogs/mcafee-labs/expiro-infects-encrypts-files-to-complicate-repair/
+    - "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/expiro-infects-encrypts-files-to-complicate-repair/"
 tags:
-- entry point
-- executable file
-- execution
-- malware
-- techniques
-- changing
-- relocating
-- real entry point
-- protect code
-- analysis
-- security software
-- identification
+    - "entry point"
+    - "executable file"
+    - "execution"
+    - "malware"
+    - "techniques"
+    - "changing"
+    - "relocating"
+    - "real entry point"
+    - "protect code"
+    - "analysis"
+    - "security software"
+    - "identification"

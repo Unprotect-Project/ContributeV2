@@ -1,2 +1,2 @@
-name: Detect OllyDbg Bad Format
-type: YARA
+name: "Detect OllyDbg Bad Format"
+type: "YARA"

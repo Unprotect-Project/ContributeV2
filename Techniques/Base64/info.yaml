@@ -1,16 +1,16 @@
-name: Base64
+name: "Base64"
 categories:
-- Data Obfuscation
+    - "Data Obfuscation"
 resources:
-- https://medium.com/@bromiley/malware-monday-obfuscation-f65239146db0
+    - "https://medium.com/@bromiley/malware-monday-obfuscation-f65239146db0"
 tags:
-- Base64
-- Binary data
-- ASCII string
-- Encoding
-- Text-based communication channels
-- 64-character alphabet
-- Padded
+    - "Base64"
+    - "Binary data"
+    - "ASCII string"
+    - "Encoding"
+    - "Text-based communication channels"
+    - "64-character alphabet"
+    - "Padded"
 contributors:
-- fr0gger
-- RussianPanda
+    - "fr0gger"
+    - "RussianPanda"

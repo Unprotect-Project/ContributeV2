@@ -1,2 +1,2 @@
-name: Impair Defenses Through Disable Windows Event Logging was Detected
-type: SIGMA
+name: "Impair Defenses Through Disable Windows Event Logging was Detected"
+type: "SIGMA"

@@ -1,2 +1,2 @@
-name: Detect Region Filtering via Blacklist
-type: SIGMA
+name: "Detect Region Filtering via Blacklist"
+type: "SIGMA"

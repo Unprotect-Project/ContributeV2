@@ -1,14 +1,14 @@
-name: Jump With Same Target
+name: "Jump With Same Target"
 categories:
-- Anti-Disassembly
+    - "Anti-Disassembly"
 resources:
-- https://www.malwinator.com/2015/11/22/anti-disassembly-used-in-malware-a-primer/
+    - "https://www.malwinator.com/2015/11/22/anti-disassembly-used-in-malware-a-primer/"
 tags:
-- Jump with the same target
-- Anti-disassembling
-- Disassembler
-- Conditional jump
-- Target address
-- Disassembly output
-- Disassembly accuracy
-- Unconditionnal jum
+    - "Jump with the same target"
+    - "Anti-disassembling"
+    - "Disassembler"
+    - "Conditional jump"
+    - "Target address"
+    - "Disassembly output"
+    - "Disassembly accuracy"
+    - "Unconditionnal jum"

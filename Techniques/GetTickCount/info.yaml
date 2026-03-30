@@ -1,10 +1,10 @@
-name: GetTickCount
+name: "GetTickCount"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://researchcenter.paloaltonetworks.com/2015/10/ticked-off-upatre-malwares-simple-anti-analysis-trick-to-defeat-sandboxes/
-- https://anti-debug.checkpoint.com/techniques/timing.html#kernel-timing
+    - "https://researchcenter.paloaltonetworks.com/2015/10/ticked-off-upatre-malwares-simple-anti-analysis-trick-to-defeat-sandboxes/"
+    - "https://anti-debug.checkpoint.com/techniques/timing.html#kernel-timing"
 tags:
-- gettickcount
+    - "gettickcount"
 featured_apis:
-- GetTickCount
+    - "GetTickCount"

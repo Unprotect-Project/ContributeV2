@@ -1,13 +1,13 @@
-name: 'Hijack Execution Flow: Path Interception by Unquoted Path'
+name: "Hijack Execution Flow: Path Interception by Unquoted Path"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1574/009/
+    - "https://attack.mitre.org/techniques/T1574/009/"
 tags:
-- Persistence
-- Privilege Escalation
-- Defense Evasion
-- privilege escalation
-- unquoted path
-- path interception
-- higher level directory
+    - "Persistence"
+    - "Privilege Escalation"
+    - "Defense Evasion"
+    - "privilege escalation"
+    - "unquoted path"
+    - "path interception"
+    - "higher level directory"

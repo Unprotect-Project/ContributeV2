@@ -1,2 +1,2 @@
-name: Detect DeviceIoControl Usage
-type: YARA
+name: "Detect DeviceIoControl Usage"
+type: "YARA"

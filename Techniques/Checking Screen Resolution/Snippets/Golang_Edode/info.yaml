@@ -1,4 +1,4 @@
-language: Golang
-contributors: Edode
-associated_technique: Checking Screen Resolution
-target_operating_system: windows
+language: "Golang"
+contributors: "Edode"
+associated_technique: "Checking Screen Resolution"
+target_operating_system: "windows"

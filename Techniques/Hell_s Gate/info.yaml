@@ -1,11 +1,11 @@
-name: Hell's Gate
+name: "Hell's Gate"
 categories:
-- Antivirus/EDR Evasion
+    - "Antivirus/EDR Evasion"
 resources:
-- https://teamhydra.blog/2020/09/18/implementing-direct-syscalls-using-hells-gate/
-- https://rioasmara.com/2022/03/09/hellgate-technique-on-av-bypass/
+    - "https://teamhydra.blog/2020/09/18/implementing-direct-syscalls-using-hells-gate/"
+    - "https://rioasmara.com/2022/03/09/hellgate-technique-on-av-bypass/"
 tags:
-- hellsgate
-- AV bypass
-- IAT
-- Obfuscation
+    - "hellsgate"
+    - "AV bypass"
+    - "IAT"
+    - "Obfuscation"

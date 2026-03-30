@@ -1,7 +1,7 @@
-name: AsPack
+name: "AsPack"
 categories:
-- Packers
+    - "Packers"
 resources:
-- http://www.aspack.com/
+    - "http://www.aspack.com/"
 tags:
-- aspack
+    - "aspack"

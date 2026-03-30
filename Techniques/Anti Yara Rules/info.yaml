@@ -1,13 +1,13 @@
-name: Anti Yara Rules
+name: "Anti Yara Rules"
 categories:
-- Others
+    - "Others"
 resources:
-- https://github.com/Yara-Rules/rules
+    - "https://github.com/Yara-Rules/rules"
 tags:
-- Yara rules
-- tracking
-- detection evasion
-- ransomware notes
-- malware classification
-- malware characteristics
-- malware behaviors
+    - "Yara rules"
+    - "tracking"
+    - "detection evasion"
+    - "ransomware notes"
+    - "malware classification"
+    - "malware characteristics"
+    - "malware behaviors"

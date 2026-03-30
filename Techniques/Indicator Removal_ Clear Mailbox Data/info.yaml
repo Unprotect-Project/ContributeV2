@@ -1,9 +1,9 @@
-name: 'Indicator Removal: Clear Mailbox Data'
+name: "Indicator Removal: Clear Mailbox Data"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 tags:
-- Defense Evasion
-- export mailbox data
-- delete mailbox data
-- Exfiltration Over Alternative Protocol
-- Remove-MailboxExportRequest
+    - "Defense Evasion"
+    - "export mailbox data"
+    - "delete mailbox data"
+    - "Exfiltration Over Alternative Protocol"
+    - "Remove-MailboxExportRequest"

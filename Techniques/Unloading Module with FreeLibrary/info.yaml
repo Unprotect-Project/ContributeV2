@@ -1,16 +1,16 @@
-name: Unloading Module with FreeLibrary
+name: "Unloading Module with FreeLibrary"
 categories:
-- Antivirus/EDR Evasion
+    - "Antivirus/EDR Evasion"
 resources:
-- http://malwarejake.blogspot.com/2013/07/interesting-malware-defense.html
-- https://rstforums.com/forum/topic/110743-make-your-dynamic-module-unfreeable-anti-freelibrary/
-- https://bohops.com/2021/03/16/investigating-net-clr-usage-log-tampering-techniques-for-edr-evasion/
+    - "http://malwarejake.blogspot.com/2013/07/interesting-malware-defense.html"
+    - "https://rstforums.com/forum/topic/110743-make-your-dynamic-module-unfreeable-anti-freelibrary/"
+    - "https://bohops.com/2021/03/16/investigating-net-clr-usage-log-tampering-techniques-for-edr-evasion/"
 tags:
-- Malware
-- AV/EDR
-- detection
-- DLL
-- address space
-- unload
-- GetModuleHandleA
-- FreeLibrary
+    - "Malware"
+    - "AV/EDR"
+    - "detection"
+    - "DLL"
+    - "address space"
+    - "unload"
+    - "GetModuleHandleA"
+    - "FreeLibrary"

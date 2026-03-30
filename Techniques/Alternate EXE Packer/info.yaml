@@ -1,7 +1,7 @@
-name: Alternate EXE Packer
+name: "Alternate EXE Packer"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.alternate-tools.com/pages/c_exepacker.php?lang=ENG
+    - "https://www.alternate-tools.com/pages/c_exepacker.php?lang=ENG"
 tags:
-- packer
+    - "packer"

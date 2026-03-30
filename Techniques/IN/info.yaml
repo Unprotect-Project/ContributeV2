@@ -1,12 +1,12 @@
-name: IN
+name: "IN"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://sites.google.com/site/bletchleypark2/malware-analysis/malware-technique/anti-vm
+    - "https://sites.google.com/site/bletchleypark2/malware-analysis/malware-technique/anti-vm"
 tags:
-- Machine code instruction
-- Input port
-- Virtual machine monitor (VMM)
-- Virtual machine
-- VMWare
-- VX port
+    - "Machine code instruction"
+    - "Input port"
+    - "Virtual machine monitor (VMM)"
+    - "Virtual machine"
+    - "VMWare"
+    - "VX port"

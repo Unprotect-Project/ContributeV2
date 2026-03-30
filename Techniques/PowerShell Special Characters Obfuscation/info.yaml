@@ -1,11 +1,11 @@
-name: PowerShell Special Characters Obfuscation
+name: "PowerShell Special Characters Obfuscation"
 categories:
-- Data Obfuscation
+    - "Data Obfuscation"
 resources:
-- https://github.com/danielbohannon/Invoke-Obfuscation/blob/master/Out-EncodedSpecialCharOnlyCommand.ps1
-- https://perl-users.jp/articles/advent-calendar/2010/sym/11
+    - "https://github.com/danielbohannon/Invoke-Obfuscation/blob/master/Out-EncodedSpecialCharOnlyCommand.ps1"
+    - "https://perl-users.jp/articles/advent-calendar/2010/sym/11"
 tags:
-- PowerShell
-- obfuscation
+    - "PowerShell"
+    - "obfuscation"
 contributors:
-- RussianPanda
+    - "RussianPanda"

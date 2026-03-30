@@ -1,5 +1,5 @@
-name: DTPacker
+name: "DTPacker"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.proofpoint.com/au/blog/threat-insight/dtpacker-net-packer-curious-password-1
+    - "https://www.proofpoint.com/au/blog/threat-insight/dtpacker-net-packer-curious-password-1"

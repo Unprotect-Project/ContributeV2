@@ -1,21 +1,21 @@
-name: Thread Execution Hijacking
+name: "Thread Execution Hijacking"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process
+    - "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process"
 tags:
-- thread execution hijacking
-- malware
-- evading detection
-- existing thread
-- process
-- avoiding noisy process
-- thread creations operations
-- analysis
-- CreateToolhelp32Snapshot
-- Thread32First
+    - "thread execution hijacking"
+    - "malware"
+    - "evading detection"
+    - "existing thread"
+    - "process"
+    - "avoiding noisy process"
+    - "thread creations operations"
+    - "analysis"
+    - "CreateToolhelp32Snapshot"
+    - "Thread32First"
 featured_apis:
-- OpenThread
-- CreateToolhelp32Snapshot
-- Thread32First
-- Thread32Next
+    - "OpenThread"
+    - "CreateToolhelp32Snapshot"
+    - "Thread32First"
+    - "Thread32Next"

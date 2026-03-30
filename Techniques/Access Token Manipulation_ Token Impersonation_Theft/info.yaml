@@ -1,14 +1,14 @@
-name: 'Access Token Manipulation: Token Impersonation/Theft'
+name: "Access Token Manipulation: Token Impersonation/Theft"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1134/001/
+    - "https://attack.mitre.org/techniques/T1134/001/"
 tags:
-- Defense Evasion
-- Privilege Escalation
-- Token impersonation
-- Token theft
-- DuplicateToken(Ex)
-- ImpersonateLoggedOnUser
-- SetThreadToken
-- APT28
+    - "Defense Evasion"
+    - "Privilege Escalation"
+    - "Token impersonation"
+    - "Token theft"
+    - "DuplicateToken(Ex)"
+    - "ImpersonateLoggedOnUser"
+    - "SetThreadToken"
+    - "APT28"

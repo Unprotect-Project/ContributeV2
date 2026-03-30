@@ -1,2 +1,2 @@
-name: Detect ASProtect Packer
-type: YARA
+name: "Detect ASProtect Packer"
+type: "YARA"

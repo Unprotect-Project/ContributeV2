@@ -1,6 +1,6 @@
-name: GetLocalTime, GetSystemTime, timeGetTime, NtQueryPerformanceCounter
+name: "GetLocalTime, GetSystemTime, timeGetTime, NtQueryPerformanceCounter"
 categories:
-- Sandbox Evasion
-- Anti-Debugging
+    - "Sandbox Evasion"
+    - "Anti-Debugging"
 resources:
-- https://www.malwinator.com/2016/01/03/part-2-antidebug/
+    - "https://www.malwinator.com/2016/01/03/part-2-antidebug/"

@@ -1,9 +1,9 @@
-name: Disabling Event Tracing for Windows (ETW)
+name: "Disabling Event Tracing for Windows (ETW)"
 categories:
-- Anti-Forensic
+    - "Anti-Forensic"
 resources:
-- https://vanmieghem.io/blueprint-for-evading-edr-in-2022/
+    - "https://vanmieghem.io/blueprint-for-evading-edr-in-2022/"
 tags:
-- anti-forensic
+    - "anti-forensic"
 featured_apis:
-- GetProcAddress
+    - "GetProcAddress"

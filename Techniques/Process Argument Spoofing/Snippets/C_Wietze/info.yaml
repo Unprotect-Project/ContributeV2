@@ -1,4 +1,4 @@
-language: C
-contributors: Wietze
-associated_technique: Process Argument Spoofing
-target_operating_system: linux
+language: "C"
+contributors: "Wietze"
+associated_technique: "Process Argument Spoofing"
+target_operating_system: "linux"

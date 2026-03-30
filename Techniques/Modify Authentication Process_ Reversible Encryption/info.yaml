@@ -1,19 +1,19 @@
-name: 'Modify Authentication Process: Reversible Encryption'
+name: "Modify Authentication Process: Reversible Encryption"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1556/005/
+    - "https://attack.mitre.org/techniques/T1556/005/"
 tags:
-- Credential Access
-- Defense Evasion
-- Persistence
-- Active Directory authentication encryption properties
-- AllowReversiblePasswordEncryption
-- G$RADIUSCHAP
-- G$RADIUSCHAPKEY
-- G$MSRADIUSCHAPKEY
-- Remote Access Subauthentication DLL (RASSFM.DLL)
-- reproduce encryption key
-- password decryption
-- Local Group Policy Editor
-- Fine-Grained Password Policy (FGPP)
+    - "Credential Access"
+    - "Defense Evasion"
+    - "Persistence"
+    - "Active Directory authentication encryption properties"
+    - "AllowReversiblePasswordEncryption"
+    - "G$RADIUSCHAP"
+    - "G$RADIUSCHAPKEY"
+    - "G$MSRADIUSCHAPKEY"
+    - "Remote Access Subauthentication DLL (RASSFM.DLL)"
+    - "reproduce encryption key"
+    - "password decryption"
+    - "Local Group Policy Editor"
+    - "Fine-Grained Password Policy (FGPP)"

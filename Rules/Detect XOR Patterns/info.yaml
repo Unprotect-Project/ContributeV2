@@ -1,2 +1,2 @@
-name: Detect XOR Patterns
-type: YARA
+name: "Detect XOR Patterns"
+type: "YARA"

@@ -1,9 +1,9 @@
-name: IPV4/IPV6 Obfuscation
+name: "IPV4/IPV6 Obfuscation"
 categories:
-- Data Obfuscation
+    - "Data Obfuscation"
 resources:
-- https://www.sentinelone.com/blog/hive-ransomware-deploys-novel-ipfuscation-technique/
-- https://www.bleepingcomputer.com/news/security/hive-ransomware-uses-new-ipfuscation-trick-to-hide-payload/
-- https://cyware.com/news/ipfuscation-is-hives-new-technique-to-evade-detection-96c3c748
+    - "https://www.sentinelone.com/blog/hive-ransomware-deploys-novel-ipfuscation-technique/"
+    - "https://www.bleepingcomputer.com/news/security/hive-ransomware-uses-new-ipfuscation-trick-to-hide-payload/"
+    - "https://cyware.com/news/ipfuscation-is-hives-new-technique-to-evade-detection-96c3c748"
 contributors:
-- 4rkt0uR0s
+    - "4rkt0uR0s"

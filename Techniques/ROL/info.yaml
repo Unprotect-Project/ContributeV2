@@ -1,14 +1,14 @@
-name: ROL
+name: "ROL"
 categories:
-- Data Obfuscation
+    - "Data Obfuscation"
 resources:
-- https://blog.malwarebytes.com/threat-analysis/2013/03/obfuscation-malwares-best-friend/
+    - "https://blog.malwarebytes.com/threat-analysis/2013/03/obfuscation-malwares-best-friend/"
 tags:
-- ROL
-- Caesar Cipher
-- Encoding algorithm
-- Plaintext
-- Ciphertext
-- Rotation value
-- Monoalphabetic substitution cipher
-- Frequency analysis
+    - "ROL"
+    - "Caesar Cipher"
+    - "Encoding algorithm"
+    - "Plaintext"
+    - "Ciphertext"
+    - "Rotation value"
+    - "Monoalphabetic substitution cipher"
+    - "Frequency analysis"

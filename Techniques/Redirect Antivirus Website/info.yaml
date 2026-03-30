@@ -1,5 +1,5 @@
-name: Redirect Antivirus Website
+name: "Redirect Antivirus Website"
 categories:
-- Antivirus/EDR Evasion
+    - "Antivirus/EDR Evasion"
 resources:
-- https://blog.malwarebytes.com/cybercrime/2016/09/hosts-file-hijacks/
+    - "https://blog.malwarebytes.com/cybercrime/2016/09/hosts-file-hijacks/"

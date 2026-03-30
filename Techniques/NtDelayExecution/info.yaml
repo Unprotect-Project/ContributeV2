@@ -1,11 +1,11 @@
-name: NtDelayExecution
+name: "NtDelayExecution"
 categories:
-- Sandbox Evasion
-- Anti-Debugging
+    - "Sandbox Evasion"
+    - "Anti-Debugging"
 resources:
-- http://undocumented.ntinternals.net/index.html?page=UserMode%2FUndocumented%20Functions%2FNT%20Objects%2FThread%2FNtDelayExecution.html
-- https://securityliterate.com/beeeeeeeeep-how-malware-uses-the-beep-winapi-function-for-anti-analysis/
+    - "http://undocumented.ntinternals.net/index.html?page=UserMode%2FUndocumented%20Functions%2FNT%20Objects%2FThread%2FNtDelayExecution.html"
+    - "https://securityliterate.com/beeeeeeeeep-how-malware-uses-the-beep-winapi-function-for-anti-analysis/"
 featured_apis:
-- NtDelayExecution
+    - "NtDelayExecution"
 contributors:
-- d4rksystem
+    - "d4rksystem"

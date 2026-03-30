@@ -1,16 +1,16 @@
-name: Retrieve HDD Information
+name: "Retrieve HDD Information"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://nicolabottura.github.io/HDDInfo-Evasion-PoC.html
+    - "https://nicolabottura.github.io/HDDInfo-Evasion-PoC.html"
 tags:
-- malware-detection
-- virtual-environment-evasion
-- hard-drive-inspection
-- virtualbox
-- deviceiocontrol-api
-- root-privileges
-- cybersecurity-tactics
-- evasion-techniques
+    - "malware-detection"
+    - "virtual-environment-evasion"
+    - "hard-drive-inspection"
+    - "virtualbox"
+    - "deviceiocontrol-api"
+    - "root-privileges"
+    - "cybersecurity-tactics"
+    - "evasion-techniques"
 contributors:
-- HoIIovv
+    - "HoIIovv"

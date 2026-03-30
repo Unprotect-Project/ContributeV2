@@ -1,21 +1,21 @@
-name: OLEUM
+name: "OLEUM"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://modexp.wordpress.com/2019/04/25/seven-window-injection-methods/
+    - "https://modexp.wordpress.com/2019/04/25/seven-window-injection-methods/"
 tags:
-- Rich Edit controls
-- EditWordBreakProc callback
-- Word wrapping
-- EM_GETOLECALLBACK message
-- SendMessage function
-- LPARAM parameter
-- Locally accessible memory
-- IRichEditOleCallback interface
+    - "Rich Edit controls"
+    - "EditWordBreakProc callback"
+    - "Word wrapping"
+    - "EM_GETOLECALLBACK message"
+    - "SendMessage function"
+    - "LPARAM parameter"
+    - "Locally accessible memory"
+    - "IRichEditOleCallback interface"
 featured_apis:
-- VirtualAlloc
-- VirtualAllocEx
-- WriteProcessMemory
-- OpenProcess
-- GetClipboardData
-- ReadProcessMemory
+    - "VirtualAlloc"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "OpenProcess"
+    - "GetClipboardData"
+    - "ReadProcessMemory"

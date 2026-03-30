@@ -1,18 +1,18 @@
-name: 'Process Injection: Process Hollowing'
+name: "Process Injection: Process Hollowing"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1055/012/
+    - "https://attack.mitre.org/techniques/T1055/012/"
 tags:
-- Defense Evasion
-- Privilege Escalation
-- inject suspended and hollowed processes
-- CreateProcess
-- ZwUnmapViewOfSection
-- NtUnmapViewOfSection
-- VirtualAllocEx
-- WriteProcessMemory
-- SetThreadContext
-- ResumeThread
-- reallocating space with malicious code
-- permission inheritance
+    - "Defense Evasion"
+    - "Privilege Escalation"
+    - "inject suspended and hollowed processes"
+    - "CreateProcess"
+    - "ZwUnmapViewOfSection"
+    - "NtUnmapViewOfSection"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "SetThreadContext"
+    - "ResumeThread"
+    - "reallocating space with malicious code"
+    - "permission inheritance"

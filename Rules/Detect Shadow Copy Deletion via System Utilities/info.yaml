@@ -1,2 +1,2 @@
-name: Detect Shadow Copy Deletion via System Utilities
-type: SIGMA
+name: "Detect Shadow Copy Deletion via System Utilities"
+type: "SIGMA"

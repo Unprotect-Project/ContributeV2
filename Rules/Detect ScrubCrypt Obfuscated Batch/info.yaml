@@ -1,2 +1,2 @@
-name: Detect ScrubCrypt Obfuscated Batch
-type: YARA
+name: "Detect ScrubCrypt Obfuscated Batch"
+type: "YARA"

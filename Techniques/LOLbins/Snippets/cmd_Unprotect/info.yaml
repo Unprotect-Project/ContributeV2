@@ -1,4 +1,4 @@
-language: cmd
-contributors: Unprotect
-associated_technique: LOLbins
-target_operating_system: windows
+language: "cmd"
+contributors: "Unprotect"
+associated_technique: "LOLbins"
+target_operating_system: "windows"

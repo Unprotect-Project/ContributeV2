@@ -1,8 +1,8 @@
-name: BuildCommDCBAndTimeoutA
+name: "BuildCommDCBAndTimeoutA"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 tags:
-- BuildCommDCBAndTimeoutsA
-- sandbox evasion
+    - "BuildCommDCBAndTimeoutsA"
+    - "sandbox evasion"
 contributors:
-- Huntress Research Team
+    - "Huntress Research Team"

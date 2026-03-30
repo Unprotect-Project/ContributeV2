@@ -1,2 +1,2 @@
-name: Detect Mew Packer
-type: YARA
+name: "Detect Mew Packer"
+type: "YARA"

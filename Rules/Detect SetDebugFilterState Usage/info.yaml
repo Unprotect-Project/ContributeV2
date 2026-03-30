@@ -1,2 +1,2 @@
-name: Detect SetDebugFilterState Usage
-type: YARA
+name: "Detect SetDebugFilterState Usage"
+type: "YARA"

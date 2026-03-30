@@ -1,11 +1,11 @@
-name: PE Injection
+name: "PE Injection"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- http://blog.sevagas.com/?PE-injection-explained
+    - "http://blog.sevagas.com/?PE-injection-explained"
 featured_apis:
-- CreateRemoteThread
-- VirtualAlloc
-- VirtualAllocEx
-- WriteProcessMemory
-- OpenProcess
+    - "CreateRemoteThread"
+    - "VirtualAlloc"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "OpenProcess"

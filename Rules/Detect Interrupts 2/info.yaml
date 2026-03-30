@@ -1,2 +1,2 @@
-name: Detect Interrupts 2
-type: YARA
+name: "Detect Interrupts 2"
+type: "YARA"

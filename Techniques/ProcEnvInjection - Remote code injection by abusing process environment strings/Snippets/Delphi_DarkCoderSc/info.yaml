@@ -1,5 +1,5 @@
-language: Delphi
-contributors: DarkCoderSc
-associated_technique: ProcEnvInjection - Remote code injection by abusing process
-  environment strings
-target_operating_system: windows
+language: "Delphi"
+contributors: "DarkCoderSc"
+associated_technique: "ProcEnvInjection - Remote code injection by abusing process\
+    \ environment strings"
+target_operating_system: "windows"

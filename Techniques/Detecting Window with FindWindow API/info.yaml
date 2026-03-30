@@ -1,11 +1,11 @@
-name: Detecting Window with FindWindow API
+name: "Detecting Window with FindWindow API"
 categories:
-- Anti-Debugging
-- Anti-Monitoring
+    - "Anti-Debugging"
+    - "Anti-Monitoring"
 resources:
-- https://securingtomorrow.mcafee.com/mcafee-labs/overview-malware-self-defense-protection/
+    - "https://securingtomorrow.mcafee.com/mcafee-labs/overview-malware-self-defense-protection/"
 tags:
-- WinAPI
-- FindWindow
+    - "WinAPI"
+    - "FindWindow"
 featured_apis:
-- OpenProcess
+    - "OpenProcess"

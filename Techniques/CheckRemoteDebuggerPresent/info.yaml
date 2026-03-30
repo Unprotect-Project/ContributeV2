@@ -1,5 +1,5 @@
-name: CheckRemoteDebuggerPresent
+name: "CheckRemoteDebuggerPresent"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://msdn.microsoft.com/en-us/library/windows/desktop/ms679280(v=vs.85).aspx
+    - "https://msdn.microsoft.com/en-us/library/windows/desktop/ms679280(v=vs.85).aspx"

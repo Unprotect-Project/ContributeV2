@@ -1,2 +1,2 @@
-name: Detect TLSCallback Anti-Debug Trick
-type: YARA
+name: "Detect TLSCallback Anti-Debug Trick"
+type: "YARA"

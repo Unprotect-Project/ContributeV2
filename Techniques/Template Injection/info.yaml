@@ -1,18 +1,18 @@
-name: Template Injection
+name: "Template Injection"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1221/
+    - "https://attack.mitre.org/techniques/T1221/"
 tags:
-- Defense Evasion
-- .docx
-- .xlsx
-- .pptx
-- .dot
-- conceal malicious code in documents
-- document injection
-- '*\template control word'
-- .rtf file
-- Forced Authentication
-- APT28
-- malicious macros
+    - "Defense Evasion"
+    - ".docx"
+    - ".xlsx"
+    - ".pptx"
+    - ".dot"
+    - "conceal malicious code in documents"
+    - "document injection"
+    - "*\\template control word"
+    - ".rtf file"
+    - "Forced Authentication"
+    - "APT28"
+    - "malicious macros"

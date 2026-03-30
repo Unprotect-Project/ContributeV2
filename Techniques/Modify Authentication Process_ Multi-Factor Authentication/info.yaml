@@ -1,13 +1,13 @@
-name: 'Modify Authentication Process: Multi-Factor Authentication'
+name: "Modify Authentication Process: Multi-Factor Authentication"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1556/006/
+    - "https://attack.mitre.org/techniques/T1556/006/"
 tags:
-- Credential Access
-- Defense Evasion
-- Persistence
-- disable multi-factor authentication (MFA)
-- Azure AD Conditional Access Policies
-- patching MFA programs
-- patching MFA configurations
+    - "Credential Access"
+    - "Defense Evasion"
+    - "Persistence"
+    - "disable multi-factor authentication (MFA)"
+    - "Azure AD Conditional Access Policies"
+    - "patching MFA programs"
+    - "patching MFA configurations"

@@ -1,9 +1,9 @@
-name: Manipulating Debug Logs
+name: "Manipulating Debug Logs"
 categories:
-- Anti-Forensic
+    - "Anti-Forensic"
 resources:
-- https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day?hl=en
+    - "https://cloud.google.com/blog/topics/threat-intelligence/ivanti-connect-secure-vpn-zero-day?hl=en"
 tags:
-- linux
-- sed
-- logs
+    - "linux"
+    - "sed"
+    - "logs"

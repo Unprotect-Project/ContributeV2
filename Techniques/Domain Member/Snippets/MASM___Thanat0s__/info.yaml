@@ -1,4 +1,4 @@
-language: MASM
-contributors: __Thanat0s__
-associated_technique: Domain Member
-target_operating_system: windows
+language: "MASM"
+contributors: "__Thanat0s__"
+associated_technique: "Domain Member"
+target_operating_system: "windows"

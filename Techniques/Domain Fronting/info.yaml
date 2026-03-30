@@ -1,17 +1,17 @@
-name: Domain Fronting
+name: "Domain Fronting"
 categories:
-- Network Evasion
-- Defense Evasion [Mitre]
+    - "Network Evasion"
+    - "Defense Evasion [Mitre]"
 resources:
-- https://en.wikipedia.org/wiki/Domain_fronting
-- https://attack.mitre.org/techniques/T1090/004/
+    - "https://en.wikipedia.org/wiki/Domain_fronting"
+    - "https://attack.mitre.org/techniques/T1090/004/"
 tags:
-- Domain fronting
-- bypass censorship
-- network restriction
-- SSL/TLS connection
-- SNI (Server Name Indication) field
-- X-Forwarded-Host
-- X-Originating-URL
-- APT29
-- TLS3.1 version
+    - "Domain fronting"
+    - "bypass censorship"
+    - "network restriction"
+    - "SSL/TLS connection"
+    - "SNI (Server Name Indication) field"
+    - "X-Forwarded-Host"
+    - "X-Originating-URL"
+    - "APT29"
+    - "TLS3.1 version"

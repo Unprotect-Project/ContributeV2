@@ -1,13 +1,13 @@
-name: LOLbins
+name: "LOLbins"
 categories:
-- Others
+    - "Others"
 resources:
-- https://www.sans.org/reading-room/whitepapers/application/application-whitelisting-panacea-propaganda-33599
-- https://lolbas-project.github.io/
+    - "https://www.sans.org/reading-room/whitepapers/application/application-whitelisting-panacea-propaganda-33599"
+    - "https://lolbas-project.github.io/"
 tags:
-- lolbin
-- Windows utilities
-- execute commands
-- Program Compatibility Assistant (pcalua.exe)
-- Windows Subsystem for Linux (WSL)
-- Command-Line Interface
+    - "lolbin"
+    - "Windows utilities"
+    - "execute commands"
+    - "Program Compatibility Assistant (pcalua.exe)"
+    - "Windows Subsystem for Linux (WSL)"
+    - "Command-Line Interface"

@@ -1,39 +1,39 @@
-name: APC injection
+name: "APC injection"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 tags:
-- Asynchronous Procedure Calls (APC)
-- custom code
-- APC Queue
-- target thread
-- alterable state
-- SleepEx
-- SignalObjectAndWait
-- MsgWaitForMultipleObjectsEx
-- WaitForMultipleObjectsEx
-- WaitForSingleObjectEx
-- OpenThread
-- QueueUserAPC
-- Malware
-- thread
-- execution
+    - "Asynchronous Procedure Calls (APC)"
+    - "custom code"
+    - "APC Queue"
+    - "target thread"
+    - "alterable state"
+    - "SleepEx"
+    - "SignalObjectAndWait"
+    - "MsgWaitForMultipleObjectsEx"
+    - "WaitForMultipleObjectsEx"
+    - "WaitForSingleObjectEx"
+    - "OpenThread"
+    - "QueueUserAPC"
+    - "Malware"
+    - "thread"
+    - "execution"
 featured_apis:
-- VirtualAlloc
-- VirtualAllocEx
-- WriteProcessMemory
-- CreateProcessA
-- CreateProcessW
-- NtCreateSection
-- NtMapViewOfSection
-- NtUnmapViewOfSection
-- NtTestAlert
-- OpenThread
-- MapViewOfSection
-- QueueUserAPC
-- ResumeThread
-- OpenProcess
-- Process32First
-- Process32Next
-- CreateToolhelp32Snapshot
-- Thread32First
-- Thread32Next
+    - "VirtualAlloc"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "CreateProcessA"
+    - "CreateProcessW"
+    - "NtCreateSection"
+    - "NtMapViewOfSection"
+    - "NtUnmapViewOfSection"
+    - "NtTestAlert"
+    - "OpenThread"
+    - "MapViewOfSection"
+    - "QueueUserAPC"
+    - "ResumeThread"
+    - "OpenProcess"
+    - "Process32First"
+    - "Process32Next"
+    - "CreateToolhelp32Snapshot"
+    - "Thread32First"
+    - "Thread32Next"

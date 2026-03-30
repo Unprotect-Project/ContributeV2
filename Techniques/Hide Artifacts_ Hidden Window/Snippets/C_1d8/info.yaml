@@ -1,4 +1,4 @@
-language: C
-contributors: 1d8
-associated_technique: 'Hide Artifacts: Hidden Window'
-target_operating_system: windows
+language: "C"
+contributors: "1d8"
+associated_technique: "Hide Artifacts: Hidden Window"
+target_operating_system: "windows"

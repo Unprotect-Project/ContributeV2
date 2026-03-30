@@ -1,2 +1,2 @@
-name: Detect Shadow Copy Deletion
-type: YARA
+name: "Detect Shadow Copy Deletion"
+type: "YARA"

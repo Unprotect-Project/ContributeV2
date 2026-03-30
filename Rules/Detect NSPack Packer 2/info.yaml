@@ -1,2 +1,2 @@
-name: Detect NSPack Packer 2
-type: YARA
+name: "Detect NSPack Packer 2"
+type: "YARA"

@@ -1,21 +1,21 @@
-name: Ctrl+Inject
+name: "Ctrl+Inject"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://blog.ensilo.com/ctrl-inject
+    - "https://blog.ensilo.com/ctrl-inject"
 tags:
-- callback function
-- control signal
-- process
-- system
-- thread
-- csrss.exe
-- detection
-- injection
-- code
-- console process
-- pointer encoding
-- Control Flow Guard
-- memory corruption
-- buffer overflow
-- SetProcessValidCallTargets
+    - "callback function"
+    - "control signal"
+    - "process"
+    - "system"
+    - "thread"
+    - "csrss.exe"
+    - "detection"
+    - "injection"
+    - "code"
+    - "console process"
+    - "pointer encoding"
+    - "Control Flow Guard"
+    - "memory corruption"
+    - "buffer overflow"
+    - "SetProcessValidCallTargets"

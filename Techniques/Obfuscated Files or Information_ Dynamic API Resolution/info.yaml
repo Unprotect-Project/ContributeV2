@@ -1,18 +1,18 @@
-name: 'Obfuscated Files or Information: Dynamic API Resolution'
+name: "Obfuscated Files or Information: Dynamic API Resolution"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1027/007/
+    - "https://attack.mitre.org/techniques/T1027/007/"
 tags:
-- Defense Evasion
-- obfuscate API functions
-- dynamic API resolution
-- conceal malicious functionality
-- import address table (IAT)
-- manipulate file signatures
-- GetProcAddress()
-- LoadLibrary()
-- Encrypt hashes
-- Deobfuscate files
-- Decode files
-- dynamic Windows hashing algorithm
+    - "Defense Evasion"
+    - "obfuscate API functions"
+    - "dynamic API resolution"
+    - "conceal malicious functionality"
+    - "import address table (IAT)"
+    - "manipulate file signatures"
+    - "GetProcAddress()"
+    - "LoadLibrary()"
+    - "Encrypt hashes"
+    - "Deobfuscate files"
+    - "Decode files"
+    - "dynamic Windows hashing algorithm"

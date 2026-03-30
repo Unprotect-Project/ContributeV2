@@ -1,21 +1,21 @@
-name: 'Impair Defenses: Disable Windows Event Logging'
+name: "Impair Defenses: Disable Windows Event Logging"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1562/002/
-- https://thedfirreport.com/2021/11/15/exchange-exploit-leads-to-domain-wide-ransomware/
-- https://www.microsoft.com/en-us/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/
+    - "https://attack.mitre.org/techniques/T1562/002/"
+    - "https://thedfirreport.com/2021/11/15/exchange-exploit-leads-to-domain-wide-ransomware/"
+    - "https://www.microsoft.com/en-us/security/blog/2021/01/20/deep-dive-into-the-solorigate-second-stage-activation-from-sunburst-to-teardrop-and-raindrop/"
 tags:
-- Defense Evasion
-- event disabling
-- EventLog service
-- Local Security Policy (secpol.msc)
-- auditpol.exe
-- /success parameters
-- /failure parameters
-- Stop-Service -Name EventLog
-- auditpol /clear /y
-- auditpol /remove /allusers
-- Security Settings\Local Policies\Audit Policy
-- Security Settings\Advanced Audit Policy Configuration
-- APT29
+    - "Defense Evasion"
+    - "event disabling"
+    - "EventLog service"
+    - "Local Security Policy (secpol.msc)"
+    - "auditpol.exe"
+    - "/success parameters"
+    - "/failure parameters"
+    - "Stop-Service -Name EventLog"
+    - "auditpol /clear /y"
+    - "auditpol /remove /allusers"
+    - "Security Settings\\Local Policies\\Audit Policy"
+    - "Security Settings\\Advanced Audit Policy Configuration"
+    - "APT29"

@@ -1,2 +1,2 @@
-name: Detect Bitsadmin Usage (Download and Execute)
-type: SIGMA
+name: "Detect Bitsadmin Usage (Download and Execute)"
+type: "SIGMA"

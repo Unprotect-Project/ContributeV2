@@ -1,14 +1,14 @@
-name: ScrubCrypt
+name: "ScrubCrypt"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://perception-point.io/blog/the-rebranded-crypter-scrubcrypt/
-- https://0xtoxin.github.io/threat%20breakdown/ScrubCrypt-Rebirth-Of-Jlaive/
-- https://www.fortinet.com/blog/threat-research/old-cyber-gang-uses-new-crypter-scrubcrypt
-- https://twitter.com/SI_FalconTeam/status/1742527508682072179
+    - "https://perception-point.io/blog/the-rebranded-crypter-scrubcrypt/"
+    - "https://0xtoxin.github.io/threat%20breakdown/ScrubCrypt-Rebirth-Of-Jlaive/"
+    - "https://www.fortinet.com/blog/threat-research/old-cyber-gang-uses-new-crypter-scrubcrypt"
+    - "https://twitter.com/SI_FalconTeam/status/1742527508682072179"
 tags:
-- packers
-- ScrubCrypt
-- obfuscation
+    - "packers"
+    - "ScrubCrypt"
+    - "obfuscation"
 contributors:
-- SI_FalconTeam
+    - "SI_FalconTeam"

@@ -1,7 +1,7 @@
-name: PECompact
+name: "PECompact"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://bitsum.com/portfolio/pecompact/
+    - "https://bitsum.com/portfolio/pecompact/"
 tags:
-- pecompact
+    - "pecompact"

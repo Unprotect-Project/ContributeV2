@@ -1,19 +1,19 @@
-name: 'Use Alternate Authentication Material: Pass the Hash'
+name: "Use Alternate Authentication Material: Pass the Hash"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1550/002/
+    - "https://attack.mitre.org/techniques/T1550/002/"
 tags:
-- Defense Evasion
-- Lateral Movement
-- stolen password hashes
-- bypass system access controls
-- bypass standard authentication steps
-- PtH
-- Credential Access
-- overpass the hash
-- Kerberos ticket
-- Pass the Ticket
-- APT1
-- APT28
-- APT32
+    - "Defense Evasion"
+    - "Lateral Movement"
+    - "stolen password hashes"
+    - "bypass system access controls"
+    - "bypass standard authentication steps"
+    - "PtH"
+    - "Credential Access"
+    - "overpass the hash"
+    - "Kerberos ticket"
+    - "Pass the Ticket"
+    - "APT1"
+    - "APT28"
+    - "APT32"

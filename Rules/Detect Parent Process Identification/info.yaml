@@ -1,2 +1,2 @@
-name: Detect Parent Process Identification
-type: YARA
+name: "Detect Parent Process Identification"
+type: "YARA"

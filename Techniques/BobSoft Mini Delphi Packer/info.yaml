@@ -1,10 +1,10 @@
-name: BobSoft Mini Delphi Packer
+name: "BobSoft Mini Delphi Packer"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.mandiant.com/resources/increased-use-of-delphi-packer-to-evade-malware-classification
+    - "https://www.mandiant.com/resources/increased-use-of-delphi-packer-to-evade-malware-classification"
 tags:
-- delphi
-- packer
+    - "delphi"
+    - "packer"
 contributors:
-- fr0gger
+    - "fr0gger"

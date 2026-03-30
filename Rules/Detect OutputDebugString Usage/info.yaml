@@ -1,2 +1,2 @@
-name: Detect OutputDebugString Usage
-type: YARA
+name: "Detect OutputDebugString Usage"
+type: "YARA"

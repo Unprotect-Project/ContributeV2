@@ -1,4 +1,4 @@
-language: Python
-contributors: __Thanat0s__
-associated_technique: Domain Fronting
-target_operating_system: windows
+language: "Python"
+contributors: "__Thanat0s__"
+associated_technique: "Domain Fronting"
+target_operating_system: "windows"

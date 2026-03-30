@@ -1,18 +1,18 @@
-name: Kill Process
+name: "Kill Process"
 categories:
-- Anti-Monitoring
+    - "Anti-Monitoring"
 resources:
-- https://www.bleepingcomputer.com/news/security/coinminer-comes-with-a-process-kill-list-to-keep-competitors-at-bay/
+    - "https://www.bleepingcomputer.com/news/security/coinminer-comes-with-a-process-kill-list-to-keep-competitors-at-bay/"
 tags:
-- Wireshark.exe
-- Kill process
-- Ida.exe
-- Procmon.exe
-- Disrupt
-- monitoring
+    - "Wireshark.exe"
+    - "Kill process"
+    - "Ida.exe"
+    - "Procmon.exe"
+    - "Disrupt"
+    - "monitoring"
 featured_apis:
-- OpenProcess
-- Process32First
-- Process32Next
-- CreateToolhelp32Snapshot
-- GetProcAddress
+    - "OpenProcess"
+    - "Process32First"
+    - "Process32Next"
+    - "CreateToolhelp32Snapshot"
+    - "GetProcAddress"

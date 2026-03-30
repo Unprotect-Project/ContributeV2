@@ -1,2 +1,2 @@
-name: Detect PowerShell Delay Execution via Ping
-type: SIGMA
+name: "Detect PowerShell Delay Execution via Ping"
+type: "SIGMA"

@@ -1,19 +1,19 @@
-name: BITS Jobs
+name: "BITS Jobs"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1197/
+    - "https://attack.mitre.org/techniques/T1197/"
 tags:
-- Defense Evasion
-- Persistence
-- Windows Background Intelligent Transfer Service (BITS)
-- BITSAdmin tool
-- Component Object Model (COM)
-- execute mailicious code
-- perform background tasks
-- job creation
-- Exfiltration Over Alternative Protocol
-- APT39
-- APT41
-- payload download
-- Indicator Removal
+    - "Defense Evasion"
+    - "Persistence"
+    - "Windows Background Intelligent Transfer Service (BITS)"
+    - "BITSAdmin tool"
+    - "Component Object Model (COM)"
+    - "execute mailicious code"
+    - "perform background tasks"
+    - "job creation"
+    - "Exfiltration Over Alternative Protocol"
+    - "APT39"
+    - "APT41"
+    - "payload download"
+    - "Indicator Removal"

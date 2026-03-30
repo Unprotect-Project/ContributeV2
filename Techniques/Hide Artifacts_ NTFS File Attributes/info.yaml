@@ -1,13 +1,13 @@
-name: 'Hide Artifacts: NTFS File Attributes'
+name: "Hide Artifacts: NTFS File Attributes"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1564/004/
+    - "https://attack.mitre.org/techniques/T1564/004/"
 tags:
-- Defense Evasion
-- New Technology File System (NTFS)
-- Master File Table (MFT)
-- Extended Attributes (EA)
-- Alternate Data Streams (ADSs)
-- attribute metadata
-- APT32
+    - "Defense Evasion"
+    - "New Technology File System (NTFS)"
+    - "Master File Table (MFT)"
+    - "Extended Attributes (EA)"
+    - "Alternate Data Streams (ADSs)"
+    - "attribute metadata"
+    - "APT32"

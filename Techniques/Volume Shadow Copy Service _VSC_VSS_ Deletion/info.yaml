@@ -1,18 +1,18 @@
-name: Volume Shadow Copy Service (VSC,VSS) Deletion
+name: "Volume Shadow Copy Service (VSC,VSS) Deletion"
 categories:
-- Anti-Forensic
-- Defense Evasion [Mitre]
+    - "Anti-Forensic"
+    - "Defense Evasion [Mitre]"
 resources:
-- https://docs.microsoft.com/ja-jp/windows-server/administration/windows-commands/vssadmin-delete-shadows
-- https://www.fortinet.com/blog/threat-research/stomping-shadow-copies-a-second-look-into-deletion-methods
-- https://blogs.blackberry.com/en/2018/11/threat-spotlight-inside-vssdestroy-ransomware
-- https://blog.avast.com/zepto-ransomware-now-introduces-new-features-to-better-encrypt-your-files
-- http://www.kazamiya.net/DeletedSC
-- https://github.com/mnrkbys/vss_carver
-- https://www.shadowexplorer.com/
+    - "https://docs.microsoft.com/ja-jp/windows-server/administration/windows-commands/vssadmin-delete-shadows"
+    - "https://www.fortinet.com/blog/threat-research/stomping-shadow-copies-a-second-look-into-deletion-methods"
+    - "https://blogs.blackberry.com/en/2018/11/threat-spotlight-inside-vssdestroy-ransomware"
+    - "https://blog.avast.com/zepto-ransomware-now-introduces-new-features-to-better-encrypt-your-files"
+    - "http://www.kazamiya.net/DeletedSC"
+    - "https://github.com/mnrkbys/vss_carver"
+    - "https://www.shadowexplorer.com/"
 tags:
-- VSC
-- ShadowCopy
-- Ransomware
+    - "VSC"
+    - "ShadowCopy"
+    - "Ransomware"
 contributors:
-- hackeT
+    - "hackeT"

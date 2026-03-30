@@ -1,19 +1,19 @@
-name: 'Subvert Trust Controls: Code Signing'
+name: "Subvert Trust Controls: Code Signing"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1553/002/
+    - "https://attack.mitre.org/techniques/T1553/002/"
 tags:
-- Defense Evasion
-- falsification of trusted signatures
-- code signing
-- falsifying certificates
-- self signed digital certificates
-- fake certificates
-- valid CA
-- invalid certificates
-- revoked certificates
-- stolen certificates
-- forged certificates
-- APT29
-- APT41
+    - "Defense Evasion"
+    - "falsification of trusted signatures"
+    - "code signing"
+    - "falsifying certificates"
+    - "self signed digital certificates"
+    - "fake certificates"
+    - "valid CA"
+    - "invalid certificates"
+    - "revoked certificates"
+    - "stolen certificates"
+    - "forged certificates"
+    - "APT29"
+    - "APT41"

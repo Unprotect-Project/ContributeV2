@@ -1,27 +1,27 @@
-name: CPUID
+name: "CPUID"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://sites.google.com/site/bletchleypark2/malware-analysis/malware-technique/anti-vm
-- https://github.com/a0rtega/pafish
+    - "https://sites.google.com/site/bletchleypark2/malware-analysis/malware-technique/anti-vm"
+    - "https://github.com/a0rtega/pafish"
 tags:
-- CPUID
-- instruction
-- CPU level
-- bytecode 0FA2
-- running CPU
-- Pentium
-- brand of the CPU
-- Hypervisor
-- leaf information
-- EAX register
-- EBX
-- EDX
-- ECX
-- virtualisation
-- plateforms
-- KVM
-- Microsoft Hv
-- Hyper V
-- VMware
-- GenuineIntel
+    - "CPUID"
+    - "instruction"
+    - "CPU level"
+    - "bytecode 0FA2"
+    - "running CPU"
+    - "Pentium"
+    - "brand of the CPU"
+    - "Hypervisor"
+    - "leaf information"
+    - "EAX register"
+    - "EBX"
+    - "EDX"
+    - "ECX"
+    - "virtualisation"
+    - "plateforms"
+    - "KVM"
+    - "Microsoft Hv"
+    - "Hyper V"
+    - "VMware"
+    - "GenuineIntel"

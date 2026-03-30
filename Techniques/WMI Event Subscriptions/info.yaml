@@ -1,8 +1,8 @@
-name: WMI Event Subscriptions
+name: "WMI Event Subscriptions"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://attack.mitre.org/techniques/T1546
-- https://github.com/1d8/offsec/tree/main/persistence/windows/wmi-event-subscription
+    - "https://attack.mitre.org/techniques/T1546"
+    - "https://github.com/1d8/offsec/tree/main/persistence/windows/wmi-event-subscription"
 contributors:
-- 1d8
+    - "1d8"

@@ -1,2 +1,2 @@
-name: Detect Shadow Copy Delete via System Utilities Through PowerShell
-type: SIGMA
+name: "Detect Shadow Copy Delete via System Utilities Through PowerShell"
+type: "SIGMA"

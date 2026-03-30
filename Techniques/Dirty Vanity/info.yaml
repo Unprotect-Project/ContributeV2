@@ -1,31 +1,31 @@
-name: Dirty Vanity
+name: "Dirty Vanity"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://github.com/deepinstinct/Dirty-Vanity
-- https://i.blackhat.com/EU-22/Thursday-Briefings/EU-22-Nissan-DirtyVanity.pdf
+    - "https://github.com/deepinstinct/Dirty-Vanity"
+    - "https://i.blackhat.com/EU-22/Thursday-Briefings/EU-22-Nissan-DirtyVanity.pdf"
 tags:
-- Process injection
-- Windows forking
-- Process reflection
-- Snapshotting
-- RtlCreateProcessReflection
-- NtCreateProcess
-- NtCreateProcessEx
-- Fork
-- Execute
-- PROCESS_VM_OPERATION
-- PROCESS_CREATE_THREAD
-- PROCESS_DUP_HANDLE
-- NtCreateSection
-- NtMapViewOfSection
-- VirtualAllocEx
-- WriteProcessMemory
-- NtSetContextThread
-- Ghost Writing
+    - "Process injection"
+    - "Windows forking"
+    - "Process reflection"
+    - "Snapshotting"
+    - "RtlCreateProcessReflection"
+    - "NtCreateProcess"
+    - "NtCreateProcessEx"
+    - "Fork"
+    - "Execute"
+    - "PROCESS_VM_OPERATION"
+    - "PROCESS_CREATE_THREAD"
+    - "PROCESS_DUP_HANDLE"
+    - "NtCreateSection"
+    - "NtMapViewOfSection"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "NtSetContextThread"
+    - "Ghost Writing"
 featured_apis:
-- VirtualAlloc
-- VirtualAllocEx
-- WriteProcessMemory
-- OpenProcess
-- GetProcAddress
+    - "VirtualAlloc"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "OpenProcess"
+    - "GetProcAddress"

@@ -1,2 +1,2 @@
-name: Detect Cronos Crypter
-type: YARA
+name: "Detect Cronos Crypter"
+type: "YARA"

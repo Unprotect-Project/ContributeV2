@@ -1,12 +1,12 @@
-name: PyArmor
+name: "PyArmor"
 categories:
-- Packers
+    - "Packers"
 resources:
-- http://pyarmor.dashingsoft.com/
-- https://github.com/dashingsoft/pyarmor
+    - "http://pyarmor.dashingsoft.com/"
+    - "https://github.com/dashingsoft/pyarmor"
 tags:
-- python
-- obfuscation
+    - "python"
+    - "obfuscation"
 contributors:
-- fr0gger
-- Jonathan Peters
+    - "fr0gger"
+    - "Jonathan Peters"

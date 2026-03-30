@@ -1,23 +1,23 @@
-name: Image File Execution Options Injection
+name: "Image File Execution Options Injection"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process
+    - "https://www.endgame.com/blog/technical-blog/ten-process-injection-techniques-technical-survey-common-and-trending-process"
 tags:
-- Image File Execution Options Injection
-- IFEO Injection
-- malware
-- evasion
-- detection
-- persistence
-- compromised system
-- registry keys
-- Windows operating system
-- debugging options
-- executable files
-- Appinit_DLL
-- AppCertDlls
-- injection
-- DLLs
-- code signing
-- de signing
+    - "Image File Execution Options Injection"
+    - "IFEO Injection"
+    - "malware"
+    - "evasion"
+    - "detection"
+    - "persistence"
+    - "compromised system"
+    - "registry keys"
+    - "Windows operating system"
+    - "debugging options"
+    - "executable files"
+    - "Appinit_DLL"
+    - "AppCertDlls"
+    - "injection"
+    - "DLLs"
+    - "code signing"
+    - "de signing"

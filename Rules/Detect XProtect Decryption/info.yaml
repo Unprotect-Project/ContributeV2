@@ -1,2 +1,2 @@
-name: Detect XProtect Decryption
-type: YARA
+name: "Detect XProtect Decryption"
+type: "YARA"

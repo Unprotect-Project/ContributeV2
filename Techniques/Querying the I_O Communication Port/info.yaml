@@ -1,5 +1,5 @@
-name: Querying the I/O Communication Port
+name: "Querying the I/O Communication Port"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://www.aldeid.com/wiki/VMXh-Magic-Value
+    - "https://www.aldeid.com/wiki/VMXh-Magic-Value"

@@ -1,4 +1,4 @@
-language: C++
-contributors: Sh0ckFR
-associated_technique: DLL Proxying
-target_operating_system: windows
+language: "C++"
+contributors: "Sh0ckFR"
+associated_technique: "DLL Proxying"
+target_operating_system: "windows"

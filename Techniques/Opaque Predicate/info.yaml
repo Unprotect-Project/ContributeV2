@@ -1,13 +1,13 @@
-name: Opaque Predicate
+name: "Opaque Predicate"
 categories:
-- Anti-Disassembly
+    - "Anti-Disassembly"
 resources:
-- https://www.carbonblack.com/2019/02/25/defeating-compiler-level-obfuscations-used-in-apt10-malware/
+    - "https://www.carbonblack.com/2019/02/25/defeating-compiler-level-obfuscations-used-in-apt10-malware/"
 tags:
-- Complex logic
-- Hard-to-understand code
-- Single-path decision making
-- Always-true conditions
-- Anti-disassembling
-- Reverse engineering evasion
-- Malware detection evasion
+    - "Complex logic"
+    - "Hard-to-understand code"
+    - "Single-path decision making"
+    - "Always-true conditions"
+    - "Anti-disassembling"
+    - "Reverse engineering evasion"
+    - "Malware detection evasion"

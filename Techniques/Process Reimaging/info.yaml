@@ -1,13 +1,13 @@
-name: Process Reimaging
+name: "Process Reimaging"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://www.trellix.com/en-sg/about/newsroom/stories/threat-labs/in-ntdll-i-trust-process-reimaging-and-endpoint-security-solution-bypass.html
+    - "https://www.trellix.com/en-sg/about/newsroom/stories/threat-labs/in-ntdll-i-trust-process-reimaging-and-endpoint-security-solution-bypass.html"
 tags:
-- Process Reimaging
-- Detection evasion
-- Endpoint security solutions
-- Process Hollowing
-- Process Doppelganging
-- Mitre Attack Defense Evasion Category
-- Code injection
+    - "Process Reimaging"
+    - "Detection evasion"
+    - "Endpoint security solutions"
+    - "Process Hollowing"
+    - "Process Doppelganging"
+    - "Mitre Attack Defense Evasion Category"
+    - "Code injection"

@@ -1,4 +1,4 @@
-language: C++
-contributors: West Wind
-associated_technique: Unloading Module with FreeLibrary
-target_operating_system: windows
+language: "C++"
+contributors: "West Wind"
+associated_technique: "Unloading Module with FreeLibrary"
+target_operating_system: "windows"

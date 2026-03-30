@@ -1,2 +1,2 @@
-name: Detect PELock Protector
-type: YARA
+name: "Detect PELock Protector"
+type: "YARA"

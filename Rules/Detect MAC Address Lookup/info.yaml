@@ -1,2 +1,2 @@
-name: Detect MAC Address Lookup
-type: YARA
+name: "Detect MAC Address Lookup"
+type: "YARA"

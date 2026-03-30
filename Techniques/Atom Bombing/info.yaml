@@ -1,35 +1,35 @@
-name: Atom Bombing
+name: "Atom Bombing"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://blog.ensilo.com/atombombing-brand-new-code-injection-for-windows
+    - "https://blog.ensilo.com/atombombing-brand-new-code-injection-for-windows"
 tags:
-- Atom Bombing
-- Process injection
-- Windows functions
-- Atom Tables
-- Globally accessible string storage
-- shellcode
-- NtQueueApcThread
-- targeted process
-- Return Oriented Programming (ROP)
-- Data Execution Prevention (DEP)
-- injection
-- malicious code
-- Windows Atom Tables
-- global storage mechanism
+    - "Atom Bombing"
+    - "Process injection"
+    - "Windows functions"
+    - "Atom Tables"
+    - "Globally accessible string storage"
+    - "shellcode"
+    - "NtQueueApcThread"
+    - "targeted process"
+    - "Return Oriented Programming (ROP)"
+    - "Data Execution Prevention (DEP)"
+    - "injection"
+    - "malicious code"
+    - "Windows Atom Tables"
+    - "global storage mechanism"
 featured_apis:
-- WriteProcessMemory
-- OpenThread
-- QueueUserAPC
-- ResumeThread
-- OpenProcess
-- Process32First
-- Process32Next
-- CreateToolhelp32Snapshot
-- Thread32First
-- Thread32Next
-- ReadProcessMemory
-- HeapAlloc
-- SuspendThread
-- GetProcAddress
+    - "WriteProcessMemory"
+    - "OpenThread"
+    - "QueueUserAPC"
+    - "ResumeThread"
+    - "OpenProcess"
+    - "Process32First"
+    - "Process32Next"
+    - "CreateToolhelp32Snapshot"
+    - "Thread32First"
+    - "Thread32Next"
+    - "ReadProcessMemory"
+    - "HeapAlloc"
+    - "SuspendThread"
+    - "GetProcAddress"

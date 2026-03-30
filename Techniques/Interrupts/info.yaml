@@ -1,5 +1,5 @@
-name: Interrupts
+name: "Interrupts"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 featured_apis:
-- IsDebuggerPresent
+    - "IsDebuggerPresent"

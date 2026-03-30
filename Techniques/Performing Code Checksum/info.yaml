@@ -1,5 +1,5 @@
-name: Performing Code Checksum
+name: "Performing Code Checksum"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://www.apriorit.com/dev-blog/367-anti-reverse-engineering-protection-techniques-to-use-before-releasing-software
+    - "https://www.apriorit.com/dev-blog/367-anti-reverse-engineering-protection-techniques-to-use-before-releasing-software"

@@ -1,12 +1,12 @@
-name: 'System Binary Proxy Execution: InstallUtil'
+name: "System Binary Proxy Execution: InstallUtil"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1218/004/
+    - "https://attack.mitre.org/techniques/T1218/004/"
 tags:
-- Defense Evasion
-- C:\Windows\Microsoft.NET\Framework\v\InstallUtil.exe
-- C:\Windows\Microsoft.NET\Framework64\v\InstallUtil.exe
-- '[System.ComponentModel.RunInstaller(true)]'
-- disable Windows Defender
-- execute malicious code
+    - "Defense Evasion"
+    - "C:\\Windows\\Microsoft.NET\\Framework\\v\\InstallUtil.exe"
+    - "C:\\Windows\\Microsoft.NET\\Framework64\\v\\InstallUtil.exe"
+    - "[System.ComponentModel.RunInstaller(true)]"
+    - "disable Windows Defender"
+    - "execute malicious code"

@@ -1,16 +1,16 @@
-name: 'Valid Accounts: Domain Accounts'
+name: "Valid Accounts: Domain Accounts"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1078/002/
+    - "https://attack.mitre.org/techniques/T1078/002/"
 tags:
-- Defense Evasion
-- Persistence
-- Privilege Escalation
-- Initial Access
-- Active Directory Domain Services
-- OS Credential Dumping
-- password reuse
-- weak passwords
-- privileged domain resources
-- lateral movement
+    - "Defense Evasion"
+    - "Persistence"
+    - "Privilege Escalation"
+    - "Initial Access"
+    - "Active Directory Domain Services"
+    - "OS Credential Dumping"
+    - "password reuse"
+    - "weak passwords"
+    - "privileged domain resources"
+    - "lateral movement"

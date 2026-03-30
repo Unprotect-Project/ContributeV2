@@ -1,2 +1,2 @@
-name: Detect QEMU Registry Artifacts
-type: YARA
+name: "Detect QEMU Registry Artifacts"
+type: "YARA"

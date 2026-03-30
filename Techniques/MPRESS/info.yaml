@@ -1,7 +1,7 @@
-name: MPRESS
+name: "MPRESS"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.autohotkey.com/mpress/mpress_web.htm
+    - "https://www.autohotkey.com/mpress/mpress_web.htm"
 tags:
-- MPRESS
+    - "MPRESS"

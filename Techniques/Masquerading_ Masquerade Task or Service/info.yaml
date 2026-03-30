@@ -1,15 +1,15 @@
-name: 'Masquerading: Masquerade Task or Service'
+name: "Masquerading: Masquerade Task or Service"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1036/004/
+    - "https://attack.mitre.org/techniques/T1036/004/"
 tags:
-- Defense Evasion
-- scheduled tasks
-- scheduled tasks
-- mimic legitimate task
-- mimic legitimate service
-- APT-C-36
-- APT29
-- APT32
-- APT41
+    - "Defense Evasion"
+    - "scheduled tasks"
+    - "scheduled tasks"
+    - "mimic legitimate task"
+    - "mimic legitimate service"
+    - "APT-C-36"
+    - "APT29"
+    - "APT32"
+    - "APT41"

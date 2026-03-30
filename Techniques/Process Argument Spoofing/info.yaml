@@ -1,19 +1,19 @@
-name: Process Argument Spoofing
+name: "Process Argument Spoofing"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://blog.xpnsec.com/how-to-argue-like-cobalt-strike/
-- https://www.bordergate.co.uk/argument-spoofing/
-- https://www.wietzebeukema.nl/blog/why-bother-with-argv0
+    - "https://blog.xpnsec.com/how-to-argue-like-cobalt-strike/"
+    - "https://www.bordergate.co.uk/argument-spoofing/"
+    - "https://www.wietzebeukema.nl/blog/why-bother-with-argv0"
 tags:
-- Process Argument Spoofing
-- PEB Manipulation
-- Command Line Argument Tampering
-- Low-Level System Manipulation
+    - "Process Argument Spoofing"
+    - "PEB Manipulation"
+    - "Command Line Argument Tampering"
+    - "Low-Level System Manipulation"
 featured_apis:
-- WriteProcessMemory
-- ReadProcessMemory
-- NtQueryInformationProcess
+    - "WriteProcessMemory"
+    - "ReadProcessMemory"
+    - "NtQueryInformationProcess"
 contributors:
-- nuts7
-- Wietze
+    - "nuts7"
+    - "Wietze"

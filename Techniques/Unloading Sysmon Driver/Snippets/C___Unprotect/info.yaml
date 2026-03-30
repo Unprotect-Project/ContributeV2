@@ -1,4 +1,4 @@
-language: C++
-contributors: Unprotect
-associated_technique: Unloading Sysmon Driver
-target_operating_system: windows
+language: "C++"
+contributors: "Unprotect"
+associated_technique: "Unloading Sysmon Driver"
+target_operating_system: "windows"

@@ -1,2 +1,2 @@
-name: Detect Windows Event Logging Crashing Attempt
-type: CAPA
+name: "Detect Windows Event Logging Crashing Attempt"
+type: "CAPA"

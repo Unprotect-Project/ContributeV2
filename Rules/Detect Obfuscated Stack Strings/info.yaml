@@ -1,2 +1,2 @@
-name: Detect Obfuscated Stack Strings
-type: CAPA
+name: "Detect Obfuscated Stack Strings"
+type: "CAPA"

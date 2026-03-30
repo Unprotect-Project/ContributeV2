@@ -1,2 +1,2 @@
-name: Detect Container Execution Agent via Process Name
-type: CAPA
+name: "Detect Container Execution Agent via Process Name"
+type: "CAPA"

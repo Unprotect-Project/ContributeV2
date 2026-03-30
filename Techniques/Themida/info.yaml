@@ -1,7 +1,7 @@
-name: Themida
+name: "Themida"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.oreans.com/Themida.php
+    - "https://www.oreans.com/Themida.php"
 tags:
-- themida
+    - "themida"

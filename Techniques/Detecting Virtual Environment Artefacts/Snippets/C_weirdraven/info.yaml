@@ -1,4 +1,4 @@
-language: C
-contributors: weirdraven
-associated_technique: Detecting Virtual Environment Artefacts
-target_operating_system: linux
+language: "C"
+contributors: "weirdraven"
+associated_technique: "Detecting Virtual Environment Artefacts"
+target_operating_system: "linux"

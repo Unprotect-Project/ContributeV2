@@ -1,10 +1,10 @@
-name: Malvertising
+name: "Malvertising"
 categories:
-- Others
+    - "Others"
 resources:
-- https://www.imperva.com/learn/application-security/malvertising/
+    - "https://www.imperva.com/learn/application-security/malvertising/"
 tags:
-- malvertising
-- online advertising
-- high-profile websites
-- trust in websites
+    - "malvertising"
+    - "online advertising"
+    - "high-profile websites"
+    - "trust in websites"

@@ -1,10 +1,10 @@
-name: Debug Registers, Hardware Breakpoints
+name: "Debug Registers, Hardware Breakpoints"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread
-- https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getthreadcontext
-- https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/registers-window
-- https://isc.sans.edu/diary/31658
+    - "https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getcurrentthread"
+    - "https://docs.microsoft.com/en-us/windows/win32/api/processthreadsapi/nf-processthreadsapi-getthreadcontext"
+    - "https://docs.microsoft.com/en-us/windows-hardware/drivers/debugger/registers-window"
+    - "https://isc.sans.edu/diary/31658"
 tags:
-- DR0
+    - "DR0"

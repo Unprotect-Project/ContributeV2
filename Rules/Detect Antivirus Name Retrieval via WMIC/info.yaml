@@ -1,2 +1,2 @@
-name: Detect Antivirus Name Retrieval via WMIC
-type: SIGMA
+name: "Detect Antivirus Name Retrieval via WMIC"
+type: "SIGMA"

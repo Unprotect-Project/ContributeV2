@@ -1,2 +1,2 @@
-name: Detect AppLocker Bypass via Regsvr32
-type: SIGMA
+name: "Detect AppLocker Bypass via Regsvr32"
+type: "SIGMA"

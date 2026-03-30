@@ -1,2 +1,2 @@
-name: Detect PowerShell Download File from Base64 URL
-type: SIGMA
+name: "Detect PowerShell Download File from Base64 URL"
+type: "SIGMA"

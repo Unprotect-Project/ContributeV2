@@ -1,5 +1,5 @@
-name: theArk
+name: "theArk"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://github.com/aaaddress1/theArk
+    - "https://github.com/aaaddress1/theArk"

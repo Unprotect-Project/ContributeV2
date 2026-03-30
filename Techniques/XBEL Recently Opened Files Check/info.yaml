@@ -1,7 +1,7 @@
-name: XBEL Recently Opened Files Check
+name: "XBEL Recently Opened Files Check"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://attack.mitre.org/techniques/T1497/002/
+    - "https://attack.mitre.org/techniques/T1497/002/"
 contributors:
-- 1d8
+    - "1d8"

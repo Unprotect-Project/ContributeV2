@@ -1,4 +1,4 @@
-language: PowerShell
-contributors: Glacius
-associated_technique: Thermal Zone Temperature
-target_operating_system: windows
+language: "PowerShell"
+contributors: "Glacius"
+associated_technique: "Thermal Zone Temperature"
+target_operating_system: "windows"

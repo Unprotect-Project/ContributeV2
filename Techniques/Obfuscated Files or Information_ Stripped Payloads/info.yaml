@@ -1,10 +1,10 @@
-name: 'Obfuscated Files or Information: Stripped Payloads'
+name: "Obfuscated Files or Information: Stripped Payloads"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1027/008/
+    - "https://attack.mitre.org/techniques/T1027/008/"
 tags:
-- Defense Evasion
-- Remove human readable information
-- operating system linker
-- obfuscate malicious code
+    - "Defense Evasion"
+    - "Remove human readable information"
+    - "operating system linker"
+    - "obfuscate malicious code"

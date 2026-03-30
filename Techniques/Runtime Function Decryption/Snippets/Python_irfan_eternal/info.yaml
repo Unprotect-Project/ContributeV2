@@ -1,4 +1,4 @@
-language: Python
-contributors: irfan_eternal
-associated_technique: Runtime Function Decryption
-target_operating_system: windows
+language: "Python"
+contributors: "irfan_eternal"
+associated_technique: "Runtime Function Decryption"
+target_operating_system: "windows"

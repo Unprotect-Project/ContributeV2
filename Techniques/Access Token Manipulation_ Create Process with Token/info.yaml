@@ -1,14 +1,14 @@
-name: 'Access Token Manipulation: Create Process with Token'
+name: "Access Token Manipulation: Create Process with Token"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1134/002/
+    - "https://attack.mitre.org/techniques/T1134/002/"
 tags:
-- Defense Evasion
-- Privilege Escalation
-- CreateProcessWithTokenW
-- runas
-- Token Impersonation
-- Token Theft
-- Make Token
-- Impersonate Token
+    - "Defense Evasion"
+    - "Privilege Escalation"
+    - "CreateProcessWithTokenW"
+    - "runas"
+    - "Token Impersonation"
+    - "Token Theft"
+    - "Make Token"
+    - "Impersonate Token"

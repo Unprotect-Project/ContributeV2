@@ -1,7 +1,7 @@
-name: LocalSize(0)
+name: "LocalSize(0)"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-localsize
+    - "https://docs.microsoft.com/en-us/windows/win32/api/winbase/nf-winbase-localsize"
 tags:
-- localsize
+    - "localsize"

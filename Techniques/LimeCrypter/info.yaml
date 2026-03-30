@@ -1,11 +1,11 @@
-name: LimeCrypter
+name: "LimeCrypter"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://github.com/NYAN-x-CAT/Lime-Crypter/tree/master
-- https://www.youtube.com/watch?v=TgYb3hwOAV4
+    - "https://github.com/NYAN-x-CAT/Lime-Crypter/tree/master"
+    - "https://www.youtube.com/watch?v=TgYb3hwOAV4"
 tags:
-- crypter
-- limecrypter
+    - "crypter"
+    - "limecrypter"
 contributors:
-- Jonathan Peters
+    - "Jonathan Peters"

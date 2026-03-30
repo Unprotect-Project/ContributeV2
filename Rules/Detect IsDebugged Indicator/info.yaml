@@ -1,2 +1,2 @@
-name: Detect IsDebugged Indicator
-type: YARA
+name: "Detect IsDebugged Indicator"
+type: "YARA"

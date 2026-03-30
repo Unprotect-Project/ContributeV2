@@ -1,2 +1,2 @@
-name: Detect NtLoadDriver Usage
-type: YARA
+name: "Detect NtLoadDriver Usage"
+type: "YARA"

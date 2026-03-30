@@ -1,4 +1,4 @@
-language: PowerShell
-contributors: DarkCoderSc
-associated_technique: Right-to-Left Override (RLO) Extension Spoofing
-target_operating_system: windows
+language: "PowerShell"
+contributors: "DarkCoderSc"
+associated_technique: "Right-to-Left Override (RLO) Extension Spoofing"
+target_operating_system: "windows"

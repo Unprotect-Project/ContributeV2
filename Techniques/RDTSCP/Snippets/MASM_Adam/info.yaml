@@ -1,4 +1,4 @@
-language: MASM
-contributors: Adam
-associated_technique: RDTSCP
-target_operating_system: windows
+language: "MASM"
+contributors: "Adam"
+associated_technique: "RDTSCP"
+target_operating_system: "windows"

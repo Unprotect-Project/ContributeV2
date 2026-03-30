@@ -1,2 +1,2 @@
-name: Detect WAN Discovery via IPIFY.ORG
-type: SIGMA
+name: "Detect WAN Discovery via IPIFY.ORG"
+type: "SIGMA"

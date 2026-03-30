@@ -1,4 +1,4 @@
-language: C
-contributors: 1d8
-associated_technique: AppInit DLL Injection
-target_operating_system: windows
+language: "C"
+contributors: "1d8"
+associated_technique: "AppInit DLL Injection"
+target_operating_system: "windows"

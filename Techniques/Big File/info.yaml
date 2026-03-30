@@ -1,5 +1,5 @@
-name: Big File
+name: "Big File"
 categories:
-- Antivirus/EDR Evasion
+    - "Antivirus/EDR Evasion"
 resources:
-- https://securelist.com/old-malware-tricks-to-bypass-detection-in-the-age-of-big-data/78010/
+    - "https://securelist.com/old-malware-tricks-to-bypass-detection-in-the-age-of-big-data/78010/"

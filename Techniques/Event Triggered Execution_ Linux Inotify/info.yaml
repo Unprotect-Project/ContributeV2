@@ -1,7 +1,7 @@
-name: 'Event Triggered Execution: Linux Inotify'
+name: "Event Triggered Execution: Linux Inotify"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://attack.mitre.org/techniques/T1546/
+    - "https://attack.mitre.org/techniques/T1546/"
 contributors:
-- 1d8
+    - "1d8"

@@ -1,4 +1,4 @@
-language: Python
-contributors: DarkCoderSc
-associated_technique: Shortcut Hiding
-target_operating_system: windows
+language: "Python"
+contributors: "DarkCoderSc"
+associated_technique: "Shortcut Hiding"
+target_operating_system: "windows"

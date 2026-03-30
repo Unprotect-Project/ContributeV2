@@ -1,2 +1,2 @@
-name: UPX Packer
-type: YARA
+name: "UPX Packer"
+type: "YARA"

@@ -1,2 +1,2 @@
-name: Detect DLL Proxying
-type: YARA
+name: "Detect DLL Proxying"
+type: "YARA"

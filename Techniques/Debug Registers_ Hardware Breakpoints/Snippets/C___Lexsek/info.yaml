@@ -1,4 +1,4 @@
-language: C++
-contributors: Lexsek
-associated_technique: Debug Registers, Hardware Breakpoints
-target_operating_system: windows
+language: "C++"
+contributors: "Lexsek"
+associated_technique: "Debug Registers, Hardware Breakpoints"
+target_operating_system: "windows"

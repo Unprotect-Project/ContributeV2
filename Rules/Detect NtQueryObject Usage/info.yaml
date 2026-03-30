@@ -1,2 +1,2 @@
-name: Detect NtQueryObject Usage
-type: YARA
+name: "Detect NtQueryObject Usage"
+type: "YARA"

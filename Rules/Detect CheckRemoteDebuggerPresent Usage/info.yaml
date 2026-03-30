@@ -1,2 +1,2 @@
-name: Detect CheckRemoteDebuggerPresent Usage
-type: YARA
+name: "Detect CheckRemoteDebuggerPresent Usage"
+type: "YARA"

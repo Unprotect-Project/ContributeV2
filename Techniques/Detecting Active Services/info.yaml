@@ -1,5 +1,5 @@
-name: Detecting Active Services
+name: "Detecting Active Services"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 featured_apis:
-- RegOpenKeyExW
+    - "RegOpenKeyExW"

@@ -1,4 +1,4 @@
-language: PowerShell
-contributors: Glacius
-associated_technique: Bypass User Account Control
-target_operating_system: windows
+language: "PowerShell"
+contributors: "Glacius"
+associated_technique: "Bypass User Account Control"
+target_operating_system: "windows"

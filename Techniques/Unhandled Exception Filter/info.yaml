@@ -1,10 +1,10 @@
-name: Unhandled Exception Filter
+name: "Unhandled Exception Filter"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://evilcodecave.wordpress.com/2008/07/24/setunhandledexception-filter-anti-debug-trick/
-- https://anti-debug.checkpoint.com/techniques/exceptions.html
+    - "https://evilcodecave.wordpress.com/2008/07/24/setunhandledexception-filter-anti-debug-trick/"
+    - "https://anti-debug.checkpoint.com/techniques/exceptions.html"
 tags:
-- exception
+    - "exception"
 featured_apis:
-- UnhandledExceptionFilter
+    - "UnhandledExceptionFilter"

@@ -1,21 +1,21 @@
-name: Killing Windows Event Log
+name: "Killing Windows Event Log"
 categories:
-- Anti-Forensic
+    - "Anti-Forensic"
 resources:
-- https://github.com/hlldz/Phant0m
+    - "https://github.com/hlldz/Phant0m"
 tags:
-- Windows Event Log
-- Anti-forensic
-- Svchost.exe
-- Services
-- Process
-- Event Log service
-- Threads
+    - "Windows Event Log"
+    - "Anti-forensic"
+    - "Svchost.exe"
+    - "Services"
+    - "Process"
+    - "Event Log service"
+    - "Threads"
 featured_apis:
-- OpenThread
-- OpenProcess
-- CreateToolhelp32Snapshot
-- Thread32First
-- Thread32Next
-- SuspendThread
-- GetProcAddress
+    - "OpenThread"
+    - "OpenProcess"
+    - "CreateToolhelp32Snapshot"
+    - "Thread32First"
+    - "Thread32Next"
+    - "SuspendThread"
+    - "GetProcAddress"

@@ -1,9 +1,9 @@
-name: API Hammering
+name: "API Hammering"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://www.joesecurity.org/blog/3660886847485093803
+    - "https://www.joesecurity.org/blog/3660886847485093803"
 tags:
-- hammering
+    - "hammering"
 contributors:
-- 0x_ror
+    - "0x_ror"

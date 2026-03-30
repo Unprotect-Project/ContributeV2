@@ -1,9 +1,9 @@
-name: Tor Network C2
+name: "Tor Network C2"
 categories:
-- Network Evasion
+    - "Network Evasion"
 tags:
-- Tor
-- Anonymous communication
-- Internet traffic
-- Volunteer overlay network
-- Command and control (C&C)
+    - "Tor"
+    - "Anonymous communication"
+    - "Internet traffic"
+    - "Volunteer overlay network"
+    - "Command and control (C&C)"

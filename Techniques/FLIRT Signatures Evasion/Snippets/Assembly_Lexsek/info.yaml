@@ -1,4 +1,4 @@
-language: Assembly
-contributors: Lexsek
-associated_technique: FLIRT Signatures Evasion
-target_operating_system: windows
+language: "Assembly"
+contributors: "Lexsek"
+associated_technique: "FLIRT Signatures Evasion"
+target_operating_system: "windows"

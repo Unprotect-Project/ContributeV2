@@ -1,16 +1,16 @@
-name: Reflective Code Loading
+name: "Reflective Code Loading"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1620/
+    - "https://attack.mitre.org/techniques/T1620/"
 tags:
-- Defense Evasion
-- malicious code injection
-- executing payloads directly within process memory
-- compiled binaries
-- anonymous files (only present in RAM)
-- fileless executable code
-- evade process-based detections
-- mimic legitimate process
-- encrypted payload
-- obfuscated payload
+    - "Defense Evasion"
+    - "malicious code injection"
+    - "executing payloads directly within process memory"
+    - "compiled binaries"
+    - "anonymous files (only present in RAM)"
+    - "fileless executable code"
+    - "evade process-based detections"
+    - "mimic legitimate process"
+    - "encrypted payload"
+    - "obfuscated payload"

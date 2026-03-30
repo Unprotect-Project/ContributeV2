@@ -1,2 +1,2 @@
-name: Detect VBox, VMWare, KVM and HVM
-type: SIGMA
+name: "Detect VBox, VMWare, KVM and HVM"
+type: "SIGMA"

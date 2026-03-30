@@ -1,4 +1,4 @@
-language: C++
-contributors: ghost_pepper108
-associated_technique: Evasion using direct Syscalls
-target_operating_system: windows
+language: "C++"
+contributors: "ghost_pepper108"
+associated_technique: "Evasion using direct Syscalls"
+target_operating_system: "windows"

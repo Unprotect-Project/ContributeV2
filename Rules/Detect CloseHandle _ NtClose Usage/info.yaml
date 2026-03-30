@@ -1,2 +1,2 @@
-name: Detect CloseHandle / NtClose Usage
-type: YARA
+name: "Detect CloseHandle / NtClose Usage"
+type: "YARA"

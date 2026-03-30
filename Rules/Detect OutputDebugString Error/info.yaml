@@ -1,2 +1,2 @@
-name: Detect OutputDebugString Error
-type: CAPA
+name: "Detect OutputDebugString Error"
+type: "CAPA"

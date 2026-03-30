@@ -1,15 +1,15 @@
-name: 'Impair Defenses: Indicator Blocking'
+name: "Impair Defenses: Indicator Blocking"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1562/006/
+    - "https://attack.mitre.org/techniques/T1562/006/"
 tags:
-- Defense Evasion
-- disabling host-based sensors
-- event telemetry tampering
-- Event Tracing for Windows (ETW)
-- bypass ETW
-- blocking reporting traffic
-- PowerShell Set-EtwTraceProvider
-- registry tampering
-- bypassing SIEM alerts
+    - "Defense Evasion"
+    - "disabling host-based sensors"
+    - "event telemetry tampering"
+    - "Event Tracing for Windows (ETW)"
+    - "bypass ETW"
+    - "blocking reporting traffic"
+    - "PowerShell Set-EtwTraceProvider"
+    - "registry tampering"
+    - "bypassing SIEM alerts"

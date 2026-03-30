@@ -1,21 +1,21 @@
-name: Treepoline
+name: "Treepoline"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- http://www.hexacorn.com/blog/2019/04/24/treepoline-new-code-injection-technique/
-- https://modexp.wordpress.com/2019/04/25/seven-window-injection-methods/
+    - "http://www.hexacorn.com/blog/2019/04/24/treepoline-new-code-injection-technique/"
+    - "https://modexp.wordpress.com/2019/04/25/seven-window-injection-methods/"
 tags:
-- Tree-view controls
-- User interface element
-- Hierarchical data
-- Graphical user interface (GUI)
-- Windows applications
-- Data structures
-- Item sorting
-- TVSORTCB structure
-- lpfnCompare field
+    - "Tree-view controls"
+    - "User interface element"
+    - "Hierarchical data"
+    - "Graphical user interface (GUI)"
+    - "Windows applications"
+    - "Data structures"
+    - "Item sorting"
+    - "TVSORTCB structure"
+    - "lpfnCompare field"
 featured_apis:
-- VirtualAlloc
-- VirtualAllocEx
-- WriteProcessMemory
-- OpenProcess
+    - "VirtualAlloc"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "OpenProcess"

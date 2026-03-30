@@ -1,15 +1,15 @@
-name: 'Access Token Manipulation: SID-History Injection'
+name: "Access Token Manipulation: SID-History Injection"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1134/005/
+    - "https://attack.mitre.org/techniques/T1134/005/"
 tags:
-- Defense Evasion
-- Privilege Escalation
-- bypass access controls
-- Windows security identifier (SID)
-- SID-History Active Directory
-- impersonate users
-- lateral movement
-- MISC::AddSid
-- Mimikatz
+    - "Defense Evasion"
+    - "Privilege Escalation"
+    - "bypass access controls"
+    - "Windows security identifier (SID)"
+    - "SID-History Active Directory"
+    - "impersonate users"
+    - "lateral movement"
+    - "MISC::AddSid"
+    - "Mimikatz"

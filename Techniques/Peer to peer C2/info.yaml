@@ -1,11 +1,11 @@
-name: Peer to peer C2
+name: "Peer to peer C2"
 categories:
-- Network Evasion
+    - "Network Evasion"
 resources:
-- https://www.malwaretech.com/2013/12/peer-to-peer-botnets-for-beginners.html
+    - "https://www.malwaretech.com/2013/12/peer-to-peer-botnets-for-beginners.html"
 tags:
-- Peer-to-peer (P2P) botnets
-- Decentralized network
-- Command and control (C&C)
-- Centralized structure
-- Botnet operator
+    - "Peer-to-peer (P2P) botnets"
+    - "Decentralized network"
+    - "Command and control (C&C)"
+    - "Centralized structure"
+    - "Botnet operator"

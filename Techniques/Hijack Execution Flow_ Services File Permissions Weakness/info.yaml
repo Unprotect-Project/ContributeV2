@@ -1,13 +1,13 @@
-name: 'Hijack Execution Flow: Services File Permissions Weakness'
+name: "Hijack Execution Flow: Services File Permissions Weakness"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1574/010/
+    - "https://attack.mitre.org/techniques/T1574/010/"
 tags:
-- Persistence
-- Privilege Escalation
-- Defense Evasion
-- Windows services
-- binary permissions
-- service hijack
-- binary hijack
+    - "Persistence"
+    - "Privilege Escalation"
+    - "Defense Evasion"
+    - "Windows services"
+    - "binary permissions"
+    - "service hijack"
+    - "binary hijack"

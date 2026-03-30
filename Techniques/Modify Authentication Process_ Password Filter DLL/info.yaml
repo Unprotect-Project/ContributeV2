@@ -1,14 +1,14 @@
-name: 'Modify Authentication Process: Password Filter DLL'
+name: "Modify Authentication Process: Password Filter DLL"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1556/002/
+    - "https://attack.mitre.org/techniques/T1556/002/"
 tags:
-- Credential Access
-- Defense Evasion
-- Persistence
-- password filter dynamic link libraries (DLLs)
-- credential harvesting
-- plain-text credentials
-- Local Security Authority (LSA)
-- Security Accounts Manager (SAM)
+    - "Credential Access"
+    - "Defense Evasion"
+    - "Persistence"
+    - "password filter dynamic link libraries (DLLs)"
+    - "credential harvesting"
+    - "plain-text credentials"
+    - "Local Security Authority (LSA)"
+    - "Security Accounts Manager (SAM)"

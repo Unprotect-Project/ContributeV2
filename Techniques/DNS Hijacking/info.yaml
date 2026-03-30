@@ -1,11 +1,11 @@
-name: DNS Hijacking
+name: "DNS Hijacking"
 categories:
-- Network Evasion
+    - "Network Evasion"
 resources:
-- https://en.wikipedia.org/wiki/DNS_hijacking
+    - "https://en.wikipedia.org/wiki/DNS_hijacking"
 tags:
-- DNS hijacking
-- DNS redirection
-- Domain name system (DNS)
-- Rogue DNS server
-- Trusted DNS server
+    - "DNS hijacking"
+    - "DNS redirection"
+    - "Domain name system (DNS)"
+    - "Rogue DNS server"
+    - "Trusted DNS server"

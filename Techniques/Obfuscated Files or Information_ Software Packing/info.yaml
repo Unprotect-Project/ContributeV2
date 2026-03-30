@@ -1,19 +1,19 @@
-name: 'Obfuscated Files or Information: Software Packing'
+name: "Obfuscated Files or Information: Software Packing"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1027/002/
+    - "https://attack.mitre.org/techniques/T1027/002/"
 tags:
-- Defense Evasion
-- compressing executables
-- encrypting  executables
-- avoiding signature-based detection
-- packed payloads
-- obfuscating malicious payloads
-- MPRESS
-- UPX
-- Virtual machine software protection
-- APT29
-- APT3
-- APT38
-- APT39
+    - "Defense Evasion"
+    - "compressing executables"
+    - "encrypting  executables"
+    - "avoiding signature-based detection"
+    - "packed payloads"
+    - "obfuscating malicious payloads"
+    - "MPRESS"
+    - "UPX"
+    - "Virtual machine software protection"
+    - "APT29"
+    - "APT3"
+    - "APT38"
+    - "APT39"

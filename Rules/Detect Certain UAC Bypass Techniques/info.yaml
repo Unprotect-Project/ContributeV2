@@ -1,2 +1,2 @@
-name: Detect Certain UAC Bypass Techniques
-type: SIGMA
+name: "Detect Certain UAC Bypass Techniques"
+type: "SIGMA"

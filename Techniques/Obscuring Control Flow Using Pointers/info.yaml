@@ -1,12 +1,12 @@
-name: Obscuring Control Flow Using Pointers
+name: "Obscuring Control Flow Using Pointers"
 categories:
-- Anti-Disassembly
+    - "Anti-Disassembly"
 resources:
-- http://staff.ustc.edu.cn/~bjhua/courses/security/2014/readings/anti-disas.pdf
+    - "http://staff.ustc.edu.cn/~bjhua/courses/security/2014/readings/anti-disas.pdf"
 tags:
-- Pointers
-- Anti-disassembling
-- Control flow
-- Program behavior
-- Memory addresses
-- Data manipulation
+    - "Pointers"
+    - "Anti-disassembling"
+    - "Control flow"
+    - "Program behavior"
+    - "Memory addresses"
+    - "Data manipulation"

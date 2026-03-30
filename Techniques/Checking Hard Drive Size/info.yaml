@@ -1,13 +1,13 @@
-name: Checking Hard Drive Size
+name: "Checking Hard Drive Size"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://www.botconf.eu/2015/sandbox-detection-for-the-masses-leak-abuse-test/
+    - "https://www.botconf.eu/2015/sandbox-detection-for-the-masses-leak-abuse-test/"
 tags:
-- user machines
-- hard drives
-- size
-- 80GB
-- malware
-- virtual environment
-- sandbox
+    - "user machines"
+    - "hard drives"
+    - "size"
+    - "80GB"
+    - "malware"
+    - "virtual environment"
+    - "sandbox"

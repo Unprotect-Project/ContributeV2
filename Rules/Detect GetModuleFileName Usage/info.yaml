@@ -1,2 +1,2 @@
-name: Detect GetModuleFileName Usage
-type: YARA
+name: "Detect GetModuleFileName Usage"
+type: "YARA"

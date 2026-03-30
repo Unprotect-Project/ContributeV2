@@ -1,15 +1,15 @@
-name: Checking Pipe
+name: "Checking Pipe"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://www.slideshare.net/ThomasRoccia/sandbox-evasion-cheat-sheet
+    - "https://www.slideshare.net/ThomasRoccia/sandbox-evasion-cheat-sheet"
 tags:
-- Sandbox
-- Cuckoo
-- Host system
-- Guest system
-- Communication
-- Named pipe
-- Virtual environment
+    - "Sandbox"
+    - "Cuckoo"
+    - "Host system"
+    - "Guest system"
+    - "Communication"
+    - "Named pipe"
+    - "Virtual environment"
 contributors:
-- HoIIovv
+    - "HoIIovv"

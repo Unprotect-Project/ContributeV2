@@ -1,4 +1,4 @@
-language: C
-contributors: HoIIovv
-associated_technique: Checking Pipe
-target_operating_system: windows
+language: "C"
+contributors: "HoIIovv"
+associated_technique: "Checking Pipe"
+target_operating_system: "windows"

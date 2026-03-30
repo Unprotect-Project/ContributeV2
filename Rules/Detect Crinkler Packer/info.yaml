@@ -1,2 +1,2 @@
-name: Detect Crinkler Packer
-type: YARA
+name: "Detect Crinkler Packer"
+type: "YARA"

@@ -1,5 +1,5 @@
-name: Obsidium
+name: "Obsidium"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.obsidium.de/home
+    - "https://www.obsidium.de/home"

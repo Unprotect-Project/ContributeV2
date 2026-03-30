@@ -1,5 +1,5 @@
-name: AxProtector
+name: "AxProtector"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.wibu.com/us/products/protection-suite/axprotector.html
+    - "https://www.wibu.com/us/products/protection-suite/axprotector.html"

@@ -1,7 +1,7 @@
-name: PEtite
+name: "PEtite"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.un4seen.com/petite/
+    - "https://www.un4seen.com/petite/"
 tags:
-- petite
+    - "petite"

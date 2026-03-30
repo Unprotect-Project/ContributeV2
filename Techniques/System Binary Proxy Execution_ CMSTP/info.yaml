@@ -1,13 +1,13 @@
-name: 'System Binary Proxy Execution: CMSTP'
+name: "System Binary Proxy Execution: CMSTP"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1218/003/
+    - "https://attack.mitre.org/techniques/T1218/003/"
 tags:
-- Defense Evasion
-- Microsoft Connection Manager Profile Installer (CMSTP.exe)
-- INF files
-- malicious COM scriptlets (SCT)
-- malicious DLLs
-- bypass AppLocker
-- Bypass User Account Control
+    - "Defense Evasion"
+    - "Microsoft Connection Manager Profile Installer (CMSTP.exe)"
+    - "INF files"
+    - "malicious COM scriptlets (SCT)"
+    - "malicious DLLs"
+    - "bypass AppLocker"
+    - "Bypass User Account Control"

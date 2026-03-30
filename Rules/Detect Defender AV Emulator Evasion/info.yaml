@@ -1,2 +1,2 @@
-name: Detect Defender AV Emulator Evasion
-type: YARA
+name: "Detect Defender AV Emulator Evasion"
+type: "YARA"

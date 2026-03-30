@@ -1,5 +1,5 @@
-name: User Interaction (Are you human?)
+name: "User Interaction (Are you human?)"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://github.com/hlldz/pickl3
+    - "https://github.com/hlldz/pickl3"

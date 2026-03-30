@@ -1,2 +1,2 @@
-name: Detect Sysmon Evasion
-type: YARA
+name: "Detect Sysmon Evasion"
+type: "YARA"

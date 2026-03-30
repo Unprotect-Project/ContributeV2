@@ -1,17 +1,17 @@
-name: Inline Hooking
+name: "Inline Hooking"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- http://www.binaryguard.com/bgc/malware/sandbox/2015/11/09/dissecting_inline_hooks.html
+    - "http://www.binaryguard.com/bgc/malware/sandbox/2015/11/09/dissecting_inline_hooks.html"
 tags:
-- Inline hooking
-- Intercept calls
-- Target functions
-- Check parameters
-- Shim
-- Log
-- Spoof returned data
-- Filter calls
-- Rootkits
+    - "Inline hooking"
+    - "Intercept calls"
+    - "Target functions"
+    - "Check parameters"
+    - "Shim"
+    - "Log"
+    - "Spoof returned data"
+    - "Filter calls"
+    - "Rootkits"
 featured_apis:
-- GetProcAddress
+    - "GetProcAddress"

@@ -1,5 +1,5 @@
-name: Evading Hash Signature
+name: "Evading Hash Signature"
 categories:
-- Antivirus/EDR Evasion
+    - "Antivirus/EDR Evasion"
 resources:
-- https://resources.infosecinstitute.com/antivirus-evasion-tools/
+    - "https://resources.infosecinstitute.com/antivirus-evasion-tools/"

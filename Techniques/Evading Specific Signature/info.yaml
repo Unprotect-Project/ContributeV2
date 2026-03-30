@@ -1,5 +1,5 @@
-name: Evading Specific Signature
+name: "Evading Specific Signature"
 categories:
-- Antivirus/EDR Evasion
+    - "Antivirus/EDR Evasion"
 resources:
-- https://www.digital.security/en/blog/bypassing-antivirus-detection-pdf-exploit
+    - "https://www.digital.security/en/blog/bypassing-antivirus-detection-pdf-exploit"

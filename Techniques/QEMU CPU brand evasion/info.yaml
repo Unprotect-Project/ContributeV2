@@ -1,7 +1,7 @@
-name: QEMU CPU brand evasion
+name: "QEMU CPU brand evasion"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- https://github.com/kernelwernel/VMAware
+    - "https://github.com/kernelwernel/VMAware"
 contributors:
-- kernelwernel
+    - "kernelwernel"

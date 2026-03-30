@@ -1,9 +1,9 @@
-name: Exfiltration via SMTP
+name: "Exfiltration via SMTP"
 categories:
-- Network Evasion
+    - "Network Evasion"
 tags:
-- Email
-- Exfiltration
-- SMTPabuse
+    - "Email"
+    - "Exfiltration"
+    - "SMTPabuse"
 contributors:
-- Tasdir
+    - "Tasdir"

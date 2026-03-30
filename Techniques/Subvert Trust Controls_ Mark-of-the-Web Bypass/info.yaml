@@ -1,16 +1,16 @@
-name: 'Subvert Trust Controls: Mark-of-the-Web Bypass'
+name: "Subvert Trust Controls: Mark-of-the-Web Bypass"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1553/005/
+    - "https://attack.mitre.org/techniques/T1553/005/"
 tags:
-- Defense Evasion
-- Mark-of-the-Web (MOTW) controls
-- NTFS Alternate Data Stream (ADS)
-- Zone.Identifier
-- Windows Defender SmartScreen
-- compressed/archive (.arj
-- .gzip) format
-- disk image (.iso
-- .vhd) file format
-- APT29
+    - "Defense Evasion"
+    - "Mark-of-the-Web (MOTW) controls"
+    - "NTFS Alternate Data Stream (ADS)"
+    - "Zone.Identifier"
+    - "Windows Defender SmartScreen"
+    - "compressed/archive (.arj"
+    - ".gzip) format"
+    - "disk image (.iso"
+    - ".vhd) file format"
+    - "APT29"

@@ -1,15 +1,15 @@
-name: 'Subvert Trust Controls: Install Root Certificate'
+name: "Subvert Trust Controls: Install Root Certificate"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1553/004/
+    - "https://attack.mitre.org/techniques/T1553/004/"
 tags:
-- Defense Evasion
-- root certificate authority (CA)
-- cloning root certificates
-- Adversary-in-the-Middle
-- root CA
-- Trusted Publisher
-- certutil
-- add-trusted-cert
-- certmgr.exe
+    - "Defense Evasion"
+    - "root certificate authority (CA)"
+    - "cloning root certificates"
+    - "Adversary-in-the-Middle"
+    - "root CA"
+    - "Trusted Publisher"
+    - "certutil"
+    - "add-trusted-cert"
+    - "certmgr.exe"

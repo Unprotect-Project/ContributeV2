@@ -1,4 +1,4 @@
-language: C++
-contributors: External
-associated_technique: INT 0x2D
-target_operating_system: windows
+language: "C++"
+contributors: "External"
+associated_technique: "INT 0x2D"
+target_operating_system: "windows"

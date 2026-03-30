@@ -1,2 +1,2 @@
-name: Detect EasyCrypter Protector
-type: YARA
+name: "Detect EasyCrypter Protector"
+type: "YARA"

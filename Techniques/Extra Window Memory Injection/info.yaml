@@ -1,16 +1,16 @@
-name: Extra Window Memory Injection
+name: "Extra Window Memory Injection"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://www.crowdstrike.com/blog/through-window-creative-code-invocation/
-- https://modexp.wordpress.com/2018/08/26/process-injection-ctray/
+    - "https://www.crowdstrike.com/blog/through-window-creative-code-invocation/"
+    - "https://modexp.wordpress.com/2018/08/26/process-injection-ctray/"
 tags:
-- EWMI
-- Code Injection
+    - "EWMI"
+    - "Code Injection"
 featured_apis:
-- VirtualAlloc
-- VirtualAllocEx
-- WriteProcessMemory
-- OpenProcess
-- ReadProcessMemory
-- GetProcAddress
+    - "VirtualAlloc"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "OpenProcess"
+    - "ReadProcessMemory"
+    - "GetProcAddress"

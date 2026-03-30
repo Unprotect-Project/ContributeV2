@@ -1,7 +1,7 @@
-name: VMProtect
+name: "VMProtect"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://vmpsoft.com/
+    - "https://vmpsoft.com/"
 tags:
-- vmprotect
+    - "vmprotect"

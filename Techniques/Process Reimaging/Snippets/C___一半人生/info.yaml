@@ -1,4 +1,4 @@
-language: C++
+language: "C++"
 contributors: "\u4E00\u534A\u4EBA\u751F"
-associated_technique: Process Reimaging
-target_operating_system: windows
+associated_technique: "Process Reimaging"
+target_operating_system: "windows"

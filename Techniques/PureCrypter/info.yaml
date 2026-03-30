@@ -1,10 +1,10 @@
-name: PureCrypter
+name: "PureCrypter"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.zscaler.com/blogs/security-research/technical-analysis-purecrypter
+    - "https://www.zscaler.com/blogs/security-research/technical-analysis-purecrypter"
 tags:
-- PureCrypter
-- Packer
+    - "PureCrypter"
+    - "Packer"
 contributors:
-- RussianPanda
+    - "RussianPanda"

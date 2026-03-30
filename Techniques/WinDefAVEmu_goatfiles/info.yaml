@@ -1,5 +1,5 @@
-name: WinDefAVEmu_goatfiles
+name: "WinDefAVEmu_goatfiles"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 contributors:
-- albertzsigovits
+    - "albertzsigovits"

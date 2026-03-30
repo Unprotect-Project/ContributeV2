@@ -1,20 +1,20 @@
-name: 'Masquerading: Match Legitimate Name or Location'
+name: "Masquerading: Match Legitimate Name or Location"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1036/005/
+    - "https://attack.mitre.org/techniques/T1036/005/"
 tags:
-- Defense Evasion
-- commonly trusted directory
-- mimic legitimate trusted program
-- trusted namespaces
-- trusted filenames
-- mimic icon
-- hidden payloads
-- malicious shortcuts
-- APT1
-- APT28
-- APT29
-- APT32
-- APT39
-- APT41
+    - "Defense Evasion"
+    - "commonly trusted directory"
+    - "mimic legitimate trusted program"
+    - "trusted namespaces"
+    - "trusted filenames"
+    - "mimic icon"
+    - "hidden payloads"
+    - "malicious shortcuts"
+    - "APT1"
+    - "APT28"
+    - "APT29"
+    - "APT32"
+    - "APT39"
+    - "APT41"

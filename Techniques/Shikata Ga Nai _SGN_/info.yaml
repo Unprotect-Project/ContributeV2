@@ -1,17 +1,17 @@
-name: Shikata Ga Nai (SGN)
+name: "Shikata Ga Nai (SGN)"
 categories:
-- Data Obfuscation
+    - "Data Obfuscation"
 resources:
-- https://github.com/EgeBalci/sgn
-- https://github.com/rapid7/metasploit-framework/blob/master/modules/encoders/x86/shikata_ga_nai.rb
-- https://www.mandiant.com/resources/blog/shikata-ga-nai-encoder-still-going-strong
+    - "https://github.com/EgeBalci/sgn"
+    - "https://github.com/rapid7/metasploit-framework/blob/master/modules/encoders/x86/shikata_ga_nai.rb"
+    - "https://www.mandiant.com/resources/blog/shikata-ga-nai-encoder-still-going-strong"
 tags:
-- Shikata Ga Nai (SGN)
-- data obfuscation
-- polymorphic binary encoding scheme
-- Ege Balci
-- msfvenom
-- self-decoding obfuscated shellcode
-- XOR feedback loop
+    - "Shikata Ga Nai (SGN)"
+    - "data obfuscation"
+    - "polymorphic binary encoding scheme"
+    - "Ege Balci"
+    - "msfvenom"
+    - "self-decoding obfuscated shellcode"
+    - "XOR feedback loop"
 contributors:
-- Dreamkinn
+    - "Dreamkinn"

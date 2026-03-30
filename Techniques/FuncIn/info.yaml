@@ -1,21 +1,21 @@
-name: FuncIn
+name: "FuncIn"
 categories:
-- Antivirus/EDR Evasion
-- Anti-Debugging
-- Anti-Disassembly
-- Anti-Forensic
+    - "Antivirus/EDR Evasion"
+    - "Anti-Debugging"
+    - "Anti-Disassembly"
+    - "Anti-Forensic"
 resources:
-- https://github.com/Unprotect-Project/FuncInEvasionTechniqueDemo/tree/main
+    - "https://github.com/Unprotect-Project/FuncInEvasionTechniqueDemo/tree/main"
 tags:
-- Shellcode
-- FuncIn
-- Plugins
-- Reflection
-- DLL
-- JIT
+    - "Shellcode"
+    - "FuncIn"
+    - "Plugins"
+    - "Reflection"
+    - "DLL"
+    - "JIT"
 featured_apis:
-- VirtualAlloc
-- VirtualAllocEx
-- VirtualAllocExNuma
+    - "VirtualAlloc"
+    - "VirtualAllocEx"
+    - "VirtualAllocExNuma"
 contributors:
-- DarkCoderSc
+    - "DarkCoderSc"

@@ -1,2 +1,2 @@
-name: Detect GetForegroundWindow Usage
-type: YARA
+name: "Detect GetForegroundWindow Usage"
+type: "YARA"

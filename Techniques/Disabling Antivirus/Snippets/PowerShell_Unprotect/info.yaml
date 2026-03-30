@@ -1,4 +1,4 @@
-language: PowerShell
-contributors: Unprotect
-associated_technique: Disabling Antivirus
-target_operating_system: windows
+language: "PowerShell"
+contributors: "Unprotect"
+associated_technique: "Disabling Antivirus"
+target_operating_system: "windows"

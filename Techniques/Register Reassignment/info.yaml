@@ -1,10 +1,10 @@
-name: Register Reassignment
+name: "Register Reassignment"
 categories:
-- Anti-Disassembly
+    - "Anti-Disassembly"
 resources:
-- https://sensorstechforum.com/advanced-obfuscation-techniques-malware/
+    - "https://sensorstechforum.com/advanced-obfuscation-techniques-malware/"
 tags:
-- Code obfuscation
-- Register modification
-- Code complexity
-- Signature evasion
+    - "Code obfuscation"
+    - "Register modification"
+    - "Code complexity"
+    - "Signature evasion"

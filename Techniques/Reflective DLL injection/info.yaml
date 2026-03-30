@@ -1,11 +1,11 @@
-name: Reflective DLL injection
+name: "Reflective DLL injection"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://0x00sec.org/t/reflective-dll-injection/3080
-- https://www.ired.team/offensive-security/code-injection-process-injection/reflective-dll-injection
+    - "https://0x00sec.org/t/reflective-dll-injection/3080"
+    - "https://www.ired.team/offensive-security/code-injection-process-injection/reflective-dll-injection"
 featured_apis:
-- VirtualAlloc
-- ReadProcessMemory
-- HeapAlloc
-- GetProcAddress
+    - "VirtualAlloc"
+    - "ReadProcessMemory"
+    - "HeapAlloc"
+    - "GetProcAddress"

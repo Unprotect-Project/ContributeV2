@@ -1,9 +1,9 @@
-name: Call to Interrupt Procedure
+name: "Call to Interrupt Procedure"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- http://www.nacad.ufrj.br/online/intel/vtune/users_guide/mergedProjects/analyzer_ec/mergedProjects/reference_olh/mergedProjects/instructions/instruct32_hh/vc140.htm
+    - "http://www.nacad.ufrj.br/online/intel/vtune/users_guide/mergedProjects/analyzer_ec/mergedProjects/reference_olh/mergedProjects/instructions/instruct32_hh/vc140.htm"
 tags:
-- Anti-debugging
-- X86 instruction
-- RET
+    - "Anti-debugging"
+    - "X86 instruction"
+    - "RET"

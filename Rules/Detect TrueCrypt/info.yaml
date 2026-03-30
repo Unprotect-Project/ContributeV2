@@ -1,2 +1,2 @@
-name: Detect TrueCrypt
-type: YARA
+name: "Detect TrueCrypt"
+type: "YARA"

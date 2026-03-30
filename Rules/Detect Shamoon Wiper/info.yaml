@@ -1,2 +1,2 @@
-name: Detect Shamoon Wiper
-type: YARA
+name: "Detect Shamoon Wiper"
+type: "YARA"

@@ -1,10 +1,10 @@
-name: CsrGetProcessID
+name: "CsrGetProcessID"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://www.gironsec.com/blog/2013/12/other-antidebug-tricks/
+    - "https://www.gironsec.com/blog/2013/12/other-antidebug-tricks/"
 tags:
-- CsrGetProcessID
+    - "CsrGetProcessID"
 featured_apis:
-- OpenProcess
-- GetProcAddress
+    - "OpenProcess"
+    - "GetProcAddress"

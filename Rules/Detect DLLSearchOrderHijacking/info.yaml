@@ -1,2 +1,2 @@
-name: Detect DLLSearchOrderHijacking
-type: YARA
+name: "Detect DLLSearchOrderHijacking"
+type: "YARA"

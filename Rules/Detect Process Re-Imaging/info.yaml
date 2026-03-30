@@ -1,2 +1,2 @@
-name: Detect Process Re-Imaging
-type: SIGMA
+name: "Detect Process Re-Imaging"
+type: "SIGMA"

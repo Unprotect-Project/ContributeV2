@@ -1,2 +1,2 @@
-name: Detect Encryption Artifacts
-type: YARA
+name: "Detect Encryption Artifacts"
+type: "YARA"

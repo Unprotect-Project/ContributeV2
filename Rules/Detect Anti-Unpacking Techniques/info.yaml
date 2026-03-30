@@ -1,2 +1,2 @@
-name: Detect Anti-Unpacking Techniques
-type: YARA
+name: "Detect Anti-Unpacking Techniques"
+type: "YARA"

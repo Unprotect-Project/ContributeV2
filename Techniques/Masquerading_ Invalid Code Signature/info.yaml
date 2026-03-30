@@ -1,14 +1,14 @@
-name: 'Masquerading: Invalid Code Signature'
+name: "Masquerading: Invalid Code Signature"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1036/001/
+    - "https://attack.mitre.org/techniques/T1036/001/"
 tags:
-- Defense Evasion
-- Impersonating valid code signatures
-- APT37
-- invalid code signatures
-- invalid digital certificates
-- unverified signatures
-- fake certificates
-- revoked certificates
+    - "Defense Evasion"
+    - "Impersonating valid code signatures"
+    - "APT37"
+    - "invalid code signatures"
+    - "invalid digital certificates"
+    - "unverified signatures"
+    - "fake certificates"
+    - "revoked certificates"

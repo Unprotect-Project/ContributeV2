@@ -1,2 +1,2 @@
-name: Detect VirtualBox Registry Artifacts
-type: YARA
+name: "Detect VirtualBox Registry Artifacts"
+type: "YARA"

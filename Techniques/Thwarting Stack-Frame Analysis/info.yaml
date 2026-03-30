@@ -1,11 +1,11 @@
-name: Thwarting Stack-Frame Analysis
+name: "Thwarting Stack-Frame Analysis"
 categories:
-- Anti-Disassembly
+    - "Anti-Disassembly"
 resources:
-- https://1malware1.medium.com/anti-disassembly-techniques-e012338f2ae0
+    - "https://1malware1.medium.com/anti-disassembly-techniques-e012338f2ae0"
 tags:
-- Stack frame
-- Disassembly
-- Control flow
+    - "Stack frame"
+    - "Disassembly"
+    - "Control flow"
 featured_apis:
-- GetProcAddress
+    - "GetProcAddress"

@@ -1,15 +1,15 @@
-name: Unloading Sysmon Driver
+name: "Unloading Sysmon Driver"
 categories:
-- Anti-Monitoring
+    - "Anti-Monitoring"
 resources:
-- https://www.ired.team/offensive-security/defense-evasion/unloading-sysmon-driver
+    - "https://www.ired.team/offensive-security/defense-evasion/unloading-sysmon-driver"
 tags:
-- Sysmon
-- system activity
-- process creation
-- network connections
-- registry changes
-- Windows Event Log
-- Sysmon driver
+    - "Sysmon"
+    - "system activity"
+    - "process creation"
+    - "network connections"
+    - "registry changes"
+    - "Windows Event Log"
+    - "Sysmon driver"
 featured_apis:
-- GetProcAddress
+    - "GetProcAddress"

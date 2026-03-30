@@ -1,7 +1,7 @@
-name: EventPairHandles
+name: "EventPairHandles"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://www.evilfingers.com/publications/research_EN/EventPairsHandle.pdf
+    - "https://www.evilfingers.com/publications/research_EN/EventPairsHandle.pdf"
 tags:
-- EventPairHandles
+    - "EventPairHandles"

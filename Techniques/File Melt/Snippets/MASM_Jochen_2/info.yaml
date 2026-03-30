@@ -1,4 +1,4 @@
-language: MASM
-contributors: Jochen
-associated_technique: File Melt
-target_operating_system: windows
+language: "MASM"
+contributors: "Jochen"
+associated_technique: "File Melt"
+target_operating_system: "windows"

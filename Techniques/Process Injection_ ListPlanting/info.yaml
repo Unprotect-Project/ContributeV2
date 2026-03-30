@@ -1,21 +1,21 @@
-name: 'Process Injection: ListPlanting'
+name: "Process Injection: ListPlanting"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1055/015/
+    - "https://attack.mitre.org/techniques/T1055/015/"
 tags:
-- Defense Evasion
-- Privilege Escalation
-- inject malicious code into hijacked processes
-- evade detection from security products
-- SysListView32 control
-- message-passing shatter attack
-- custom callback
-- FindWindow
-- EnumWindows
-- window messages
-- LVM_SETITEMPOSITION message
-- LVM_GETITEMPOSITION message
-- LVM_SORTITEMS message
-- ListView_SortItems callback
-- WriteProcessMemory function
+    - "Defense Evasion"
+    - "Privilege Escalation"
+    - "inject malicious code into hijacked processes"
+    - "evade detection from security products"
+    - "SysListView32 control"
+    - "message-passing shatter attack"
+    - "custom callback"
+    - "FindWindow"
+    - "EnumWindows"
+    - "window messages"
+    - "LVM_SETITEMPOSITION message"
+    - "LVM_GETITEMPOSITION message"
+    - "LVM_SORTITEMS message"
+    - "ListView_SortItems callback"
+    - "WriteProcessMemory function"

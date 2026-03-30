@@ -1,2 +1,2 @@
-name: Detect XOR Encoded Malicious Patterns
-type: YARA
+name: "Detect XOR Encoded Malicious Patterns"
+type: "YARA"

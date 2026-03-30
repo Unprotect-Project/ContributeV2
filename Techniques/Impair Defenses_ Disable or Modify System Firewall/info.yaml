@@ -1,15 +1,15 @@
-name: 'Impair Defenses: Disable or Modify System Firewall'
+name: "Impair Defenses: Disable or Modify System Firewall"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1562/004/
+    - "https://attack.mitre.org/techniques/T1562/004/"
 tags:
-- Defense Evasion
-- bypass firewall
-- disable firewall
-- modify firewall rules
-- APT29
-- APT38
-- enable adversary C2 communications
-- lateral movement
-- data exfiltration
+    - "Defense Evasion"
+    - "bypass firewall"
+    - "disable firewall"
+    - "modify firewall rules"
+    - "APT29"
+    - "APT38"
+    - "enable adversary C2 communications"
+    - "lateral movement"
+    - "data exfiltration"

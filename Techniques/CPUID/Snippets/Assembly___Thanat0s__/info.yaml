@@ -1,4 +1,4 @@
-language: Assembly
-contributors: __Thanat0s__
-associated_technique: CPUID
-target_operating_system: windows
+language: "Assembly"
+contributors: "__Thanat0s__"
+associated_technique: "CPUID"
+target_operating_system: "windows"

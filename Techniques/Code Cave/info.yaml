@@ -1,8 +1,8 @@
-name: Code Cave
+name: "Code Cave"
 categories:
-- Antivirus/EDR Evasion
+    - "Antivirus/EDR Evasion"
 resources:
-- https://resources.infosecinstitute.com/injecting-spyware-exe-code-injections/
+    - "https://resources.infosecinstitute.com/injecting-spyware-exe-code-injections/"
 contributors:
-- DarkCoderSc
-- fr0gger
+    - "DarkCoderSc"
+    - "fr0gger"

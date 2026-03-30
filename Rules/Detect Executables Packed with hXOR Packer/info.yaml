@@ -1,2 +1,2 @@
-name: Detect Executables Packed with hXOR Packer
-type: YARA
+name: "Detect Executables Packed with hXOR Packer"
+type: "YARA"

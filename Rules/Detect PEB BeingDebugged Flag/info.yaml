@@ -1,2 +1,2 @@
-name: Detect PEB BeingDebugged Flag
-type: CAPA
+name: "Detect PEB BeingDebugged Flag"
+type: "CAPA"

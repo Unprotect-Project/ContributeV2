@@ -1,11 +1,11 @@
-name: 'System Binary Proxy Execution: Regsvcs/Regasm'
+name: "System Binary Proxy Execution: Regsvcs/Regasm"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1218/009/
+    - "https://attack.mitre.org/techniques/T1218/009/"
 tags:
-- Defense Evasion
-- register .NET Component Object Model (COM) assemblies
-- bypass application control
-- '[ComRegisterFunction]'
-- '[ComUnregisterFunction]'
+    - "Defense Evasion"
+    - "register .NET Component Object Model (COM) assemblies"
+    - "bypass application control"
+    - "[ComRegisterFunction]"
+    - "[ComUnregisterFunction]"

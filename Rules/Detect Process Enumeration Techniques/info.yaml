@@ -1,2 +1,2 @@
-name: Detect Process Enumeration Techniques
-type: YARA
+name: "Detect Process Enumeration Techniques"
+type: "YARA"

@@ -1,15 +1,15 @@
-name: WordWarping
+name: "WordWarping"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 tags:
-- Rich Edit controls
-- Windows controls
-- Multiline mode
-- EditWordBreakProc callback function
-- Word wrapping
-- EM_SETWORDBREAKPROC message
+    - "Rich Edit controls"
+    - "Windows controls"
+    - "Multiline mode"
+    - "EditWordBreakProc callback function"
+    - "Word wrapping"
+    - "EM_SETWORDBREAKPROC message"
 featured_apis:
-- VirtualAlloc
-- VirtualAllocEx
-- WriteProcessMemory
-- OpenProcess
+    - "VirtualAlloc"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "OpenProcess"

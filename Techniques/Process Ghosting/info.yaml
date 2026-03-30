@@ -1,5 +1,5 @@
-name: Process Ghosting
+name: "Process Ghosting"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://www.elastic.co/blog/process-ghosting-a-new-executable-image-tampering-attack
+    - "https://www.elastic.co/blog/process-ghosting-a-new-executable-image-tampering-attack"

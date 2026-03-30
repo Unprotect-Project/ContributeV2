@@ -1,2 +1,2 @@
-name: Detect Antivirus Killers
-type: YARA
+name: "Detect Antivirus Killers"
+type: "YARA"

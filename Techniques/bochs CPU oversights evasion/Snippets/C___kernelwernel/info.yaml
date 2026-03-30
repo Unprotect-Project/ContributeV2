@@ -1,4 +1,4 @@
-language: C++
-contributors: kernelwernel
-associated_technique: bochs CPU oversights evasion
-target_operating_system: windows
+language: "C++"
+contributors: "kernelwernel"
+associated_technique: "bochs CPU oversights evasion"
+target_operating_system: "windows"

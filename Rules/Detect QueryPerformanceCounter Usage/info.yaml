@@ -1,2 +1,2 @@
-name: Detect QueryPerformanceCounter Usage
-type: CAPA
+name: "Detect QueryPerformanceCounter Usage"
+type: "CAPA"

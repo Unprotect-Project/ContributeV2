@@ -1,24 +1,24 @@
-name: 'Use Alternate Authentication Material: Pass the Ticket'
+name: "Use Alternate Authentication Material: Pass the Ticket"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1550/003/
+    - "https://attack.mitre.org/techniques/T1550/003/"
 tags:
-- Defense Evasion
-- Lateral Movement
-- stolen password hashes
-- stolen AES keys
-- bypass system access controls
-- Kerberos authentication
-- PtT
-- OS Credential Dumping
-- Ticket Granting Ticket (TGT)
-- Ticket Granting Service (TGS)
-- Silver Ticket
-- Golden Ticket
-- Key Distribution Service account KRBTGT account NTLM hash
-- Kerberos ticket
-- overpassing the hash
-- Pass the Hash
-- APT28
-- APT32
+    - "Defense Evasion"
+    - "Lateral Movement"
+    - "stolen password hashes"
+    - "stolen AES keys"
+    - "bypass system access controls"
+    - "Kerberos authentication"
+    - "PtT"
+    - "OS Credential Dumping"
+    - "Ticket Granting Ticket (TGT)"
+    - "Ticket Granting Service (TGS)"
+    - "Silver Ticket"
+    - "Golden Ticket"
+    - "Key Distribution Service account KRBTGT account NTLM hash"
+    - "Kerberos ticket"
+    - "overpassing the hash"
+    - "Pass the Hash"
+    - "APT28"
+    - "APT32"

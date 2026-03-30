@@ -1,5 +1,5 @@
-name: Crinkler
+name: "Crinkler"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://github.com/runestubbe/Crinkler
+    - "https://github.com/runestubbe/Crinkler"

@@ -1,13 +1,13 @@
-name: Inserting Garbage Bytes
+name: "Inserting Garbage Bytes"
 categories:
-- Anti-Disassembly
+    - "Anti-Disassembly"
 resources:
-- https://www.enisa.europa.eu/topics/trainings-for-cybersecurity-specialists/online-training-material/documents/static-analysis-of-artefacts-toolset.pdf
+    - "https://www.enisa.europa.eu/topics/trainings-for-cybersecurity-specialists/online-training-material/documents/static-analysis-of-artefacts-toolset.pdf"
 tags:
-- Random data
-- Meaningless data
-- Code obfuscation
-- Code transposition
-- Register reassignment
-- Code confusion
-- Obfuscated code
+    - "Random data"
+    - "Meaningless data"
+    - "Code obfuscation"
+    - "Code transposition"
+    - "Register reassignment"
+    - "Code confusion"
+    - "Obfuscated code"

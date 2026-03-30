@@ -1,10 +1,10 @@
-name: CryptOne
+name: "CryptOne"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://www.deepinstinct.com/blog/a-deep-dive-into-packing-software-cryptone
-- https://github.com/Tera0017/de-CryptOne
+    - "https://www.deepinstinct.com/blog/a-deep-dive-into-packing-software-cryptone"
+    - "https://github.com/Tera0017/de-CryptOne"
 tags:
-- cryptone
+    - "cryptone"
 contributors:
-- fr0gger
+    - "fr0gger"

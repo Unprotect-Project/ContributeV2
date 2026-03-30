@@ -1,5 +1,5 @@
-name: Cronos-Crypter
+name: "Cronos-Crypter"
 categories:
-- Packers
+    - "Packers"
 resources:
-- https://github.com/TalosSec/Cronos-Crypter
+    - "https://github.com/TalosSec/Cronos-Crypter"

@@ -1,20 +1,20 @@
-name: DNS API Injection
+name: "DNS API Injection"
 categories:
-- Process Manipulating
+    - "Process Manipulating"
 resources:
-- https://modexp.wordpress.com/2019/08/08/windows-process-injection-dnsapi/
-- http://www.hexacorn.com/blog/2019/06/12/code-execution-via-surgical-callback-overwrites-e-g-dns-memory-functions/
+    - "https://modexp.wordpress.com/2019/08/08/windows-process-injection-dnsapi/"
+    - "http://www.hexacorn.com/blog/2019/06/12/code-execution-via-surgical-callback-overwrites-e-g-dns-memory-functions/"
 tags:
-- Overwriting DNS memory functions
-- Logging DNS queries
-- Intercepting DNS requests
-- Hiding DNS requests
-- dnsapi.dll
-- DnsApiHeapReset
+    - "Overwriting DNS memory functions"
+    - "Logging DNS queries"
+    - "Intercepting DNS requests"
+    - "Hiding DNS requests"
+    - "dnsapi.dll"
+    - "DnsApiHeapReset"
 featured_apis:
-- VirtualAlloc
-- VirtualAllocEx
-- WriteProcessMemory
-- OpenProcess
-- ReadProcessMemory
-- GetTickCount
+    - "VirtualAlloc"
+    - "VirtualAllocEx"
+    - "WriteProcessMemory"
+    - "OpenProcess"
+    - "ReadProcessMemory"
+    - "GetTickCount"

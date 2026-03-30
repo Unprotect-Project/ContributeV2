@@ -1,2 +1,2 @@
-name: Detect NtGlobalFlags Debugger Flag
-type: YARA
+name: "Detect NtGlobalFlags Debugger Flag"
+type: "YARA"

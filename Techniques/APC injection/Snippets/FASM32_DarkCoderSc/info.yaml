@@ -1,4 +1,4 @@
-language: FASM32
-contributors: DarkCoderSc
-associated_technique: APC injection
-target_operating_system: windows
+language: "FASM32"
+contributors: "DarkCoderSc"
+associated_technique: "APC injection"
+target_operating_system: "windows"

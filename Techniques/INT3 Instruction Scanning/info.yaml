@@ -1,10 +1,10 @@
-name: INT3 Instruction Scanning
+name: "INT3 Instruction Scanning"
 categories:
-- Anti-Debugging
+    - "Anti-Debugging"
 resources:
-- https://www.blackhat.com/presentations/bh-usa-07/Quist_and_Valsmith/Whitepaper/bh-usa-07-quist_and_valsmith-WP.pdf
-- https://anti-debug.checkpoint.com/techniques/assembly.html#int3
+    - "https://www.blackhat.com/presentations/bh-usa-07/Quist_and_Valsmith/Whitepaper/bh-usa-07-quist_and_valsmith-WP.pdf"
+    - "https://anti-debug.checkpoint.com/techniques/assembly.html#int3"
 tags:
-- int3
+    - "int3"
 featured_apis:
-- IsDebuggerPresent
+    - "IsDebuggerPresent"

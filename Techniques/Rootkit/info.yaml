@@ -1,16 +1,16 @@
-name: Rootkit
+name: "Rootkit"
 categories:
-- Defense Evasion [Mitre]
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1014/
+    - "https://attack.mitre.org/techniques/T1014/"
 tags:
-- Defense Evasion
-- intercepting/hooking and modifying operating system API calls
-- hypervisor
-- Master Boot Record
-- System Firmware
-- obfuscation of malware
-- obfuscation of payloads
-- obfuscation of system resource usage
-- APT28
-- persistent remote access
+    - "Defense Evasion"
+    - "intercepting/hooking and modifying operating system API calls"
+    - "hypervisor"
+    - "Master Boot Record"
+    - "System Firmware"
+    - "obfuscation of malware"
+    - "obfuscation of payloads"
+    - "obfuscation of system resource usage"
+    - "APT28"
+    - "persistent remote access"

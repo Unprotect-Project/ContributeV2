@@ -1,4 +1,4 @@
-language: C++
-contributors: Unprotect
-associated_technique: Listplanting
-target_operating_system: windows
+language: "C++"
+contributors: "Unprotect"
+associated_technique: "Listplanting"
+target_operating_system: "windows"

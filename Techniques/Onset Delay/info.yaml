@@ -1,6 +1,6 @@
-name: Onset Delay
+name: "Onset Delay"
 categories:
-- Sandbox Evasion
+    - "Sandbox Evasion"
 resources:
-- http://www.syssec-project.eu/m/page-media/3/hasten-ccs11.pdf
-- https://blog.sonicwall.com/2018/02/6-ways-malware-evades-detection/
+    - "http://www.syssec-project.eu/m/page-media/3/hasten-ccs11.pdf"
+    - "https://blog.sonicwall.com/2018/02/6-ways-malware-evades-detection/"

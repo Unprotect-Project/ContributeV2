@@ -1,11 +1,11 @@
-name: AppInit DLL Injection
+name: "AppInit DLL Injection"
 categories:
-- Process Manipulating
-- Defense Evasion [Mitre]
+    - "Process Manipulating"
+    - "Defense Evasion [Mitre]"
 resources:
-- https://attack.mitre.org/techniques/T1546/010/
+    - "https://attack.mitre.org/techniques/T1546/010/"
 featured_apis:
-- RegSetValueExW
-- RegOpenKeyExW
+    - "RegSetValueExW"
+    - "RegOpenKeyExW"
 contributors:
-- 1d8
+    - "1d8"

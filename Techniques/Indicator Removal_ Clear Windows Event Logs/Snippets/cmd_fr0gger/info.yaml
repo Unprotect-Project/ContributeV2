@@ -1,4 +1,4 @@
-language: cmd
-contributors: fr0gger
-associated_technique: 'Indicator Removal: Clear Windows Event Logs'
-target_operating_system: windows
+language: "cmd"
+contributors: "fr0gger"
+associated_technique: "Indicator Removal: Clear Windows Event Logs"
+target_operating_system: "windows"

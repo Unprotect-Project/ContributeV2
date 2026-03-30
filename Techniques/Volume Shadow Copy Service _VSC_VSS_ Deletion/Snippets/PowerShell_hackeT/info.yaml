@@ -1,4 +1,4 @@
-language: PowerShell
-contributors: hackeT
-associated_technique: Volume Shadow Copy Service (VSC,VSS) Deletion
-target_operating_system: windows
+language: "PowerShell"
+contributors: "hackeT"
+associated_technique: "Volume Shadow Copy Service (VSC,VSS) Deletion"
+target_operating_system: "windows"
