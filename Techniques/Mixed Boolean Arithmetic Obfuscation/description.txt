@@ -1,0 +1,118 @@
+## Overview
+
+Mixed Boolean-Arithmetic (MBA) obfuscation is a code obfuscation technique that rewrites simple arithmetic or bitwise expressions into semantically equivalent expressions that combine Boolean operators and arithmetic operators.
+
+Common Boolean operators include `AND`, `OR`, `XOR`, and `NOT`. Common arithmetic operators include `+`, `-`, and `*`. MBA expressions are usually interpreted under fixed-width bit-vector semantics, such as 32-bit or 64-bit integer arithmetic, where overflow wraps modulo `2^n`.
+
+The goal is not to change the behavior of the program. The goal is to make the data flow harder for reverse engineers, decompilers, symbolic execution engines, and detection logic to understand.
+
+## How it works
+
+MBA obfuscation relies on algebraic identities that are true for fixed-width integers. For example, a simple addition can be rewritten as:
+
+```c
+z = x + y;
+```
+
+Equivalent MBA form:
+
+```c
+z = (x ^ y) + 2 * (x & y);
+```
+
+Likewise, XOR can be represented using arithmetic and Boolean operations:
+
+```c
+z = (x + y) - 2 * (x & y);
+```
+
+This expression is equivalent to:
+
+```c
+z = x ^ y;
+```
+
+Because these transformations preserve semantics, the program still computes the same result while the expression tree becomes larger and harder to simplify manually.
+
+## Common usage
+
+MBA obfuscation is commonly used to hide:
+
+- arithmetic expressions;
+- bitwise operations;
+- constants and key material;
+- array indexes and pointer offsets;
+- branch conditions;
+- opaque predicates;
+- checksum or validation logic;
+- unpacking or decoding routines.
+
+In malware or protected software, MBA can make a simple operation appear as a dense block of mixed arithmetic and logical instructions. This increases the cost of static analysis and often produces noisy decompiler output.
+
+## Linear and non-linear MBA
+
+A linear MBA expression is a linear combination of Boolean sub-expressions. For example:
+
+```text
+a1 * e1 + a2 * e2 + ... + an * en
+```
+
+where each `ei` is a Boolean expression over variables such as `x`, `y`, or `z`.
+
+A non-linear MBA expression may include variable multiplication, nested arithmetic, polynomial transformations, or additional rewriting layers. Non-linear MBA expressions are generally harder to simplify and may require more advanced algebraic, symbolic, or synthesis-based approaches.
+
+## Why it is effective
+
+MBA expressions are difficult to simplify because they mix two domains that many analysis tools reason about differently:
+
+- Boolean logic over bits;
+- arithmetic over fixed-width machine words.
+
+A decompiler may preserve the expression literally instead of reducing it back to a simple operation. SMT solvers can also struggle when expressions are deeply nested, non-linear, or intentionally expanded.
+
+For example, a decompiler may show:
+
+```c
+v = (a + b) - 2 * (a & b);
+```
+
+but the intended operation may simply be:
+
+```c
+v = a ^ b;
+```
+
+This makes the code harder to read and can obscure the actual purpose of a function.
+
+## Detection and analysis opportunities
+
+MBA obfuscation does not have a single universal byte pattern. Detection is usually heuristic and context-dependent. Useful indicators may include:
+
+- unusually high density of mixed arithmetic and bitwise operations in short instruction sequences;
+- repeated use of equivalent identities such as `(x ^ y) + 2 * (x & y)`;
+- large expression trees around simple branch conditions;
+- arithmetic reconstruction of common bitwise operators;
+- constants generated through multiple Boolean and arithmetic layers;
+- decompiler output with dense expressions that simplify to common operators.
+
+Because these patterns can also appear in compiler output or legitimate optimized code, detection rules should be conservative and should be validated against clean software.
+
+## Deobfuscation approaches
+
+Common deobfuscation approaches include:
+
+- pattern-based rewriting for known MBA identities;
+- SMT solver equivalence checking;
+- bit-blasting and truth-table based simplification;
+- algebraic simplification over fixed-width bit-vectors;
+- e-graph based equality saturation;
+- program synthesis based simplification;
+- specialized MBA simplifiers such as MBA-Blast, SiMBA, and GAMBA.
+
+A practical workflow is to lift the suspicious expression into an intermediate representation, normalize it under a known bit width, simplify it with rewriting or solver assistance, and then map the simplified expression back into the reverse engineering tool.
+
+## Limitations
+
+MBA obfuscation is not cryptographic protection. It increases analysis cost, but it does not make code impossible to understand. Many MBA expressions can be simplified when the bit width is known and the expression can be isolated.
+
+The technique is most effective when combined with other obfuscation layers, such as control-flow flattening, opaque predicates, virtualization, packing, or anti-analysis checks.
