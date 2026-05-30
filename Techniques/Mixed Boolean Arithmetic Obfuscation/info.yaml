@@ -1,0 +1,23 @@
+name: "Mixed Boolean-Arithmetic Obfuscation"
+categories:
+    - "Data Obfuscation"
+    - "Antivirus/EDR Evasion"
+    - "Defense Evasion [Mitre]"
+resources:
+    - "https://www.usenix.org/conference/usenixsecurity21/presentation/liu-binbin"
+    - "https://arxiv.org/abs/2209.06335"
+    - "https://arxiv.org/abs/2305.06763"
+    - "https://arxiv.org/abs/2404.05431"
+    - "https://recon.cx/cfp.recon.cx/recon-2025/talk/BKBQ37/index.html"
+    - "https://github.com/mrphrazer/obfuscation_analysis"
+    - "https://plzin.github.io/posts/mba"
+tags:
+    - "Code Obfuscation"
+    - "Mixed Boolean-Arithmetic"
+    - "MBA"
+    - "Bit-Vector"
+    - "Expression Obfuscation"
+    - "Opaque Predicate"
+    - "Decompiler Evasion"
+contributors:
+    - "CX330Blake"
