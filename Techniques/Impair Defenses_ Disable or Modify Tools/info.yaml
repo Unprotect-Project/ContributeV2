@@ -3,6 +3,7 @@ categories:
     - "Defense Evasion [Mitre]"
 resources:
     - "https://attack.mitre.org/techniques/T1562/001/"
+    - "https://en.hackita.it/articoli/rtcore64-sys-byovd/"
 tags:
     - "Defense Evasion"
     - "bypass event aggregation"
